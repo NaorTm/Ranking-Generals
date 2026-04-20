@@ -1,0 +1,25 @@
+{
+  "starting_snapshot": "outputs_cleaned_2026-04-11_globaltrust_authoritative",
+  "current_snapshot": "outputs_cleaned_2026-04-11_hardening_authoritative",
+  "annotated_rows_old": 60395,
+  "annotated_rows_new": 60321,
+  "strict_known_outcome_rows_old": 29311,
+  "strict_known_outcome_rows_new": 30267,
+  "unresolved_old": {
+    "coal_rows": 1224,
+    "coal_pages": 260,
+    "coal_commanders": 832,
+    "generic_rows": 4520,
+    "generic_pages": 445,
+    "generic_commanders": 3799
+  },
+  "unresolved_new": {
+    "coal_rows": 242,
+    "coal_pages": 69,
+    "coal_commanders": 229,
+    "generic_rows": 4503,
+    "generic_pages": 445,
+    "generic_commanders": 3786
+  },
+  "dashboard_qa_passed": true
+}

@@ -1,0 +1,114 @@
+{
+  "model_rows": {
+    "baseline_conservative": 719,
+    "battle_only_baseline": 2255,
+    "hierarchical_weighted": 1366,
+    "hierarchical_full_credit": 1366,
+    "hierarchical_equal_split": 1366,
+    "hierarchical_broader_eligibility": 1437
+  },
+  "top_baseline": [
+    {
+      "rank": 1,
+      "display_name": "Jean Lannes",
+      "score_normalized": 99.23157162726008
+    },
+    {
+      "rank": 2,
+      "display_name": "Napoleon Bonaparte",
+      "score_normalized": 98.3518776077886
+    },
+    {
+      "rank": 3,
+      "display_name": "Alexander Suvorov",
+      "score_normalized": 98.15716272600834
+    },
+    {
+      "rank": 4,
+      "display_name": "Takeda Shingen",
+      "score_normalized": 97.11404728789985
+    },
+    {
+      "rank": 5,
+      "display_name": "Khalid ibn al-Walid",
+      "score_normalized": 96.80806675938804
+    },
+    {
+      "rank": 6,
+      "display_name": "Alexander Farnese, Duke of Parma",
+      "score_normalized": 96.60639777468707
+    },
+    {
+      "rank": 7,
+      "display_name": "Louis-Gabriel Suchet",
+      "score_normalized": 96.23783031988874
+    },
+    {
+      "rank": 8,
+      "display_name": "S\u00e9bastien Le Prestre, Marquis of Vauban",
+      "score_normalized": 96.1578581363004
+    },
+    {
+      "rank": 9,
+      "display_name": "Maurice, Prince of Orange",
+      "score_normalized": 95.05563282336578
+    },
+    {
+      "rank": 10,
+      "display_name": "Louis-Nicolas Davout",
+      "score_normalized": 95.00347705146035
+    }
+  ],
+  "top_hierarchical": [
+    {
+      "rank": 1,
+      "display_name": "Suleiman the Magnificent",
+      "score_normalized": 95.23523670082967
+    },
+    {
+      "rank": 2,
+      "display_name": "Alexander Suvorov",
+      "score_normalized": 93.78550512445096
+    },
+    {
+      "rank": 3,
+      "display_name": "Napoleon Bonaparte",
+      "score_normalized": 93.12884333821377
+    },
+    {
+      "rank": 4,
+      "display_name": "Douglas MacArthur",
+      "score_normalized": 88.78794533918985
+    },
+    {
+      "rank": 5,
+      "display_name": "Louis XIV",
+      "score_normalized": 88.7747681795998
+    },
+    {
+      "rank": 6,
+      "display_name": "Charles XIV John",
+      "score_normalized": 87.82930697901415
+    },
+    {
+      "rank": 7,
+      "display_name": "Louis-Nicolas Davout",
+      "score_normalized": 87.56979014153245
+    },
+    {
+      "rank": 8,
+      "display_name": "Jean Lannes",
+      "score_normalized": 86.38518789653492
+    },
+    {
+      "rank": 9,
+      "display_name": "Babur",
+      "score_normalized": 85.69241093216202
+    },
+    {
+      "rank": 10,
+      "display_name": "Subutai",
+      "score_normalized": 85.41752074182527
+    }
+  ]
+}

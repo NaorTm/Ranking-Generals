@@ -1,0 +1,29 @@
+{
+  "rows_checked": 10,
+  "status_counts": {
+    "ok": 8,
+    "needs_review": 2
+  },
+  "issue_type_counts_top50": {
+    "likely_false_positive_generic_topic": 1,
+    "missing_field": 1,
+    "weak_row_no_infobox_no_result": 1
+  },
+  "stable_mismatch_fields_top50": {
+    "strength_side_a_raw": 1,
+    "strength_side_b_raw": 1,
+    "casualties_side_a_raw": 1,
+    "casualties_side_b_raw": 1,
+    "strength_side_a_min": 1,
+    "strength_side_a_max": 1,
+    "strength_side_b_min": 1,
+    "strength_side_b_max": 1
+  },
+  "diagnostic_mismatch_fields_top50": {
+    "list_page_origin": 2,
+    "parent_list_page": 2,
+    "source_family": 2,
+    "discovery_root": 1,
+    "categories": 1
+  }
+}

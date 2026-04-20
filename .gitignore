@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Local cache
+.cache/
+.git_broken/
+.gitdata/
+
+# Temporary artifacts
+tmp_*.csv
+
+# Ignore all generated output snapshots by default
+outputs/
+outputs_*/
+outputs_cleaned_*/
+
+# Keep the latest authoritative deliverable
+!outputs_cleaned_2026-04-12_coalitionhardening_authoritative/
+!outputs_cleaned_2026-04-12_coalitionhardening_authoritative/**
+
+# Unrelated workspace files
+*.bin
+*.png
+*.docx
+roman_download.json
+sitemap_products.xml
+sitemap_products_shopify.xml
+mapsandwords_poster.html
+mockup_1024.png
+mockup_1200.png
+mockup_2048.png
+shopify_mockup.png
+products.json
+product_json_headers.txt
+roman_poster.json
+sky_pilot_v3.js

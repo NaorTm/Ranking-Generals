@@ -1,0 +1,11 @@
+row_number,wikipedia_title,battle_id,status,issue_count,internal_issue_count,stable_mismatch_count,diagnostic_mismatch_count,issue_types,stable_mismatch_fields,diagnostic_mismatch_fields,live_title,live_pageid,live_fetch_mode,notes
+1,Caratacus' last battle,battle_1269828,ok,3,0,0,3,,,list_page_origin|parent_list_page|source_family,Caratacus' last battle,1269828,wikitext_batch,
+2,Air assault,battle_1042730,needs_review,3,3,0,0,likely_false_positive_generic_topic|missing_field|weak_row_no_infobox_no_result,,,Air assault,1042730,wikitext_batch,
+3,Battle of Vercellae,battle_1187231,ok,0,0,0,0,,,,Battle of Vercellae,1187231,wikitext_batch,
+4,Third Battle of Tapae,battle_5905704,ok,0,0,0,0,,,,Third Battle of Tapae,5905704,wikitext_batch,
+5,Trajan's Dacian Wars,battle_1711717,ok,0,0,0,0,,,,Trajan's Dacian Wars,1711717,wikitext_batch,
+6,Trajan's First Dacian War,battle_8467905,ok,4,0,0,4,,,list_page_origin|parent_list_page|discovery_root|source_family,Trajan's First Dacian War,8467905,wikitext_batch,
+7,Battle of Adamclisi,battle_5999960,needs_review,9,0,8,1,,strength_side_a_raw|strength_side_b_raw|casualties_side_a_raw|casualties_side_b_raw|strength_side_a_min|strength_side_a_max|strength_side_b_min|strength_side_b_max,categories,Battle of Adamclisi,5999960,wikitext_batch,
+8,Battle of Aquae Sextiae,battle_2224425,ok,0,0,0,0,,,,Battle of Aquae Sextiae,2224425,wikitext_batch,
+9,Battle of Tridentum,battle_61275535,ok,0,0,0,0,,,,Battle of Tridentum,61275535,wikitext_batch,
+10,Second Servile War,battle_895420,ok,0,0,0,0,,,,Second Servile War,895420,wikitext_batch,
