@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commander Ranking Analysis Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Frozen Snapshot Dashboard</p>
+        <h1>Commander Ranking Analysis</h1>
+        <p class="hero-copy">
+          Interactive exploration layer for the frozen ranking package in <code>outputs_cleaned_2026-04-12_coalitionhardening_authoritative</code>.
+          This dashboard is built for analytical use: model comparison, robustness inspection, page-type dependence, era slicing, and commander-level comparison.
+        </p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-card">
+          <span class="meta-label">Source snapshot</span>
+          <strong id="snapshot-label">outputs_cleaned_2026-04-12_coalitionhardening_authoritative</strong>
+        </div>
+        <div class="hero-meta-card">
+          <span class="meta-label">Ranked commanders</span>
+          <strong id="commander-count">0</strong>
+        </div>
+        <div class="hero-meta-card">
+          <span class="meta-label">Interactive mode</span>
+          <strong>Client-side only</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel controls-panel">
+      <div class="panel-header">
+        <h2>Filters And Selection</h2>
+        <p>Use the controls to filter the cohort, switch ranking models, and build a comparison set.</p>
+      </div>
+      <div class="controls-grid">
+        <label class="control">
+          <span>Ranking model</span>
+          <select id="model-select"></select>
+        </label>
+        <label class="control">
+          <span>Metric view</span>
+          <select id="metric-select">
+            <option value="rank">Rank</option>
+            <option value="score">Normalized score</option>
+          </select>
+        </label>
+        <label class="control">
+          <span>Era filter</span>
+          <select id="era-filter">
+            <option value="all">All eras</option>
+            <option value="ancient">Ancient</option>
+            <option value="medieval">Medieval</option>
+            <option value="early_modern">Early modern</option>
+            <option value="modern">Modern</option>
+            <option value="contemporary">Contemporary</option>
+          </select>
+        </label>
+        <label class="control">
+          <span>Page-type profile</span>
+          <select id="page-type-filter">
+            <option value="all">All profiles</option>
+            <option value="battle_dominant">Battle dominant</option>
+            <option value="mixed_profile">Mixed profile</option>
+            <option value="war_campaign_heavy">War/campaign heavy</option>
+            <option value="operation_heavy">Operation heavy</option>
+          </select>
+        </label>
+        <label class="control">
+          <span>Robustness category</span>
+          <select id="robustness-filter">
+            <option value="all">All ranked commanders</option>
+            <option value="robust_elite">Robust elite</option>
+            <option value="strong_but_model_sensitive">Strong but model-sensitive</option>
+            <option value="caution_likely_artifact">Caution / likely artifact</option>
+            <option value="other_ranked">Other ranked</option>
+          </select>
+        </label>
+        <label class="control">
+          <span>Minimum engagements</span>
+          <input id="min-engagements-input" type="number" min="0" step="1" value="0">
+        </label>
+        <label class="control control-wide">
+          <span>Search commanders</span>
+          <div class="search-row">
+            <input id="search-input" type="text" list="commander-search-list" placeholder="Search or type a commander name">
+            <button id="add-commander-button" type="button">Add to compare</button>
+            <button id="clear-selection-button" type="button" class="secondary-button">Clear selection</button>
+          </div>
+          <datalist id="commander-search-list"></datalist>
+        </label>
+        <label class="control">
+          <span>Top N charts</span>
+          <select id="top-n-select">
+            <option value="10">Top 10</option>
+            <option value="15">Top 15</option>
+            <option value="20" selected>Top 20</option>
+            <option value="25">Top 25</option>
+            <option value="50">Top 50</option>
+          </select>
+        </label>
+      </div>
+      <div id="selected-commander-chips" class="selected-chips"></div>
+    </section>
+
+    <section class="panel overview-panel">
+      <div class="panel-header">
+        <h2>Top-Tier Overview</h2>
+        <p>The dashboard’s interpretive center: robust elite, strong but model-sensitive, and caution cases.</p>
+      </div>
+      <div id="overview-cards" class="overview-cards"></div>
+      <div id="top-tier-columns" class="top-tier-columns"></div>
+    </section>
+
+    <section class="dashboard-grid">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Top Commanders By Selected Model</h2>
+          <p>Interactive leaderboard for the filtered cohort. Click a bar to add or remove a commander from the comparison set.</p>
+        </div>
+        <div id="leaderboard-chart" class="chart large-chart"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Rank Movement Across Models</h2>
+          <p>Shows rank movement across all six ranking variants. Selected commanders are highlighted across the chart.</p>
+        </div>
+        <div id="movement-chart" class="chart large-chart"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Baseline Rank Vs Model Sensitivity</h2>
+          <p>X-axis uses conservative baseline rank. Y-axis uses rank spread across all models. Bubble size shows engagement count.</p>
+        </div>
+        <div id="sensitivity-chart" class="chart medium-chart"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Commander Explorer Table</h2>
+          <p>Sortable filtered cohort view. Click a row to add a commander to the comparison panel.</p>
+        </div>
+        <div class="table-shell">
+          <table id="explorer-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Page-Type Dependence</h2>
+          <p>The scatter isolates higher-level page dependence. Positive values mean the commander ranks better once hierarchical pages are included.</p>
+        </div>
+        <div id="page-dependence-chart" class="chart medium-chart"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Selected Commander Page-Type Composition</h2>
+          <p>Stacked composition of strict page-type shares for selected commanders, or the current top filtered cohort if nothing is selected.</p>
+        </div>
+        <div id="page-composition-chart" class="chart medium-chart"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Era-Specific Leaderboard</h2>
+          <p>Inspect each requested era separately under the current model.</p>
+        </div>
+        <div class="inline-controls">
+          <label>
+            <span>Era view</span>
+            <select id="era-view-select">
+              <option value="ancient">Ancient</option>
+              <option value="medieval">Medieval</option>
+              <option value="early_modern">Early modern</option>
+              <option value="modern" selected>Modern</option>
+              <option value="contemporary">Contemporary</option>
+            </select>
+          </label>
+        </div>
+        <div id="era-chart" class="chart medium-chart"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Outcome Profile Comparison</h2>
+          <p>Grouped into victory-family, indecisive-family, defeat-family, and unknown shares for easier visual comparison.</p>
+        </div>
+        <div id="outcome-chart" class="chart medium-chart"></div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Commander Comparison Panel</h2>
+        <p>Selected commanders appear here side by side with ranks, scores, exposure profile, caution flags, and audit-style indicators.</p>
+      </div>
+      <div id="comparison-cards" class="comparison-cards"></div>
+    </section>
+
+    <section class="panel footer-panel">
+      <div class="panel-header">
+        <h2>Audit And Era Shortlist</h2>
+        <p>Directly browse the focused audit cases and the era-by-era elite shortlist that feed the interpretive layer.</p>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h3>Focused Sensitivity Audit</h3>
+          <ul id="audit-list" class="plain-list"></ul>
+        </div>
+        <div>
+          <h3>Era Elite Shortlist</h3>
+          <ul id="era-shortlist-list" class="plain-list"></ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./plotly.min.js"></script>
+  <script src="./dashboard_data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
