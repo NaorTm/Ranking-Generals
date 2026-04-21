@@ -1,0 +1,55 @@
+{
+  "snapshot": "outputs_cleaned_2026-04-21_fullverification_authoritative",
+  "before_snapshot": "outputs_cleaned_2026-04-21_trustfirstv2_authoritative",
+  "top_n": 200,
+  "risk_band_counts": {
+    "materially_inflated": 164,
+    "high_priority_manual_audit": 18,
+    "mildly_inflated": 16,
+    "structurally_clean": 2
+  },
+  "headline_figures": [
+    {
+      "display_name": "Suleiman the Magnificent",
+      "current_trust_rank": 1,
+      "trust_tier_current": "high_confidence_upper_band",
+      "trust_confidence_current": "moderate",
+      "inflation_risk_band": "high_priority_manual_audit"
+    },
+    {
+      "display_name": "Alexander Suvorov",
+      "current_trust_rank": 2,
+      "trust_tier_current": "robust_elite_core",
+      "trust_confidence_current": "high",
+      "inflation_risk_band": "mildly_inflated"
+    },
+    {
+      "display_name": "Napoleon Bonaparte",
+      "current_trust_rank": 3,
+      "trust_tier_current": "robust_elite_core",
+      "trust_confidence_current": "very_high",
+      "inflation_risk_band": "high_priority_manual_audit"
+    },
+    {
+      "display_name": "Louis-Nicolas Davout",
+      "current_trust_rank": 10,
+      "trust_tier_current": "robust_elite_core",
+      "trust_confidence_current": "high",
+      "inflation_risk_band": "mildly_inflated"
+    },
+    {
+      "display_name": "Jean Lannes",
+      "current_trust_rank": 11,
+      "trust_tier_current": "robust_elite_core",
+      "trust_confidence_current": "high",
+      "inflation_risk_band": "mildly_inflated"
+    },
+    {
+      "display_name": "Khalid ibn al-Walid",
+      "current_trust_rank": 44,
+      "trust_tier_current": "model_sensitive_band",
+      "trust_confidence_current": "caution",
+      "inflation_risk_band": "high_priority_manual_audit"
+    }
+  ]
+}

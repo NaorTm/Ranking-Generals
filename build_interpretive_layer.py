@@ -14,6 +14,7 @@ ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
 MODEL_RANK_COLUMNS = [
     "rank_baseline_conservative",
     "rank_battle_only_baseline",
+    "rank_hierarchical_trust_v2",
     "rank_hierarchical_weighted",
     "rank_hierarchical_full_credit",
     "rank_hierarchical_equal_split",
@@ -22,6 +23,7 @@ MODEL_RANK_COLUMNS = [
 TRUSTED_MODEL_RANK_COLUMNS = [
     "rank_baseline_conservative",
     "rank_battle_only_baseline",
+    "rank_hierarchical_trust_v2",
     "rank_hierarchical_weighted",
     "rank_hierarchical_equal_split",
     "rank_hierarchical_broader_eligibility",
@@ -78,6 +80,7 @@ def rank_signature(row: pd.Series) -> str:
     labels = [
         ("B0", row["rank_baseline_conservative"]),
         ("B1", row["rank_battle_only_baseline"]),
+        ("HT", row["rank_hierarchical_trust_v2"]),
         ("H", row["rank_hierarchical_weighted"]),
         ("HF", row["rank_hierarchical_full_credit"]),
         ("HE", row["rank_hierarchical_equal_split"]),
@@ -133,29 +136,42 @@ def sensitivity_driver(row: pd.Series) -> str:
 
 
 def interpretive_reason(row: pd.Series, category: str) -> str:
-    if category == "robust_elite":
+    if category == "robust_elite_core":
         return (
-            f"Top-25 in {fmt_rank(row['top25_appearances'])} of 5 trusted models with a rank range of "
-            f"{fmt_rank(row['rank_range'])}; remains competitive under both battle-only and hierarchical runs."
+            f"Anchors the headline trust tier with broad cross-model support; rank range "
+            f"{fmt_rank(row['rank_range'])} and repeated top-tier placement across trusted models."
         )
 
     driver = row["dominant_sensitivity_driver"]
-    if category == "strong_but_model_sensitive":
+    if category == "strong_upper_tier":
         if driver == "battle_specialist_profile":
             return (
-                "Performs very strongly in battle-dominant models, but the rank drops when higher-level "
-                "war/campaign pages are allowed to dilute battle-only performance."
+                "Belongs near the top, but battle-dominant models are more favorable than broader hierarchical views."
             )
         if driver == "higher_level_page_dependency":
             return (
-                "Remains a serious contender, but the rank is materially stronger when operations, campaigns, "
-                "or war-level pages are included."
+                "Belongs in the upper tier, but higher-level war/campaign pages still provide a meaningful share of the support."
             )
         if driver == "credit_rule_dependency":
             return (
-                "Strong overall signal, but attribution rules materially change the final placement."
+                "Upper-tier signal is strong, but attribution rules still move the placement materially."
             )
-        return "Appears repeatedly near the top, but the exact placement depends on model structure."
+        return "Upper-tier signal is strong, but the exact placement still depends on model structure."
+
+    if category == "high_confidence_upper_band":
+        if driver == "battle_specialist_profile":
+            return (
+                "Strong case with real support, but battle-dominant models remain noticeably more favorable than broader views."
+            )
+        if driver == "higher_level_page_dependency":
+            return (
+                "Strong case with meaningful support, but operations, campaigns, or war-level pages still boost the result materially."
+            )
+        if driver == "credit_rule_dependency":
+            return (
+                "Support is real, but attribution rules still change the final placement enough to keep this outside the headline core."
+            )
+        return "Support is meaningful, but the exact placement still depends on model structure."
 
     parts: list[str] = []
     if driver == "higher_level_page_dependency" or contains_flag(row["caution_flags"], "higher_level_dependent"):
@@ -175,13 +191,17 @@ def interpretive_reason(row: pd.Series, category: str) -> str:
 
 def era_recommendation_note(row: pd.Series, band: str) -> str:
     era_name = row["requested_era"].replace("_", " ")
-    if band == "robust_elite":
+    if band == "robust_elite_core":
         return (
             f"Best-supported {era_name} candidate; rank signature {row['rank_signature']}."
         )
-    if band == "strong_but_model_sensitive":
+    if band == "strong_upper_tier":
         return (
             f"Belongs in the era shortlist, but the case depends on model choice; rank signature {row['rank_signature']}."
+        )
+    if band == "high_confidence_upper_band":
+        return (
+            f"Strong {era_name} signal with meaningful support, but not yet part of the headline core; rank signature {row['rank_signature']}."
         )
     return (
         f"Useful as an audit case for the era, not as a secure top-tier conclusion; rank signature {row['rank_signature']}."
@@ -209,6 +229,7 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
         [
             "rank_baseline_conservative",
             "rank_battle_only_baseline",
+            "rank_hierarchical_trust_v2",
             "rank_hierarchical_weighted",
             "rank_hierarchical_full_credit",
             "rank_hierarchical_equal_split",
@@ -219,6 +240,7 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
             "distinct_opponents_strict",
             "known_outcome_count",
             "score_baseline_conservative",
+            "score_hierarchical_trust_v2",
             "score_hierarchical_weighted",
         ],
     )
@@ -240,6 +262,11 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
                 "distinct_conflicts_strict",
                 "distinct_opponents_strict",
                 "known_outcome_count",
+                "rank_hierarchical_trust_v2",
+                "score_hierarchical_trust_v2",
+                "trust_tier_v2",
+                "trust_confidence_v2",
+                "trust_headline_reason_v2",
                 "outcome_profile_summary",
                 "page_type_exposure_summary",
                 "stability_label",
@@ -268,47 +295,26 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
     merged["interpretive_era"] = merged["primary_era_bucket"].map(interpretive_era)
     merged["rank_signature"] = merged.apply(rank_signature, axis=1)
 
-    robust_mask = (
-        (merged["top25_appearances"] >= 5)
-        & (merged["rank_range"] <= 18)
-        & (merged["mean_rank"] <= 25)
-        & (~merged["caution_flags"].str.contains("higher_level_dependent", na=False))
-    )
-
-    caution_mask = (
-        ((merged["best_rank"] <= 25) | (merged["top10_appearances"] >= 1))
-        & (
-            merged["caution_flags"].str.contains("higher_level_dependent", na=False)
-            | (merged["full_credit_gain"] >= 60)
-            | (merged["battle_vs_hier_gap"] >= 200)
-            | (merged["baseline_vs_hier_gap"] >= 150)
-        )
-    )
-
-    strong_mask = (
-        (~robust_mask)
-        & (~caution_mask)
-        & ((merged["top25_appearances"] >= 3) | (merged["best_rank"] <= 15))
-    )
-
-    merged["interpretive_group"] = np.select(
-        [robust_mask, strong_mask, caution_mask],
-        ["robust_elite", "strong_but_model_sensitive", "caution_likely_artifact"],
-        default="outside_interpretive_top_tier",
-    )
-    merged["interpretive_reason"] = merged.apply(
-        lambda row: interpretive_reason(row, row["interpretive_group"]), axis=1
+    merged["interpretive_group"] = merged["trust_tier_v2"].fillna("outside_trust_headline")
+    merged["interpretive_reason"] = merged["trust_headline_reason_v2"].fillna("")
+    missing_reason_mask = merged["interpretive_reason"].eq("")
+    merged.loc[missing_reason_mask, "interpretive_reason"] = merged.loc[missing_reason_mask].apply(
+        lambda row: interpretive_reason(row, row["interpretive_group"])
+        if row["interpretive_group"] != "outside_trust_headline"
+        else interpretive_reason(row, "model_sensitive_band"),
+        axis=1,
     )
 
     classification = merged[
-        merged["interpretive_group"] != "outside_interpretive_top_tier"
+        merged["interpretive_group"] != "outside_trust_headline"
     ].copy()
     classification["interpretive_group"] = pd.Categorical(
         classification["interpretive_group"],
         categories=[
-            "robust_elite",
-            "strong_but_model_sensitive",
-            "caution_likely_artifact",
+            "robust_elite_core",
+            "strong_upper_tier",
+            "high_confidence_upper_band",
+            "model_sensitive_band",
         ],
         ordered=True,
     )
@@ -325,13 +331,12 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
             | (merged["baseline_vs_hier_gap"].abs() >= 80)
             | merged["caution_flags"].str.contains("higher_level_dependent", na=False)
             | ((merged["best_rank"] <= 5) & (merged["rank_range"] >= 30))
+            | merged["interpretive_group"].eq("model_sensitive_band")
         )
     )
 
     audit = merged[audit_mask].copy()
-    audit["audit_note"] = audit.apply(
-        lambda row: interpretive_reason(row, "caution_likely_artifact"), axis=1
-    )
+    audit["audit_note"] = audit["interpretive_reason"]
     audit = audit.sort_values(by=["best_rank", "mean_rank", "display_name"]).head(20)
 
     era_rows: list[pd.Series] = []
@@ -346,17 +351,17 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
 
     for era in era_order:
         candidates = merged[merged["interpretive_era"] == era].copy()
-        robust = candidates[candidates["interpretive_group"] == "robust_elite"].sort_values(
+        robust = candidates[candidates["interpretive_group"] == "robust_elite_core"].sort_values(
             by=["mean_rank", "best_rank"]
         )
         strong = candidates[
-            candidates["interpretive_group"] == "strong_but_model_sensitive"
+            candidates["interpretive_group"] == "strong_upper_tier"
         ].sort_values(by=["best_rank", "top25_appearances", "mean_rank"], ascending=[True, False, True])
-        caution = candidates[
-            candidates["interpretive_group"] == "caution_likely_artifact"
+        high_confidence = candidates[
+            candidates["interpretive_group"] == "high_confidence_upper_band"
         ].sort_values(by=["best_rank", "mean_rank"])
         tentative = candidates[
-            (candidates["interpretive_group"] == "outside_interpretive_top_tier")
+            (candidates["interpretive_group"] == "model_sensitive_band")
             & (candidates["best_rank"] <= 100)
         ].sort_values(by=["best_rank", "mean_rank"])
 
@@ -370,7 +375,7 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
 
         if len(chosen) < target_limits[era]:
             remaining_slots = target_limits[era] - len(chosen)
-            fallback = pd.concat([tentative, caution]).drop_duplicates(
+            fallback = pd.concat([tentative, high_confidence]).drop_duplicates(
                 subset=["display_name", "canonical_wikipedia_url"]
             )
             fallback = fallback[
@@ -380,17 +385,14 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
 
         chosen = chosen.copy()
         chosen["requested_era"] = era
-        chosen["support_band"] = chosen["interpretive_group"].replace(
-            {"outside_interpretive_top_tier": "tentative_signal"}
-        )
+        chosen["support_band"] = chosen["interpretive_group"]
         chosen["recommendation_note"] = chosen.apply(
             lambda row: era_recommendation_note(row, row["support_band"]), axis=1
         )
         chosen["caveat_note"] = chosen.apply(
-            lambda row: interpretive_reason(row, row["interpretive_group"])
-            if row["interpretive_group"] != "outside_interpretive_top_tier"
-            else "The era signal is thin; treat this as a weak provisional inclusion."
-            ,
+            lambda row: row["interpretive_reason"]
+            if row["interpretive_group"] != "model_sensitive_band"
+            else "The era signal is still model-sensitive; treat this as a provisional inclusion rather than a headline conclusion.",
             axis=1,
         )
         era_rows.extend(chosen.to_dict(orient="records"))
@@ -415,6 +417,7 @@ def write_csvs(
         "primary_era_bucket",
         "interpretive_era",
         "interpretive_group",
+        "trust_confidence_v2",
         "best_rank",
         "worst_rank",
         "rank_range",
@@ -443,6 +446,7 @@ def write_csvs(
         "best_rank",
         "worst_rank",
         "rank_range",
+        "trust_confidence_v2",
         *MODEL_RANK_COLUMNS,
         "known_outcome_count",
         "total_engagements_strict",
@@ -465,8 +469,10 @@ def write_csvs(
         "mean_rank",
         "top25_appearances",
         "rank_baseline_conservative",
+        "rank_hierarchical_trust_v2",
         "rank_hierarchical_weighted",
         "rank_signature",
+        "trust_confidence_v2",
         "stability_label",
         "caution_flags",
         "recommendation_note",
@@ -515,15 +521,15 @@ def inline_name_list(names: list[str], limit: int | None = None) -> str:
 
 def write_memo(snapshot_dir: Path, classification: pd.DataFrame, audit: pd.DataFrame, era_shortlist: pd.DataFrame) -> None:
     robust = classification[
-        classification["interpretive_group"] == "robust_elite"
+        classification["interpretive_group"] == "robust_elite_core"
     ].sort_values(by=["mean_rank", "best_rank"])
 
     strong = classification[
-        classification["interpretive_group"] == "strong_but_model_sensitive"
+        classification["interpretive_group"] == "strong_upper_tier"
     ].sort_values(by=["mean_rank", "best_rank"])
 
     caution = classification[
-        classification["interpretive_group"] == "caution_likely_artifact"
+        classification["interpretive_group"] == "model_sensitive_band"
     ].sort_values(by=["best_rank", "mean_rank"])
 
     battle_specialists = strong[
@@ -564,13 +570,14 @@ def write_memo(snapshot_dir: Path, classification: pd.DataFrame, audit: pd.DataF
         "",
         "Interpretive heuristics used here:",
         "",
-        "- `Robust elite`: top-25 in at least 5 of 5 trusted models, rank range at most 18, mean rank at most 25, and no `higher_level_dependent` caution flag.",
-        "- `Strong but model-sensitive`: still reaches the leading cohort repeatedly, but placement depends materially on battle-only vs hierarchical weighting or on credit rules.",
-        "- `Caution / likely artifact`: high placement appears heavily dependent on higher-level pages, credit-attribution variants, or broad-eligibility inclusion.",
+        "- `Robust elite core`: the strongest all-model cluster and the safest headline tier.",
+        "- `Strong upper tier`: belongs in the serious top discussion, but exact order still depends on model structure.",
+        "- `High-confidence upper band`: supported and important, but not strong enough to be merged into the headline core.",
+        "- `Model-sensitive band`: worth auditing and discussing, but too structurally sensitive to treat as a secure headline conclusion.",
         "",
         "These are interpretive categories layered on top of the existing ranking framework. They are meant to support judgment, not replace the underlying score tables.",
         "",
-        "## Robust Elite",
+            "## Robust Elite Core",
         "",
         "This is the strongest cross-model core in the current package. These commanders stay near the top even when the model changes meaningfully.",
         "",
@@ -583,7 +590,7 @@ def write_memo(snapshot_dir: Path, classification: pd.DataFrame, audit: pd.DataF
             f"The clearest current cross-model core is {inline_name_list(robust_names, limit=7)}. "
             "These names remain near the top under meaningfully different ranking assumptions, so the exact internal order should not be over-read more than the cluster itself.",
             "",
-            "## Strong But Model-Sensitive",
+            "## Strong Upper Tier",
             "",
             "These commanders perform well enough to belong in the serious discussion, but the model structure affects how high they climb.",
             "",
@@ -607,9 +614,9 @@ def write_memo(snapshot_dir: Path, classification: pd.DataFrame, audit: pd.DataF
         [
             "",
             f"The strongest names in this cluster are {inline_name_list(broad_sensitive_names, limit=6)}. "
-            "They remain important contenders, but they are not as secure as the robust-elite core and still need model-context qualification.",
+            "They remain important contenders, but they are not as secure as the robust elite core and still need model-context qualification.",
             "",
-            "## Caution / Likely Artifact Cases",
+            "## Model-Sensitive Band",
             "",
             "These are the cases where the current data structure appears to be doing too much of the work. They should stay in the audit layer, not in the headline conclusion layer.",
             "",

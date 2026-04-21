@@ -1,14 +1,14 @@
 # Ranking Generals
 
-Historical general-ranking pipeline, cleaned evidence package, and static dashboard.
+Historical general-ranking pipeline, audited evidence package, and static dashboard.
 
-This repository builds a conservative commander-performance dataset from Wikipedia military-history pages, applies multiple audited ranking models, and publishes a frozen final dashboard for browsing the results.
+This repository publishes a conservative, audited ranking framework built from retained Wikipedia military-history pages. It is designed to support tiered interpretation with explicit confidence limits, not to claim a final exact-order historical truth for every adjacent rank.
 
 ## Live Links
 
 - Repository: [NaorTm/Ranking-Generals](https://github.com/NaorTm/Ranking-Generals)
-- Planned GitHub Pages dashboard: `https://naortm.github.io/Ranking-Generals/`
-- Final authoritative snapshot: `outputs_cleaned_2026-04-21_conservativepatch_authoritative`
+- GitHub Pages dashboard: `https://naortm.github.io/Ranking-Generals/`
+- Official authoritative snapshot: `outputs_cleaned_2026-04-21_fullpopulation_authoritative`
 
 ## What This Repo Contains
 
@@ -20,18 +20,28 @@ This repository builds a conservative commander-performance dataset from Wikiped
 
 ## Current Best Snapshot
 
-The current best final system state is:
+The current official system state is:
 
-- `outputs_cleaned_2026-04-21_conservativepatch_authoritative`
+- `outputs_cleaned_2026-04-21_fullpopulation_authoritative`
 
-Under the current methodology, this is the authoritative deliverable. The primary trusted ranking model is `hierarchical_weighted`.
+Under the current methodology, this is the authoritative deliverable. The primary headline interpretation is `trust-first v2`: tiers first, confidence labels first, exact ranks second.
 
 Key files:
 
-- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/FINAL_SYSTEM_TRUST_ASSESSMENT.md`
-- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/SCORING_FRAMEWORK.md`
-- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/RANKING_RESULTS_HIERARCHICAL.csv`
-- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/TOP_COMMANDERS_PROFILES.md`
+- `outputs_cleaned_2026-04-21_fullpopulation_authoritative/FINAL_SYSTEM_TRUST_ASSESSMENT.md`
+- `outputs_cleaned_2026-04-21_fullpopulation_authoritative/SCORING_FRAMEWORK.md`
+- `outputs_cleaned_2026-04-21_fullpopulation_authoritative/TOP_COMMANDERS_SUMMARY.csv`
+- `outputs_cleaned_2026-04-21_fullpopulation_authoritative/verification/FULL_POPULATION_SUMMARY.json`
+- `outputs_cleaned_2026-04-21_fullpopulation_authoritative/verification/FULL_POPULATION_COMMANDER_RESULTS.csv`
+
+## Release Framing
+
+- This release presents a conservative, audited ranking framework with confidence limits.
+- The full ranked population behind the published outputs was reviewed.
+- The framework is now globally defensible at the system level.
+- Exact adjacent ordering is still not fully settled in every case.
+- Unresolved cases remain because the method refuses to over-interpret weak retained-page evidence.
+- The remaining weakness is visible ambiguity, not silent breakage.
 
 ## Project Structure
 
@@ -89,7 +99,7 @@ Quickest option:
 Manual option:
 
 ```powershell
-cd .\outputs_cleaned_2026-04-21_conservativepatch_authoritative\dashboard
+cd .\outputs_cleaned_2026-04-21_fullpopulation_authoritative\dashboard
 python -m http.server 8000
 ```
 
@@ -110,6 +120,8 @@ That copies the latest frozen dashboard assets from the authoritative snapshot i
 ## Trust Notes
 
 - The framework is conservative and audit-oriented rather than exhaustive.
-- Remaining ambiguity is explicitly documented in the authoritative snapshot.
+- The site and docs should be read as tiers first, exact ranks second.
+- Confidence labels are part of the primary interpretation, not an accessory.
+- Remaining ambiguity is explicitly documented in the authoritative snapshot and verification outputs.
 - Stable cores and top tiers are more defensible than tiny adjacent rank differences.
 - `hierarchical_full_credit` should be treated as diagnostic, not as the headline final model.

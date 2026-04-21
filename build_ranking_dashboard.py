@@ -16,6 +16,7 @@ ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
 MODEL_KEYS = [
     "baseline_conservative",
     "battle_only_baseline",
+    "hierarchical_trust_v2",
     "hierarchical_weighted",
     "hierarchical_full_credit",
     "hierarchical_equal_split",
@@ -25,6 +26,7 @@ MODEL_KEYS = [
 MODEL_LABELS = {
     "baseline_conservative": "Conservative baseline",
     "battle_only_baseline": "Battle-only baseline",
+    "hierarchical_trust_v2": "Trust-first v2",
     "hierarchical_weighted": "Hierarchical weighted",
     "hierarchical_full_credit": "Hierarchical full-credit (diagnostic)",
     "hierarchical_equal_split": "Hierarchical equal-split",
@@ -131,11 +133,13 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         [
             "rank_baseline_conservative",
             "rank_battle_only_baseline",
+            "rank_hierarchical_trust_v2",
             "rank_hierarchical_weighted",
             "rank_hierarchical_full_credit",
             "rank_hierarchical_equal_split",
             "rank_hierarchical_broader_eligibility",
             "score_baseline_conservative",
+            "score_hierarchical_trust_v2",
             "score_hierarchical_weighted",
             "total_engagements_strict",
             "total_battle_pages_strict",
@@ -380,6 +384,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         }
 
         baseline_rank = row.get("rank_baseline_conservative")
+        trust_rank = row.get("rank_hierarchical_trust_v2")
         hierarchical_rank = row.get("rank_hierarchical_weighted")
         battle_rank = row.get("rank_battle_only_baseline")
         full_credit_rank = row.get("rank_hierarchical_full_credit")
@@ -395,6 +400,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "pageTypeProfileClass": clean_value(row.get("page_type_profile_class")),
                 "stabilityLabel": clean_value(row.get("stability_label")) or clean_value(row.get("summary_stability_label")),
                 "robustnessCategory": clean_value(row.get("interpretive_group")) or "other_ranked",
+                "trustConfidence": clean_value(row.get("summary_trust_confidence_v2")) or clean_value(row.get("trust_confidence_v2")),
+                "trustHeadlineReason": clean_value(row.get("summary_trust_headline_reason_v2")) or clean_value(row.get("trust_headline_reason_v2")),
                 "dominantSensitivityDriver": clean_value(row.get("dominant_sensitivity_driver")) or "mixed_model_sensitivity",
                 "interpretiveReason": clean_value(row.get("interpretive_reason")),
                 "cautionFlags": split_flags(row.get("caution_flags")) or split_flags(row.get("summary_caution_flags")),
@@ -447,6 +454,11 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                     "multiEra": bool(clean_value(row.get("multi_era_flag")) or False),
                 },
                 "modelDependence": {
+                    "trustVsHierarchicalRankGap": clean_value(
+                        (trust_rank - hierarchical_rank)
+                        if pd.notna(trust_rank) and pd.notna(hierarchical_rank)
+                        else None
+                    ),
                     "battleVsHierarchicalRankGap": clean_value(
                         (battle_rank - hierarchical_rank)
                         if pd.notna(battle_rank) and pd.notna(hierarchical_rank)
@@ -484,6 +496,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "rankRange": clean_value(row.get("rank_range")),
                 "meanRank": clean_value(row.get("mean_rank")),
                 "top25Appearances": clean_value(row.get("top25_appearances")),
+                "trustConfidence": clean_value(row.get("trust_confidence_v2")),
                 "dominantSensitivityDriver": clean_value(row.get("dominant_sensitivity_driver")),
                 "interpretiveReason": clean_value(row.get("interpretive_reason")),
             }
@@ -502,8 +515,10 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "meanRank": clean_value(row.get("mean_rank")),
                 "top25Appearances": clean_value(row.get("top25_appearances")),
                 "rankBaseline": clean_value(row.get("rank_baseline_conservative")),
+                "rankTrustV2": clean_value(row.get("rank_hierarchical_trust_v2")),
                 "rankHierarchical": clean_value(row.get("rank_hierarchical_weighted")),
                 "rankSignature": clean_value(row.get("rank_signature")),
+                "trustConfidence": clean_value(row.get("trust_confidence_v2")),
                 "stabilityLabel": clean_value(row.get("stability_label")),
                 "cautionFlags": split_flags(row.get("caution_flags")),
                 "recommendationNote": clean_value(row.get("recommendation_note")),
@@ -522,6 +537,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "worstRank": clean_value(row.get("worst_rank")),
                 "rankRange": clean_value(row.get("rank_range")),
                 "ranks": {model: clean_value(row.get(f"rank_{model}")) for model in MODEL_KEYS},
+                "trustConfidence": clean_value(row.get("trust_confidence_v2")),
                 "stabilityLabel": clean_value(row.get("stability_label")),
                 "cautionFlags": split_flags(row.get("caution_flags")),
                 "dominantSensitivityDriver": clean_value(row.get("dominant_sensitivity_driver")),
@@ -542,6 +558,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
 
     metadata = {
         "snapshot": snapshot_dir.name,
+        "headlineModel": "hierarchical_trust_v2",
         "generatedFrom": [
             "derived_scoring/commander_ranking_features.csv",
             "derived_scoring/commander_outcome_profile.csv",
@@ -549,6 +566,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
             "derived_scoring/commander_era_profile.csv",
             "RANKING_RESULTS_BASELINE.csv",
             "RANKING_RESULTS_BATTLE_ONLY.csv",
+            "RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv",
             "RANKING_RESULTS_HIERARCHICAL.csv",
             "RANKING_RESULTS_SENSITIVITY.csv",
             "TOP_COMMANDERS_SUMMARY.csv",
@@ -559,9 +577,9 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         "models": [{"key": key, "label": MODEL_LABELS[key]} for key in MODEL_KEYS],
         "counts": {
             "commanderCount": len(commanders),
-            "robustEliteCount": int(counts_by_group.get("robust_elite", 0)),
-            "strongModelSensitiveCount": int(counts_by_group.get("strong_but_model_sensitive", 0)),
-            "cautionCount": int(counts_by_group.get("caution_likely_artifact", 0)),
+            "robustEliteCount": int(counts_by_group.get("robust_elite_core", 0)),
+            "strongModelSensitiveCount": int(counts_by_group.get("strong_upper_tier", 0)),
+            "cautionCount": int(counts_by_group.get("model_sensitive_band", 0)),
             "otherRankedCount": int(counts_by_group.get("other_ranked", 0)),
         },
         "countsByInterpretiveEra": {str(k): int(v) for k, v in counts_by_era.items()},
@@ -600,6 +618,7 @@ Primary source tables:
 - `derived_scoring/commander_era_profile.csv`
 - `RANKING_RESULTS_BASELINE.csv`
 - `RANKING_RESULTS_BATTLE_ONLY.csv`
+- `RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv`
 - `RANKING_RESULTS_HIERARCHICAL.csv`
 - `RANKING_RESULTS_SENSITIVITY.csv`
 - `TOP_COMMANDERS_SUMMARY.csv`
@@ -617,7 +636,7 @@ Build process:
 What is included in the browser dataset:
 
 - one commander record per ranked commander appearing in `RANKING_RESULTS_SENSITIVITY.csv`
-- model ranks and normalized scores across five trusted ranking variants plus one diagnostic full-credit variant
+- model ranks and normalized scores across six ranking variants, with `hierarchical_trust_v2` as the headline trust-first view
 - engagement, conflict, outcome, page-type, and era profile metrics
 - robustness classification from `TOP_TIER_CLASSIFICATION.csv`
 - era shortlist rows from `ERA_ELITE_SHORTLIST.csv`

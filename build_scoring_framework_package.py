@@ -1043,6 +1043,172 @@ def write_csv(path: Path, frame: pd.DataFrame) -> None:
     frame.to_csv(path, index=False, encoding="utf-8-sig", quoting=csv.QUOTE_MINIMAL)
 
 
+def apply_battle_verification_overrides(output_root: Path, eligibility: pd.DataFrame) -> pd.DataFrame:
+    override_path = output_root / "verification" / "verified_battle_eligibility.csv"
+    eligibility = eligibility.copy()
+    eligibility["verification_status"] = "unverified"
+    eligibility["verification_issue_flags"] = ""
+    eligibility["strict_gate_pre_verification"] = eligibility["strict_gate_include"]
+    eligibility["balanced_gate_pre_verification"] = eligibility["balanced_gate_include"]
+    if not override_path.exists():
+        return eligibility
+
+    overrides = pd.read_csv(override_path, dtype=str).fillna("")
+    merged = eligibility.merge(
+        overrides[
+            [
+                "battle_id",
+                "verification_status",
+                "verification_issue_flags",
+                "strict_gate_override",
+                "balanced_gate_override",
+            ]
+        ],
+        on="battle_id",
+        how="left",
+        suffixes=("", "_verification"),
+    )
+    merged["verification_status"] = merged["verification_status_verification"].where(
+        merged["verification_status_verification"].ne(""),
+        merged["verification_status"],
+    )
+    merged["verification_issue_flags"] = merged["verification_issue_flags_verification"].where(
+        merged["verification_issue_flags_verification"].ne(""),
+        merged["verification_issue_flags"],
+    )
+    merged.loc[merged["strict_gate_override"].ne(""), "strict_gate_include"] = merged.loc[
+        merged["strict_gate_override"].ne(""), "strict_gate_override"
+    ]
+    merged.loc[merged["balanced_gate_override"].ne(""), "balanced_gate_include"] = merged.loc[
+        merged["balanced_gate_override"].ne(""), "balanced_gate_override"
+    ]
+    merged["exclude_reason_flags"] = merged.apply(
+        lambda row: join_flags([normalize_space(row["exclude_reason_flags"]), normalize_space(row["verification_issue_flags"])]),
+        axis=1,
+    )
+    return merged.drop(
+        columns=[
+            "verification_status_verification",
+            "verification_issue_flags_verification",
+            "strict_gate_override",
+            "balanced_gate_override",
+        ],
+        errors="ignore",
+    )
+
+
+def apply_commander_verification_overrides(output_root: Path, annotated: pd.DataFrame) -> pd.DataFrame:
+    override_path = output_root / "verification" / "verified_commander_ranking_eligibility.csv"
+    annotated = annotated.copy()
+    annotated["verification_status"] = "unverified"
+    annotated["verification_issue_flags"] = ""
+    annotated["recommended_action"] = ""
+    annotated["eligible_strict_pre_verification"] = annotated["eligible_strict"]
+    annotated["eligible_balanced_pre_verification"] = annotated["eligible_balanced"]
+    if not override_path.exists():
+        return annotated
+
+    overrides = pd.read_csv(override_path, dtype=str).fillna("")
+    merged = annotated.merge(
+        overrides[
+            [
+                "analytic_commander_id",
+                "battle_id",
+                "verification_status",
+                "verification_issue_flags",
+                "recommended_action",
+                "strict_include_override",
+                "balanced_include_override",
+            ]
+        ],
+        on=["analytic_commander_id", "battle_id"],
+        how="left",
+        suffixes=("", "_verification"),
+    )
+    merged["verification_status"] = merged["verification_status_verification"].where(
+        merged["verification_status_verification"].ne(""),
+        merged["verification_status"],
+    )
+    merged["verification_issue_flags"] = merged["verification_issue_flags_verification"].where(
+        merged["verification_issue_flags_verification"].ne(""),
+        merged["verification_issue_flags"],
+    )
+    merged["recommended_action"] = merged["recommended_action_verification"].where(
+        merged["recommended_action_verification"].ne(""),
+        merged["recommended_action"],
+    )
+    merged.loc[merged["strict_include_override"].ne(""), "eligible_strict"] = merged.loc[
+        merged["strict_include_override"].ne(""), "strict_include_override"
+    ]
+    merged.loc[merged["balanced_include_override"].ne(""), "eligible_balanced"] = merged.loc[
+        merged["balanced_include_override"].ne(""), "balanced_include_override"
+    ]
+    merged["exclude_reason_flags"] = merged.apply(
+        lambda row: join_flags([normalize_space(row["exclude_reason_flags"]), normalize_space(row["verification_issue_flags"])]),
+        axis=1,
+    )
+    return merged.drop(
+        columns=[
+            "verification_status_verification",
+            "verification_issue_flags_verification",
+            "recommended_action_verification",
+            "strict_include_override",
+            "balanced_include_override",
+        ],
+        errors="ignore",
+    )
+
+
+def apply_commander_outcome_overrides(output_root: Path, annotated: pd.DataFrame) -> pd.DataFrame:
+    override_path = output_root / "verification" / "verified_outcome_overrides.csv"
+    annotated = annotated.copy()
+    annotated["outcome_category_pre_override"] = annotated["outcome_category"]
+    annotated["outcome_inference_method_pre_override"] = annotated["outcome_inference_method"]
+    annotated["outcome_inference_confidence_pre_override"] = annotated["outcome_inference_confidence"]
+    annotated["outcome_override_applied"] = "0"
+    annotated["outcome_override_justification"] = ""
+    annotated["outcome_override_evidence_basis"] = ""
+    if not override_path.exists():
+        return annotated
+
+    overrides = pd.read_csv(override_path, dtype=str).fillna("")
+    merged = annotated.merge(
+        overrides[
+            [
+                "analytic_commander_id",
+                "battle_id",
+                "new_outcome_category",
+                "override_justification",
+                "override_evidence_basis",
+            ]
+        ],
+        on=["analytic_commander_id", "battle_id"],
+        how="left",
+    )
+    merged["new_outcome_category"] = merged["new_outcome_category"].fillna("")
+    merged["override_justification"] = merged["override_justification"].fillna("")
+    merged["override_evidence_basis"] = merged["override_evidence_basis"].fillna("")
+    override_mask = merged["new_outcome_category"].ne("")
+    merged.loc[override_mask, "outcome_category"] = merged.loc[override_mask, "new_outcome_category"]
+    merged.loc[override_mask, "outcome_inference_method"] = "verification_outcome_override"
+    merged.loc[override_mask, "outcome_inference_confidence"] = "high"
+    merged.loc[override_mask, "outcome_override_applied"] = "1"
+    merged.loc[override_mask, "outcome_override_justification"] = merged.loc[
+        override_mask, "override_justification"
+    ]
+    merged.loc[override_mask, "outcome_override_evidence_basis"] = merged.loc[
+        override_mask, "override_evidence_basis"
+    ]
+    return merged.drop(
+        columns=[
+            "new_outcome_category",
+            "override_justification",
+            "override_evidence_basis",
+        ],
+        errors="ignore",
+    )
+
+
 def build_package(output_root: Path) -> dict[str, Any]:
     battles = pd.read_csv(output_root / "battles_clean.csv", dtype=str).fillna("")
     commanders = pd.read_csv(output_root / "battle_commanders.csv", dtype=str).fillna("")
@@ -1194,6 +1360,7 @@ def build_package(output_root: Path) -> dict[str, Any]:
         )
 
     eligibility = pd.DataFrame(eligibility_rows)
+    eligibility = apply_battle_verification_overrides(output_root, eligibility)
     write_csv(derived_dir / "engagement_eligibility.csv", eligibility)
 
     master["canonical_wikipedia_url"] = master["wikipedia_page"].map(canonicalize_wikipedia_url)
@@ -1430,6 +1597,8 @@ def build_package(output_root: Path) -> dict[str, Any]:
     annotated["page_weight_model_a"] = model_a_weights
     annotated["page_weight_model_b"] = model_b_weights
     annotated["page_weight_model_c"] = model_c_weights
+    annotated = apply_commander_verification_overrides(output_root, annotated)
+    annotated = apply_commander_outcome_overrides(output_root, annotated)
     annotated["known_outcome_flag"] = annotated["outcome_category"].ne("unknown").astype(int).astype(str)
 
     write_csv(derived_dir / "commander_engagements_annotated.csv", annotated)

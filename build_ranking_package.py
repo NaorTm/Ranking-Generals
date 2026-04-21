@@ -15,6 +15,7 @@ VALID_SIDES = {"side_a", "side_b", "side_c", "side_d"}
 TRUSTED_SENSITIVITY_MODELS = [
     "baseline_conservative",
     "battle_only_baseline",
+    "hierarchical_trust_v2",
     "hierarchical_weighted",
     "hierarchical_equal_split",
     "hierarchical_broader_eligibility",
@@ -49,6 +50,83 @@ def tier_from_score(score: float) -> str:
     if score >= 60:
         return "solid"
     return "qualified"
+
+
+def trust_confidence_label(
+    *,
+    known_outcome_count: float,
+    total_battle_pages: float,
+    rank_range: float,
+    higher_level_share: float,
+    caution_flags: str,
+) -> str:
+    caution_text = safe_text(caution_flags)
+    if (
+        "higher_level_dependent" in caution_text
+        or "thin_battle_anchor" in caution_text
+        or rank_range >= 60
+        or total_battle_pages < 5
+    ):
+        return "caution"
+    if known_outcome_count >= 24 and total_battle_pages >= 15 and rank_range <= 12 and higher_level_share <= 0.55:
+        return "very_high"
+    if known_outcome_count >= 16 and total_battle_pages >= 10 and rank_range <= 24:
+        return "high"
+    if known_outcome_count >= 8 and total_battle_pages >= 6 and rank_range <= 45:
+        return "moderate"
+    return "caution"
+
+
+def trust_tier_v2(
+    *,
+    trust_rank: float,
+    confidence_label: str,
+    top25_appearances: float,
+    rank_range: float,
+) -> str:
+    if confidence_label in {"very_high", "high"} and trust_rank <= 12 and top25_appearances >= 4 and rank_range <= 24:
+        return "robust_elite_core"
+    if confidence_label in {"very_high", "high"} and trust_rank <= 25:
+        return "strong_upper_tier"
+    if confidence_label in {"very_high", "high", "moderate"} and trust_rank <= 50:
+        return "high_confidence_upper_band"
+    if trust_rank <= 100:
+        return "model_sensitive_band"
+    return "outside_trust_headline"
+
+
+def trust_tier_reason(
+    *,
+    tier: str,
+    confidence_label: str,
+    trust_rank: float,
+    rank_range: float,
+    top25_appearances: float,
+    known_outcome_count: float,
+    total_battle_pages: float,
+    caution_flags: str,
+) -> str:
+    caution_text = safe_text(caution_flags)
+    if tier == "robust_elite_core":
+        return (
+            f"Trust-first v2 rank {int(trust_rank)} with {confidence_label} confidence; "
+            f"Top-25 in {int(top25_appearances)} trusted models and rank spread {int(rank_range)}."
+        )
+    if tier == "strong_upper_tier":
+        return (
+            f"Upper-tier contender with {confidence_label} confidence; "
+            f"rank {int(trust_rank)} and enough scale ({int(known_outcome_count)} known outcomes, {int(total_battle_pages)} battle pages) "
+            "to remain defensible under the trust-first model."
+        )
+    if tier == "high_confidence_upper_band":
+        return (
+            f"High-confidence upper-band commander; rank {int(trust_rank)} but not stable enough for the headline core."
+        )
+    if tier == "model_sensitive_band":
+        if "higher_level_dependent" in caution_text or "thin_battle_anchor" in caution_text:
+            return "Ranks well enough to monitor, but higher-level evidence dependence keeps this case out of the headline tiers."
+        return "Visible in upper-model results, but the rank remains too model-sensitive for headline trust treatment."
+    return ""
 
 
 def stability_label(model_count: int, rank_range: float) -> str:
@@ -293,6 +371,7 @@ def finalize_model_scores(
         eligible["component_outcome"] = percentile_score(eligible["outcome_shrunk_raw"])
         eligible["component_depth"] = percentile_score(eligible["depth_raw"])
         eligible["component_reliability"] = percentile_score(eligible["reliability_raw"])
+        eligible["component_sustained_scale"] = ""
         eligible["score_normalized"] = (
             0.60 * eligible["component_outcome"]
             + 0.25 * eligible["component_depth"]
@@ -318,6 +397,7 @@ def finalize_model_scores(
         eligible["component_depth"] = percentile_score(eligible["depth_raw"])
         eligible["score_normalized"] = 0.75 * eligible["component_outcome"] + 0.25 * eligible["component_depth"]
         eligible["component_reliability"] = ""
+        eligible["component_sustained_scale"] = ""
     else:
         cohort_mask = (
             frame["linked_ok"]
@@ -347,6 +427,16 @@ def finalize_model_scores(
             0.60 * pd.to_numeric(frame["known_outcome_share"], errors="coerce").fillna(0)
             + 0.40 * pd.to_numeric(frame["known_battle_outcome_share"], errors="coerce").fillna(0)
         )
+        frame["sustained_scale_raw"] = (
+            0.45 * pd.to_numeric(frame["known_outcome_count"], errors="coerce").fillna(0).map(math.log1p)
+            + 0.20 * pd.to_numeric(frame["conflict_breadth"], errors="coerce").fillna(0).map(math.log1p)
+            + 0.20 * pd.to_numeric(frame["distinct_opponents_strict"], errors="coerce").fillna(0).map(math.log1p)
+            + 0.15
+            * (
+                pd.to_numeric(frame["battle_count"], errors="coerce").fillna(0)
+                + pd.to_numeric(frame["campaign_count"], errors="coerce").fillna(0)
+            ).map(math.log1p)
+        )
         eligible = frame.loc[cohort_mask].copy()
         eligible["component_outcome"] = percentile_score(eligible["outcome_shrunk_raw"])
         eligible["component_scope_conflict"] = percentile_score(eligible["scope_conflict_raw"])
@@ -359,14 +449,26 @@ def finalize_model_scores(
         eligible["component_centrality"] = percentile_score(eligible["centrality_raw"])
         eligible["component_higher_level"] = percentile_score(eligible["higher_level_raw"])
         eligible["component_evidence"] = percentile_score(eligible["evidence_raw"])
-        eligible["score_pre_guardrail"] = (
-            0.45 * eligible["component_outcome"]
-            + 0.20 * eligible["component_scope"]
-            + 0.15 * eligible["component_temporal"]
-            + 0.10 * eligible["component_centrality"]
-            + 0.06 * eligible["component_higher_level"]
-            + 0.04 * eligible["component_evidence"]
-        )
+        eligible["component_sustained_scale"] = percentile_score(eligible["sustained_scale_raw"])
+        if model_name == "hierarchical_trust_v2":
+            eligible["score_pre_guardrail"] = (
+                0.32 * eligible["component_outcome"]
+                + 0.18 * eligible["component_sustained_scale"]
+                + 0.18 * eligible["component_scope"]
+                + 0.12 * eligible["component_temporal"]
+                + 0.10 * eligible["component_centrality"]
+                + 0.06 * eligible["component_higher_level"]
+                + 0.04 * eligible["component_evidence"]
+            )
+        else:
+            eligible["score_pre_guardrail"] = (
+                0.45 * eligible["component_outcome"]
+                + 0.20 * eligible["component_scope"]
+                + 0.15 * eligible["component_temporal"]
+                + 0.10 * eligible["component_centrality"]
+                + 0.06 * eligible["component_higher_level"]
+                + 0.04 * eligible["component_evidence"]
+            )
         eligible["confidence_guardrail_factor"] = 1.0
         combo_mask = (
             pd.to_numeric(eligible["higher_level_share"], errors="coerce").fillna(0.0) >= 0.50
@@ -394,11 +496,30 @@ def finalize_model_scores(
         eligible.loc[thin_battle_anchor_mask, "confidence_guardrail_factor"] = (
             eligible.loc[thin_battle_anchor_mask, "confidence_guardrail_factor"].clip(upper=0.92)
         )
+        if model_name == "hierarchical_trust_v2":
+            low_scale_anchor_mask = (
+                pd.to_numeric(eligible["known_outcome_count"], errors="coerce").fillna(0.0) < 8.0
+            ) & (
+                pd.to_numeric(eligible["battle_count"], errors="coerce").fillna(0.0) < 8.0
+            )
+            very_thin_record_mask = (
+                pd.to_numeric(eligible["known_outcome_count"], errors="coerce").fillna(0.0) < 6.0
+            ) | (
+                pd.to_numeric(eligible["known_battle_outcome_count"], errors="coerce").fillna(0.0) < 3.0
+            )
+            eligible.loc[low_scale_anchor_mask, "confidence_guardrail_factor"] = (
+                eligible.loc[low_scale_anchor_mask, "confidence_guardrail_factor"].clip(upper=0.97)
+            )
+            eligible.loc[very_thin_record_mask, "confidence_guardrail_factor"] = (
+                eligible.loc[very_thin_record_mask, "confidence_guardrail_factor"].clip(upper=0.94)
+            )
         eligible["score_normalized"] = (
             eligible["score_pre_guardrail"] * eligible["confidence_guardrail_factor"]
         )
         eligible["component_depth"] = ""
         eligible["component_reliability"] = ""
+        if model_name != "hierarchical_trust_v2":
+            eligible["component_sustained_scale"] = ""
 
     eligible["page_type_profile_class"] = eligible.apply(
         lambda row: page_profile_class(
@@ -511,6 +632,22 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
             score_mode="balanced",
             cohort_rule="hierarchical",
         ),
+        "hierarchical_trust_v2": finalize_model_scores(
+            aggregate_model_metrics(
+                annotated,
+                row_weight_col="page_weight_model_b_num",
+                outcome_mode="balanced",
+                presence_mode="full",
+                outcome_credit_mode="split",
+            ),
+            bridge,
+            summary,
+            page_profile,
+            outcome_profile,
+            model_name="hierarchical_trust_v2",
+            score_mode="balanced",
+            cohort_rule="hierarchical",
+        ),
         "hierarchical_full_credit": finalize_model_scores(
             aggregate_model_metrics(
                 annotated,
@@ -563,6 +700,7 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
 
     baseline = model_frames["baseline_conservative"].copy()
     hierarchical = model_frames["hierarchical_weighted"].copy()
+    trust_v2 = model_frames["hierarchical_trust_v2"].copy()
     battle_only = model_frames["battle_only_baseline"].copy()
 
     baseline_cols = [
@@ -602,6 +740,7 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
         "known_outcome_share",
         "outcome_shrunk_raw",
         "component_outcome",
+        "component_sustained_scale",
         "component_scope",
         "component_temporal",
         "component_centrality",
@@ -614,6 +753,7 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
     ]
     write_csv(output_root / "RANKING_RESULTS_BASELINE.csv", baseline[baseline_cols])
     write_csv(output_root / "RANKING_RESULTS_HIERARCHICAL.csv", hierarchical[hierarchical_cols])
+    write_csv(output_root / "RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv", trust_v2[hierarchical_cols])
     write_csv(output_root / "RANKING_RESULTS_BATTLE_ONLY.csv", battle_only[baseline_cols])
 
     all_ids = sorted(set().union(*[set(frame["analytic_commander_id"]) for frame in model_frames.values()]))
@@ -671,7 +811,78 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
         lambda row: join_flags([safe_text(row[column]) for column in caution_cols]),
         axis=1,
     )
-    sensitivity = sensitivity.sort_values(["rank_baseline_conservative", "rank_hierarchical_weighted", "display_name"], ascending=[True, True, True])
+    for column in ["known_battle_outcome_count", "known_battle_outcome_share"]:
+        if column not in outcome_profile.columns:
+            outcome_profile[column] = math.nan
+
+    trust_support = summary[
+        [
+            "analytic_commander_id",
+            "total_engagements_strict",
+            "total_battle_pages_strict",
+            "distinct_conflicts_strict",
+            "distinct_opponents_strict",
+        ]
+    ].merge(
+        outcome_profile[
+            [
+                "analytic_commander_id",
+                "known_outcome_count",
+                "known_outcome_share",
+                "known_battle_outcome_count",
+                "known_battle_outcome_share",
+            ]
+        ],
+        on="analytic_commander_id",
+        how="left",
+    ).merge(
+        trust_v2[
+            [
+                "analytic_commander_id",
+                "higher_level_share",
+                "battle_count",
+                "campaign_count",
+                "war_count",
+                "component_sustained_scale",
+            ]
+        ],
+        on="analytic_commander_id",
+        how="left",
+    )
+    sensitivity = sensitivity.merge(trust_support, on="analytic_commander_id", how="left")
+    sensitivity["trust_confidence_v2"] = sensitivity.apply(
+        lambda row: trust_confidence_label(
+            known_outcome_count=float(pd.to_numeric(row.get("known_outcome_count", 0), errors="coerce") or 0),
+            total_battle_pages=float(pd.to_numeric(row.get("total_battle_pages_strict", 0), errors="coerce") or 0),
+            rank_range=float(pd.to_numeric(row.get("rank_range", 999), errors="coerce") or 999),
+            higher_level_share=float(pd.to_numeric(row.get("higher_level_share", 0), errors="coerce") or 0),
+            caution_flags=safe_text(row.get("caution_flags", "")),
+        ),
+        axis=1,
+    )
+    sensitivity["trust_tier_v2"] = sensitivity.apply(
+        lambda row: trust_tier_v2(
+            trust_rank=float(pd.to_numeric(row.get("rank_hierarchical_trust_v2", 9999), errors="coerce") or 9999),
+            confidence_label=safe_text(row.get("trust_confidence_v2")),
+            top25_appearances=float(pd.to_numeric(row.get("top25_appearances", 0), errors="coerce") or 0),
+            rank_range=float(pd.to_numeric(row.get("rank_range", 999), errors="coerce") or 999),
+        ),
+        axis=1,
+    )
+    sensitivity["trust_headline_reason_v2"] = sensitivity.apply(
+        lambda row: trust_tier_reason(
+            tier=safe_text(row.get("trust_tier_v2")),
+            confidence_label=safe_text(row.get("trust_confidence_v2")),
+            trust_rank=float(pd.to_numeric(row.get("rank_hierarchical_trust_v2", 9999), errors="coerce") or 9999),
+            rank_range=float(pd.to_numeric(row.get("rank_range", 999), errors="coerce") or 999),
+            top25_appearances=float(pd.to_numeric(row.get("top25_appearances", 0), errors="coerce") or 0),
+            known_outcome_count=float(pd.to_numeric(row.get("known_outcome_count", 0), errors="coerce") or 0),
+            total_battle_pages=float(pd.to_numeric(row.get("total_battle_pages_strict", 0), errors="coerce") or 0),
+            caution_flags=safe_text(row.get("caution_flags", "")),
+        ),
+        axis=1,
+    )
+    sensitivity = sensitivity.sort_values(["rank_hierarchical_trust_v2", "rank_hierarchical_weighted", "display_name"], ascending=[True, True, True])
     write_csv(output_root / "RANKING_RESULTS_SENSITIVITY.csv", sensitivity)
 
     top_ids = set()
@@ -717,6 +928,23 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
         on="analytic_commander_id",
         how="left",
     )
+    for column in [
+        "total_engagements_strict",
+        "total_battle_pages_strict",
+        "total_war_pages_strict",
+        "total_campaign_pages_strict",
+        "total_operation_pages_strict",
+        "distinct_conflicts_strict",
+        "distinct_opponents_strict",
+        "known_outcome_count",
+    ]:
+        if column not in top_summary.columns:
+            left = f"{column}_x"
+            right = f"{column}_y"
+            if left in top_summary.columns or right in top_summary.columns:
+                left_series = top_summary[left] if left in top_summary.columns else pd.Series(math.nan, index=top_summary.index)
+                right_series = top_summary[right] if right in top_summary.columns else pd.Series(math.nan, index=top_summary.index)
+                top_summary[column] = left_series.combine_first(right_series)
     top_summary["outcome_profile_summary"] = top_summary.apply(
         lambda row: (
             f"V={int(float(row['count_victory'] or 0)) + int(float(row['count_decisive_victory'] or 0)) + int(float(row['count_tactical_victory'] or 0)) + int(float(row['count_pyrrhic_victory'] or 0))}; "
@@ -733,19 +961,24 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
         ),
         axis=1,
     )
-    top_summary = top_summary.sort_values(["rank_baseline_conservative", "rank_hierarchical_weighted", "display_name"])
+    top_summary = top_summary.sort_values(["rank_hierarchical_trust_v2", "rank_hierarchical_weighted", "display_name"])
     keep_cols = [
         "display_name",
         "canonical_wikipedia_url",
         "primary_era_bucket",
         "rank_baseline_conservative",
         "rank_battle_only_baseline",
+        "rank_hierarchical_trust_v2",
         "rank_hierarchical_weighted",
         "rank_hierarchical_full_credit",
         "rank_hierarchical_equal_split",
         "rank_hierarchical_broader_eligibility",
         "score_baseline_conservative",
+        "score_hierarchical_trust_v2",
         "score_hierarchical_weighted",
+        "trust_tier_v2",
+        "trust_confidence_v2",
+        "trust_headline_reason_v2",
         "total_engagements_strict",
         "total_battle_pages_strict",
         "distinct_conflicts_strict",
@@ -758,6 +991,27 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
         "caution_flags",
     ]
     write_csv(output_root / "TOP_COMMANDERS_SUMMARY.csv", top_summary[keep_cols])
+    trust_tier_rows = sensitivity.loc[
+        sensitivity["trust_tier_v2"].ne("outside_trust_headline"),
+        [
+            "display_name",
+            "canonical_wikipedia_url",
+            "primary_era_bucket",
+            "rank_hierarchical_trust_v2",
+            "score_hierarchical_trust_v2",
+            "trust_tier_v2",
+            "trust_confidence_v2",
+            "rank_range",
+            "top25_appearances",
+            "known_outcome_count",
+            "total_battle_pages_strict",
+            "distinct_conflicts_strict",
+            "distinct_opponents_strict",
+            "caution_flags",
+            "trust_headline_reason_v2",
+        ],
+    ].sort_values(["rank_hierarchical_trust_v2", "display_name"])
+    write_csv(output_root / "TIERED_TRUST_V2.csv", trust_tier_rows)
 
     top_slices_rows = []
     for model_name, frame in model_frames.items():
@@ -820,6 +1074,7 @@ def build_rankings(output_root: Path) -> dict[str, Any]:
     metrics = {
         "model_rows": {name: int(len(frame)) for name, frame in model_frames.items()},
         "top_baseline": baseline.head(10)[["rank", "display_name", "score_normalized"]].to_dict(orient="records"),
+        "top_trust_v2": trust_v2.head(10)[["rank", "display_name", "score_normalized"]].to_dict(orient="records"),
         "top_hierarchical": hierarchical.head(10)[["rank", "display_name", "score_normalized"]].to_dict(orient="records"),
     }
     (output_root / "RANKING_BUILD_METRICS.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")

@@ -1,4 +1,4 @@
-$sourceDir = Join-Path $PSScriptRoot "outputs_cleaned_2026-04-21_conservativepatch_authoritative\dashboard"
+$sourceDir = Join-Path $PSScriptRoot "outputs_cleaned_2026-04-21_fullpopulation_authoritative\dashboard"
 $targetDir = Join-Path $PSScriptRoot "docs"
 
 if (-not (Test-Path $sourceDir)) {

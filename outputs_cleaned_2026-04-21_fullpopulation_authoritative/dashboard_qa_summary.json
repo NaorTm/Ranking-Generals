@@ -1,0 +1,97 @@
+{
+  "snapshot_dir": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-12_coalitionhardening_authoritative",
+  "url": "http://127.0.0.1:8005",
+  "checks": {
+    "panel_leaderboard-chart": {
+      "ok": true,
+      "detail": {
+        "svg_count": 8
+      }
+    },
+    "panel_movement-chart": {
+      "ok": true,
+      "detail": {
+        "svg_count": 8
+      }
+    },
+    "panel_sensitivity-chart": {
+      "ok": true,
+      "detail": {
+        "svg_count": 8
+      }
+    },
+    "panel_page-dependence-chart": {
+      "ok": true,
+      "detail": {
+        "svg_count": 8
+      }
+    },
+    "panel_page-composition-chart": {
+      "ok": true,
+      "detail": {
+        "svg_count": 8
+      }
+    },
+    "panel_era-chart": {
+      "ok": true,
+      "detail": {
+        "svg_count": 8
+      }
+    },
+    "panel_outcome-chart": {
+      "ok": true,
+      "detail": {
+        "svg_count": 8
+      }
+    },
+    "overview_rendered": {
+      "ok": true,
+      "detail": {
+        "metric_cards": 4,
+        "tier_columns": 3
+      }
+    },
+    "default_baseline_top_row": {
+      "ok": true,
+      "detail": {
+        "top_rows": [
+          "Jean Lannes",
+          "Napoleon Bonaparte",
+          "Alexander Suvorov",
+          "Takeda Shingen",
+          "Khalid ibn al-Walid"
+        ]
+      }
+    },
+    "hierarchical_top_row": {
+      "ok": true,
+      "detail": {
+        "top_rows": [
+          "Suleiman the Magnificent",
+          "Alexander Suvorov",
+          "Napoleon Bonaparte",
+          "Douglas MacArthur",
+          "Louis XIV"
+        ]
+      }
+    },
+    "search_filter": {
+      "ok": true,
+      "detail": {
+        "rows": 1
+      }
+    },
+    "row_selection": {
+      "ok": true,
+      "detail": {
+        "comparison_cards": 1,
+        "chips": 1
+      }
+    }
+  },
+  "console_errors": [],
+  "page_errors": [],
+  "status": "PASS",
+  "console_error_count": 0,
+  "page_error_count": 0
+}
