@@ -8,7 +8,7 @@ This repository builds a conservative commander-performance dataset from Wikiped
 
 - Repository: [NaorTm/Ranking-Generals](https://github.com/NaorTm/Ranking-Generals)
 - Planned GitHub Pages dashboard: `https://naortm.github.io/Ranking-Generals/`
-- Final authoritative snapshot: `outputs_cleaned_2026-04-12_coalitionhardening_authoritative`
+- Final authoritative snapshot: `outputs_cleaned_2026-04-21_conservativepatch_authoritative`
 
 ## What This Repo Contains
 
@@ -22,16 +22,16 @@ This repository builds a conservative commander-performance dataset from Wikiped
 
 The current best final system state is:
 
-- `outputs_cleaned_2026-04-12_coalitionhardening_authoritative`
+- `outputs_cleaned_2026-04-21_conservativepatch_authoritative`
 
 Under the current methodology, this is the authoritative deliverable. The primary trusted ranking model is `hierarchical_weighted`.
 
 Key files:
 
-- `outputs_cleaned_2026-04-12_coalitionhardening_authoritative/FINAL_SYSTEM_TRUST_ASSESSMENT.md`
-- `outputs_cleaned_2026-04-12_coalitionhardening_authoritative/SCORING_FRAMEWORK.md`
-- `outputs_cleaned_2026-04-12_coalitionhardening_authoritative/RANKING_RESULTS_HIERARCHICAL.csv`
-- `outputs_cleaned_2026-04-12_coalitionhardening_authoritative/TOP_COMMANDERS_PROFILES.md`
+- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/FINAL_SYSTEM_TRUST_ASSESSMENT.md`
+- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/SCORING_FRAMEWORK.md`
+- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/RANKING_RESULTS_HIERARCHICAL.csv`
+- `outputs_cleaned_2026-04-21_conservativepatch_authoritative/TOP_COMMANDERS_PROFILES.md`
 
 ## Project Structure
 
@@ -89,7 +89,7 @@ Quickest option:
 Manual option:
 
 ```powershell
-cd .\outputs_cleaned_2026-04-12_coalitionhardening_authoritative\dashboard
+cd .\outputs_cleaned_2026-04-21_conservativepatch_authoritative\dashboard
 python -m http.server 8000
 ```
 

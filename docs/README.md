@@ -1,17 +1,17 @@
 # Commander Ranking Dashboard
 
-This folder contains a static, client-side dashboard built on top of the frozen ranking package in `outputs_cleaned_2026-04-12_coalitionhardening_authoritative`.
+This folder contains a static, client-side dashboard built on top of the frozen ranking package in `outputs_cleaned_2026-04-21_conservativepatch_authoritative`.
 
 ## Open locally
 
 Default option:
 
-1. Open [index.html](C:/Users/gameo/OneDrive/Desktop/test/outputs_cleaned_2026-04-12_coalitionhardening_authoritative/dashboard/index.html) in a browser.
+1. Open [index.html](C:/Users/gameo/OneDrive/Desktop/test/outputs_cleaned_2026-04-21_conservativepatch_authoritative/dashboard/index.html) in a browser.
 
 If your browser blocks local file scripts, use a trivial local server instead:
 
 ```powershell
-cd C:\Users\gameo\OneDrive\Desktop\test\outputs_cleaned_2026-04-12_coalitionhardening_authoritative\dashboard
+cd C:\Users\gameo\OneDrive\Desktop\test\outputs_cleaned_2026-04-21_conservativepatch_authoritative\dashboard
 python -m http.server 8000
 ```
 
@@ -34,4 +34,4 @@ cd C:\Users\gameo\OneDrive\Desktop\test
 python build_ranking_dashboard.py
 ```
 
-That rebuilds `dashboard/dashboard_data.js` and updates [RANKING_DASHBOARD_TECHNICAL_NOTE.md](C:/Users/gameo/OneDrive/Desktop/test/outputs_cleaned_2026-04-12_coalitionhardening_authoritative/RANKING_DASHBOARD_TECHNICAL_NOTE.md).
+That rebuilds `dashboard/dashboard_data.js` and updates [RANKING_DASHBOARD_TECHNICAL_NOTE.md](C:/Users/gameo/OneDrive/Desktop/test/outputs_cleaned_2026-04-21_conservativepatch_authoritative/RANKING_DASHBOARD_TECHNICAL_NOTE.md).

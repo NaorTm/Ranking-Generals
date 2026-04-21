@@ -1327,6 +1327,28 @@ def parse_year_and_dates(date_raw: str) -> dict[str, Any]:
     }
 
 
+def repair_year_from_title_context(title: str, parsed_year: Any) -> Any:
+    title = normalize_space(title)
+    if not title:
+        return parsed_year
+    try:
+        parsed_year_int = int(parsed_year) if parsed_year not in {"", None} else None
+    except (TypeError, ValueError):
+        parsed_year_int = None
+
+    title_year_matches = [int(value) for value in re.findall(r"\((\d{3,4})\)", title)]
+    if parsed_year_int is None:
+        if len(title_year_matches) == 1:
+            return title_year_matches[0]
+        return parsed_year
+
+    if parsed_year_int > 2100 and len(title_year_matches) == 1:
+        title_year = title_year_matches[0]
+        if 1 <= title_year <= 2100:
+            return title_year
+    return parsed_year
+
+
 def normalize_result(result_raw: str) -> tuple[str, str]:
     result_raw = normalize_space(result_raw)
     if not result_raw:

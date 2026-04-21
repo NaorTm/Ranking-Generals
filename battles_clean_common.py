@@ -369,6 +369,11 @@ def sanitize_candidate_row(row: dict[str, Any], rebuild_mode: str) -> dict[str, 
     cleaned["present_day_country"] = normalize_text(cleaned.get("present_day_country"))
     cleaned["date_raw"] = normalize_text(cleaned.get("date_raw"))
     date_info = bdp.parse_year_and_dates(cleaned["date_raw"])
+    repaired_year = bdp.repair_year_from_title_context(cleaned.get("battle_name", ""), date_info.get("year"))
+    if repaired_year != date_info.get("year"):
+        date_info["year"] = repaired_year
+        date_info["century"] = math.floor((int(repaired_year) - 1) / 100) + 1 if repaired_year else ""
+        cleaned["notes"] = bdp.merge_pipe_values(cleaned.get("notes", ""), "year_repaired_from_title_context")
     cleaned["start_date"] = date_info.get("start_date", "")
     cleaned["end_date"] = date_info.get("end_date", "")
     cleaned["year"] = date_info.get("year", "")

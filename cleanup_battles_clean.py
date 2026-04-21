@@ -85,6 +85,31 @@ def count_existing_rows(path: Path) -> int:
         return sum(1 for _ in reader)
 
 
+def dedupe_existing_csv(path: Path, key_field: str, fieldnames: list[str] | None = None) -> None:
+    if not path.exists() or path.stat().st_size == 0:
+        return
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if not reader.fieldnames:
+            return
+        rows = list(reader)
+        columns = fieldnames or reader.fieldnames
+    deduped: dict[str, dict[str, str]] = {}
+    ordered_keys: list[str] = []
+    for row in rows:
+        key = row.get(key_field, "")
+        if not key:
+            continue
+        if key not in deduped:
+            ordered_keys.append(key)
+        deduped[key] = row
+    with path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=columns)
+        writer.writeheader()
+        for key in ordered_keys:
+            writer.writerow(deduped[key])
+
+
 def read_processed_ids(path: Path) -> set[str]:
     if not path.exists():
         return set()
@@ -138,6 +163,11 @@ def main() -> None:
 
     processed_ids = read_processed_ids(actions_path) if args.resume else set()
     if args.resume:
+        dedupe_existing_csv(main_path, "battle_id", MAIN_FIELDNAMES)
+        dedupe_existing_csv(quarantine_path, "battle_id", QUARANTINE_FIELDNAMES)
+        dedupe_existing_csv(removed_path, "battle_id", REMOVED_FIELDNAMES)
+        dedupe_existing_csv(actions_path, "original_battle_id", ACTIONS_FIELDNAMES)
+        processed_ids = read_processed_ids(actions_path)
         if summary_path.exists():
             counts.update(json.loads(summary_path.read_text(encoding="utf-8")))
             counts["original_rows"] = len(battles_rows)

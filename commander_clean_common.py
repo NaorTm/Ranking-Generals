@@ -591,6 +591,115 @@ def extract_commander_candidates(
     return accepted, rejected, issues
 
 
+def conservative_name_match(raw_name: str, candidate_name: str) -> bool:
+    raw_clean = clean_commander_name(raw_name)
+    candidate_clean = clean_commander_name(candidate_name)
+    if not raw_clean or not candidate_clean:
+        return False
+    if raw_clean.lower() == candidate_clean.lower():
+        return True
+    raw_tokens = raw_clean.split()
+    candidate_tokens = candidate_clean.split()
+    if len(raw_tokens) == 1 and len(candidate_tokens) >= 2 and len(raw_tokens[0]) >= 6:
+        return raw_tokens[0].lower() == candidate_tokens[-1].lower()
+    return False
+
+
+def recover_linked_commander_candidates(
+    side_cell: dict[str, Any] | None,
+    side_key: str,
+    battle_row: dict[str, Any],
+    page_wikitext: str,
+    link_meta: dict[str, dict[str, Any]],
+    existing_candidates: list[dict[str, str]],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], list[dict[str, str]]]:
+    if not side_cell or not normalize_text(side_cell.get("raw_text", "")):
+        return [], [], []
+
+    belligerent = battle_side_value(battle_row, "belligerent", side_key)
+    existing_keys = {
+        f"{normalize_text(candidate.get('normalized_name')).lower()}|{normalize_text(candidate.get('wikipedia_url')).lower()}"
+        for candidate in existing_candidates
+    }
+    raw_segments = side_cell.get("segments") or bdp.split_raw_commander_text(side_cell.get("raw_text", ""))
+    usable_segments = []
+    for segment in raw_segments:
+        cleaned = clean_commander_name(segment, belligerent)
+        blockers = commander_name_blockers(segment, cleaned, linked=False)
+        if cleaned and not blockers:
+            usable_segments.append((segment, cleaned))
+    if not usable_segments:
+        return [], [], []
+
+    page_links = bdp.extract_wikilinks_from_wikitext(page_wikitext)
+    person_links: list[dict[str, str]] = []
+    surname_index: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for link in page_links:
+        title = normalize_text(link.get("title", ""))
+        if not title:
+            continue
+        meta = link_meta.get(title, {"title": title, "categories": [], "fullurl": link.get("url", "")})
+        page_class = classify_commander_page(meta.get("title") or title, meta.get("categories", []))
+        if page_class == "nonperson" or belligerent_conflict(meta.get("title") or title, belligerent):
+            continue
+        candidate_name = clean_commander_name(meta.get("title") or title, belligerent)
+        blockers = commander_name_blockers(link.get("text") or title, candidate_name, linked=True)
+        if not candidate_name or blockers:
+            continue
+        candidate = {
+            "raw_name": candidate_name,
+            "normalized_name": candidate_name,
+            "wikipedia_url": canonical_wikipedia_url(meta.get("fullurl") or link.get("url", "")),
+            "identity_confidence": "high" if page_class == "person" else "medium",
+            "identity_resolution_method": "page_wikitext_link_match",
+            "candidate_source": "page_wikitext_link_match",
+        }
+        person_links.append(candidate)
+        surname = candidate_name.split()[-1].lower()
+        surname_index[surname].append(candidate)
+
+    recovered: list[dict[str, str]] = []
+    rejected: list[dict[str, str]] = []
+    issues: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for raw_segment, cleaned_segment in usable_segments:
+        matched_candidate = next(
+            (candidate for candidate in person_links if conservative_name_match(cleaned_segment, candidate["normalized_name"])),
+            None,
+        )
+        if matched_candidate is None and len(cleaned_segment.split()) == 1:
+            surname_matches = surname_index.get(cleaned_segment.lower(), [])
+            if len(surname_matches) == 1:
+                matched_candidate = surname_matches[0]
+        if matched_candidate is None:
+            continue
+        key = f"{matched_candidate['normalized_name'].lower()}|{matched_candidate['wikipedia_url'].lower()}"
+        if key in existing_keys or key in seen:
+            continue
+        seen.add(key)
+        recovered.append(
+            {
+                **matched_candidate,
+                "raw_name": clean_commander_name(raw_segment, belligerent) or matched_candidate["normalized_name"],
+            }
+        )
+
+    if not recovered and person_links:
+        issues.append(
+            {
+                "battle_id": normalize_text(battle_row.get("battle_id")),
+                "battle_name": normalize_text(battle_row.get("battle_name")),
+                "wikipedia_title": normalize_text(battle_row.get("wikipedia_title")),
+                "side": side_key,
+                "raw_text": normalize_text(side_cell.get("raw_text", "")),
+                "issue_type": "no_recoverable_linked_commander",
+                "details": "No conservative page-local linked commander match was found for the side cell text.",
+            }
+        )
+
+    return recovered, rejected, issues
+
+
 def build_commander_row(
     battle_row: dict[str, Any],
     side_key: str,
@@ -768,6 +877,7 @@ def cleanup_rules_text() -> str:
 
 - Commander rows are rebuilt from the validated battle snapshot, not patched from the old commander CSV.
 - Commander extraction uses Wikipedia infobox commander cells as the source of truth.
+- A second conservative recovery pass may upgrade or recover linked commanders only when the retained page itself contains a page-local linked-person match for the side-cell commander text.
 - Linked commander candidates are accepted only if the cleaned name passes strict person-name rules and the linked page is not classified as a non-person page.
 - Unlinked commander candidates are accepted only when the raw segment itself passes strict person-name rules.
 - Nickname-only quoted fragments, graphic/template artifacts, narrative text, and non-person entities are excluded from the main commander file.

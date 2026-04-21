@@ -18,6 +18,8 @@ outputs_cleaned_*/
 # Keep the latest authoritative deliverable
 !outputs_cleaned_2026-04-12_coalitionhardening_authoritative/
 !outputs_cleaned_2026-04-12_coalitionhardening_authoritative/**
+!outputs_cleaned_2026-04-21_conservativepatch_authoritative/
+!outputs_cleaned_2026-04-21_conservativepatch_authoritative/**
 
 # Unrelated workspace files
 *.bin
