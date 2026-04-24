@@ -24,6 +24,8 @@ outputs_cleaned_*/
 !outputs_cleaned_2026-04-21_fullpopulation_authoritative/**
 !outputs_improved_2026-04-24_ranking_model_upgrade/
 !outputs_improved_2026-04-24_ranking_model_upgrade/**
+!outputs_improved_2026-04-24_upgrade_pass2_role_highlevel/
+!outputs_improved_2026-04-24_upgrade_pass2_role_highlevel/**
 
 # Unrelated workspace files
 *.bin
