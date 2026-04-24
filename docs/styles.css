@@ -364,6 +364,10 @@ button:hover {
   line-height: 1.35;
 }
 
+.confidence-line {
+  border-left-color: var(--accent);
+}
+
 .comparison-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

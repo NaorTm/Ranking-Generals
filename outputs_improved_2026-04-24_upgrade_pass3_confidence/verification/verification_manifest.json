@@ -1,0 +1,15 @@
+{
+  "snapshot": "outputs_cleaned_2026-04-21_fullverification_authoritative",
+  "sources": {
+    "battle_audit_dir": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\postfix_audit",
+    "commander_audit_dir": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\commander_postfix_audit",
+    "annotated_source": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\derived_scoring\\commander_engagements_annotated.csv"
+  },
+  "outputs": {
+    "verified_battle_eligibility": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\verification\\verified_battle_eligibility.csv",
+    "verified_commander_ranking_eligibility": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\verification\\verified_commander_ranking_eligibility.csv",
+    "structural_row_flags": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\verification\\structural_row_flags.csv",
+    "structural_commander_summary": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\verification\\structural_commander_summary.csv",
+    "verification_summary": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative\\verification\\verification_summary.json"
+  }
+}

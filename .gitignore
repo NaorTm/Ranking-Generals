@@ -26,6 +26,9 @@ outputs_cleaned_*/
 !outputs_improved_2026-04-24_ranking_model_upgrade/**
 !outputs_improved_2026-04-24_upgrade_pass2_role_highlevel/
 !outputs_improved_2026-04-24_upgrade_pass2_role_highlevel/**
+!outputs_improved_2026-04-24_upgrade_pass3_confidence/
+!outputs_improved_2026-04-24_upgrade_pass3_confidence/**
+outputs_improved_2026-04-24_upgrade_pass3_confidence/derived_scoring/bootstrap_rank_samples.csv
 
 # Unrelated workspace files
 *.bin

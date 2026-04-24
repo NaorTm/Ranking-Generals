@@ -1,0 +1,396 @@
+﻿display_name,canonical_wikipedia_url,battle_id,battle_name,page_type,side,page_result_raw,page_result_type,outcome_inference_method,outcome_inference_confidence
+Shapur I,https://en.wikipedia.org/wiki/Shapur_I,battle_6023888,Battle of Misiche,battle_article,side_a,Defeat,defeat,unknown,low
+Shapur I,https://en.wikipedia.org/wiki/Shapur_I,battle_39147951,Siege of Antioch (253),battle_article,side_b,Sasanian victory,victory,unknown,low
+Shapur I,https://en.wikipedia.org/wiki/Shapur_I,battle_39831094,Siege of Dura-Europos (256),battle_article,side_a,Sasanian victory,victory,unknown,low
+Shapur I,https://en.wikipedia.org/wiki/Shapur_I,battle_39765329,Siege of Caesarea in Cappadocia (260),battle_article,side_a,Sasanian victory,victory,unknown,low
+Alexander the Great,https://en.wikipedia.org/wiki/Alexander_the_Great,battle_27637254,Battle of Jaxartes,battle_article,side_a,Macedonian victoryBivar 1983,unknown,unknown,low
+Alexander the Great,https://en.wikipedia.org/wiki/Alexander_the_Great,battle_34185030,Siege of Cyropolis,battle_article,side_a,Macedonian victory,victory,unknown,low
+Craterus,https://en.wikipedia.org/wiki/Craterus,battle_34185030,Siege of Cyropolis,battle_article,side_a,Macedonian victory,victory,unknown,low
+Alexander the Great,https://en.wikipedia.org/wiki/Alexander_the_Great,battle_241926,Battle of Gaugamela,battle_article,side_a,Macedonian victory,victory,unknown,low
+Alexander the Great,https://en.wikipedia.org/wiki/Alexander_the_Great,battle_32279399,Battle of the Uxian Defile,battle_article,side_a,Macedonian victory,victory,unknown,low
+Alexander the Great,https://en.wikipedia.org/wiki/Alexander_the_Great,battle_20474118,Siege of Halicarnassus,battle_article,side_a,Macedonian victory,victory,unknown,low
+Alexander the Great,https://en.wikipedia.org/wiki/Alexander_the_Great,battle_32369190,Siege of Pelium,battle_article,side_a,Macedonian victoryVujčić 2021,unknown,unknown,low
+Alexander the Great,https://en.wikipedia.org/wiki/Alexander_the_Great,battle_24202898,Expansion of Macedonia under Philip II,battle_article,side_a,Macedonian hegemony establishment of League of Corinth,unknown,unknown,low
+Stilicho,https://en.wikipedia.org/wiki/Stilicho,battle_2221853,Battle of the Frigidus,battle_article,side_a,Theodosian victory,victory,unknown,low
+Stilicho,https://en.wikipedia.org/wiki/Stilicho,battle_43179791,Stilicho's Pictish War,war_conflict_article,side_a,Imperial victory,victory,unknown,low
+Khalid ibn al-Walid,https://en.wikipedia.org/wiki/Khalid_ibn_al-Walid,battle_70387436,Muslim–Quraysh War,war_conflict_article,multiple_sides,Muslim victory,victory,ambiguous_multi_side_commander,low
+Khalid ibn al-Walid,https://en.wikipedia.org/wiki/Khalid_ibn_al-Walid,battle_3042024,Battle of Mu'tah,battle_article,side_a,First Battle: Byzantine victoryKaegi 1992Donner 1981Buhl 1993 Second Battle: Rashidun Victory,victory,unknown,low
+Amr ibn al-As,https://en.wikipedia.org/wiki/Amr_ibn_al-As,battle_23321726,First battle of Dongola,battle_article,side_a,Makurian victory,victory,unknown,low
+Shapur II,https://en.wikipedia.org/wiki/Shapur_II,battle_68795542,Siege of Nisibis (338),battle_article,multiple_sides,Roman victoryDodgeon Lieu 2002,unknown,ambiguous_multi_side_commander,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_14872471,Crusader invasions of Egypt,battle_article,side_b,Zengid victory Crusaders withdraw from Egypt Later establishment of the Ayyubid dynasty,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_78052022,Siege of Alexandria (1167),battle_article,side_b,Negotiated settlement,unknown,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_643071,Battle of Montgisard,battle_article,side_b,Crusader victory,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_16327077,Battle of Belvoir Castle,battle_article,side_b,Crusader victory,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_3098435,Siege of Kerak,battle_article,side_b,Crusader victory,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_1184312,Battle of Cresson,battle_article,side_b,Ayyubid victory,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_27605748,Siege of Tyre (1187),battle_article,side_b,Crusader victory,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_347265,Siege of Acre (1189–1191),battle_article,side_b,Crusader victory,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_250506,Battle of Arsuf,battle_article,side_b,Crusader victory,victory,unknown,low
+Qutb ud-Din Aibak,https://en.wikipedia.org/wiki/Qutb_ud-Din_Aibak,battle_22370955,First Battle of Tarain,battle_article,side_a,Rajput victory,victory,unknown,low
+Saladin,https://en.wikipedia.org/wiki/Saladin,battle_2979565,Battle of Jaffa (1192),battle_article,side_b,Crusader victory,victory,unknown,low
+Bertrand du Guesclin,https://en.wikipedia.org/wiki/Bertrand_du_Guesclin,battle_81204047,First Fernandine War,war_conflict_article,side_b,Treaty of Alcoutim Treaty of Tui (1372),unknown,unknown,low
+Philip the Good,https://en.wikipedia.org/wiki/Philip_the_Good,battle_5032975,Dutch–Hanseatic War,war_conflict_article,side_a,Treaty of Copenhagen: Unlimited Dutch access to Baltic grain trade Hanseatic League's loss of grain monopoly,unknown,unknown,low
+Murad II,https://en.wikipedia.org/wiki/Murad_II,battle_81621642,Siege of Smederevo (1439),battle_article,side_a,Decisive Ottoman victory Fall of the Serbian Despotate,decisive_victory,unknown,low
+Murad II,https://en.wikipedia.org/wiki/Murad_II,battle_797175,Battle of Kosovo (1448),battle_article,side_a,Ottoman victory,victory,unknown,low
+Mehmed II,https://en.wikipedia.org/wiki/Mehmed_II,battle_797175,Battle of Kosovo (1448),battle_article,side_a,Ottoman victory,victory,unknown,low
+Mahmud Pasha Angelović,https://en.wikipedia.org/wiki/Mahmud_Pasha_Angelovi%C4%87,battle_102674,Fall of Constantinople,battle_article,side_a,Ottoman victory,victory,unknown,low
+Mehmed II,https://en.wikipedia.org/wiki/Mehmed_II,battle_4016236,Siege of Krujë (1466–1467),battle_article,side_b,Albanian–Venetian victory,victory,unknown,low
+Ivan Sirko,https://en.wikipedia.org/wiki/Ivan_Sirko,battle_79893444,Cossack raids,battle_article,side_a,Cossack victory,victory,unknown,low
+Babur,https://en.wikipedia.org/wiki/Babur,battle_33805731,Siege of Kabul (1504),battle_article,side_a,Timurid victory,victory,unknown,low
+Babur,https://en.wikipedia.org/wiki/Babur,battle_37671759,Battle of Ab Darrah Pass,battle_article,side_b,Timurid victory,victory,unknown,low
+Babur,https://en.wikipedia.org/wiki/Babur,battle_19634330,Battle of Ghazdewan,battle_article,side_a,Uzbek victory,victory,unknown,low
+Selim I,https://en.wikipedia.org/wiki/Selim_I,battle_72013662,Battle of Yenişehir (1513),battle_article,side_a,Victory for Selim I Execution of Şehzade Ahmed End of the fight for the throne between Selim and Ahmed,victory,unknown,low
+Hayreddin Barbarossa,https://en.wikipedia.org/wiki/Hayreddin_Barbarossa,battle_29214636,Capture of Algiers (1516),battle_article,side_a,Algerian victory,victory,unknown,low
+Babur,https://en.wikipedia.org/wiki/Babur,battle_68649275,Battle of Hisar Firoza,battle_article,side_a,Mughal victory,victory,unknown,low
+Dragut,https://en.wikipedia.org/wiki/Dragut,battle_46633493,Battle of Girolata,battle_article,side_b,Christian victory,victory,unknown,low
+Bairam Khan,https://en.wikipedia.org/wiki/Bairam_Khan,battle_68575755,Battle of Kannauj,battle_article,side_b,Sur victory,victory,unknown,low
+Hayreddin Barbarossa,https://en.wikipedia.org/wiki/Hayreddin_Barbarossa,battle_13945626,Siege of Nice,battle_article,side_b,Imperial-Savoyard victory,victory,unknown,low
+Takeda Shingen,https://en.wikipedia.org/wiki/Takeda_Shingen,battle_3305420,Siege of Fukashi,battle_article,side_a,Takeda victory. Ogasawara Nagatoki forced to abandon his lands.,victory,unknown,low
+Tokugawa Ieyasu,https://en.wikipedia.org/wiki/Tokugawa_Ieyasu,battle_366902,Siege of Terabe,battle_article,side_a,Oda victory,victory,unknown,low
+Dragut,https://en.wikipedia.org/wiki/Dragut,battle_4622529,Battle of Djerba,battle_article,side_b,Victory,victory,unknown,low
+Takeda Shingen,,battle_8253516,Siege of Musashi-Matsuyama (1563),battle_article,side_b,Siege successful; castle falls to the Hōjō and Takeda,unknown,unknown,low
+Kuroda Yoshitaka,https://en.wikipedia.org/wiki/Kuroda_Yoshitaka,battle_35314820,Siege of Inabayama Castle,battle_article,side_a,Oda victory,victory,unknown,low
+Takeda Shingen,,battle_3328781,Siege of Hachigata (1568),battle_article,side_b,Hōjō victory,victory,unknown,low
+Tokugawa Ieyasu,https://en.wikipedia.org/wiki/Tokugawa_Ieyasu,battle_4411137,Siege of Kanegasaki (1570),battle_article,side_a,Nobunaga withdraws his forces Successful retreat by Nobunaga,unknown,unknown,low
+Maeda Toshiie,https://en.wikipedia.org/wiki/Maeda_Toshiie,battle_4411137,Siege of Kanegasaki (1570),battle_article,side_a,Nobunaga withdraws his forces Successful retreat by Nobunaga,unknown,unknown,low
+Takeda Shingen,https://en.wikipedia.org/wiki/Takeda_Shingen,battle_6967988,Battle of Tonegawa,battle_article,side_b,disengagement,unknown,unknown,low
+Takeda Shingen,,battle_356177,Siege of Noda Castle,battle_article,side_a,"Siege succeeds, but Takeda Shingen wounded, possibly fatally",unknown,unknown,low
+Shimazu Yoshihiro,https://en.wikipedia.org/wiki/Shimazu_Yoshihiro,battle_9195380,Battle of Mimigawa,battle_article,side_a,Shimazu clan victory,victory,unknown,low
+Kuroda Yoshitaka,https://en.wikipedia.org/wiki/Kuroda_Yoshitaka,battle_355585,Siege of Miki,battle_article,side_a,Toyotomi victory,victory,unknown,low
+Katō Kiyomasa,https://en.wikipedia.org/wiki/Kat%C5%8D_Kiyomasa,battle_873080,Battle of Yamazaki,battle_article,side_b,Oda clan victory Hideyoshi begins his consolidation of power,victory,unknown,low
+Kuroda Yoshitaka,https://en.wikipedia.org/wiki/Kuroda_Yoshitaka,battle_873080,Battle of Yamazaki,battle_article,side_b,Oda clan victory Hideyoshi begins his consolidation of power,victory,unknown,low
+Kuroda Yoshitaka,https://en.wikipedia.org/wiki/Kuroda_Yoshitaka,battle_366852,Siege of Takamatsu,battle_article,side_a,Peace negotiation Oda's forces withdraw due to the Honnō-ji Incident,unknown,unknown,low
+Konishi Yukinaga,https://en.wikipedia.org/wiki/Konishi_Yukinaga,battle_366852,Siege of Takamatsu,battle_article,side_a,Peace negotiation Oda's forces withdraw due to the Honnō-ji Incident,unknown,unknown,low
+Katō Kiyomasa,https://en.wikipedia.org/wiki/Kat%C5%8D_Kiyomasa,battle_366852,Siege of Takamatsu,battle_article,side_a,Peace negotiation Oda's forces withdraw due to the Honnō-ji Incident,unknown,unknown,low
+"Alexander Farnese, Duke of Parma",https://en.wikipedia.org/wiki/Alexander_Farnese%2C_Duke_of_Parma,battle_23309899,Cologne War,war_conflict_article,side_b,Roman Catholic victory,victory,unknown,low
+Date Masamune,https://en.wikipedia.org/wiki/Date_Masamune,battle_7054123,Battle of Hitotoribashi,battle_article,side_a,Date Masamune retreat Nihonmatsu and allies withdrew,unknown,unknown,low
+"Alexander Farnese, Duke of Parma",https://en.wikipedia.org/wiki/Alexander_Farnese%2C_Duke_of_Parma,battle_50490360,Siege of Caudebec,battle_article,side_b,Royalist victory,victory,unknown,low
+Konishi Yukinaga,https://en.wikipedia.org/wiki/Konishi_Yukinaga,battle_2278543,Battle of Chilcheollyang,battle_article,side_a,Japanese victory,victory,unknown,low
+Shimazu Yoshihiro,https://en.wikipedia.org/wiki/Shimazu_Yoshihiro,battle_2278543,Battle of Chilcheollyang,battle_article,side_a,Japanese victory,victory,unknown,low
+"Maurice, Prince of Orange",https://en.wikipedia.org/wiki/Maurice%2C_Prince_of_Orange,battle_54360024,Siege of Zaltbommel,battle_article,side_a,Victory,victory,unknown,low
+Francis Vere,https://en.wikipedia.org/wiki/Francis_Vere,battle_54360024,Siege of Zaltbommel,battle_article,side_a,Victory,victory,unknown,low
+Honda Tadakatsu,https://en.wikipedia.org/wiki/Honda_Tadakatsu,battle_25559442,Battle of Kuisegawa,battle_article,side_b,Western Army victory and Eastern Army retreats to Sekigahara,victory,unknown,low
+Ambrogio Spinola,https://en.wikipedia.org/wiki/Ambrogio_Spinola,battle_22722803,War of the Jülich Succession,war_conflict_article,side_a,Treaty of Xanten Mark and Cleves to Brandenburg Jülich and Berg to Wolfgang Wilhelm,unknown,unknown,low
+"Maurice, Prince of Orange",https://en.wikipedia.org/wiki/Maurice%2C_Prince_of_Orange,battle_22722803,War of the Jülich Succession,war_conflict_article,side_b,Treaty of Xanten Mark and Cleves to Brandenburg Jülich and Berg to Wolfgang Wilhelm,unknown,unknown,low
+Gustavus Adolphus,https://en.wikipedia.org/wiki/Gustavus_Adolphus,battle_808359,Ingrian War,war_conflict_article,side_b,Victory,victory,unknown,low
+Gustavus Adolphus,https://en.wikipedia.org/wiki/Gustavus_Adolphus,battle_1658239,Kalmar War,war_conflict_article,side_b,Victory,victory,unknown,low
+Stanisław Żółkiewski,https://en.wikipedia.org/wiki/Stanis%C5%82aw_%C5%BB%C3%B3%C5%82kiewski,battle_42357008,Battle of Cornul lui Sas,battle_article,side_b,Ottoman–Moldavian–Tatar victory,victory,unknown,low
+Gustavus Adolphus,https://en.wikipedia.org/wiki/Gustavus_Adolphus,battle_30583,Thirty Years' War,war_conflict_article,side_a,Peace of Westphalia,unknown,unknown,low
+Gustav Horn,https://en.wikipedia.org/wiki/Gustav_Horn,battle_30583,Thirty Years' War,war_conflict_article,side_a,Peace of Westphalia,unknown,unknown,low
+"Maurice, Prince of Orange",https://en.wikipedia.org/wiki/Maurice%2C_Prince_of_Orange,battle_30583,Thirty Years' War,war_conflict_article,side_a,Peace of Westphalia,unknown,unknown,low
+Ambrogio Spinola,https://en.wikipedia.org/wiki/Ambrogio_Spinola,battle_30583,Thirty Years' War,war_conflict_article,side_b,Peace of Westphalia,unknown,unknown,low
+Jan Karol Chodkiewicz,https://en.wikipedia.org/wiki/Jan_Karol_Chodkiewicz,battle_12259648,Battle of Khotyn (1621),battle_article,side_a,Victory,victory,unknown,low
+Ivan Sirko,https://en.wikipedia.org/wiki/Ivan_Sirko,battle_12259648,Battle of Khotyn (1621),battle_article,side_a,Victory,victory,unknown,low
+Stanisław Koniecpolski,https://en.wikipedia.org/wiki/Stanis%C5%82aw_Koniecpolski,battle_36362850,Zhmaylo uprising,battle_article,side_a,Treaty of Kurukove,unknown,unknown,low
+Ambrogio Spinola,https://en.wikipedia.org/wiki/Ambrogio_Spinola,battle_2938870,War of the Mantuan Succession,war_conflict_article,side_b,"Victory for the Duke of Nevers, Treaty of Cherasco",victory,unknown,low
+Stanisław Koniecpolski,https://en.wikipedia.org/wiki/Stanis%C5%82aw_Koniecpolski,battle_12996736,Fedorovych uprising,battle_article,side_a,Treaty of Pereiaslav (1630),unknown,unknown,low
+Gustavus Adolphus,https://en.wikipedia.org/wiki/Gustavus_Adolphus,battle_38566252,Swedish intervention in the Thirty Years' War,war_conflict_article,side_a,Peace of Prague,unknown,unknown,low
+Lennart Torstensson,https://en.wikipedia.org/wiki/Lennart_Torstensson,battle_38566252,Swedish intervention in the Thirty Years' War,war_conflict_article,side_a,Peace of Prague,unknown,unknown,low
+Gustav Horn,https://en.wikipedia.org/wiki/Gustav_Horn,battle_38566252,Swedish intervention in the Thirty Years' War,war_conflict_article,side_a,Peace of Prague,unknown,unknown,low
+Cardinal-Infante Ferdinand of Austria,https://en.wikipedia.org/wiki/Cardinal-Infante_Ferdinand_of_Austria,battle_38566252,Swedish intervention in the Thirty Years' War,war_conflict_article,side_b,Peace of Prague,unknown,unknown,low
+Gustavus Adolphus,https://en.wikipedia.org/wiki/Gustavus_Adolphus,battle_101666,Battle of Lützen (1632),battle_article,side_b,Tactical victory,tactical_victory,unknown,low
+Gustavus Adolphus,https://en.wikipedia.org/wiki/Gustavus_Adolphus,battle_6513835,Battle of the Alte Veste,battle_article,side_b,Imperial victory,victory,unknown,low
+Lennart Torstensson,https://en.wikipedia.org/wiki/Lennart_Torstensson,battle_6513835,Battle of the Alte Veste,battle_article,side_b,Imperial victory,victory,unknown,low
+Gustavus Adolphus,https://en.wikipedia.org/wiki/Gustavus_Adolphus,battle_2575587,Siege of Nuremberg,battle_article,side_a,Imperial victory,victory,unknown,low
+Lennart Torstensson,https://en.wikipedia.org/wiki/Lennart_Torstensson,battle_2575587,Siege of Nuremberg,battle_article,side_a,Imperial victory,victory,unknown,low
+"Frederick Henry, Prince of Orange",https://en.wikipedia.org/wiki/Frederick_Henry%2C_Prince_of_Orange,battle_22337353,Siege of Schenkenschans,battle_article,side_a,First siege: Spanish victory Second siege: Dutch victory,victory,unknown,low
+Cardinal-Infante Ferdinand of Austria,https://en.wikipedia.org/wiki/Cardinal-Infante_Ferdinand_of_Austria,battle_22337353,Siege of Schenkenschans,battle_article,side_b,First siege: Spanish victory Second siege: Dutch victory,victory,unknown,low
+"Henri de La Tour d'Auvergne, Viscount of Turenne",https://en.wikipedia.org/wiki/Henri_de_La_Tour_d%27Auvergne%2C_Viscount_of_Turenne,battle_17921690,Piedmontese Civil War,war_conflict_article,side_a,1642 treaties of Turin,unknown,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_9709,English Civil War,war_conflict_article,side_a,Parliamentarian victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_3470446,Battle of Gainsborough,battle_article,side_b,Parliamentarian victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_1591752,Battle of Winceby,battle_article,side_b,Parliamentarian victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_17778863,Siege of Hull (1643),battle_article,side_b,Parliamentarian victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_31211208,Siege of Lincoln,battle_article,side_b,Parliamentarian victory,victory,unknown,low
+"Henri de La Tour d'Auvergne, Viscount of Turenne",https://en.wikipedia.org/wiki/Henri_de_La_Tour_d%27Auvergne%2C_Viscount_of_Turenne,battle_10393600,Battle of Herbsthausen,battle_article,side_b,Bavarian victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_105805,Battle of Naseby,battle_article,side_a,Parliamentarian victory,victory,unknown,low
+Lennart Torstensson,https://en.wikipedia.org/wiki/Lennart_Torstensson,battle_77125967,Siege of Brno,battle_article,side_a,Imperial victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_59256153,Battle of Bovey Heath,battle_article,side_b,Parliamentarian victory,victory,unknown,low
+Ivan Sirko,https://en.wikipedia.org/wiki/Ivan_Sirko,battle_8631861,Battle of Korsuń,battle_article,side_a,Cossack–Tatar victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_23789144,Battle of Preston (1648),battle_article,side_b,Parliamentarian victory,victory,unknown,low
+Ivan Sirko,https://en.wikipedia.org/wiki/Ivan_Sirko,battle_8663197,Battle of Pyliavtsi,battle_article,side_a,Cossack–Tatar victory,victory,unknown,low
+Ivan Sirko,https://en.wikipedia.org/wiki/Ivan_Sirko,battle_8566633,Battle of Zhovti Vody,battle_article,side_a,Cossack–Tatar victory,victory,unknown,low
+Stefan Czarniecki,https://en.wikipedia.org/wiki/Stefan_Czarniecki,battle_8566633,Battle of Zhovti Vody,battle_article,side_b,Cossack–Tatar victory,victory,unknown,low
+Ivan Sirko,https://en.wikipedia.org/wiki/Ivan_Sirko,battle_1191347,Khmelnytsky Uprising,battle_article,side_a,Victory,victory,unknown,low
+Stanisław Rewera Potocki,https://en.wikipedia.org/wiki/Stanis%C5%82aw_Rewera_Potocki,battle_1191347,Khmelnytsky Uprising,battle_article,side_b,Victory,victory,unknown,low
+Stefan Czarniecki,https://en.wikipedia.org/wiki/Stefan_Czarniecki,battle_1191347,Khmelnytsky Uprising,battle_article,side_b,Victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_1057632,Second English Civil War,war_conflict_article,side_b,Parliamentarian victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_3072706,Siege of Pembroke,battle_article,side_b,Parliamentarian victory,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_4581924,Siege of Waterford,battle_article,side_a,Parliamentarian victory New Model Army take Waterford after a second siege.,victory,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_70181,Battle of Worcester,battle_article,side_a,Parliamentarian victory,victory,unknown,low
+Michiel de Ruyter,https://en.wikipedia.org/wiki/Michiel_de_Ruyter,battle_62713,First Anglo-Dutch War,war_conflict_article,side_a,Treaty of Westminster (1654),unknown,unknown,low
+Oliver Cromwell,https://en.wikipedia.org/wiki/Oliver_Cromwell,battle_62713,First Anglo-Dutch War,war_conflict_article,side_b,Treaty of Westminster (1654),unknown,unknown,low
+Stanisław Rewera Potocki,https://en.wikipedia.org/wiki/Stanis%C5%82aw_Rewera_Potocki,battle_14883756,Battle of Horodok (1655),battle_article,side_a,Muscovite–Cossack victory,victory,unknown,low
+Michiel de Ruyter,https://en.wikipedia.org/wiki/Michiel_de_Ruyter,battle_65614,Second Anglo-Dutch War,war_conflict_article,side_a,Treaty of Breda (1667),unknown,unknown,low
+Louis XIV,https://en.wikipedia.org/wiki/Louis_XIV,battle_323844,War of Devolution,war_conflict_article,side_a,Treaty of Aix-la-Chapelle (1668),unknown,unknown,low
+"Henri de La Tour d'Auvergne, Viscount of Turenne",https://en.wikipedia.org/wiki/Henri_de_La_Tour_d%27Auvergne%2C_Viscount_of_Turenne,battle_323844,War of Devolution,war_conflict_article,side_a,Treaty of Aix-la-Chapelle (1668),unknown,unknown,low
+"Louis, Grand Condé",https://en.wikipedia.org/wiki/Louis%2C_Grand_Cond%C3%A9,battle_323844,War of Devolution,war_conflict_article,side_a,Treaty of Aix-la-Chapelle (1668),unknown,unknown,low
+"François-Henri de Montmorency, duc de Luxembourg",https://en.wikipedia.org/wiki/Fran%C3%A7ois-Henri_de_Montmorency%2C_duc_de_Luxembourg,battle_323844,War of Devolution,war_conflict_article,side_a,Treaty of Aix-la-Chapelle (1668),unknown,unknown,low
+Louis XIV,https://en.wikipedia.org/wiki/Louis_XIV,battle_323886,Franco-Dutch War,war_conflict_article,side_a,Treaties of Nijmegen,unknown,unknown,low
+"Henri de La Tour d'Auvergne, Viscount of Turenne",https://en.wikipedia.org/wiki/Henri_de_La_Tour_d%27Auvergne%2C_Viscount_of_Turenne,battle_323886,Franco-Dutch War,war_conflict_article,side_a,Treaties of Nijmegen,unknown,unknown,low
+"Louis, Grand Condé",https://en.wikipedia.org/wiki/Louis%2C_Grand_Cond%C3%A9,battle_323886,Franco-Dutch War,war_conflict_article,side_a,Treaties of Nijmegen,unknown,unknown,low
+"François-Henri de Montmorency, duc de Luxembourg",https://en.wikipedia.org/wiki/Fran%C3%A7ois-Henri_de_Montmorency%2C_duc_de_Luxembourg,battle_323886,Franco-Dutch War,war_conflict_article,side_a,Treaties of Nijmegen,unknown,unknown,low
+"Sébastien Le Prestre, Marquis of Vauban",https://en.wikipedia.org/wiki/S%C3%A9bastien_Le_Prestre%2C_Marquis_of_Vauban,battle_323886,Franco-Dutch War,war_conflict_article,side_a,Treaties of Nijmegen,unknown,unknown,low
+Michiel de Ruyter,https://en.wikipedia.org/wiki/Michiel_de_Ruyter,battle_323886,Franco-Dutch War,war_conflict_article,side_b,Treaties of Nijmegen,unknown,unknown,low
+Louis XIV,https://en.wikipedia.org/wiki/Louis_XIV,battle_87635,Third Anglo-Dutch War,war_conflict_article,side_a,Treaty of Westminster,unknown,unknown,low
+Michiel de Ruyter,https://en.wikipedia.org/wiki/Michiel_de_Ruyter,battle_87635,Third Anglo-Dutch War,war_conflict_article,side_b,Treaty of Westminster,unknown,unknown,low
+Prince Eugene of Savoy,https://en.wikipedia.org/wiki/Prince_Eugene_of_Savoy,battle_2353203,Battle of Mohács (1687),battle_article,side_a,Imperial victory,victory,unknown,low
+Prince Eugene of Savoy,https://en.wikipedia.org/wiki/Prince_Eugene_of_Savoy,battle_224589,Nine Years' War,war_conflict_article,side_a,Peace of Ryswick,unknown,unknown,low
+Louis XIV,https://en.wikipedia.org/wiki/Louis_XIV,battle_224589,Nine Years' War,war_conflict_article,side_b,Peace of Ryswick,unknown,unknown,low
+"François-Henri de Montmorency, duc de Luxembourg",https://en.wikipedia.org/wiki/Fran%C3%A7ois-Henri_de_Montmorency%2C_duc_de_Luxembourg,battle_224589,Nine Years' War,war_conflict_article,side_b,Peace of Ryswick,unknown,unknown,low
+"Sébastien Le Prestre, Marquis of Vauban",https://en.wikipedia.org/wiki/S%C3%A9bastien_Le_Prestre%2C_Marquis_of_Vauban,battle_224589,Nine Years' War,war_conflict_article,side_b,Peace of Ryswick,unknown,unknown,low
+Prince Eugene of Savoy,https://en.wikipedia.org/wiki/Prince_Eugene_of_Savoy,battle_2329604,Battle of Zenta,battle_article,side_a,Holy League victory,victory,unknown,low
+Prince Eugene of Savoy,https://en.wikipedia.org/wiki/Prince_Eugene_of_Savoy,battle_33604,War of the Spanish Succession,war_conflict_article,side_b,"Treaties of Utrecht, Rastatt, and Baden",unknown,unknown,low
+Prince Eugene of Savoy,https://en.wikipedia.org/wiki/Prince_Eugene_of_Savoy,battle_74626616,Siege of Mons (1709),battle_article,side_a,Grand Alliance victory,victory,unknown,low
+Nader Shah,https://en.wikipedia.org/wiki/Nader_Shah,battle_68457018,Rebellion of Sheikh Ahmad Madani,war_conflict_article,side_a,Rebellion suppressed Arabs of Persian Gulf reincorporated into Safavid Iran,unknown,unknown,low
+Prince Eugene of Savoy,https://en.wikipedia.org/wiki/Prince_Eugene_of_Savoy,battle_33514,War of the Polish Succession,war_conflict_article,side_b,Treaty of Vienna,unknown,unknown,low
+Nader Shah,https://en.wikipedia.org/wiki/Nader_Shah,battle_29340464,Siege of Kandahar,battle_article,side_a,Afsharid victory Fall of the Hotak dynasty.,victory,unknown,low
+Nader Shah,https://en.wikipedia.org/wiki/Nader_Shah,battle_43950008,Battle of Khyber Pass (1738),battle_article,side_a,Victory,victory,unknown,low
+Nader Shah,https://en.wikipedia.org/wiki/Nader_Shah,battle_48551319,Moḥammad Taqi Khan Shirazi's Rebellion,war_conflict_article,side_a,Rebellion quelled,unknown,unknown,low
+Jassa Singh Ahluwalia,https://en.wikipedia.org/wiki/Jassa_Singh_Ahluwalia,battle_73691656,Siege of Amritsar (1748),battle_article,side_a,Sikh victory,victory,unknown,low
+Maurice de Saxe,https://en.wikipedia.org/wiki/Maurice_de_Saxe,battle_52266,War of the Austrian Succession,war_conflict_article,side_a,Treaty of Aix-la-Chapelle (1748),unknown,unknown,low
+Frederick the Great,https://en.wikipedia.org/wiki/Frederick_the_Great,battle_52266,War of the Austrian Succession,war_conflict_article,side_a,Treaty of Aix-la-Chapelle (1748),unknown,unknown,low
+Robert Clive,https://en.wikipedia.org/wiki/Robert_Clive,battle_22774989,Siege of Arcot,battle_article,side_a,Victory,victory,unknown,low
+George Washington,https://en.wikipedia.org/wiki/George_Washington,battle_1929790,Battle of Jumonville Glen,battle_article,side_a,British victory Beginning of the French and Indian War,victory,unknown,low
+Robert Clive,https://en.wikipedia.org/wiki/Robert_Clive,battle_413064,Battle of Plassey,battle_article,side_a,Victory,victory,unknown,low
+Ahmad Shah Durrani,https://en.wikipedia.org/wiki/Ahmad_Shah_Durrani,battle_35537896,Afghan–Maratha War,war_conflict_article,side_a,Victory,victory,unknown,low
+Jassa Singh Ahluwalia,https://en.wikipedia.org/wiki/Jassa_Singh_Ahluwalia,battle_35537896,Afghan–Maratha War,war_conflict_article,side_b,Victory,victory,unknown,low
+Charat Singh,https://en.wikipedia.org/wiki/Charat_Singh,battle_35537896,Afghan–Maratha War,war_conflict_article,side_b,Victory,victory,unknown,low
+Charat Singh,https://en.wikipedia.org/wiki/Charat_Singh,battle_47668224,Battle of Sialkot (1761),battle_article,side_a,Sikh victory,victory,unknown,low
+Charat Singh,https://en.wikipedia.org/wiki/Charat_Singh,battle_47315851,Battle of Sialkot (1763),battle_article,side_a,Sikh victory,victory,unknown,low
+Alexander Suvorov,https://en.wikipedia.org/wiki/Alexander_Suvorov,battle_2763050,Pugachev's Rebellion,war_conflict_article,side_a,Russian government victory Catherine expands serfdom,victory,unknown,low
+George Washington,https://en.wikipedia.org/wiki/George_Washington,battle_771,American Revolutionary War,war_conflict_article,side_a,Victory,victory,unknown,low
+Ernst Gideon von Laudon,https://en.wikipedia.org/wiki/Ernst_Gideon_von_Laudon,battle_503189,War of the Bavarian Succession,war_conflict_article,side_a,Treaty of Teschen,unknown,unknown,low
+"Charles William Ferdinand, Duke of Brunswick",https://en.wikipedia.org/wiki/Charles_William_Ferdinand%2C_Duke_of_Brunswick,battle_503189,War of the Bavarian Succession,war_conflict_article,side_b,Treaty of Teschen,unknown,unknown,low
+Jassa Singh Ahluwalia,https://en.wikipedia.org/wiki/Jassa_Singh_Ahluwalia,battle_57528436,Battle of Delhi (1783),battle_article,side_a,Victory,victory,unknown,low
+"Charles William Ferdinand, Duke of Brunswick",https://en.wikipedia.org/wiki/Charles_William_Ferdinand%2C_Duke_of_Brunswick,battle_200249,Battle of Valmy,battle_article,side_b,French victory Republic proclaimed one day later,victory,unknown,low
+"Charles William Ferdinand, Duke of Brunswick",https://en.wikipedia.org/wiki/Charles_William_Ferdinand%2C_Duke_of_Brunswick,battle_176739,War of the First Coalition,war_conflict_article,side_a,"French victory; Treaty of The Hague, Treaty of Paris, Peaces of Basel, Treaty of Tolentino, Treaty of Campo Formio",victory,unknown,low
+Napoleon Bonaparte,https://en.wikipedia.org/wiki/Napoleon,battle_176739,War of the First Coalition,war_conflict_article,side_b,"French victory; Treaty of The Hague, Treaty of Paris, Peaces of Basel, Treaty of Tolentino, Treaty of Campo Formio",victory,unknown,low
+Louis-Nicolas Davout,https://en.wikipedia.org/wiki/Louis-Nicolas_Davout,battle_47090899,Battle of Vihiers,battle_article,side_b,Vendean victory,victory,unknown,low
+Napoleon Bonaparte,https://en.wikipedia.org/wiki/Napoleon,battle_1964536,Siege of Toulon (1793),battle_article,side_a,French Republican victory,victory,unknown,low
+Sidney Smith,https://en.wikipedia.org/wiki/Sidney_Smith_(Royal_Navy_officer),battle_1964536,Siege of Toulon (1793),battle_article,side_b,French Republican victory,victory,unknown,low
+Joseph Souham,https://en.wikipedia.org/wiki/Joseph_Souham,battle_31610933,Battle of Mouscron,battle_article,side_a,French victory,victory,unknown,low
+Maharaja Ranjit Singh,https://en.wikipedia.org/wiki/Ranjit_Singh,battle_73595416,Battle of Amritsar (1798),battle_article,side_a,Sikh victory,victory,unknown,low
+Napoleon Bonaparte,https://en.wikipedia.org/wiki/Napoleon,battle_25343,Quasi-War,war_conflict_article,side_b,Convention of 1800,unknown,unknown,low
+André Masséna,https://en.wikipedia.org/wiki/Andr%C3%A9_Mass%C3%A9na,battle_45466374,Battle of Feldkirch,battle_article,side_b,French victory (1st) Austrian victory (2nd),victory,unknown,low
+Laurent de Gouvion Saint-Cyr,https://en.wikipedia.org/wiki/Laurent_de_Gouvion_Saint-Cyr,battle_554733,War of the Oranges,war_conflict_article,side_b,Victory,victory,unknown,low
+Mikhail Kutuzov,https://en.wikipedia.org/wiki/Mikhail_Kutuzov,battle_454595,First Serbian Uprising,battle_article,side_a,Victory,victory,unknown,low
+André Masséna,https://en.wikipedia.org/wiki/Andr%C3%A9_Mass%C3%A9na,battle_864032,Battle of Caldiero (1805),battle_article,side_a,Victory,victory,unknown,low
+"Archduke Charles, Duke of Teschen",https://en.wikipedia.org/wiki/Archduke_Charles%2C_Duke_of_Teschen,battle_864032,Battle of Caldiero (1805),battle_article,side_b,Victory,victory,unknown,low
+Alexander I of Russia,https://en.wikipedia.org/wiki/Alexander_I_of_Russia,battle_1263789,Gunboat War,war_conflict_article,side_a,Anglo-Swedish victory Treaty of Kiel End of Denmark–Norway,victory,unknown,low
+Charles XIV John,https://en.wikipedia.org/wiki/Charles_XIV_John,battle_1263789,Gunboat War,war_conflict_article,side_b,Anglo-Swedish victory Treaty of Kiel End of Denmark–Norway,victory,unknown,low
+Claude-Victor Perrin,https://en.wikipedia.org/wiki/Claude-Victor_Perrin,battle_20460837,Siege of Kolberg (1807),battle_article,side_a,Siege lifted by peace treatyBodart 1908,unknown,unknown,low
+"Édouard Mortier, Duke of Treviso",https://en.wikipedia.org/wiki/%C3%89douard_Mortier%2C_Duke_of_Treviso,battle_20460837,Siege of Kolberg (1807),battle_article,side_a,Siege lifted by peace treatyBodart 1908,unknown,unknown,low
+Nikolay Kamensky,https://en.wikipedia.org/wiki/Nikolay_Kamensky,battle_39263901,Battle of Ruona–Salmi,battle_article,side_b,Swedish victory at RuonaVelichko Novitsky Schwartz Russian victory at SalmiVelichko Novitsky Schwartz,victory,unknown,low
+Charles-Pierre Augereau,https://en.wikipedia.org/wiki/Charles-Pierre_Augereau,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Jean-Baptiste Bessières,https://en.wikipedia.org/wiki/Jean-Baptiste_Bessi%C3%A8res,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Jean Lannes,https://en.wikipedia.org/wiki/Jean_Lannes,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+François Joseph Lefebvre,https://en.wikipedia.org/wiki/Fran%C3%A7ois_Joseph_Lefebvre,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Laurent de Gouvion Saint-Cyr,https://en.wikipedia.org/wiki/Laurent_de_Gouvion_Saint-Cyr,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Auguste de Marmont,https://en.wikipedia.org/wiki/Auguste_de_Marmont,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+André Masséna,https://en.wikipedia.org/wiki/Andr%C3%A9_Mass%C3%A9na,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+"Édouard Mortier, Duke of Treviso",https://en.wikipedia.org/wiki/%C3%89douard_Mortier%2C_Duke_of_Treviso,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Joachim Murat,https://en.wikipedia.org/wiki/Joachim_Murat,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Michel Ney,https://en.wikipedia.org/wiki/Michel_Ney,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Jean-de-Dieu Soult,https://en.wikipedia.org/wiki/Jean-de-Dieu_Soult,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Louis-Gabriel Suchet,https://en.wikipedia.org/wiki/Louis-Gabriel_Suchet,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Claude-Victor Perrin,https://en.wikipedia.org/wiki/Claude-Victor_Perrin,battle_102485,Peninsular War,war_conflict_article,side_b,Victory,victory,unknown,low
+Eugène de Beauharnais,https://en.wikipedia.org/wiki/Eug%C3%A8ne_de_Beauharnais,battle_32371245,Battle of Caldiero (1809),battle_article,side_a,Victory,victory,unknown,low
+Jean-de-Dieu Soult,https://en.wikipedia.org/wiki/Jean-de-Dieu_Soult,battle_1849129,Battle of Grijó,battle_article,side_b,Anglo-Portuguese victory,victory,unknown,low
+François Joseph Lefebvre,https://en.wikipedia.org/wiki/Fran%C3%A7ois_Joseph_Lefebvre,battle_10747227,Battles of Bergisel,battle_article,side_b,Victory,victory,unknown,low
+"Jean-Baptiste Drouet, Comte d'Erlon",https://en.wikipedia.org/wiki/Jean-Baptiste_Drouet%2C_Comte_d%27Erlon,battle_10747227,Battles of Bergisel,battle_article,side_b,Victory,victory,unknown,low
+Karl Philipp von Wrede,https://en.wikipedia.org/wiki/Karl_Philipp_von_Wrede,battle_10747227,Battles of Bergisel,battle_article,side_b,Victory,victory,unknown,low
+"Archduke Charles, Duke of Teschen",https://en.wikipedia.org/wiki/Archduke_Charles%2C_Duke_of_Teschen,battle_866485,War of the Fifth Coalition,war_conflict_article,side_a,French victory,victory,unknown,low
+Eugène de Beauharnais,https://en.wikipedia.org/wiki/Eug%C3%A8ne_de_Beauharnais,battle_866485,War of the Fifth Coalition,war_conflict_article,side_b,French victory,victory,unknown,low
+Joachim Murat,https://en.wikipedia.org/wiki/Joachim_Murat,battle_866485,War of the Fifth Coalition,war_conflict_article,side_b,French victory,victory,unknown,low
+Alexander I of Russia,https://en.wikipedia.org/wiki/Alexander_I_of_Russia,battle_866485,War of the Fifth Coalition,war_conflict_article,side_b,French victory,victory,unknown,low
+André Masséna,https://en.wikipedia.org/wiki/Andr%C3%A9_Mass%C3%A9na,battle_867731,Battle of Bussaco,battle_article,side_a,Tactical victory,tactical_victory,unknown,low
+Michel Ney,https://en.wikipedia.org/wiki/Michel_Ney,battle_867731,Battle of Bussaco,battle_article,side_a,Tactical victory,tactical_victory,unknown,low
+Muhammad Ali of Egypt,https://en.wikipedia.org/wiki/Muhammad_Ali_of_Egypt,battle_9182948,Battle of Al-Safra,battle_article,side_a,Wahhabi victory,victory,unknown,low
+Michel Ney,https://en.wikipedia.org/wiki/Michel_Ney,battle_25413056,Battle of Casal Novo,battle_article,side_a,Victory,victory,unknown,low
+André Masséna,https://en.wikipedia.org/wiki/Andr%C3%A9_Mass%C3%A9na,battle_157401,Battle of Fuentes de Oñoro,battle_article,side_b,Anglo-Portuguese victoryBodart 1908,unknown,unknown,low
+Charles XIV John,https://en.wikipedia.org/wiki/Charles_XIV_John,battle_2934328,Battle of Großbeeren,battle_article,side_a,Coalition victory,victory,unknown,low
+Friedrich Wilhelm Freiherr von Bülow,https://en.wikipedia.org/wiki/Friedrich_Wilhelm_Freiherr_von_B%C3%BClow,battle_2934328,Battle of Großbeeren,battle_article,side_a,Coalition victory,victory,unknown,low
+Charles-Pierre Augereau,https://en.wikipedia.org/wiki/Charles-Pierre_Augereau,battle_49818495,Battle of Limonest,battle_article,side_b,Coalition victoryBodart 1908Smith 1998,unknown,unknown,low
+Eugène de Beauharnais,https://en.wikipedia.org/wiki/Eug%C3%A8ne_de_Beauharnais,battle_4074078,Battle of the Mincio River (1814),battle_article,side_a,Victory,victory,unknown,low
+Charles XIV John,https://en.wikipedia.org/wiki/Charles_XIV_John,battle_2293357,Swedish–Norwegian War,war_conflict_article,side_b,Victory,victory,unknown,low
+Joachim Murat,https://en.wikipedia.org/wiki/Joachim_Murat,battle_1670766,Battle of Tolentino,battle_article,side_b,Victory,victory,unknown,low
+Joachim Murat,https://en.wikipedia.org/wiki/Joachim_Murat,battle_13125889,Battle of the Panaro,battle_article,side_a,Neapolitan victory,victory,unknown,low
+Gebhard Leberecht von Blücher,https://en.wikipedia.org/wiki/Gebhard_Leberecht_von_Bl%C3%BCcher,battle_215994,Hundred Days,battle_article,side_a,Victory,victory,unknown,low
+"Archduke Charles, Duke of Teschen",https://en.wikipedia.org/wiki/Archduke_Charles%2C_Duke_of_Teschen,battle_215994,Hundred Days,battle_article,side_a,Victory,victory,unknown,low
+William I of the Netherlands,https://en.wikipedia.org/wiki/William_I_of_the_Netherlands,battle_215994,Hundred Days,battle_article,side_a,Victory,victory,unknown,low
+Alexander I of Russia,https://en.wikipedia.org/wiki/Alexander_I_of_Russia,battle_215994,Hundred Days,battle_article,side_a,Victory,victory,unknown,low
+Napoleon Bonaparte,https://en.wikipedia.org/wiki/Napoleon,battle_215994,Hundred Days,battle_article,side_b,Victory,victory,unknown,low
+Louis-Nicolas Davout,https://en.wikipedia.org/wiki/Louis-Nicolas_Davout,battle_215994,Hundred Days,battle_article,side_b,Victory,victory,unknown,low
+Michel Ney,https://en.wikipedia.org/wiki/Michel_Ney,battle_215994,Hundred Days,battle_article,side_b,Victory,victory,unknown,low
+Louis-Gabriel Suchet,https://en.wikipedia.org/wiki/Louis-Gabriel_Suchet,battle_215994,Hundred Days,battle_article,side_b,Victory,victory,unknown,low
+Jean-de-Dieu Soult,https://en.wikipedia.org/wiki/Jean-de-Dieu_Soult,battle_215994,Hundred Days,battle_article,side_b,Victory,victory,unknown,low
+Joachim Murat,https://en.wikipedia.org/wiki/Joachim_Murat,battle_215994,Hundred Days,battle_article,side_b,Victory,victory,unknown,low
+Joachim Murat,https://en.wikipedia.org/wiki/Joachim_Murat,battle_566640,Neapolitan War,war_conflict_article,side_b,Austrian victory Treaty of Casalanza Murat ousted from Neapolitan throne,victory,unknown,low
+Mahmud II,https://en.wikipedia.org/wiki/Mahmud_II,battle_7115697,Wallachian uprising of 1821,battle_article,side_c,Ottoman military victory Wallachian political victory End of the Phanariote Era,victory,unknown,low
+Theodoros Kolokotronis,https://en.wikipedia.org/wiki/Theodoros_Kolokotronis,battle_6772121,Battle of Dervenakia,battle_article,side_a,Greek victory Destruction of Dramali's army,victory,unknown,low
+Maharaja Ranjit Singh,https://en.wikipedia.org/wiki/Ranjit_Singh,battle_25839238,Battle of Nowshera,battle_article,side_a,Sikh – Durrani victoryStewart 2011 Yar Muhammad reinstated as governor of PeshawarLee 2019,unknown,unknown,low
+Hari Singh Nalwa,https://en.wikipedia.org/wiki/Hari_Singh_Nalwa,battle_25839238,Battle of Nowshera,battle_article,side_a,Sikh – Durrani victoryStewart 2011 Yar Muhammad reinstated as governor of PeshawarLee 2019,unknown,unknown,low
+Winfield Scott,https://en.wikipedia.org/wiki/Winfield_Scott,battle_21073732,Mexican–American War,war_conflict_article,side_a,Victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_863,American Civil War,war_conflict_article,side_b,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_84849,Battle of Antietam,battle_article,side_b,Victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_1348572,Battle of Beaver Dam Creek,battle_article,side_b,Victory,victory,unknown,low
+George Crook,https://en.wikipedia.org/wiki/George_Crook,battle_70822774,Battle of Lewisburg,battle_article,side_a,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_44812438,Battle of Malvern Hill,battle_article,side_b,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_540026,Battle of South Mountain,battle_article,side_b,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_998780,Seven Days Battles,battle_article,side_b,Victory,victory,unknown,low
+George Crook,https://en.wikipedia.org/wiki/George_Crook,battle_906255,Battle of Cedar Creek,battle_article,side_a,Union victory,victory,unknown,low
+George Crook,https://en.wikipedia.org/wiki/George_Crook,battle_1501860,Battle of Cloyd's Mountain,battle_article,side_a,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_77667,Siege of Petersburg,battle_article,side_b,Union victory,victory,unknown,low
+George Crook,https://en.wikipedia.org/wiki/George_Crook,battle_1501334,Third Battle of Winchester,battle_article,side_a,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_1478485,Battle of Appomattox Court House,battle_article,side_b,Union victory surrender of the Army of Northern Virginia De facto end of the Civil War,victory,unknown,low
+Nelson A. Miles,https://en.wikipedia.org/wiki/Nelson_A._Miles,battle_4019384,Battle of Sutherland's Station,battle_article,side_a,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_1644100,Battle of White Oak Road,battle_article,side_b,Union victory,victory,unknown,low
+Robert E. Lee,https://en.wikipedia.org/wiki/Robert_E._Lee,battle_1642568,Third Battle of Petersburg,battle_article,side_b,"Union victory: End of the Siege of Petersburg and opening of the Appomattox Campaign Fall of Richmond on April 3, 1865",victory,unknown,low
+Nelson A. Miles,https://en.wikipedia.org/wiki/Nelson_A._Miles,battle_44845145,Battle of Little Muddy Creek,battle_article,side_a,American victory,victory,unknown,low
+Yamagata Aritomo,https://en.wikipedia.org/wiki/Yamagata_Aritomo,battle_1501861,Battle of Shiroyama,battle_article,side_a,Imperial victory,victory,unknown,low
+Yamagata Aritomo,https://en.wikipedia.org/wiki/Yamagata_Aritomo,battle_412862,Satsuma Rebellion,war_conflict_article,side_a,Imperial victory,victory,unknown,low
+Yamagata Aritomo,https://en.wikipedia.org/wiki/Yamagata_Aritomo,battle_15188907,Siege of Kumamoto Castle,battle_article,side_a,Imperial victory,victory,unknown,low
+Hubert Gough,https://en.wikipedia.org/wiki/Hubert_Gough,battle_19099717,Battle of Blood River Poort,battle_article,side_a,Boer victory,victory,unknown,low
+Abdulaziz Ibn Saud,https://en.wikipedia.org/wiki/Ibn_Saud,battle_16176996,Battle of Dilam,battle_article,side_b,Saudi victory,victory,unknown,low
+Andranik Ozanian,https://en.wikipedia.org/wiki/Andranik,battle_8863748,1904 Sasun uprising,battle_article,side_b,Uprising suppressed,unknown,unknown,low
+Abdulaziz Ibn Saud,https://en.wikipedia.org/wiki/Ibn_Saud,battle_16282038,Battle of Al-Bukiryah,battle_article,side_b,Saudi victory,victory,unknown,low
+Abdulaziz Ibn Saud,https://en.wikipedia.org/wiki/Ibn_Saud,battle_34248627,Battle of Unaizah (1904),battle_article,side_b,Emirate of Nejd victory,victory,unknown,low
+Abdulaziz Ibn Saud,https://en.wikipedia.org/wiki/Ibn_Saud,battle_16479369,Battle of Rawdat Muhanna,battle_article,side_b,Emirate of Riyadh victory,victory,unknown,low
+Enver Pasha,https://en.wikipedia.org/wiki/Enver_Pasha,battle_5053598,1913 Ottoman coup d'état,battle_article,side_a,Victory,victory,unknown,low
+Radomir Putnik,https://en.wikipedia.org/wiki/Radomir_Putnik,battle_294430,Second Balkan War,war_conflict_article,side_b,Bulgarian defeat,defeat,unknown,low
+Stepa Stepanović,https://en.wikipedia.org/wiki/Stepa_Stepanovi%C4%87,battle_294430,Second Balkan War,war_conflict_article,side_b,Bulgarian defeat,defeat,unknown,low
+Petar Bojović,https://en.wikipedia.org/wiki/Petar_Bojovi%C4%87,battle_294430,Second Balkan War,war_conflict_article,side_b,Bulgarian defeat,defeat,unknown,low
+Enver Pasha,https://en.wikipedia.org/wiki/Enver_Pasha,battle_294430,Second Balkan War,war_conflict_article,side_b,Bulgarian defeat,defeat,unknown,low
+Ferdinand Foch,https://en.wikipedia.org/wiki/Ferdinand_Foch,battle_171325,First Battle of the Marne,battle_article,side_a,Entente victory Failure of Schlieffen Plan,victory,unknown,low
+Radomir Putnik,https://en.wikipedia.org/wiki/Radomir_Putnik,battle_7931714,Kosovo offensive (1915),operation_article,side_b,Central Powers victory,victory,unknown,low
+Petar Bojović,https://en.wikipedia.org/wiki/Petar_Bojovi%C4%87,battle_7931714,Kosovo offensive (1915),operation_article,side_b,Central Powers victory,victory,unknown,low
+Živojin Mišić,https://en.wikipedia.org/wiki/%C5%BDivojin_Mi%C5%A1i%C4%87,battle_7931714,Kosovo offensive (1915),operation_article,side_b,Central Powers victory,victory,unknown,low
+Stepa Stepanović,https://en.wikipedia.org/wiki/Stepa_Stepanovi%C4%87,battle_7931714,Kosovo offensive (1915),operation_article,side_b,Central Powers victory,victory,unknown,low
+Enver Pasha,https://en.wikipedia.org/wiki/Enver_Pasha,battle_627596,Basmachi movement,war_conflict_article,side_b,Soviet-Afghan victory,victory,unknown,low
+Živojin Mišić,https://en.wikipedia.org/wiki/%C5%BDivojin_Mi%C5%A1i%C4%87,battle_25894154,Battle of the Crna Bend (1916),battle_article,side_a,Entente victory,victory,unknown,low
+Enver Pasha,https://en.wikipedia.org/wiki/Enver_Pasha,battle_78293902,Central Asian Front of the Russian Civil War,war_conflict_article,side_b,Victory,victory,unknown,low
+Agha Petros,https://en.wikipedia.org/wiki/Agha_Petros,battle_72911672,Battle of Seray Mountain,battle_article,side_a,Assyrian victoryHaddad 1996,unknown,unknown,low
+Abdulaziz Ibn Saud,https://en.wikipedia.org/wiki/Ibn_Saud,battle_35926995,Al-Khurma dispute,battle_article,side_a,Saudi victory,victory,unknown,low
+Faisal bin Hussein,https://en.wikipedia.org/wiki/Faisal_I,battle_31376607,Iraqi–Kurdish conflict,war_conflict_article,side_b,Defeat,defeat,unknown,low
+Henri Gouraud,https://en.wikipedia.org/wiki/Henri_Gouraud,battle_5704020,Battle of Marash,battle_article,side_b,Turkish victory French troops abandon Marash,victory,unknown,low
+Mustafa Kemal Atatürk,https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk,battle_1115528,Battle of the Sakarya,battle_article,side_b,Turkish victory Greek advance halted,victory,unknown,low
+Enver Pasha,https://en.wikipedia.org/wiki/Enver_Pasha,battle_77065271,Battles for Dushanbe (1922),battle_article,side_b,Bolshevik victory,victory,unknown,low
+Mustafa Kemal Atatürk,https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk,battle_8309183,Koçgiri rebellion,war_conflict_article,side_a,Turkish victory,victory,unknown,low
+Mustafa Kemal Atatürk,https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk,battle_60517284,Assyrian rebellion,war_conflict_article,side_b,Victory,victory,unknown,low
+Joseph Stalin,https://en.wikipedia.org/wiki/Joseph_Stalin,battle_1545161,August Uprising,battle_article,side_a,Soviet government victory Consolidation of Soviet rule in the Georgian SSR,victory,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_30754239,Canton Merchants' Corps Uprising,battle_article,side_a,Government victory,victory,unknown,low
+Abdulaziz Ibn Saud,https://en.wikipedia.org/wiki/Ibn_Saud,battle_13657367,Battle of Jeddah (1925),battle_article,side_a,Najdi victory,victory,unknown,low
+Mustafa Kemal Atatürk,https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk,battle_9713388,Sheikh Said rebellion,war_conflict_article,side_a,Turkish victory Revolt suppressed Sheikh Said executed,victory,unknown,low
+Joseph Stalin,https://en.wikipedia.org/wiki/Joseph_Stalin,battle_60599051,Urtatagai conflict (1925–1926),war_conflict_article,side_a,Victory,victory,unknown,low
+Mao Zedong,https://en.wikipedia.org/wiki/Mao_Zedong,battle_644162,Autumn Harvest Uprising,battle_article,side_b,"Uprising crushed, Communists forced to retreat to the Jinggang Mountains",unknown,unknown,low
+Zhang Fakui,https://en.wikipedia.org/wiki/Zhang_Fakui,battle_49451077,Battle of Humen-Shijing,battle_article,side_b,Zhang Fakui's supporters occupy Humen and Shijing,unknown,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_6795857,Shanghai massacre,battle_article,side_a,Split within the Kuomintang End of the First United Front Start of Autumn Harvest Uprising,unknown,unknown,low
+Bai Chongxi,https://en.wikipedia.org/wiki/Bai_Chongxi,battle_6795857,Shanghai massacre,battle_article,side_a,Split within the Kuomintang End of the First United Front Start of Autumn Harvest Uprising,unknown,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_6045837,Central Plains War,war_conflict_article,side_a,"Nationalist government victory Resignation of Yan and Feng Resumption, then end, of the Warlord Era",victory,unknown,low
+Bai Chongxi,https://en.wikipedia.org/wiki/Bai_Chongxi,battle_6045837,Central Plains War,war_conflict_article,side_b,"Nationalist government victory Resignation of Yan and Feng Resumption, then end, of the Warlord Era",victory,unknown,low
+Rodolfo Graziani,https://en.wikipedia.org/wiki/Rodolfo_Graziani,battle_76818971,Battle of Uadi Bu Taga,battle_article,side_a,Italian victoryLibyan Heritage HouseQuirino 2003,unknown,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_63479770,Battle of Chishui River,battle_article,side_a,Communist forces manage to maneuver out of the Nationalists' encirclement,unknown,unknown,low
+Xue Yue,https://en.wikipedia.org/wiki/Xue_Yue,battle_63479770,Battle of Chishui River,battle_article,side_a,Communist forces manage to maneuver out of the Nationalists' encirclement,unknown,unknown,low
+Bai Chongxi,https://en.wikipedia.org/wiki/Bai_Chongxi,battle_63479770,Battle of Chishui River,battle_article,side_a,Communist forces manage to maneuver out of the Nationalists' encirclement,unknown,unknown,low
+Mao Zedong,https://en.wikipedia.org/wiki/Mao_Zedong,battle_63479770,Battle of Chishui River,battle_article,side_b,Communist forces manage to maneuver out of the Nationalists' encirclement,unknown,unknown,low
+Peng Dehuai,https://en.wikipedia.org/wiki/Peng_Dehuai,battle_63479770,Battle of Chishui River,battle_article,side_b,Communist forces manage to maneuver out of the Nationalists' encirclement,unknown,unknown,low
+Bernard Montgomery,https://en.wikipedia.org/wiki/Bernard_Montgomery,battle_304601,1936–1939 Arab revolt in Palestine,battle_article,side_a,Revolt suppressed Issuance of the White Paper of 1939,unknown,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_27997386,Islamic rebellion in Xinjiang (1937),war_conflict_article,side_a,Provincial government victory,victory,unknown,low
+Fedor von Bock,https://en.wikipedia.org/wiki/Fedor_von_Bock,battle_309288,Invasion of Poland,battle_article,side_a,Victory,victory,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_309288,Invasion of Poland,battle_article,side_a,Victory,victory,unknown,low
+Joseph Stalin,https://en.wikipedia.org/wiki/Joseph_Stalin,battle_33924,Winter War,war_conflict_article,side_b,Moscow Peace Treaty,unknown,unknown,low
+Kirill Meretskov,https://en.wikipedia.org/wiki/Kirill_Meretskov,battle_33924,Winter War,war_conflict_article,side_b,Moscow Peace Treaty,unknown,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_228080,Battle of France,battle_article,side_a,Axis victory,victory,unknown,low
+Fedor von Bock,https://en.wikipedia.org/wiki/Fedor_von_Bock,battle_228080,Battle of France,battle_article,side_a,Axis victory,victory,unknown,low
+Heinz Guderian,https://en.wikipedia.org/wiki/Heinz_Guderian,battle_228080,Battle of France,battle_article,side_a,Axis victory,victory,unknown,low
+Erich Hoepner,https://en.wikipedia.org/wiki/Erich_Hoepner,battle_25467180,Battle of Gembloux (1940),battle_article,side_b,Victory,victory,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_41099690,Battle of the Ypres–Comines Canal,battle_article,side_b,Successful British delaying action Withdrawal of the BEF to Dunkirk,unknown,unknown,low
+Peng Dehuai,https://en.wikipedia.org/wiki/Peng_Dehuai,battle_24911268,Hundred Regiments Offensive,operation_article,side_a,Chinese victory,victory,unknown,low
+Georg von Küchler,https://en.wikipedia.org/wiki/Georg_von_K%C3%BCchler,battle_17191607,Baltic operation,operation_article,side_a,Victory,victory,unknown,low
+Erich Hoepner,https://en.wikipedia.org/wiki/Erich_Hoepner,battle_17191607,Baltic operation,operation_article,side_a,Victory,victory,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_1177270,Battle of Kiev (1941),battle_article,side_a,German victory Encirclement and destruction of Soviet Southwestern Front Beginning of Battle of Moscow,victory,unknown,low
+Heinz Guderian,https://en.wikipedia.org/wiki/Heinz_Guderian,battle_1177270,Battle of Kiev (1941),battle_article,side_a,German victory Encirclement and destruction of Soviet Southwestern Front Beginning of Battle of Moscow,victory,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_1634809,Battle of Uman,battle_article,side_a,Axis victory,victory,unknown,low
+Wolfram von Richthofen,https://en.wikipedia.org/wiki/Wolfram_von_Richthofen,battle_7541477,Battle of the Kerch Peninsula,battle_article,side_a,Axis victory,victory,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_12383316,Battle of the Sea of Azov,battle_article,side_a,"Axis victory Encirclement & destruction of Soviet 9th & 18th Armies German forces advance on Crimea, Kharkov, and Rostov",victory,unknown,low
+Kirill Meretskov,https://en.wikipedia.org/wiki/Kirill_Meretskov,battle_11826673,Finnish invasion of East Karelia (1941),operation_article,side_b,Finnish victory,victory,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_342641,Pacific War,war_conflict_article,side_a,Allied victory,victory,unknown,low
+Wolfram von Richthofen,https://en.wikipedia.org/wiki/Wolfram_von_Richthofen,battle_1277307,Siege of Sevastopol (1941–1942),battle_article,side_a,Axis victory,victory,unknown,low
+Fedor von Bock,https://en.wikipedia.org/wiki/Fedor_von_Bock,battle_1636789,Battle of Voronezh (1942),battle_article,side_a,Axis victory,victory,unknown,low
+Rodion Malinovsky,https://en.wikipedia.org/wiki/Rodion_Malinovsky,battle_1636789,Battle of Voronezh (1942),battle_article,side_b,Axis victory,victory,unknown,low
+Wolfram von Richthofen,https://en.wikipedia.org/wiki/Wolfram_von_Richthofen,battle_1387508,Case Blue,operation_article,side_a,Axis strategic failure,unknown,unknown,low
+Joseph Stalin,https://en.wikipedia.org/wiki/Joseph_Stalin,battle_1387508,Case Blue,operation_article,side_b,Axis strategic failure,unknown,unknown,low
+William Halsey Jr.,https://en.wikipedia.org/wiki/William_Halsey_Jr.,battle_22282934,Marshalls–Gilberts raids,battle_article,side_a,Minor damage to Japanese garrisons,unknown,unknown,low
+Fedor von Bock,https://en.wikipedia.org/wiki/Fedor_von_Bock,battle_1018445,Second Battle of Kharkov,battle_article,side_a,Axis victory,victory,unknown,low
+Ivan Bagramyan,https://en.wikipedia.org/wiki/Ivan_Bagramyan,battle_1018445,Second Battle of Kharkov,battle_article,side_b,Axis victory,victory,unknown,low
+Joseph Stalin,https://en.wikipedia.org/wiki/Joseph_Stalin,battle_16352626,Dnieper–Carpathian offensive,operation_article,side_a,Victory,victory,unknown,low
+Giovanni Messe,https://en.wikipedia.org/wiki/Giovanni_Messe,battle_9870769,Italian Civil War,war_conflict_article,side_a,Victory,victory,unknown,low
+Rodolfo Graziani,https://en.wikipedia.org/wiki/Rodolfo_Graziani,battle_9870769,Italian Civil War,war_conflict_article,side_b,Victory,victory,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_19224918,Operation Achse,operation_article,side_b,Axis victory,victory,unknown,low
+Rodolfo Graziani,https://en.wikipedia.org/wiki/Rodolfo_Graziani,battle_31829992,Battle of Garfagnana,battle_article,side_b,Axis victory,victory,unknown,low
+Dwight D. Eisenhower,https://en.wikipedia.org/wiki/Dwight_D._Eisenhower,battle_57998,Battle of the Bulge,battle_article,side_a,Victory,victory,unknown,low
+Bernard Montgomery,https://en.wikipedia.org/wiki/Bernard_Montgomery,battle_57998,Battle of the Bulge,battle_article,side_a,Victory,victory,unknown,low
+Omar Bradley,https://en.wikipedia.org/wiki/Omar_Bradley,battle_57998,Battle of the Bulge,battle_article,side_a,Victory,victory,unknown,low
+George S. Patton,https://en.wikipedia.org/wiki/George_S._Patton,battle_57998,Battle of the Bulge,battle_article,side_a,Victory,victory,unknown,low
+Gerd von Rundstedt,https://en.wikipedia.org/wiki/Gerd_von_Rundstedt,battle_57998,Battle of the Bulge,battle_article,side_b,Victory,victory,unknown,low
+Fyodor Tolbukhin,https://en.wikipedia.org/wiki/Fyodor_Tolbukhin,battle_17229910,Belgrade offensive,operation_article,side_a,Victory,victory,unknown,low
+Ivan Konev,https://en.wikipedia.org/wiki/Ivan_Konev,battle_21975983,First Battle of Târgu Frumos,battle_article,side_b,Axis victoryGlantzGlantz,unknown,unknown,low
+Ivan Konev,https://en.wikipedia.org/wiki/Ivan_Konev,battle_21982576,First Jassy–Kishinev offensive,operation_article,side_b,Axis victoryGlantz,unknown,unknown,low
+Rodion Malinovsky,https://en.wikipedia.org/wiki/Rodion_Malinovsky,battle_21982576,First Jassy–Kishinev offensive,operation_article,side_b,Axis victoryGlantz,unknown,unknown,low
+Joseph Stalin,https://en.wikipedia.org/wiki/Joseph_Stalin,battle_1761990,Kamenets–Podolsky pocket,operation_article,side_b,Victory,victory,unknown,low
+Georgy Zhukov,https://en.wikipedia.org/wiki/Georgy_Zhukov,battle_1761990,Kamenets–Podolsky pocket,operation_article,side_b,Victory,victory,unknown,low
+Ivan Konev,https://en.wikipedia.org/wiki/Ivan_Konev,battle_3535371,Second Battle of Târgu Frumos,battle_article,side_b,Axis victory,victory,unknown,low
+Joseph Stalin,https://en.wikipedia.org/wiki/Joseph_Stalin,battle_4215601,Second Jassy–Kishinev offensive,operation_article,side_a,Victory,victory,unknown,low
+Fyodor Tolbukhin,https://en.wikipedia.org/wiki/Fyodor_Tolbukhin,battle_4215601,Second Jassy–Kishinev offensive,operation_article,side_a,Victory,victory,unknown,low
+Kirill Meretskov,https://en.wikipedia.org/wiki/Kirill_Meretskov,battle_4838342,Vyborg–Petrozavodsk offensive,operation_article,side_b,Moscow Armistice,unknown,unknown,low
+Hisaichi Terauchi,https://en.wikipedia.org/wiki/Hisaichi_Terauchi,battle_79532280,Civil conflicts in Vietnam (1945–1949),war_conflict_article,side_c,Victory,victory,unknown,low
+Bernard Montgomery,https://en.wikipedia.org/wiki/Bernard_Montgomery,battle_535273,Operation Plunder,operation_article,side_a,Allied victory,victory,unknown,low
+Rodolfo Graziani,https://en.wikipedia.org/wiki/Rodolfo_Graziani,battle_12104288,Spring 1945 offensive in Italy,operation_article,side_b,Victory,victory,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_9413636,Autumn Offensive of 1947 in Northeast China,operation_article,side_a,Communist victory,victory,unknown,low
+Peng Dehuai,https://en.wikipedia.org/wiki/Peng_Dehuai,battle_41226218,Battle of Yan'an,battle_article,side_b,Nationalist victory,victory,unknown,low
+Chiang Kai-shek,https://en.wikipedia.org/wiki/Chiang_Kai-shek,battle_1218341,Battle of Guningtou,battle_article,side_a,Republic of China victory,victory,unknown,low
+Mao Zedong,https://en.wikipedia.org/wiki/Mao_Zedong,battle_1218341,Battle of Guningtou,battle_article,side_b,Republic of China victory,victory,unknown,low
+Xue Yue,https://en.wikipedia.org/wiki/Xue_Yue,battle_15191556,Battle of Hainan Island,battle_article,side_b,Communist victory,victory,unknown,low
+Douglas MacArthur,https://en.wikipedia.org/wiki/Douglas_MacArthur,battle_1055744,Battle of Inchon,battle_article,side_a,Victory,victory,unknown,low
+Peng Dehuai,https://en.wikipedia.org/wiki/Peng_Dehuai,battle_856325,Battle of the Imjin River,battle_article,side_b,Victory,victory,unknown,low
+Peng Dehuai,https://en.wikipedia.org/wiki/Peng_Dehuai,battle_2821556,Battle of the Twin Tunnels,battle_article,side_b,UN victory,victory,unknown,low
+Dwight D. Eisenhower,https://en.wikipedia.org/wiki/Dwight_D._Eisenhower,battle_415767,1953 Iranian coup d'état,operation_article,side_b,Victory,victory,unknown,low
+Dwight D. Eisenhower,https://en.wikipedia.org/wiki/Dwight_D._Eisenhower,battle_613055,1954 Guatemalan coup d'état,operation_article,side_b,Victory,victory,unknown,low
+Ivan Konev,https://en.wikipedia.org/wiki/Ivan_Konev,battle_29784661,1961 F-84 Thunderstreak incident,operation_article,side_b,West German fighters landed safely,unknown,unknown,low
+Abdul Rashid Dostum,https://en.wikipedia.org/wiki/Abdul_Rashid_Dostum,battle_10798933,Battle of Kabul (1992–1996),battle_article,multiple_sides,Victory,victory,ambiguous_multi_side_commander,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_22972419,Fall of Kabul (2001),battle_article,side_a,Victory,victory,unknown,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_23010233,Fall of Kandahar,operation_article,side_a,Victory,victory,unknown,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_23099057,Iraqi Kurdistan conflict (2001–2003),war_conflict_article,side_b,Kurdistan Region–United States victory Kurdistan Regional Government regains control of the Islamic Emirate of Kurdistan,victory,unknown,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_22972195,Operation Crescent Wind,operation_article,side_a,US–UK victory,victory,unknown,low
+Abdul Rashid Dostum,https://en.wikipedia.org/wiki/Abdul_Rashid_Dostum,battle_4512092,Taliban insurgency,war_conflict_article,side_a,Victory,victory,unknown,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_4512092,Taliban insurgency,war_conflict_article,side_a,Victory,victory,unknown,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_8812611,Operation Enduring Freedom – Horn of Africa,operation_article,side_a,21 high level Al-Shabaab leaders killed,unknown,unknown,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_207031,Battle of Baghdad (2003),battle_article,side_a,Victory,victory,unknown,low
+Tommy Franks,https://en.wikipedia.org/wiki/Tommy_Franks,battle_847626,Iraqi insurgency (2003–2011),war_conflict_article,side_a,Defeat,defeat,unknown,low
+Qasem Soleimani,https://en.wikipedia.org/wiki/Qasem_Soleimani,battle_19729651,Iran–PJAK conflict,war_conflict_article,side_a,Victory,victory,unknown,low
+Valery Gerasimov,https://en.wikipedia.org/wiki/Valery_Gerasimov,battle_22353469,Insurgency in the North Caucasus,war_conflict_article,side_a,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_37315707,Siege of Daraa,battle_article,side_b,FSA victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_36494808,Battle of Aleppo (2012–2016),battle_article,side_a,Victory,victory,unknown,low
+Qasem Soleimani,https://en.wikipedia.org/wiki/Qasem_Soleimani,battle_36494808,Battle of Aleppo (2012–2016),battle_article,side_a,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_59852438,Siege of Northern Homs,battle_article,side_a,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_56656382,Siege of Eastern Ghouta,battle_article,side_b,Victory,victory,unknown,low
+Qasem Soleimani,https://en.wikipedia.org/wiki/Qasem_Soleimani,battle_44430686,Battle of Baiji (2014–2015),battle_article,side_a,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_42365990,Battle of Morek,battle_article,side_b,Syrian government victory,victory,unknown,low
+Hulusi Akar,https://en.wikipedia.org/wiki/Hulusi_Akar,battle_47342615,Operation Martyr Yalçın,operation_article,side_a,Turkiye Tactical victory,tactical_victory,unknown,low
+Qasem Soleimani,https://en.wikipedia.org/wiki/Qasem_Soleimani,battle_45549617,Second Battle of Tikrit,battle_article,side_a,Victory,victory,unknown,low
+Hulusi Akar,https://en.wikipedia.org/wiki/Hulusi_Akar,battle_51082294,2016 Turkish coup d'état attempt,battle_article,side_b,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_54363632,2017 Southern Raqqa offensive,operation_article,side_a,Victory,victory,unknown,low
+Abdul Rashid Dostum,https://en.wikipedia.org/wiki/Abdul_Rashid_Dostum,battle_53899276,Battle of Darzab (2017),battle_article,side_c,ISIL victory ISIL captures most of Darzab and Qush Tepa District from Taliban,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_53450288,East Aleppo offensive (2017),operation_article,side_a,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_54012283,Maskanah Plains offensive,operation_article,side_a,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_53164060,Palmyra offensive (2017),operation_article,side_a,Victory,victory,unknown,low
+Qasem Soleimani,https://en.wikipedia.org/wiki/Qasem_Soleimani,battle_54675905,Qalamoun offensive (2017),operation_article,side_a,Victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_57645711,2018 Southern Syria offensive,operation_article,side_a,Syrian government victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_57232388,Eastern Qalamoun offensive (April 2018),operation_article,side_a,Decisive victory,decisive_victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_62364188,Northwestern Syria offensive (2019–2020),operation_article,side_a,Syrian government victory,victory,unknown,low
+Hulusi Akar,https://en.wikipedia.org/wiki/Hulusi_Akar,battle_62364188,Northwestern Syria offensive (2019–2020),operation_article,side_b,Syrian government victory,victory,unknown,low
+Hulusi Akar,https://en.wikipedia.org/wiki/Hulusi_Akar,battle_60895741,Operation Claw (2019–2020),operation_article,side_a,Victory,victory,unknown,low
+Valery Gerasimov,https://en.wikipedia.org/wiki/Valery_Gerasimov,battle_73987015,2023 Ukrainian counteroffensive,operation_article,side_b,Ukrainian operational failure,unknown,unknown,low
+Valery Gerasimov,https://en.wikipedia.org/wiki/Valery_Gerasimov,battle_74115393,Wagner Group rebellion,war_conflict_article,side_b,Wagner mercenaries halt advance after ~23 hours and begin withdrawing at 11:00 p.m. local time (see: Resolution),unknown,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_78529501,2024 Homs offensive,operation_article,side_b,Syrian opposition victory,victory,unknown,low
+Suhayl al-Hasan,https://en.wikipedia.org/wiki/Suhayl_al-Hasan,battle_78477542,Battle of Aleppo (2024),battle_article,side_b,Syrian opposition victory Syrian government forces retreat from the city SDF enclave within the city besieged by rebels,victory,unknown,low

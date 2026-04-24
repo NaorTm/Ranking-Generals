@@ -124,6 +124,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
     commander_tiers = load_optional_csv(snapshot_dir, "derived_scoring/commander_tiers.csv")
     page_type_contributions = load_optional_csv(snapshot_dir, "derived_scoring/page_type_score_contributions.csv")
     high_ranked_flags = load_optional_csv(snapshot_dir, "audits/high_ranked_commander_flags.csv")
+    rank_confidence = load_optional_csv(snapshot_dir, "derived_scoring/commander_rank_confidence_summary.csv")
+    confidence_adjusted_tiers = load_optional_csv(snapshot_dir, "derived_scoring/commander_tiers_confidence_adjusted.csv")
 
     sensitivity_numeric = [
         "best_rank",
@@ -308,6 +310,35 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         )
     if not high_ranked_flags.empty:
         to_numeric(high_ranked_flags, ["rank_hierarchical_trust_v2", "supporting_value"])
+    if not rank_confidence.empty:
+        to_numeric(
+            rank_confidence,
+            [
+                "headline_rank",
+                "median_rank",
+                "rank_p10",
+                "rank_p90",
+                "rank_band_width_80",
+                "rank_band_width_90",
+                "broad_page_contribution_share",
+                "known_outcome_count",
+                "bootstrap_presence_rate",
+            ],
+        )
+    if not confidence_adjusted_tiers.empty:
+        to_numeric(
+            confidence_adjusted_tiers,
+            [
+                "headline_rank",
+                "median_rank",
+                "rank_p10",
+                "rank_p90",
+                "rank_band_width_80",
+                "rank_band_width_90",
+                "bootstrap_presence_rate",
+                "score_normalized",
+            ],
+        )
 
     commander_ids = set(sensitivity["analytic_commander_id"])
     outcome_profile = outcome_profile[outcome_profile["analytic_commander_id"].isin(commander_ids)]
@@ -324,6 +355,12 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         ]
     if not high_ranked_flags.empty:
         high_ranked_flags = high_ranked_flags[high_ranked_flags["analytic_commander_id"].isin(commander_ids)]
+    if not rank_confidence.empty:
+        rank_confidence = rank_confidence[rank_confidence["analytic_commander_id"].isin(commander_ids)]
+    if not confidence_adjusted_tiers.empty:
+        confidence_adjusted_tiers = confidence_adjusted_tiers[
+            confidence_adjusted_tiers["analytic_commander_id"].isin(commander_ids)
+        ]
 
     stability_by_id = {
         row["analytic_commander_id"]: {
@@ -383,6 +420,30 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 }
                 for _, row in group.sort_values("flag").iterrows()
             ]
+    rank_confidence_by_id = {
+        row["analytic_commander_id"]: {
+            "headlineRank": clean_value(row.get("headline_rank")),
+            "medianRank": clean_value(row.get("median_rank")),
+            "rankInterval80": clean_value(row.get("rank_interval_80")),
+            "rankInterval90": clean_value(row.get("rank_interval_90")),
+            "rankP10": clean_value(row.get("rank_p10")),
+            "rankP90": clean_value(row.get("rank_p90")),
+            "rankBandWidth80": clean_value(row.get("rank_band_width_80")),
+            "rankBandWidth90": clean_value(row.get("rank_band_width_90")),
+            "confidenceCategory": clean_value(row.get("confidence_category")),
+            "bootstrapPresenceRate": clean_value(row.get("bootstrap_presence_rate")),
+            "recommendedInterpretation": clean_value(row.get("recommended_interpretation")),
+        }
+        for _, row in rank_confidence.iterrows()
+    } if not rank_confidence.empty else {}
+    confidence_tier_by_id = {
+        row["analytic_commander_id"]: {
+            "key": clean_value(row.get("confidence_adjusted_tier_key")),
+            "label": clean_value(row.get("confidence_adjusted_tier")),
+            "reason": clean_value(row.get("confidence_adjusted_tier_reason")),
+        }
+        for _, row in confidence_adjusted_tiers.iterrows()
+    } if not confidence_adjusted_tiers.empty else {}
 
     summary = summary.rename(columns={column: f"summary_{column}" for column in summary.columns})
     classification = classification.rename(
@@ -442,6 +503,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         tier_info = tier_by_id.get(row.get("analytic_commander_id"), {})
         audit_flags = audit_flags_by_id.get(row.get("analytic_commander_id"), [])
         page_contributions = page_contributions_by_id.get(row.get("analytic_commander_id"), [])
+        rank_confidence_info = rank_confidence_by_id.get(row.get("analytic_commander_id"), {})
+        confidence_tier_info = confidence_tier_by_id.get(row.get("analytic_commander_id"), {})
         primary_era_bucket = (
             clean_value(row.get("primary_era_bucket"))
             or clean_value(row.get("primary_era_bucket_x"))
@@ -535,6 +598,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "stabilityCategory": stability_info.get("category"),
                 "stabilityScore": stability_info.get("score"),
                 "tier": tier_info,
+                "rankConfidence": rank_confidence_info,
+                "confidenceAdjustedTier": confidence_tier_info,
                 "robustnessCategory": clean_value(row.get("interpretive_group")) or "other_ranked",
                 "trustConfidence": clean_value(row.get("summary_trust_confidence_v2")) or clean_value(row.get("trust_confidence_v2")),
                 "trustHeadlineReason": clean_value(row.get("summary_trust_headline_reason_v2")) or clean_value(row.get("trust_headline_reason_v2")),
@@ -725,6 +790,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         ("derived_scoring/commander_tiers.csv", commander_tiers),
         ("derived_scoring/page_type_score_contributions.csv", page_type_contributions),
         ("audits/high_ranked_commander_flags.csv", high_ranked_flags),
+        ("derived_scoring/commander_rank_confidence_summary.csv", rank_confidence),
+        ("derived_scoring/commander_tiers_confidence_adjusted.csv", confidence_adjusted_tiers),
     ]:
         if not frame.empty:
             generated_from.append(optional_source)

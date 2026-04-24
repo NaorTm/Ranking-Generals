@@ -1,0 +1,12 @@
+{
+  "original_rows": 15779,
+  "kept": 8477,
+  "repaired": 5015,
+  "quarantined": 1996,
+  "removed_false_positive": 291,
+  "final_main_rows": 13492,
+  "final_quarantine_rows": 1996,
+  "final_removed_rows": 291,
+  "postfix_audit_moved_to_quarantine": 1,
+  "reconciliation_ok": true
+}

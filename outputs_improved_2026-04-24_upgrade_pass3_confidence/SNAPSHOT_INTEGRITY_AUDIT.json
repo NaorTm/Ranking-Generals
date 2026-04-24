@@ -1,0 +1,265 @@
+{
+  "snapshot": "outputs_improved_2026-04-24_upgrade_pass3_confidence",
+  "status": "PASS",
+  "failed_check_count": 0,
+  "checks": [
+    {
+      "name": "required_files_exist",
+      "pass": true,
+      "missing_files": []
+    },
+    {
+      "name": "battle_ids_unique",
+      "pass": true,
+      "rows": 13492,
+      "unique": 13492
+    },
+    {
+      "name": "bridge_ids_unique",
+      "pass": true,
+      "rows": 30953,
+      "unique": 30953
+    },
+    {
+      "name": "annotated_commander_battle_pairs_unique",
+      "pass": true,
+      "rows": 60512,
+      "unique": 60512
+    },
+    {
+      "name": "battle_commanders_reference_existing_battles",
+      "pass": true,
+      "missing_count": 0
+    },
+    {
+      "name": "annotated_rows_reference_existing_battles",
+      "pass": true,
+      "missing_count": 0
+    },
+    {
+      "name": "annotated_rows_reference_existing_bridge_ids",
+      "pass": true,
+      "missing_count": 0
+    },
+    {
+      "name": "features_reference_existing_bridge_ids",
+      "pass": true,
+      "missing_count": 0
+    },
+    {
+      "name": "scoring_metrics_match_row_counts",
+      "pass": true,
+      "retained_pages": 13492,
+      "raw_commander_rows": 60903,
+      "excluded_commander_rows": 213,
+      "expected_scored_commander_rows": 60690,
+      "metrics": {
+        "retained_pages": 13492,
+        "commander_rows": 60690,
+        "commander_master_rows": 30783
+      }
+    },
+    {
+      "name": "unknown_outcomes_have_zero_split_credit",
+      "pass": true,
+      "rows": 0
+    },
+    {
+      "name": "known_split_credit_uses_known_same_side_denominator",
+      "pass": true,
+      "samples": []
+    },
+    {
+      "name": "ranking_metrics_match_csv_tops",
+      "pass": true,
+      "baseline_top": [
+        "Khalid ibn al-Walid",
+        "Jean Lannes",
+        "Napoleon Bonaparte",
+        "Alexander Suvorov",
+        "Alexander Farnese, Duke of Parma",
+        "Takeda Shingen",
+        "Louis-Gabriel Suchet",
+        "Maurice, Prince of Orange",
+        "Sébastien Le Prestre, Marquis of Vauban",
+        "Abu Ubayda ibn al-Jarrah"
+      ],
+      "trust_top": [
+        "Alexander Suvorov",
+        "Maurice, Prince of Orange",
+        "Napoleon Bonaparte",
+        "Subutai",
+        "Sébastien Le Prestre, Marquis of Vauban",
+        "Jean Lannes",
+        "Louis-Nicolas Davout",
+        "Douglas MacArthur",
+        "Charles XIV John",
+        "Ivan Paskevich"
+      ],
+      "hierarchical_top": [
+        "Alexander Suvorov",
+        "Ivan Paskevich",
+        "Subutai",
+        "Sébastien Le Prestre, Marquis of Vauban",
+        "Maurice, Prince of Orange",
+        "Napoleon Bonaparte",
+        "Louis XIV",
+        "Louis-Nicolas Davout",
+        "Jean Lannes",
+        "Charles XIV John"
+      ]
+    },
+    {
+      "name": "dashboard_data_matches_ranking",
+      "pass": true,
+      "dashboard_snapshot": "outputs_improved_2026-04-24_upgrade_pass3_confidence",
+      "dashboard_count": 2541,
+      "sensitivity_rows": 2541,
+      "dashboard_first": "Alexander Suvorov",
+      "trust_first": "Alexander Suvorov"
+    },
+    {
+      "name": "top100_have_stability_metadata",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": []
+    },
+    {
+      "name": "top100_have_interpretive_tiers",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": []
+    },
+    {
+      "name": "top100_have_page_type_contributions",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": []
+    },
+    {
+      "name": "top100_have_high_rank_audit_rows",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": []
+    },
+    {
+      "name": "dashboard_contains_upgrade_metadata",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": [],
+      "generated_from": [
+        "derived_scoring/commander_ranking_features.csv",
+        "derived_scoring/commander_outcome_profile.csv",
+        "derived_scoring/commander_page_type_profile.csv",
+        "derived_scoring/commander_era_profile.csv",
+        "RANKING_RESULTS_BASELINE.csv",
+        "RANKING_RESULTS_BATTLE_ONLY.csv",
+        "RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv",
+        "RANKING_RESULTS_HIERARCHICAL.csv",
+        "RANKING_RESULTS_SENSITIVITY.csv",
+        "TOP_COMMANDERS_SUMMARY.csv",
+        "TOP_TIER_CLASSIFICATION.csv",
+        "ERA_ELITE_SHORTLIST.csv",
+        "MODEL_SENSITIVITY_AUDIT.csv",
+        "derived_scoring/commander_model_stability.csv",
+        "derived_scoring/commander_tiers.csv",
+        "derived_scoring/page_type_score_contributions.csv",
+        "audits/high_ranked_commander_flags.csv",
+        "derived_scoring/commander_rank_confidence_summary.csv",
+        "derived_scoring/commander_tiers_confidence_adjusted.csv"
+      ]
+    },
+    {
+      "name": "diagnostic_full_credit_not_headline",
+      "pass": true,
+      "headline_model": "hierarchical_trust_v2"
+    },
+    {
+      "name": "top100_have_bootstrap_confidence",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": []
+    },
+    {
+      "name": "top100_have_confidence_adjusted_tiers",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": []
+    },
+    {
+      "name": "dashboard_contains_confidence_metadata",
+      "pass": true,
+      "missing_count": 0,
+      "missing_ids": [],
+      "generated_from": [
+        "derived_scoring/commander_ranking_features.csv",
+        "derived_scoring/commander_outcome_profile.csv",
+        "derived_scoring/commander_page_type_profile.csv",
+        "derived_scoring/commander_era_profile.csv",
+        "RANKING_RESULTS_BASELINE.csv",
+        "RANKING_RESULTS_BATTLE_ONLY.csv",
+        "RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv",
+        "RANKING_RESULTS_HIERARCHICAL.csv",
+        "RANKING_RESULTS_SENSITIVITY.csv",
+        "TOP_COMMANDERS_SUMMARY.csv",
+        "TOP_TIER_CLASSIFICATION.csv",
+        "ERA_ELITE_SHORTLIST.csv",
+        "MODEL_SENSITIVITY_AUDIT.csv",
+        "derived_scoring/commander_model_stability.csv",
+        "derived_scoring/commander_tiers.csv",
+        "derived_scoring/page_type_score_contributions.csv",
+        "audits/high_ranked_commander_flags.csv",
+        "derived_scoring/commander_rank_confidence_summary.csv",
+        "derived_scoring/commander_tiers_confidence_adjusted.csv"
+      ]
+    },
+    {
+      "name": "model_validation_passes",
+      "pass": true,
+      "failures": {}
+    },
+    {
+      "name": "dashboard_qa_passes",
+      "pass": true,
+      "all_checks_passed": true
+    },
+    {
+      "name": "no_literal_nan_in_core_csvs",
+      "pass": true,
+      "samples": []
+    },
+    {
+      "name": "current_docs_do_not_point_to_stale_snapshots",
+      "pass": true,
+      "stale_refs": []
+    }
+  ],
+  "warnings": [
+    {
+      "name": "historical_reports_reference_older_snapshots",
+      "count": 21,
+      "sample": [
+        "ANALYTICAL_TABLES_SPEC.md",
+        "BARE_RESULT_RESIDUAL_AUDIT.md",
+        "COALITION_HARDENING_IMPACT_REPORT.md",
+        "COALITION_RESIDUAL_AUDIT.md",
+        "CONSERVATIVE_HARDENING_SUMMARY.json",
+        "GENERIC_RESULT_HARDENING_IMPACT_REPORT.md",
+        "GENERIC_RESULT_HARDENING_REPORT.md",
+        "GLOBAL_CORRECTION_PASS_REPORT.md",
+        "GLOBAL_RANKING_TRUST_AUDIT.md",
+        "HARDENING_PASS_IMPACT_REPORT.md",
+        "HARDENING_PASS_REPORT.md",
+        "HARDENING_PASS_SUMMARY.json",
+        "POST_FIX_RANKING_IMPACT_REPORT.md",
+        "RANKING_COMPARISON_REPORT.md",
+        "RANKING_FIX_IMPLEMENTATION_REPORT.md",
+        "SCORING_READINESS_REPORT.md",
+        "SECOND_PASS_ANTI_COALITION_AUDIT.md",
+        "SECOND_PASS_IMPACT_REPORT.md",
+        "SECOND_PASS_IMPLEMENTATION_REPORT.md",
+        "SECOND_PASS_SUSPICIOUS_LEADERS_AUDIT.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "input_battles": 13492,
+  "battles_with_any_commander_rows": 12383,
+  "battle_commander_rows": 60903,
+  "battle_commander_quarantine_rows": 7364,
+  "battle_commander_side_issues": 6340,
+  "commanders_master_rows": 30783,
+  "linked_commander_rows": 56865,
+  "unlinked_commander_rows": 4038,
+  "recovered_linked_commander_rows": 255,
+  "pages_touched_by_recovery": 195,
+  "recovery_quarantine_rows": 0,
+  "identity_confidence_counts": {
+    "high": 34288,
+    "medium": 26615
+  },
+  "quarantine_reason_counts": {
+    "generic_commander_value": 3740,
+    "linked_page_nonperson": 2428,
+    "narrative_text_artifact": 934,
+    "graphic_artifact": 898,
+    "belligerent_link_not_person": 770,
+    "generic_rank_only_name": 217,
+    "empty_name": 111,
+    "unbroken_multi_value_name": 54,
+    "too_many_tokens": 53,
+    "name_too_long": 26,
+    "quoted_single_token_alias": 10,
+    "postfix_audit:linked_page_nonperson": 5
+  }
+}

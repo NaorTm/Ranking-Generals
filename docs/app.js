@@ -102,6 +102,13 @@
     return `${titleCase(category || "unknown")}${scoreText}`;
   }
 
+  function commanderConfidenceLabel(commander) {
+    const confidence = commander.rankConfidence || {};
+    if (!confidence.confidenceCategory && !confidence.rankInterval80) return "Unknown";
+    const interval = confidence.rankInterval80 ? `80% ${confidence.rankInterval80}` : "80% NA";
+    return `${titleCase(confidence.confidenceCategory || "unknown")} · ${interval}`;
+  }
+
   function commanderMetricValue(commander, modelKey, metricKey) {
     return metricKey === "score" ? commander.scores[modelKey] : commander.ranks[modelKey];
   }
@@ -123,6 +130,7 @@
     if (key === "category") return GROUP_LABELS[commander.robustnessCategory] || "Other ranked";
     if (key === "tier") return commander.tier && commander.tier.sort != null ? commander.tier.sort : 99;
     if (key === "stability") return commander.stabilityScore || 0;
+    if (key === "confidence") return commander.rankConfidence && commander.rankConfidence.rankBandWidth80 != null ? commander.rankConfidence.rankBandWidth80 : 999999;
     if (key === "audit") return (commander.auditFlags || []).length;
     if (key === "metric") return commanderMetricValue(commander, state.modelKey, state.metricKey);
     if (key === "engagements") return commander.engagementCount || 0;
@@ -176,7 +184,8 @@
       if ((commander.engagementCount || 0) < state.minEngagements) return false;
       if (state.searchTerm) {
         const auditText = (commander.auditFlags || []).map((flag) => flag.flag).join(" ");
-        const haystack = `${commander.name} ${commander.primaryEraBucket || ""} ${commander.interpretiveEra} ${commander.robustnessCategory} ${commanderTierLabel(commander)} ${auditText}`
+        const confidenceText = commander.rankConfidence ? `${commander.rankConfidence.confidenceCategory || ""} ${commander.rankConfidence.rankInterval80 || ""}` : "";
+        const haystack = `${commander.name} ${commander.primaryEraBucket || ""} ${commander.interpretiveEra} ${commander.robustnessCategory} ${commanderTierLabel(commander)} ${confidenceText} ${auditText}`
           .toLowerCase();
         if (!haystack.includes(state.searchTerm.toLowerCase())) return false;
       }
@@ -758,6 +767,12 @@
               <strong>${commanderTierLabel(commander)}</strong>
               <span>${commander.tier && commander.tier.reason ? commander.tier.reason : "No tier reason available."}</span>
             </div>
+            ${commander.confidenceAdjustedTier && commander.confidenceAdjustedTier.label ? `
+              <div class="tier-line confidence-line">
+                <strong>${commander.confidenceAdjustedTier.label}</strong>
+                <span>${commander.confidenceAdjustedTier.reason || "No confidence-adjusted tier reason available."}</span>
+              </div>
+            ` : ""}
             <div class="comparison-grid">
               <div><span>Engagements</span><strong>${formatNumber(commander.engagementCount)}</strong></div>
               <div><span>Known outcomes</span><strong>${formatNumber(commander.knownOutcomeCount)}</strong></div>
@@ -766,9 +781,12 @@
               <div><span>Battle share</span><strong>${formatPercent(commander.pageTypes.shares.battle)}</strong></div>
               <div><span>Higher-level share</span><strong>${formatPercent(commander.pageTypes.higherLevelShare)}</strong></div>
               <div><span>Stability</span><strong>${commanderStabilityLabel(commander)}</strong></div>
+              <div><span>Rank CI</span><strong>${commanderConfidenceLabel(commander)}</strong></div>
+              <div><span>Bootstrap presence</span><strong>${formatPercent(commander.rankConfidence && commander.rankConfidence.bootstrapPresenceRate)}</strong></div>
               <div><span>Audit flags</span><strong>${formatNumber((commander.auditFlags || []).length)}</strong></div>
             </div>
             <div class="muted">${commander.trustHeadlineReason || commander.interpretiveReason || "No interpretive note available for this commander in the current classification layer."}</div>
+            ${commander.rankConfidence && commander.rankConfidence.recommendedInterpretation ? `<div class="muted">${commander.rankConfidence.recommendedInterpretation}</div>` : ""}
             ${topPageContributions ? `<div class="muted">Main page contribution mix: ${topPageContributions}</div>` : ""}
             <table class="model-rank-list">
               <thead>
@@ -831,6 +849,7 @@
         ${sortableHeader("metric", state.metricKey === "rank" ? "Rank" : "Score")}
         ${sortableHeader("engagements", "Engagements")}
         ${sortableHeader("stability", "Stability")}
+        ${sortableHeader("confidence", "Confidence")}
         ${sortableHeader("spread", "Spread")}
         ${sortableHeader("audit", "Audit")}
         ${sortableHeader("profile", "Profile")}
@@ -848,6 +867,7 @@
             <td>${state.metricKey === "rank" ? formatRank(commander.ranks[state.modelKey]) : formatScore(commander.scores[state.modelKey])}</td>
             <td>${formatNumber(commander.engagementCount)}</td>
             <td>${commanderStabilityLabel(commander)}</td>
+            <td>${commanderConfidenceLabel(commander)}</td>
             <td>${formatNumber(commander.rankRange)}</td>
             <td>${formatNumber((commander.auditFlags || []).length)}</td>
             <td>${PAGE_CLASS_LABELS[commander.pageTypeProfileClass] || titleCase(commander.pageTypeProfileClass || "mixed")}</td>

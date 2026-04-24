@@ -40,6 +40,12 @@ UPGRADE_FILES = [
     "derived_scoring/page_type_score_contributions.csv",
     "audits/high_ranked_commander_flags.csv",
 ]
+CONFIDENCE_FILES = [
+    "derived_scoring/bootstrap_rank_confidence.csv",
+    "derived_scoring/commander_rank_confidence_summary.csv",
+    "derived_scoring/commander_tiers_confidence_adjusted.csv",
+    "reports/UPGRADE_PASS_3_CONFIDENCE_REPORT.md",
+]
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -77,11 +83,19 @@ def top_names(rows: list[dict[str, str]], count: int = 10) -> list[str]:
     return [row["display_name"] for row in rows[:count]]
 
 
-def audit(snapshot_dir: Path, require_upgrade_files: bool = False) -> dict[str, Any]:
+def audit(
+    snapshot_dir: Path,
+    require_upgrade_files: bool = False,
+    require_confidence_files: bool = False,
+) -> dict[str, Any]:
     checks: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
 
-    required_files = [*REQUIRED_FILES, *(UPGRADE_FILES if require_upgrade_files else [])]
+    required_files = [
+        *REQUIRED_FILES,
+        *(UPGRADE_FILES if require_upgrade_files else []),
+        *(CONFIDENCE_FILES if require_confidence_files else []),
+    ]
     missing_files = [name for name in required_files if not (snapshot_dir / name).exists()]
     add_check(checks, "required_files_exist", not missing_files, missing_files=missing_files)
     if missing_files:
@@ -283,6 +297,61 @@ def audit(snapshot_dir: Path, require_upgrade_files: bool = False) -> dict[str, 
             headline_model=dashboard["metadata"].get("headlineModel"),
         )
 
+    if require_confidence_files:
+        confidence = read_csv(snapshot_dir / "derived_scoring" / "commander_rank_confidence_summary.csv")
+        adjusted = read_csv(snapshot_dir / "derived_scoring" / "commander_tiers_confidence_adjusted.csv")
+        bootstrap = read_csv(snapshot_dir / "derived_scoring" / "bootstrap_rank_confidence.csv")
+        top100_ids = {
+            row["analytic_commander_id"]
+            for row in trust
+            if 0 < numeric(row.get("rank", row.get("rank_hierarchical_trust_v2", "")), 999999) <= 100
+        }
+        confidence_ids = {
+            row["analytic_commander_id"]
+            for row in confidence
+            if row.get("confidence_category") and row.get("rank_interval_80")
+        }
+        adjusted_ids = {
+            row["analytic_commander_id"]
+            for row in adjusted
+            if row.get("confidence_adjusted_tier") and row.get("confidence_adjusted_tier_key")
+        }
+        bootstrap_headline_ids = {
+            row["analytic_commander_id"]
+            for row in bootstrap
+            if row.get("model_name") == "hierarchical_trust_v2"
+        }
+        dashboard_by_id = {row.get("id"): row for row in dashboard.get("commanders", [])}
+        dashboard_missing_confidence = []
+        for commander_id in sorted(top100_ids):
+            commander = dashboard_by_id.get(commander_id, {})
+            if not commander.get("rankConfidence") or not commander.get("confidenceAdjustedTier"):
+                dashboard_missing_confidence.append(commander_id)
+        add_check(
+            checks,
+            "top100_have_bootstrap_confidence",
+            top100_ids <= confidence_ids <= bootstrap_headline_ids,
+            missing_count=len(top100_ids - confidence_ids),
+            missing_ids=sorted(top100_ids - confidence_ids)[:20],
+        )
+        add_check(
+            checks,
+            "top100_have_confidence_adjusted_tiers",
+            top100_ids <= adjusted_ids,
+            missing_count=len(top100_ids - adjusted_ids),
+            missing_ids=sorted(top100_ids - adjusted_ids)[:20],
+        )
+        add_check(
+            checks,
+            "dashboard_contains_confidence_metadata",
+            not dashboard_missing_confidence
+            and "derived_scoring/commander_rank_confidence_summary.csv" in dashboard["metadata"].get("generatedFrom", [])
+            and "derived_scoring/commander_tiers_confidence_adjusted.csv" in dashboard["metadata"].get("generatedFrom", []),
+            missing_count=len(dashboard_missing_confidence),
+            missing_ids=dashboard_missing_confidence[:20],
+            generated_from=dashboard["metadata"].get("generatedFrom", []),
+        )
+
     validation_failures = {
         name: result
         for name, result in validation.get("checks", {}).items()
@@ -351,9 +420,18 @@ def main() -> None:
         action="store_true",
         help="Require improved-snapshot stability, tier, page-type contribution, and high-rank audit outputs.",
     )
+    parser.add_argument(
+        "--require-confidence-files",
+        action="store_true",
+        help="Require Pass 3 bootstrap confidence outputs and dashboard confidence metadata.",
+    )
     args = parser.parse_args()
 
-    summary = audit(args.snapshot_dir, require_upgrade_files=args.require_upgrade_files)
+    summary = audit(
+        args.snapshot_dir,
+        require_upgrade_files=args.require_upgrade_files,
+        require_confidence_files=args.require_confidence_files,
+    )
     output_path = args.output or args.snapshot_dir / "SNAPSHOT_INTEGRITY_AUDIT.json"
     output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
