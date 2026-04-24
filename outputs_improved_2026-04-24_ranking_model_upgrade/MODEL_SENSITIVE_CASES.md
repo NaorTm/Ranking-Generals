@@ -1,5 +1,7 @@
 # Model-Sensitive Cases
 
+Snapshot: `outputs_improved_2026-04-24_ranking_model_upgrade`
+
 This file highlights commanders whose interpretation changes materially depending on model assumptions.
 
 Top model-sensitive upper-band cases:

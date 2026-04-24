@@ -1,5 +1,7 @@
 # Methodological Limitations
 
+Snapshot: `outputs_improved_2026-04-24_ranking_model_upgrade`
+
 This framework is designed to expose uncertainty rather than hide it.
 
 Known limitations:
