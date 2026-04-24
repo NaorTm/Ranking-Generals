@@ -18,7 +18,7 @@ from generate_post_commander_reports import (
 )
 
 
-ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
+ROOT = Path(__file__).resolve().parent
 
 
 def read_json(path: Path) -> dict[str, Any]:

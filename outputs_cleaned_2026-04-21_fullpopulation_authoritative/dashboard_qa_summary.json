@@ -1,97 +1,97 @@
 {
-  "snapshot_dir": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-12_coalitionhardening_authoritative",
-  "url": "http://127.0.0.1:8005",
+  "snapshot": "outputs_cleaned_2026-04-21_fullpopulation_authoritative",
+  "dashboard_dir": "outputs_cleaned_2026-04-21_fullpopulation_authoritative\\dashboard",
+  "expected": {
+    "commander_count": 2541,
+    "default_leader": "Alexander Suvorov",
+    "baseline_leader": "Khalid ibn al-Walid",
+    "hierarchical_leader": "Alexander Suvorov"
+  },
   "checks": {
-    "panel_leaderboard-chart": {
+    "http_load": {
       "ok": true,
-      "detail": {
-        "svg_count": 8
-      }
+      "status": 200,
+      "url": "http://127.0.0.1:8765/"
     },
-    "panel_movement-chart": {
+    "title": {
       "ok": true,
-      "detail": {
-        "svg_count": 8
-      }
+      "value": "Commander Ranking Analysis Dashboard"
     },
-    "panel_sensitivity-chart": {
+    "header_metadata": {
       "ok": true,
-      "detail": {
-        "svg_count": 8
-      }
+      "commander_count": 2541,
+      "snapshot_label": "outputs_cleaned_2026-04-21_fullpopulation_authoritative"
     },
-    "panel_page-dependence-chart": {
+    "panel_render": {
       "ok": true,
-      "detail": {
-        "svg_count": 8
-      }
+      "chart_trace_counts": {
+        "#leaderboard-chart": 1,
+        "#movement-chart": 18,
+        "#sensitivity-chart": 4,
+        "#page-dependence-chart": 4,
+        "#page-composition-chart": 4,
+        "#era-chart": 1,
+        "#outcome-chart": 4
+      },
+      "overview_cards": 4,
+      "tier_columns": 4,
+      "comparison_cards": 3,
+      "audit_rows": 10,
+      "shortlist_rows": 8,
+      "explorer_rows": 120
     },
-    "panel_page-composition-chart": {
+    "default_model_alignment": {
       "ok": true,
-      "detail": {
-        "svg_count": 8
-      }
+      "leader_from_table": "Alexander Suvorov",
+      "expected_leader": "Alexander Suvorov"
     },
-    "panel_era-chart": {
+    "hierarchical_alignment": {
       "ok": true,
-      "detail": {
-        "svg_count": 8
-      }
+      "leader_from_table": "Alexander Suvorov",
+      "expected_leader": "Alexander Suvorov"
     },
-    "panel_outcome-chart": {
+    "search": {
       "ok": true,
-      "detail": {
-        "svg_count": 8
-      }
+      "rows_after_search": 1,
+      "first_row": "Alexander Suvorov"
     },
-    "overview_rendered": {
+    "filtering": {
       "ok": true,
-      "detail": {
-        "metric_cards": 4,
-        "tier_columns": 3
-      }
+      "rows_after_filter": 6
     },
-    "default_baseline_top_row": {
+    "sorting": {
       "ok": true,
-      "detail": {
-        "top_rows": [
-          "Jean Lannes",
-          "Napoleon Bonaparte",
-          "Alexander Suvorov",
-          "Takeda Shingen",
-          "Khalid ibn al-Walid"
-        ]
-      }
+      "descending_sample": [
+        67,
+        46,
+        43,
+        42,
+        42
+      ],
+      "ascending_sample": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
     },
-    "hierarchical_top_row": {
+    "selection_and_comparison": {
       "ok": true,
-      "detail": {
-        "top_rows": [
-          "Suleiman the Magnificent",
-          "Alexander Suvorov",
-          "Napoleon Bonaparte",
-          "Douglas MacArthur",
-          "Louis XIV"
-        ]
-      }
+      "selected_chip_count": 2,
+      "comparison_card_count": 2
     },
-    "search_filter": {
+    "clear_selection": {
       "ok": true,
-      "detail": {
-        "rows": 1
-      }
+      "selected_chip_count": 0
     },
-    "row_selection": {
+    "console_clean": {
       "ok": true,
-      "detail": {
-        "comparison_cards": 1,
-        "chips": 1
-      }
+      "console_error_count": 0,
+      "page_error_count": 0
     }
   },
   "console_errors": [],
   "page_errors": [],
-  "status": "PASS",
-  "console_error_count": 0,
-  "page_error_count": 0
+  "all_checks_passed": true
 }

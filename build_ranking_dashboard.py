@@ -10,7 +10,7 @@ from typing import Any
 import pandas as pd
 
 
-ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
+ROOT = Path(__file__).resolve().parent
 
 
 MODEL_KEYS = [
@@ -70,6 +70,13 @@ def load_scoring_csv(snapshot_dir: Path, name: str) -> pd.DataFrame:
     return pd.read_csv(snapshot_dir / "derived_scoring" / name)
 
 
+def load_optional_csv(snapshot_dir: Path, name: str) -> pd.DataFrame:
+    path = snapshot_dir / name
+    if not path.exists():
+        return pd.DataFrame()
+    return pd.read_csv(path)
+
+
 def to_numeric(df: pd.DataFrame, columns: list[str]) -> None:
     for column in columns:
         if column in df.columns:
@@ -113,6 +120,10 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
     page_type_profile = load_scoring_csv(snapshot_dir, "commander_page_type_profile.csv")
     era_profile = load_scoring_csv(snapshot_dir, "commander_era_profile.csv")
     ranking_features = load_scoring_csv(snapshot_dir, "commander_ranking_features.csv")
+    model_stability = load_optional_csv(snapshot_dir, "derived_scoring/commander_model_stability.csv")
+    commander_tiers = load_optional_csv(snapshot_dir, "derived_scoring/commander_tiers.csv")
+    page_type_contributions = load_optional_csv(snapshot_dir, "derived_scoring/page_type_score_contributions.csv")
+    high_ranked_flags = load_optional_csv(snapshot_dir, "audits/high_ranked_commander_flags.csv")
 
     sensitivity_numeric = [
         "best_rank",
@@ -249,12 +260,129 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
             "opponent_breadth_strict",
         ],
     )
+    if not model_stability.empty:
+        to_numeric(
+            model_stability,
+            [
+                "models_present_count",
+                "trusted_models_present_count",
+                "best_rank",
+                "worst_rank",
+                "median_rank",
+                "mean_rank",
+                "rank_stddev",
+                "rank_iqr",
+                "top_10_count",
+                "top_25_count",
+                "top_50_count",
+                "top_100_count",
+                "stability_score",
+            ],
+        )
+    if not commander_tiers.empty:
+        to_numeric(
+            commander_tiers,
+            [
+                "rank_hierarchical_trust_v2",
+                "score_hierarchical_trust_v2",
+                "tier_sort",
+                "stability_score",
+                "known_outcome_count",
+                "known_outcome_share",
+                "higher_level_share",
+            ],
+        )
+    if not page_type_contributions.empty:
+        to_numeric(
+            page_type_contributions,
+            [
+                "raw_score_contribution",
+                "weighted_score_contribution",
+                "absolute_weighted_score_contribution",
+                "weighted_presence",
+                "share_of_total_score",
+                "known_outcome_rows",
+                "unknown_outcome_rows",
+                "engagement_rows",
+            ],
+        )
+    if not high_ranked_flags.empty:
+        to_numeric(high_ranked_flags, ["rank_hierarchical_trust_v2", "supporting_value"])
 
     commander_ids = set(sensitivity["analytic_commander_id"])
     outcome_profile = outcome_profile[outcome_profile["analytic_commander_id"].isin(commander_ids)]
     page_type_profile = page_type_profile[page_type_profile["analytic_commander_id"].isin(commander_ids)]
     era_profile = era_profile[era_profile["analytic_commander_id"].isin(commander_ids)]
     ranking_features = ranking_features[ranking_features["analytic_commander_id"].isin(commander_ids)]
+    if not model_stability.empty:
+        model_stability = model_stability[model_stability["analytic_commander_id"].isin(commander_ids)]
+    if not commander_tiers.empty:
+        commander_tiers = commander_tiers[commander_tiers["analytic_commander_id"].isin(commander_ids)]
+    if not page_type_contributions.empty:
+        page_type_contributions = page_type_contributions[
+            page_type_contributions["analytic_commander_id"].isin(commander_ids)
+        ]
+    if not high_ranked_flags.empty:
+        high_ranked_flags = high_ranked_flags[high_ranked_flags["analytic_commander_id"].isin(commander_ids)]
+
+    stability_by_id = {
+        row["analytic_commander_id"]: {
+            "score": clean_value(row.get("stability_score")),
+            "category": clean_value(row.get("stability_category")),
+            "modelsPresentCount": clean_value(row.get("models_present_count")),
+            "trustedModelsPresentCount": clean_value(row.get("trusted_models_present_count")),
+            "bestRank": clean_value(row.get("best_rank")),
+            "worstRank": clean_value(row.get("worst_rank")),
+            "medianRank": clean_value(row.get("median_rank")),
+            "meanRank": clean_value(row.get("mean_rank")),
+            "rankStddev": clean_value(row.get("rank_stddev")),
+            "rankIqr": clean_value(row.get("rank_iqr")),
+            "top10Count": clean_value(row.get("top_10_count")),
+            "top25Count": clean_value(row.get("top_25_count")),
+            "top50Count": clean_value(row.get("top_50_count")),
+            "top100Count": clean_value(row.get("top_100_count")),
+        }
+        for _, row in model_stability.iterrows()
+    } if not model_stability.empty else {}
+    tier_by_id = {
+        row["analytic_commander_id"]: {
+            "key": clean_value(row.get("tier_key")),
+            "label": clean_value(row.get("tier_label")),
+            "sort": clean_value(row.get("tier_sort")),
+            "reason": clean_value(row.get("tier_reason")),
+        }
+        for _, row in commander_tiers.iterrows()
+    } if not commander_tiers.empty else {}
+    page_contributions_by_id: dict[str, list[dict[str, Any]]] = {}
+    if not page_type_contributions.empty:
+        for commander_id, group in page_type_contributions.groupby("analytic_commander_id"):
+            group = group.sort_values("share_of_total_score", ascending=False)
+            page_contributions_by_id[commander_id] = [
+                {
+                    "pageType": clean_value(row.get("page_type")),
+                    "rawScoreContribution": clean_value(row.get("raw_score_contribution")),
+                    "weightedScoreContribution": clean_value(row.get("weighted_score_contribution")),
+                    "shareOfTotalScore": clean_value(row.get("share_of_total_score")),
+                    "knownOutcomeRows": clean_value(row.get("known_outcome_rows")),
+                    "unknownOutcomeRows": clean_value(row.get("unknown_outcome_rows")),
+                    "engagementRows": clean_value(row.get("engagement_rows")),
+                }
+                for _, row in group.iterrows()
+            ]
+    audit_flags_by_id: dict[str, list[dict[str, Any]]] = {}
+    if not high_ranked_flags.empty:
+        flagged = high_ranked_flags[
+            high_ranked_flags["flagged"].astype(str).str.lower().eq("true")
+        ].copy()
+        for commander_id, group in flagged.groupby("analytic_commander_id"):
+            audit_flags_by_id[commander_id] = [
+                {
+                    "flag": clean_value(row.get("flag")),
+                    "supportingValue": clean_value(row.get("supporting_value")),
+                    "explanation": clean_value(row.get("explanation")),
+                }
+                for _, row in group.sort_values("flag").iterrows()
+            ]
 
     summary = summary.rename(columns={column: f"summary_{column}" for column in summary.columns})
     classification = classification.rename(
@@ -309,6 +437,11 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
 
     commanders: list[dict[str, Any]] = []
     for _, row in merged.iterrows():
+        commander_id = clean_value(row.get("analytic_commander_id"))
+        stability_info = stability_by_id.get(row.get("analytic_commander_id"), {})
+        tier_info = tier_by_id.get(row.get("analytic_commander_id"), {})
+        audit_flags = audit_flags_by_id.get(row.get("analytic_commander_id"), [])
+        page_contributions = page_contributions_by_id.get(row.get("analytic_commander_id"), [])
         primary_era_bucket = (
             clean_value(row.get("primary_era_bucket"))
             or clean_value(row.get("primary_era_bucket_x"))
@@ -399,6 +532,9 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "interpretiveEra": interpretive_era(primary_era_bucket),
                 "pageTypeProfileClass": clean_value(row.get("page_type_profile_class")),
                 "stabilityLabel": clean_value(row.get("stability_label")) or clean_value(row.get("summary_stability_label")),
+                "stabilityCategory": stability_info.get("category"),
+                "stabilityScore": stability_info.get("score"),
+                "tier": tier_info,
                 "robustnessCategory": clean_value(row.get("interpretive_group")) or "other_ranked",
                 "trustConfidence": clean_value(row.get("summary_trust_confidence_v2")) or clean_value(row.get("trust_confidence_v2")),
                 "trustHeadlineReason": clean_value(row.get("summary_trust_headline_reason_v2")) or clean_value(row.get("trust_headline_reason_v2")),
@@ -406,6 +542,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "interpretiveReason": clean_value(row.get("interpretive_reason")),
                 "cautionFlags": split_flags(row.get("caution_flags")) or split_flags(row.get("summary_caution_flags")),
                 "featureQualityFlags": split_flags(row.get("feature_quality_flags")),
+                "auditFlags": audit_flags,
                 "modelsEligibleCount": clean_value(row.get("models_eligible_count")) or 0,
                 "bestRank": clean_value(row.get("best_rank")),
                 "worstRank": clean_value(row.get("worst_rank")),
@@ -440,7 +577,9 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                     "counts": page_counts,
                     "shares": page_shares,
                     "higherLevelShare": higher_level_share,
+                    "contributions": page_contributions,
                 },
+                "stability": stability_info,
                 "outcomes": {
                     "counts": outcome_counts_raw,
                     "shares": outcome_shares_raw,
@@ -555,25 +694,45 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         .value_counts(dropna=False)
         .to_dict()
     )
+    counts_by_tier = (
+        pd.Series([commander.get("tier", {}).get("label") or "Unclassified" for commander in commanders])
+        .value_counts(dropna=False)
+        .to_dict()
+    )
+    counts_by_stability = (
+        pd.Series([commander.get("stabilityCategory") or "unknown" for commander in commanders])
+        .value_counts(dropna=False)
+        .to_dict()
+    )
+
+    generated_from = [
+        "derived_scoring/commander_ranking_features.csv",
+        "derived_scoring/commander_outcome_profile.csv",
+        "derived_scoring/commander_page_type_profile.csv",
+        "derived_scoring/commander_era_profile.csv",
+        "RANKING_RESULTS_BASELINE.csv",
+        "RANKING_RESULTS_BATTLE_ONLY.csv",
+        "RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv",
+        "RANKING_RESULTS_HIERARCHICAL.csv",
+        "RANKING_RESULTS_SENSITIVITY.csv",
+        "TOP_COMMANDERS_SUMMARY.csv",
+        "TOP_TIER_CLASSIFICATION.csv",
+        "ERA_ELITE_SHORTLIST.csv",
+        "MODEL_SENSITIVITY_AUDIT.csv",
+    ]
+    for optional_source, frame in [
+        ("derived_scoring/commander_model_stability.csv", model_stability),
+        ("derived_scoring/commander_tiers.csv", commander_tiers),
+        ("derived_scoring/page_type_score_contributions.csv", page_type_contributions),
+        ("audits/high_ranked_commander_flags.csv", high_ranked_flags),
+    ]:
+        if not frame.empty:
+            generated_from.append(optional_source)
 
     metadata = {
         "snapshot": snapshot_dir.name,
         "headlineModel": "hierarchical_trust_v2",
-        "generatedFrom": [
-            "derived_scoring/commander_ranking_features.csv",
-            "derived_scoring/commander_outcome_profile.csv",
-            "derived_scoring/commander_page_type_profile.csv",
-            "derived_scoring/commander_era_profile.csv",
-            "RANKING_RESULTS_BASELINE.csv",
-            "RANKING_RESULTS_BATTLE_ONLY.csv",
-            "RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv",
-            "RANKING_RESULTS_HIERARCHICAL.csv",
-            "RANKING_RESULTS_SENSITIVITY.csv",
-            "TOP_COMMANDERS_SUMMARY.csv",
-            "TOP_TIER_CLASSIFICATION.csv",
-            "ERA_ELITE_SHORTLIST.csv",
-            "MODEL_SENSITIVITY_AUDIT.csv",
-        ],
+        "generatedFrom": generated_from,
         "models": [{"key": key, "label": MODEL_LABELS[key]} for key in MODEL_KEYS],
         "counts": {
             "commanderCount": len(commanders),
@@ -583,6 +742,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
             "otherRankedCount": int(counts_by_group.get("other_ranked", 0)),
         },
         "countsByInterpretiveEra": {str(k): int(v) for k, v in counts_by_era.items()},
+        "countsByTier": {str(k): int(v) for k, v in counts_by_tier.items()},
+        "countsByStability": {str(k): int(v) for k, v in counts_by_stability.items()},
     }
 
     return {
@@ -660,6 +821,8 @@ def copy_dashboard_assets(snapshot_dir: Path, asset_source_dir: Path) -> None:
     for name in ["index.html", "app.js", "styles.css", "plotly.min.js", "README.md"]:
         source = asset_source_dir / name
         target = dashboard_dir / name
+        if source.resolve() == target.resolve():
+            continue
         if name in {"index.html", "README.md"}:
             text = source.read_text(encoding="utf-8")
             text = text.replace("outputs_final_2026-04-05", snapshot_dir.name)
@@ -676,13 +839,13 @@ def main() -> None:
     parser.add_argument(
         "--snapshot-dir",
         type=Path,
-        default=Path("outputs_final_2026-04-05"),
+        default=Path("outputs_cleaned_2026-04-21_fullpopulation_authoritative"),
         help="Snapshot directory containing rebuilt scoring, ranking, and interpretive outputs.",
     )
     parser.add_argument(
         "--asset-source-dir",
         type=Path,
-        default=Path("outputs_final_2026-04-05") / "dashboard",
+        default=Path("docs"),
         help="Source dashboard asset directory to copy static assets from.",
     )
     args = parser.parse_args()

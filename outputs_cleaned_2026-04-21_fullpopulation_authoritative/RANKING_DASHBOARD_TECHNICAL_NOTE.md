@@ -40,4 +40,4 @@ Runtime characteristics:
 - the dashboard is fully static and can be opened locally
 - charts are rendered client-side with the bundled `plotly.min.js`
 
-Current commander universe in the dashboard: `2610`
+Current commander universe in the dashboard: `2541`

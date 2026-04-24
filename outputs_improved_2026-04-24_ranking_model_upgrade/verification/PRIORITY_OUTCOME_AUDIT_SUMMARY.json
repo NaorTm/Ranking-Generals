@@ -1,0 +1,31 @@
+{
+  "base_snapshot": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative",
+  "output_snapshot": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_outcomeaudit_authoritative",
+  "audited_commander_count": 16,
+  "audited_commanders": [
+    "Suleiman the Magnificent",
+    "Douglas MacArthur",
+    "Nader Shah",
+    "Abbas the Great",
+    "William Halsey Jr.",
+    "Nelson A. Miles",
+    "Dwight D. Eisenhower",
+    "Peter the Great",
+    "Flavius Aetius",
+    "Ivan Sirko",
+    "Holland M. Smith",
+    "Charles XIV John",
+    "Joseph Stalin",
+    "\u017divojin Mi\u0161i\u0107",
+    "Napoleon Bonaparte",
+    "Khalid ibn al-Walid"
+  ],
+  "changed_row_count": 9,
+  "changed_commander_count": 6,
+  "group_counts": {
+    "no_material_change": 10,
+    "still_unresolved_needs_manual_judgment": 3,
+    "major_correction": 2,
+    "modest_correction": 1
+  }
+}

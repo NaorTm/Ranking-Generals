@@ -11,14 +11,10 @@ Read it as a conservative, audited ranking framework:
 
 ## Open locally
 
-Default option:
-
-1. Open [index.html](C:/Users/gameo/OneDrive/Desktop/test/outputs_cleaned_2026-04-21_fullpopulation_authoritative/dashboard/index.html) in a browser.
-
-If your browser blocks local file scripts, use a trivial local server instead:
+Use a trivial local server from the snapshot dashboard directory:
 
 ```powershell
-cd C:\Users\gameo\OneDrive\Desktop\test\outputs_cleaned_2026-04-21_fullpopulation_authoritative\dashboard
+cd .\outputs_cleaned_2026-04-21_fullpopulation_authoritative\dashboard
 python -m http.server 8000
 ```
 
@@ -37,11 +33,10 @@ Then open `http://localhost:8000`.
 From the workspace root:
 
 ```powershell
-cd C:\Users\gameo\OneDrive\Desktop\test
 python build_ranking_dashboard.py
 ```
 
-That rebuilds `dashboard/dashboard_data.js` and updates [RANKING_DASHBOARD_TECHNICAL_NOTE.md](C:/Users/gameo/OneDrive/Desktop/test/outputs_cleaned_2026-04-21_fullpopulation_authoritative/RANKING_DASHBOARD_TECHNICAL_NOTE.md).
+That rebuilds `dashboard/dashboard_data.js` and updates `outputs_cleaned_2026-04-21_fullpopulation_authoritative/RANKING_DASHBOARD_TECHNICAL_NOTE.md`.
 
 ## Publication Notes
 

@@ -25,6 +25,7 @@ def read_expected(snapshot_dir: Path) -> dict[str, object]:
     commander_count = len(pd.read_csv(snapshot_dir / "RANKING_RESULTS_SENSITIVITY.csv", dtype=str).fillna(""))
     return {
         "commander_count": commander_count,
+        "default_leader": ranking_metrics["top_trust_v2"][0]["display_name"],
         "baseline_leader": ranking_metrics["top_baseline"][0]["display_name"],
         "hierarchical_leader": ranking_metrics["top_hierarchical"][0]["display_name"],
     }
@@ -45,6 +46,18 @@ def table_rows(page) -> list[list[str]]:
         if cells:
             rows.append(cells)
     return rows
+
+
+def table_headers(page) -> list[str]:
+    return [cell.inner_text().strip() for cell in page.locator("#explorer-table thead th").all()]
+
+
+def column_index(headers: list[str], label: str) -> int:
+    normalized = [header.replace("▲", "").replace("▼", "").strip() for header in headers]
+    try:
+        return normalized.index(label)
+    except ValueError as exc:
+        raise AssertionError(f"Missing table header: {label}") from exc
 
 
 def parse_rank(value: str) -> int:
@@ -139,10 +152,15 @@ def run_checks(snapshot_dir: Path, host: str, port: int) -> dict[str, object]:
             }
 
             initial_rows = table_rows(page)
-            summary["checks"]["baseline_alignment"] = {
-                "ok": bool(initial_rows) and initial_rows[0][0] == expected["baseline_leader"],
+            initial_headers = table_headers(page)
+            summary["checks"]["default_model_alignment"] = {
+                "ok": bool(initial_rows) and initial_rows[0][0] == expected["default_leader"],
                 "leader_from_table": initial_rows[0][0] if initial_rows else None,
-                "expected_leader": expected["baseline_leader"],
+                "expected_leader": expected["default_leader"],
+            }
+            summary["checks"]["upgrade_columns_visible"] = {
+                "ok": all(header in initial_headers for header in ["Tier", "Stability", "Audit"]),
+                "headers": initial_headers,
             }
 
             page.select_option("#model-select", "hierarchical_weighted")
@@ -166,11 +184,13 @@ def run_checks(snapshot_dir: Path, host: str, port: int) -> dict[str, object]:
             }
 
             page.fill("#search-input", "")
-            page.select_option("#robustness-filter", "robust_elite")
+            page.select_option("#robustness-filter", "robust_elite_core")
             page.wait_for_timeout(500)
             robust_rows = table_rows(page)
+            robust_headers = table_headers(page)
+            category_index = column_index(robust_headers, "Category")
             summary["checks"]["filtering"] = {
-                "ok": len(robust_rows) >= 1 and all("Robust elite" in row[2] for row in robust_rows),
+                "ok": len(robust_rows) >= 1 and all("Robust elite core" in row[category_index] for row in robust_rows),
                 "rows_after_filter": len(robust_rows),
             }
 
@@ -180,11 +200,15 @@ def run_checks(snapshot_dir: Path, host: str, port: int) -> dict[str, object]:
             page.locator("#explorer-table thead th[data-sort-key='engagements']").click()
             page.wait_for_timeout(300)
             desc_rows = table_rows(page)
-            desc_values = [parse_number(row[4]) for row in desc_rows[:5]]
+            desc_headers = table_headers(page)
+            engagements_index = column_index(desc_headers, "Engagements")
+            desc_values = [parse_number(row[engagements_index]) for row in desc_rows[:5]]
             page.locator("#explorer-table thead th[data-sort-key='engagements']").click()
             page.wait_for_timeout(300)
             asc_rows = table_rows(page)
-            asc_values = [parse_number(row[4]) for row in asc_rows[:5]]
+            asc_headers = table_headers(page)
+            engagements_index = column_index(asc_headers, "Engagements")
+            asc_values = [parse_number(row[engagements_index]) for row in asc_rows[:5]]
             summary["checks"]["sorting"] = {
                 "ok": desc_values == sorted(desc_values, reverse=True) and asc_values == sorted(asc_values),
                 "descending_sample": desc_values,

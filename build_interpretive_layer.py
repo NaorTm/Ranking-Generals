@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 
-ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
+ROOT = Path(__file__).resolve().parent
 
 
 MODEL_RANK_COLUMNS = [
@@ -384,6 +384,8 @@ def build_frames(snapshot_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
             chosen = pd.concat([chosen, fallback], ignore_index=True)
 
         chosen = chosen.copy()
+        if chosen.empty:
+            continue
         chosen["requested_era"] = era
         chosen["support_band"] = chosen["interpretive_group"]
         chosen["recommendation_note"] = chosen.apply(
@@ -730,7 +732,7 @@ def main() -> None:
     parser.add_argument(
         "--snapshot-dir",
         type=Path,
-        default=Path("outputs_final_2026-04-05"),
+        default=Path("outputs_cleaned_2026-04-21_fullpopulation_authoritative"),
         help="Snapshot directory containing ranking outputs.",
     )
     args = parser.parse_args()

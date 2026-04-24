@@ -14,27 +14,27 @@
       "overlap_count": 9,
       "trust_top10": [
         "Alexander Suvorov",
-        "Suleiman the Magnificent",
+        "Maurice, Prince of Orange",
         "Napoleon Bonaparte",
-        "Douglas MacArthur",
-        "Dwight D. Eisenhower",
-        "Charles XIV John",
         "Subutai",
-        "Louis XIV",
+        "Sébastien Le Prestre, Marquis of Vauban",
+        "Jean Lannes",
         "Louis-Nicolas Davout",
-        "Jean Lannes"
+        "Douglas MacArthur",
+        "Charles XIV John",
+        "Ivan Paskevich"
       ],
       "weighted_top10": [
         "Alexander Suvorov",
-        "Napoleon Bonaparte",
-        "Suleiman the Magnificent",
-        "Douglas MacArthur",
-        "Dwight D. Eisenhower",
         "Ivan Paskevich",
-        "Louis XIV",
         "Subutai",
-        "Charles XIV John",
-        "Louis-Nicolas Davout"
+        "Sébastien Le Prestre, Marquis of Vauban",
+        "Maurice, Prince of Orange",
+        "Napoleon Bonaparte",
+        "Louis XIV",
+        "Louis-Nicolas Davout",
+        "Jean Lannes",
+        "Charles XIV John"
       ]
     },
     "robust_core_not_higher_level_fragile": {

@@ -1,0 +1,13 @@
+{
+  "old_snapshot": "outputs_cleaned_2026-04-12_coalitionhardening_authoritative",
+  "new_snapshot": "outputs_cleaned_2026-04-21_conservativepatch_authoritative",
+  "year_corrections": 1,
+  "recovered_commander_rows": 255,
+  "pages_touched_by_recovery": 195,
+  "sanity_commanders": [
+    "Alexander Suvorov",
+    "Napoleon Bonaparte",
+    "Jean Lannes",
+    "Suleiman the Magnificent"
+  ]
+}

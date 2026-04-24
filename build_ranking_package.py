@@ -191,22 +191,33 @@ def prepare_rows(output_root: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.Data
         .size()
         .to_dict()
     )
+    known_side_counts = (
+        annotated.loc[annotated["valid_side_flag"] & annotated["outcome_category"].ne("unknown")]
+        .groupby(["battle_id", "side"])
+        .size()
+        .to_dict()
+    )
     presence_split = []
+    outcome_split = []
     for row in annotated.to_dict(orient="records"):
         if row["side"] in VALID_SIDES:
-            count = side_counts.get((row["battle_id"], row["side"]), 1)
+            key = (row["battle_id"], row["side"])
+            count = side_counts.get(key, 1)
             presence_split.append(1.0 / max(count, 1))
+            known_count = known_side_counts.get(key, 0)
+            if row["outcome_category"] != "unknown" and known_count > 0:
+                outcome_split.append(1.0 / math.sqrt(known_count))
+            else:
+                outcome_split.append(0.0)
         else:
             presence_split.append(0.0)
+            outcome_split.append(0.0)
     annotated["presence_factor_full"] = annotated["valid_side_flag"].astype(float)
     annotated["presence_factor_split"] = presence_split
     annotated["outcome_factor_full"] = (
         annotated["valid_side_flag"] & annotated["outcome_category"].ne("unknown")
     ).astype(float)
-    annotated["outcome_factor_split"] = (
-        annotated["outcome_credit_fraction_num"]
-        * annotated["outcome_category"].ne("unknown").astype(float)
-    )
+    annotated["outcome_factor_split"] = outcome_split
 
     for mode, mapping in OUTCOME_SCORE_MAPS.items():
         annotated[f"outcome_score_{mode}"] = (
@@ -1086,7 +1097,7 @@ def main() -> None:
     parser.add_argument(
         "--output-root",
         type=Path,
-        default=Path("outputs_final_2026-04-05"),
+        default=Path("outputs_cleaned_2026-04-21_fullpopulation_authoritative"),
         help="Frozen output directory containing derived_scoring tables.",
     )
     args = parser.parse_args()

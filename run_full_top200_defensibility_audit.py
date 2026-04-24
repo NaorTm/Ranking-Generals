@@ -14,7 +14,7 @@ from typing import Any
 import pandas as pd
 
 
-ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
+ROOT = Path(__file__).resolve().parent
 TOP200_SOURCE_SNAPSHOT = ROOT / "outputs_cleaned_2026-04-21_fullverification_authoritative"
 BASE_SNAPSHOT = ROOT / "outputs_cleaned_2026-04-21_outcomeaudit_authoritative"
 OUTPUT_SNAPSHOT = ROOT / "outputs_cleaned_2026-04-21_top200defensibility_authoritative"

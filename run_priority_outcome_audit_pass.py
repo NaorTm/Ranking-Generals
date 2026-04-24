@@ -12,8 +12,9 @@ from pathlib import Path
 import pandas as pd
 
 
-BASE_SNAPSHOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test\outputs_cleaned_2026-04-21_fullverification_authoritative")
-DEFAULT_OUTPUT = Path(r"C:\Users\gameo\OneDrive\Desktop\test\outputs_cleaned_2026-04-21_outcomeaudit_authoritative")
+ROOT = Path(__file__).resolve().parent
+BASE_SNAPSHOT = ROOT / "outputs_cleaned_2026-04-21_fullverification_authoritative"
+DEFAULT_OUTPUT = ROOT / "outputs_cleaned_2026-04-21_outcomeaudit_authoritative"
 PRIORITY_FORCE_INCLUDE = ["Napoleon Bonaparte", "Khalid ibn al-Walid"]
 MAX_AUDITED_COMMANDERS = 15
 

@@ -53,6 +53,7 @@ Key files:
 - `build_interpretive_layer.py`: narrative summaries and profiles
 - `build_ranking_dashboard.py`: static dashboard data bundle builder
 - `qa_dashboard_snapshot.py`: dashboard QA checks
+- `audit_snapshot_integrity.py`: DB/ranking/dashboard consistency audit
 - `docs/`: GitHub Pages copy of the final dashboard
 
 ## Local Setup
@@ -86,6 +87,13 @@ python .\build_scoring_framework_package.py
 python .\build_ranking_package.py
 python .\build_interpretive_layer.py
 python .\build_ranking_dashboard.py
+```
+
+Run integrity checks:
+
+```powershell
+python .\audit_snapshot_integrity.py
+python .\qa_dashboard_snapshot.py --snapshot-dir .\outputs_cleaned_2026-04-21_fullpopulation_authoritative
 ```
 
 ## Run The Dashboard Locally

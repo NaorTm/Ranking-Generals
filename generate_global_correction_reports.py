@@ -7,7 +7,7 @@ from typing import Any
 import pandas as pd
 
 
-ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
+ROOT = Path(__file__).resolve().parent
 OLD_SNAPSHOT = ROOT / "outputs_cleaned_2026-04-10_secondpass_authoritative"
 NEW_SNAPSHOT = ROOT / "outputs_cleaned_2026-04-11_globaltrust_authoritative"
 

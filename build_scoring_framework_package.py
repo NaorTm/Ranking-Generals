@@ -1209,6 +1209,94 @@ def apply_commander_outcome_overrides(output_root: Path, annotated: pd.DataFrame
     )
 
 
+def apply_split_outcome_credit(annotated: pd.DataFrame) -> pd.DataFrame:
+    annotated = annotated.copy()
+    valid_side_mask = annotated["side"].isin(["side_a", "side_b", "side_c", "side_d"])
+    known_outcome_mask = annotated["outcome_category"].ne("unknown")
+    same_side_counts = (
+        annotated.loc[valid_side_mask]
+        .groupby(["battle_id", "side"])
+        .size()
+        .to_dict()
+    )
+    known_side_counts = (
+        annotated.loc[valid_side_mask & known_outcome_mask]
+        .groupby(["battle_id", "side"])
+        .size()
+        .to_dict()
+    )
+
+    same_side_count_values: list[str] = []
+    known_side_count_values: list[str] = []
+    outcome_credit_fractions: list[str] = []
+    for row in annotated.to_dict(orient="records"):
+        key = (row["battle_id"], row["side"])
+        if row["side"] in {"side_a", "side_b", "side_c", "side_d"}:
+            side_count = max(same_side_counts.get(key, 1), 1)
+            known_side_count = known_side_counts.get(key, 0)
+            same_side_count_values.append(str(side_count))
+            known_side_count_values.append(str(known_side_count))
+            if row["outcome_category"] != "unknown" and known_side_count > 0:
+                outcome_credit_fractions.append(f"{1.0 / math.sqrt(known_side_count):.6f}")
+            else:
+                outcome_credit_fractions.append("0.000000")
+        else:
+            same_side_count_values.append("0")
+            known_side_count_values.append("0")
+            outcome_credit_fractions.append("0.000000")
+
+    annotated["same_side_commander_count"] = same_side_count_values
+    annotated["same_side_known_outcome_count"] = known_side_count_values
+    annotated["outcome_credit_fraction"] = outcome_credit_fractions
+    annotated["outcome_credit_rule"] = "sqrt_known_same_side_split"
+    return annotated
+
+
+def apply_page_weights(annotated: pd.DataFrame) -> pd.DataFrame:
+    annotated = annotated.copy()
+    battle_presence_by_overlap = (
+        annotated.loc[
+            (annotated["page_type"].eq("battle_article"))
+            & (annotated["eligible_strict"].eq("1"))
+        ]
+        .groupby(["analytic_commander_id", "hierarchy_overlap_key"])
+        .size()
+        .to_dict()
+    )
+
+    overlap_penalties: list[str] = []
+    model_a_weights: list[str] = []
+    model_b_weights: list[str] = []
+    model_c_weights: list[str] = []
+    for row in annotated.to_dict(orient="records"):
+        eligible = row["eligible_strict"] == "1"
+        has_battle_overlap = (row["analytic_commander_id"], row["hierarchy_overlap_key"]) in battle_presence_by_overlap
+        penalty = 0.5 if eligible and row["page_type"] != "battle_article" and has_battle_overlap else 1.0
+        overlap_penalties.append(f"{penalty:.2f}")
+
+        if eligible and row["page_type"] == "battle_article":
+            model_a_weights.append("1.000000")
+            model_c_weights.append("1.000000")
+        elif eligible and row["page_type"] == "operation_article":
+            model_a_weights.append("0.800000")
+            model_c_weights.append("0.000000")
+        else:
+            model_a_weights.append("0.000000")
+            model_c_weights.append("0.000000")
+
+        if eligible:
+            base_weight = PAGE_TYPE_WEIGHTS.get(row["page_type"], 0.0)
+            model_b_weights.append(f"{base_weight * penalty:.6f}")
+        else:
+            model_b_weights.append("0.000000")
+
+    annotated["hierarchy_overlap_penalty"] = overlap_penalties
+    annotated["page_weight_model_a"] = model_a_weights
+    annotated["page_weight_model_b"] = model_b_weights
+    annotated["page_weight_model_c"] = model_c_weights
+    return annotated
+
+
 def build_package(output_root: Path) -> dict[str, Any]:
     battles = pd.read_csv(output_root / "battles_clean.csv", dtype=str).fillna("")
     commanders = pd.read_csv(output_root / "battle_commanders.csv", dtype=str).fillna("")
@@ -1537,68 +1625,10 @@ def build_package(output_root: Path) -> dict[str, Any]:
             collapsed_rows.append(base)
         annotated = pd.DataFrame(collapsed_rows)
 
-    analytic_side_counts = (
-        annotated.loc[annotated["side"].isin(["side_a", "side_b", "side_c", "side_d"])]
-        .groupby(["battle_id", "side"])
-        .size()
-        .to_dict()
-    )
-    same_side_counts: list[str] = []
-    outcome_credit_fractions: list[str] = []
-    for row in annotated.to_dict(orient="records"):
-        if row["side"] in {"side_a", "side_b", "side_c", "side_d"}:
-            side_count = analytic_side_counts.get((row["battle_id"], row["side"]), 1)
-            same_side_counts.append(str(max(side_count, 1)))
-            outcome_credit_fractions.append(f"{1.0 / math.sqrt(max(side_count, 1)):.6f}")
-        else:
-            same_side_counts.append("0")
-            outcome_credit_fractions.append("0.000000")
-    annotated["same_side_commander_count"] = same_side_counts
-    annotated["outcome_credit_fraction"] = outcome_credit_fractions
-    annotated["outcome_credit_rule"] = "sqrt_same_side_split"
-
-    battle_presence_by_overlap = (
-        annotated.loc[
-            (annotated["page_type"].eq("battle_article"))
-            & (annotated["eligible_strict"].eq("1"))
-        ]
-        .groupby(["analytic_commander_id", "hierarchy_overlap_key"])
-        .size()
-        .to_dict()
-    )
-
-    overlap_penalties: list[str] = []
-    model_a_weights: list[str] = []
-    model_b_weights: list[str] = []
-    model_c_weights: list[str] = []
-    for row in annotated.to_dict(orient="records"):
-        eligible = row["eligible_strict"] == "1"
-        has_battle_overlap = (row["analytic_commander_id"], row["hierarchy_overlap_key"]) in battle_presence_by_overlap
-        penalty = 0.5 if eligible and row["page_type"] != "battle_article" and has_battle_overlap else 1.0
-        overlap_penalties.append(f"{penalty:.2f}")
-
-        if eligible and row["page_type"] == "battle_article":
-            model_a_weights.append("1.000000")
-            model_c_weights.append("1.000000")
-        elif eligible and row["page_type"] == "operation_article":
-            model_a_weights.append("0.800000")
-            model_c_weights.append("0.000000")
-        else:
-            model_a_weights.append("0.000000")
-            model_c_weights.append("0.000000")
-
-        if eligible:
-            base_weight = PAGE_TYPE_WEIGHTS.get(row["page_type"], 0.0)
-            model_b_weights.append(f"{base_weight * penalty:.6f}")
-        else:
-            model_b_weights.append("0.000000")
-
-    annotated["hierarchy_overlap_penalty"] = overlap_penalties
-    annotated["page_weight_model_a"] = model_a_weights
-    annotated["page_weight_model_b"] = model_b_weights
-    annotated["page_weight_model_c"] = model_c_weights
     annotated = apply_commander_verification_overrides(output_root, annotated)
     annotated = apply_commander_outcome_overrides(output_root, annotated)
+    annotated = apply_split_outcome_credit(annotated)
+    annotated = apply_page_weights(annotated)
     annotated["known_outcome_flag"] = annotated["outcome_category"].ne("unknown").astype(int).astype(str)
 
     write_csv(derived_dir / "commander_engagements_annotated.csv", annotated)
@@ -1974,7 +2004,7 @@ def main() -> None:
     parser.add_argument(
         "--output-root",
         type=Path,
-        default=Path("outputs_final_2026-04-05"),
+        default=Path("outputs_cleaned_2026-04-21_fullpopulation_authoritative"),
         help="Frozen output directory containing battles_clean.csv and related files.",
     )
     args = parser.parse_args()

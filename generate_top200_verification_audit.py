@@ -9,7 +9,7 @@ from typing import Any
 import pandas as pd
 
 
-ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
+ROOT = Path(__file__).resolve().parent
 HEADLINE_NAMES = [
     "Napoleon Bonaparte",
     "Alexander Suvorov",

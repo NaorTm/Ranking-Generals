@@ -21,7 +21,7 @@ from build_ranking_package import build_rankings
 from build_scoring_framework_package import build_package
 
 
-ROOT = Path(r"C:\Users\gameo\OneDrive\Desktop\test")
+ROOT = Path(__file__).resolve().parent
 SANITY_NAMES = [
     "Napoleon Bonaparte",
     "Alexander Suvorov",

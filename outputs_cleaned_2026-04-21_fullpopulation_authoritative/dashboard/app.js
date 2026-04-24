@@ -54,6 +54,8 @@
     topN: 20,
     eraView: "modern",
     selectedIds: [],
+    tableSortKey: "metric",
+    tableSortDirection: "default",
   };
 
   const commanderById = new Map(COMMANDERS.map((commander) => [commander.id, commander]));
@@ -101,6 +103,54 @@
     if (rightValue == null) return -1;
     if (state.metricKey === "rank") return leftValue - rightValue;
     return rightValue - leftValue;
+  }
+
+  function tableSortValue(commander, key) {
+    if (key === "name") return commander.name;
+    if (key === "era") return ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra);
+    if (key === "category") return GROUP_LABELS[commander.robustnessCategory] || "Other ranked";
+    if (key === "metric") return commanderMetricValue(commander, state.modelKey, state.metricKey);
+    if (key === "engagements") return commander.engagementCount || 0;
+    if (key === "spread") return commander.rankRange || 0;
+    if (key === "profile") return PAGE_CLASS_LABELS[commander.pageTypeProfileClass] || titleCase(commander.pageTypeProfileClass || "mixed");
+    return null;
+  }
+
+  function compareTableRows(left, right) {
+    if (state.tableSortKey === "metric" && state.tableSortDirection === "default") {
+      return compareForCurrentMetric(left, right);
+    }
+
+    const leftValue = tableSortValue(left, state.tableSortKey);
+    const rightValue = tableSortValue(right, state.tableSortKey);
+    const direction = state.tableSortDirection === "asc" ? 1 : -1;
+
+    if (typeof leftValue === "string" || typeof rightValue === "string") {
+      return direction * String(leftValue || "").localeCompare(String(rightValue || ""));
+    }
+    if (leftValue == null && rightValue == null) return left.name.localeCompare(right.name);
+    if (leftValue == null) return 1;
+    if (rightValue == null) return -1;
+    if (leftValue === rightValue) return left.name.localeCompare(right.name);
+    return direction * (Number(leftValue) - Number(rightValue));
+  }
+
+  function sortableHeader(key, label) {
+    const active = state.tableSortKey === key;
+    const marker = active && state.tableSortDirection !== "default"
+      ? (state.tableSortDirection === "asc" ? " ▲" : " ▼")
+      : "";
+    return `<th data-sort-key="${key}" class="${active ? "sorted" : ""}">${label}${marker}</th>`;
+  }
+
+  function handleTableSort(key) {
+    if (state.tableSortKey === key) {
+      state.tableSortDirection = state.tableSortDirection === "desc" ? "asc" : "desc";
+    } else {
+      state.tableSortKey = key;
+      state.tableSortDirection = key === "name" || key === "era" || key === "category" || key === "profile" ? "asc" : "desc";
+    }
+    renderExplorerTable();
   }
 
   function filteredCommanders() {
@@ -738,17 +788,17 @@
     const table = document.getElementById("explorer-table");
     const thead = table.querySelector("thead");
     const tbody = table.querySelector("tbody");
-    const rows = commandersWithCurrentMetric().sort(compareForCurrentMetric).slice(0, 120);
+    const rows = commandersWithCurrentMetric().sort(compareTableRows).slice(0, 120);
 
     thead.innerHTML = `
       <tr>
-        <th>Commander</th>
-        <th>Era</th>
-        <th>Category</th>
-        <th>${state.metricKey === "rank" ? "Rank" : "Score"}</th>
-        <th>Engagements</th>
-        <th>Spread</th>
-        <th>Profile</th>
+        ${sortableHeader("name", "Commander")}
+        ${sortableHeader("era", "Era")}
+        ${sortableHeader("category", "Category")}
+        ${sortableHeader("metric", state.metricKey === "rank" ? "Rank" : "Score")}
+        ${sortableHeader("engagements", "Engagements")}
+        ${sortableHeader("spread", "Spread")}
+        ${sortableHeader("profile", "Profile")}
       </tr>
     `;
 
@@ -770,6 +820,9 @@
 
     tbody.querySelectorAll("tr[data-commander-id]").forEach((row) => {
       row.addEventListener("click", () => addSelection(row.dataset.commanderId));
+    });
+    thead.querySelectorAll("th[data-sort-key]").forEach((cell) => {
+      cell.addEventListener("click", () => handleTableSort(cell.dataset.sortKey));
     });
   }
 
