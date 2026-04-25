@@ -25,6 +25,16 @@ MODELS = [
 CAP_BROAD_SHARE = 0.40
 
 
+def snapshot_file(snapshot_dir: Path, relative_name: str) -> Path:
+    path = snapshot_dir / relative_name
+    if path.exists():
+        return path
+    gzip_path = snapshot_dir / f"{relative_name}.gz"
+    if gzip_path.exists():
+        return gzip_path
+    return path
+
+
 def confidence_category(width_80: float) -> str:
     if width_80 <= 10:
         return "narrow"
@@ -90,7 +100,7 @@ def original_model_table(snapshot_dir: Path) -> pd.DataFrame:
 
 def run_bootstrap(snapshot_dir: Path, iterations: int, seed: int) -> tuple[pd.DataFrame, dict[str, object]]:
     start = time.time()
-    annotated = pd.read_csv(snapshot_dir / "derived_scoring" / "commander_engagements_annotated.csv")
+    annotated = pd.read_csv(snapshot_file(snapshot_dir, "derived_scoring/commander_engagements_annotated.csv"))
     for column in [
         "eligible_strict",
         "page_weight_model_b",

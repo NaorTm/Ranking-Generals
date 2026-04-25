@@ -28,6 +28,7 @@ outputs_cleaned_*/
 !outputs_improved_2026-04-24_upgrade_pass2_role_highlevel/**
 !outputs_improved_2026-04-24_upgrade_pass3_confidence/
 !outputs_improved_2026-04-24_upgrade_pass3_confidence/**
+**/derived_scoring/commander_engagements_annotated.csv
 outputs_improved_2026-04-24_upgrade_pass3_confidence/derived_scoring/bootstrap_rank_samples.csv
 
 # Unrelated workspace files

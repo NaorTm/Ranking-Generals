@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 import math
 import re
@@ -48,8 +49,19 @@ CONFIDENCE_FILES = [
 ]
 
 
+def resolve_snapshot_file(snapshot_dir: Path, relative_name: str) -> Path:
+    path = snapshot_dir / relative_name
+    if path.exists():
+        return path
+    gzip_path = snapshot_dir / f"{relative_name}.gz"
+    if gzip_path.exists():
+        return gzip_path
+    return path
+
+
 def read_csv(path: Path) -> list[dict[str, str]]:
-    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+    opener = gzip.open if path.suffix == ".gz" else Path.open
+    with opener(path, "rt", encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
 
 
@@ -96,7 +108,7 @@ def audit(
         *(UPGRADE_FILES if require_upgrade_files else []),
         *(CONFIDENCE_FILES if require_confidence_files else []),
     ]
-    missing_files = [name for name in required_files if not (snapshot_dir / name).exists()]
+    missing_files = [name for name in required_files if not resolve_snapshot_file(snapshot_dir, name).exists()]
     add_check(checks, "required_files_exist", not missing_files, missing_files=missing_files)
     if missing_files:
         return {
@@ -110,7 +122,7 @@ def audit(
     commanders = read_csv(snapshot_dir / "battle_commanders.csv")
     excluded = read_csv(snapshot_dir / "derived_scoring" / "scoring_excluded_commander_rows.csv")
     bridge = read_csv(snapshot_dir / "derived_scoring" / "commander_identity_bridge.csv")
-    annotated = read_csv(snapshot_dir / "derived_scoring" / "commander_engagements_annotated.csv")
+    annotated = read_csv(resolve_snapshot_file(snapshot_dir, "derived_scoring/commander_engagements_annotated.csv"))
     features = read_csv(snapshot_dir / "derived_scoring" / "commander_ranking_features.csv")
     sensitivity = read_csv(snapshot_dir / "RANKING_RESULTS_SENSITIVITY.csv")
     trust = read_csv(snapshot_dir / "RANKING_RESULTS_HIERARCHICAL_TRUST_V2.csv")
@@ -362,7 +374,7 @@ def audit(
 
     nan_hits = []
     for rel_path in CORE_CSVS:
-        for line_number, row in enumerate(read_csv(snapshot_dir / rel_path), start=2):
+        for line_number, row in enumerate(read_csv(resolve_snapshot_file(snapshot_dir, rel_path)), start=2):
             for column, value in row.items():
                 if isinstance(value, str) and value.strip().lower() == "nan":
                     nan_hits.append({"file": rel_path, "line": line_number, "column": column})
