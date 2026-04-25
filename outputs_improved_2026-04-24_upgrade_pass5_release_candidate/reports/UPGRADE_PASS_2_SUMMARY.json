@@ -1,0 +1,11 @@
+{
+  "snapshot": "outputs_improved_2026-04-24_upgrade_pass2_role_highlevel",
+  "cap_broad_share": 0.4,
+  "ranked_commanders": 1067,
+  "top100_broad_gt_40": 12,
+  "ranked_100_percent_broad": 18,
+  "high_ranked_weak_battle_siege": 2,
+  "exclude_from_headline_recommendations": 7,
+  "capped_ranked_commanders": 1067,
+  "eligibility_filtered_commanders": 1060
+}

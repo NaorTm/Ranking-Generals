@@ -1,0 +1,24 @@
+{
+  "top200_source_snapshot": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_fullverification_authoritative",
+  "base_snapshot": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_outcomeaudit_authoritative",
+  "output_snapshot": "C:\\Users\\gameo\\OneDrive\\Desktop\\test\\outputs_cleaned_2026-04-21_top200defensibility_authoritative",
+  "top200_count": 200,
+  "changed_row_count": 158,
+  "changed_commander_count": 90,
+  "outcome_review_status_counts": {
+    "unresolved_after_review": 79,
+    "corrected_but_partially_unresolved": 68,
+    "confirmed_no_change": 31,
+    "corrected": 22
+  },
+  "stability_counts": {
+    "stable_after_review": 154,
+    "material_change": 46
+  },
+  "structural_classification_counts": {
+    "materially_inflated": 164,
+    "high_priority_manual_audit": 18,
+    "mildly_inflated": 16,
+    "structurally_clean": 2
+  }
+}

@@ -77,6 +77,13 @@ def load_optional_csv(snapshot_dir: Path, name: str) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
+def load_optional_json(snapshot_dir: Path, name: str) -> dict[str, Any]:
+    path = snapshot_dir / name
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def to_numeric(df: pd.DataFrame, columns: list[str]) -> None:
     for column in columns:
         if column in df.columns:
@@ -128,6 +135,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
     confidence_adjusted_tiers = load_optional_csv(snapshot_dir, "derived_scoring/commander_tiers_confidence_adjusted.csv")
     role_contributions = load_optional_csv(snapshot_dir, "derived_scoring/role_class_score_contributions.csv")
     role_sensitivity = load_optional_csv(snapshot_dir, "RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv")
+    synthesis_tiers = load_optional_csv(snapshot_dir, "RANKING_RESULTS_SYNTHESIS_TIERED.csv")
+    release_metadata = load_optional_json(snapshot_dir, "DASHBOARD_RELEASE_METADATA.json")
 
     sensitivity_numeric = [
         "best_rank",
@@ -368,6 +377,23 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "mean_role_confidence",
             ],
         )
+    if not synthesis_tiers.empty:
+        to_numeric(
+            synthesis_tiers,
+            [
+                "headline_rank",
+                "headline_score",
+                "role_weighted_rank",
+                "high_level_capped_rank",
+                "eligibility_filtered_rank",
+                "battle_only_rank",
+                "broad_page_share",
+                "direct_field_command_share",
+                "unclear_role_share",
+                "known_outcome_rows",
+                "total_commander_engagement_rows",
+            ],
+        )
 
     commander_ids = set(sensitivity["analytic_commander_id"])
     outcome_profile = outcome_profile[outcome_profile["analytic_commander_id"].isin(commander_ids)]
@@ -394,6 +420,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         role_contributions = role_contributions[role_contributions["analytic_commander_id"].isin(commander_ids)]
     if not role_sensitivity.empty:
         role_sensitivity = role_sensitivity[role_sensitivity["analytic_commander_id"].isin(commander_ids)]
+    if not synthesis_tiers.empty:
+        synthesis_tiers = synthesis_tiers[synthesis_tiers["analytic_commander_id"].isin(commander_ids)]
 
     stability_by_id = {
         row["analytic_commander_id"]: {
@@ -500,6 +528,19 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         }
         for _, row in role_sensitivity.iterrows()
     } if not role_sensitivity.empty else {}
+    synthesis_by_id = {
+        row["analytic_commander_id"]: {
+            "tier": clean_value(row.get("synthesis_tier")),
+            "recommendedInterpretation": clean_value(row.get("recommended_interpretation")),
+            "mainAuditFlags": split_flags(row.get("main_audit_flags")),
+            "headlineRank": clean_value(row.get("headline_rank")),
+            "roleWeightedRank": clean_value(row.get("role_weighted_rank")),
+            "highLevelCappedRank": clean_value(row.get("high_level_capped_rank")),
+            "eligibilityFilteredRank": clean_value(row.get("eligibility_filtered_rank")),
+            "battleOnlyRank": clean_value(row.get("battle_only_rank")),
+        }
+        for _, row in synthesis_tiers.iterrows()
+    } if not synthesis_tiers.empty else {}
 
     summary = summary.rename(columns={column: f"summary_{column}" for column in summary.columns})
     classification = classification.rename(
@@ -563,6 +604,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         confidence_tier_info = confidence_tier_by_id.get(row.get("analytic_commander_id"), {})
         role_contrib_info = role_contrib_by_id.get(row.get("analytic_commander_id"), {})
         role_sensitivity_info = role_sensitivity_by_id.get(row.get("analytic_commander_id"), {})
+        synthesis_info = synthesis_by_id.get(row.get("analytic_commander_id"), {})
         primary_era_bucket = (
             clean_value(row.get("primary_era_bucket"))
             or clean_value(row.get("primary_era_bucket_x"))
@@ -660,6 +702,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "confidenceAdjustedTier": confidence_tier_info,
                 "roleContribution": role_contrib_info,
                 "roleSensitivity": role_sensitivity_info,
+                "synthesis": synthesis_info,
                 "robustnessCategory": clean_value(row.get("interpretive_group")) or "other_ranked",
                 "trustConfidence": clean_value(row.get("summary_trust_confidence_v2")) or clean_value(row.get("trust_confidence_v2")),
                 "trustHeadlineReason": clean_value(row.get("summary_trust_headline_reason_v2")) or clean_value(row.get("trust_headline_reason_v2")),
@@ -854,6 +897,7 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         ("derived_scoring/commander_tiers_confidence_adjusted.csv", confidence_adjusted_tiers),
         ("derived_scoring/role_class_score_contributions.csv", role_contributions),
         ("RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv", role_sensitivity),
+        ("RANKING_RESULTS_SYNTHESIS_TIERED.csv", synthesis_tiers),
     ]:
         if not frame.empty:
             generated_from.append(optional_source)
@@ -861,6 +905,9 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
     metadata = {
         "snapshot": snapshot_dir.name,
         "headlineModel": "hierarchical_trust_v2",
+        "recommendedHeadlineView": release_metadata.get("recommended_headline_view", "tiered_synthesis" if not synthesis_tiers.empty else "exact_rank_with_interpretive_layers"),
+        "interpretationRule": release_metadata.get("interpretation_rule"),
+        "caveatLanguage": release_metadata.get("caveat_language"),
         "generatedFrom": generated_from,
         "models": [{"key": key, "label": MODEL_LABELS[key]} for key in MODEL_KEYS],
         "counts": {

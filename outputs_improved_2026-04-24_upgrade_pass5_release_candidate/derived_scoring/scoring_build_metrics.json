@@ -1,0 +1,36 @@
+{
+  "source": {
+    "retained_pages": 13492,
+    "commander_rows": 60690,
+    "commander_master_rows": 30783
+  },
+  "derived": {
+    "engagement_eligibility_rows": 13492,
+    "identity_bridge_rows": 30953,
+    "annotated_rows": 60512,
+    "opponent_profile_rows": 60420,
+    "commander_summary_rows": 30953,
+    "commander_features_rows": 30953
+  },
+  "eligibility": {
+    "strict_included_pages": 13492,
+    "balanced_included_pages": 13492,
+    "likely_false_positive_pages": 594,
+    "pages_with_unresolved_year_anomaly": 0
+  },
+  "identities": {
+    "linked_identities": 27372,
+    "raw_name_only_identities": 3581,
+    "suspect_identities": 0
+  },
+  "outcomes": {
+    "strict_known_outcome_rows": 26364,
+    "strict_known_outcome_commanders": 16132,
+    "default_ranking_eligible_commanders": 781
+  },
+  "validation": {
+    "eligibility_unique_battle_ids": true,
+    "bridge_unique_commander_ids": true,
+    "annotated_unique_commander_battle_pairs": true
+  }
+}

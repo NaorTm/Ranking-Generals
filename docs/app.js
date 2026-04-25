@@ -91,6 +91,8 @@
   }
 
   function commanderTierLabel(commander) {
+    if (commander.synthesis && commander.synthesis.tier) return commander.synthesis.tier;
+    if (commander.confidenceAdjustedTier && commander.confidenceAdjustedTier.label) return commander.confidenceAdjustedTier.label;
     return commander.tier && commander.tier.label ? commander.tier.label : "Unclassified";
   }
 
@@ -797,6 +799,7 @@
               <div><span>Audit flags</span><strong>${formatNumber((commander.auditFlags || []).length)}</strong></div>
             </div>
             <div class="muted">${commander.trustHeadlineReason || commander.interpretiveReason || "No interpretive note available for this commander in the current classification layer."}</div>
+            ${commander.synthesis && commander.synthesis.recommendedInterpretation ? `<div class="muted">${commander.synthesis.recommendedInterpretation}</div>` : ""}
             ${commander.rankConfidence && commander.rankConfidence.recommendedInterpretation ? `<div class="muted">${commander.rankConfidence.recommendedInterpretation}</div>` : ""}
             ${topPageContributions ? `<div class="muted">Main page contribution mix: ${topPageContributions}</div>` : ""}
             <table class="model-rank-list">

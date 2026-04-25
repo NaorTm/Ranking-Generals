@@ -31,6 +31,8 @@ outputs_cleaned_*/
 outputs_improved_2026-04-24_upgrade_pass3_confidence/derived_scoring/bootstrap_rank_samples.csv
 !outputs_improved_2026-04-24_upgrade_pass4_role_curated/
 !outputs_improved_2026-04-24_upgrade_pass4_role_curated/**
+!outputs_improved_2026-04-24_upgrade_pass5_release_candidate/
+!outputs_improved_2026-04-24_upgrade_pass5_release_candidate/**
 **/derived_scoring/commander_engagements_annotated.csv
 
 # Unrelated workspace files

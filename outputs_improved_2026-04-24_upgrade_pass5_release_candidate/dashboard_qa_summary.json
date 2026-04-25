@@ -1,0 +1,114 @@
+{
+  "snapshot": "outputs_improved_2026-04-24_upgrade_pass5_release_candidate",
+  "dashboard_dir": "outputs_improved_2026-04-24_upgrade_pass5_release_candidate\\dashboard",
+  "expected": {
+    "commander_count": 2541,
+    "default_leader": "Alexander Suvorov",
+    "baseline_leader": "Khalid ibn al-Walid",
+    "hierarchical_leader": "Alexander Suvorov"
+  },
+  "checks": {
+    "http_load": {
+      "ok": true,
+      "status": 200,
+      "url": "http://127.0.0.1:8772/"
+    },
+    "title": {
+      "ok": true,
+      "value": "Commander Ranking Analysis Dashboard"
+    },
+    "header_metadata": {
+      "ok": true,
+      "commander_count": 2541,
+      "snapshot_label": "outputs_improved_2026-04-24_upgrade_pass5_release_candidate"
+    },
+    "panel_render": {
+      "ok": true,
+      "chart_trace_counts": {
+        "#leaderboard-chart": 1,
+        "#movement-chart": 18,
+        "#sensitivity-chart": 4,
+        "#page-dependence-chart": 4,
+        "#page-composition-chart": 4,
+        "#era-chart": 1,
+        "#outcome-chart": 4
+      },
+      "overview_cards": 4,
+      "tier_columns": 4,
+      "comparison_cards": 3,
+      "audit_rows": 10,
+      "shortlist_rows": 8,
+      "explorer_rows": 120
+    },
+    "default_model_alignment": {
+      "ok": true,
+      "leader_from_table": "Alexander Suvorov",
+      "expected_leader": "Alexander Suvorov"
+    },
+    "upgrade_columns_visible": {
+      "ok": true,
+      "headers": [
+        "Commander",
+        "Era",
+        "Category",
+        "Tier",
+        "Rank",
+        "Engagements",
+        "Stability",
+        "Confidence",
+        "Role",
+        "Spread",
+        "Audit",
+        "Profile"
+      ]
+    },
+    "hierarchical_alignment": {
+      "ok": true,
+      "leader_from_table": "Alexander Suvorov",
+      "expected_leader": "Alexander Suvorov"
+    },
+    "search": {
+      "ok": true,
+      "rows_after_search": 1,
+      "first_row": "Alexander Suvorov"
+    },
+    "filtering": {
+      "ok": true,
+      "rows_after_filter": 6
+    },
+    "sorting": {
+      "ok": true,
+      "descending_sample": [
+        67,
+        46,
+        43,
+        42,
+        42
+      ],
+      "ascending_sample": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "selection_and_comparison": {
+      "ok": true,
+      "selected_chip_count": 2,
+      "comparison_card_count": 2
+    },
+    "clear_selection": {
+      "ok": true,
+      "selected_chip_count": 0
+    },
+    "console_clean": {
+      "ok": true,
+      "console_error_count": 0,
+      "page_error_count": 0
+    }
+  },
+  "console_errors": [],
+  "page_errors": [],
+  "all_checks_passed": true
+}

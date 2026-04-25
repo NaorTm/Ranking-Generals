@@ -1,0 +1,16 @@
+{
+  "current_snapshot": "outputs_improved_2026-04-24_upgrade_pass5_release_candidate",
+  "parent_snapshot": "outputs_improved_2026-04-24_upgrade_pass4_role_curated",
+  "recommended_headline_model": "hierarchical_trust_v2",
+  "recommended_headline_view": "tiered_synthesis",
+  "caveat_language": "Exact ranks are model outputs and should be read through tiers, confidence bands, role sensitivity, high-level page dependence, and audit flags.",
+  "interpretation_rule": "This is a conservative, auditable, evidence-weighted framework, not an absolute historical truth.",
+  "validation_status": {
+    "python_compile": "passed",
+    "ranking_validation": "passed",
+    "strict_integrity_audit": "PASS, 0 failed checks",
+    "dashboard_qa": "passed, 0 console errors, 0 page errors",
+    "large_file_check": "passed, no tracked files above 50 MB",
+    "repo_status": "clean after commit"
+  }
+}

@@ -54,6 +54,14 @@ ROLE_FILES = [
     "RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv",
     "reports/UPGRADE_PASS_4_ROLE_CLASSIFICATION_REPORT.md",
 ]
+SYNTHESIS_FILES = [
+    "FINAL_UPGRADED_SYSTEM_ASSESSMENT.md",
+    "RANKING_RESULTS_SYNTHESIS_TIERED.csv",
+    "ROBUST_ELITE_CORE.md",
+    "CAVEATED_HIGH_RANKED_COMMANDERS.md",
+    "DASHBOARD_RELEASE_METADATA.json",
+    "RELEASE_CANDIDATE_CHECKLIST.md",
+]
 
 
 def resolve_snapshot_file(snapshot_dir: Path, relative_name: str) -> Path:
@@ -107,6 +115,7 @@ def audit(
     require_upgrade_files: bool = False,
     require_confidence_files: bool = False,
     require_role_files: bool = False,
+    require_synthesis_files: bool = False,
 ) -> dict[str, Any]:
     checks: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
@@ -116,6 +125,7 @@ def audit(
         *(UPGRADE_FILES if require_upgrade_files else []),
         *(CONFIDENCE_FILES if require_confidence_files else []),
         *(ROLE_FILES if require_role_files else []),
+        *(SYNTHESIS_FILES if require_synthesis_files else []),
     ]
     missing_files = [name for name in required_files if not resolve_snapshot_file(snapshot_dir, name).exists()]
     add_check(checks, "required_files_exist", not missing_files, missing_files=missing_files)
@@ -437,6 +447,52 @@ def audit(
             generated_from=dashboard["metadata"].get("generatedFrom", []),
         )
 
+    if require_synthesis_files:
+        synthesis = read_csv(snapshot_dir / "RANKING_RESULTS_SYNTHESIS_TIERED.csv")
+        release_metadata = read_json(snapshot_dir / "DASHBOARD_RELEASE_METADATA.json")
+        top100_ids = {
+            row["analytic_commander_id"]
+            for row in trust
+            if 0 < numeric(row.get("rank", row.get("rank_hierarchical_trust_v2", "")), 999999) <= 100
+        }
+        synthesis_ids = {
+            row["analytic_commander_id"]
+            for row in synthesis
+            if row.get("synthesis_tier") and row.get("recommended_interpretation")
+        }
+        dashboard_by_id = {row.get("id"): row for row in dashboard.get("commanders", [])}
+        dashboard_missing_synthesis = []
+        for commander_id in sorted(top100_ids):
+            commander = dashboard_by_id.get(commander_id, {})
+            if not commander.get("synthesis"):
+                dashboard_missing_synthesis.append(commander_id)
+        add_check(
+            checks,
+            "top100_have_synthesis_tiers",
+            top100_ids <= synthesis_ids,
+            missing_count=len(top100_ids - synthesis_ids),
+            missing_ids=sorted(top100_ids - synthesis_ids)[:20],
+        )
+        add_check(
+            checks,
+            "dashboard_contains_synthesis_metadata",
+            not dashboard_missing_synthesis
+            and "RANKING_RESULTS_SYNTHESIS_TIERED.csv" in dashboard["metadata"].get("generatedFrom", [])
+            and dashboard["metadata"].get("recommendedHeadlineView") == "tiered_synthesis",
+            missing_count=len(dashboard_missing_synthesis),
+            missing_ids=dashboard_missing_synthesis[:20],
+            recommended_headline_view=dashboard["metadata"].get("recommendedHeadlineView"),
+            generated_from=dashboard["metadata"].get("generatedFrom", []),
+        )
+        add_check(
+            checks,
+            "release_metadata_points_to_snapshot",
+            release_metadata.get("current_snapshot") == snapshot_dir.name
+            and release_metadata.get("recommended_headline_view") == "tiered_synthesis",
+            current_snapshot=release_metadata.get("current_snapshot"),
+            recommended_headline_view=release_metadata.get("recommended_headline_view"),
+        )
+
     validation_failures = {
         name: result
         for name, result in validation.get("checks", {}).items()
@@ -515,6 +571,11 @@ def main() -> None:
         action="store_true",
         help="Require Pass 4 command-role classification outputs and dashboard role metadata.",
     )
+    parser.add_argument(
+        "--require-synthesis-files",
+        action="store_true",
+        help="Require Pass 5 release-candidate synthesis outputs and dashboard synthesis metadata.",
+    )
     args = parser.parse_args()
 
     summary = audit(
@@ -522,6 +583,7 @@ def main() -> None:
         require_upgrade_files=args.require_upgrade_files,
         require_confidence_files=args.require_confidence_files,
         require_role_files=args.require_role_files,
+        require_synthesis_files=args.require_synthesis_files,
     )
     output_path = args.output or args.snapshot_dir / "SNAPSHOT_INTEGRITY_AUDIT.json"
     output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")

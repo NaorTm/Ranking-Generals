@@ -1,0 +1,31 @@
+{
+  "snapshot": "outputs_cleaned_2026-04-21_fullverification_authoritative",
+  "battle_rows": 13492,
+  "commander_rows": 60903,
+  "master_rows": 30783,
+  "annotated_rows": 60512,
+  "battle_audit_summary": {
+    "rows_checked": 13492,
+    "blocker_rows": 0,
+    "ok_rows": 13492,
+    "blocker_counts": {}
+  },
+  "commander_audit_summary": {
+    "rows_checked": 60648,
+    "row_blocker_rows": 0,
+    "row_ok_rows": 60648,
+    "row_blocker_counts": {},
+    "master_rows_checked": 30722,
+    "master_blocker_rows": 0,
+    "master_ok_rows": 30722,
+    "master_blocker_counts": {}
+  },
+  "verification_status_counts": {
+    "structurally_suspect": 4001,
+    "verified_broad": 6844,
+    "verified_core": 49667
+  },
+  "battle_verification_counts": {
+    "verified_core": 13492
+  }
+}
