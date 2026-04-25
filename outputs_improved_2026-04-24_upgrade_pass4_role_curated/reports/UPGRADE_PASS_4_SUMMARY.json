@@ -1,0 +1,20 @@
+{
+  "snapshot": "outputs_improved_2026-04-24_upgrade_pass4_role_curated",
+  "parent_snapshot": "outputs_improved_2026-04-24_upgrade_pass3_confidence",
+  "role_weights": {
+    "overall_commander": 1.0,
+    "principal_field_commander": 0.85,
+    "coalition_commander": 0.7,
+    "naval_commander": 0.75,
+    "siege_engineer_or_specialist": 0.7,
+    "wing_or_corps_commander": 0.55,
+    "staff_or_planning_role": 0.45,
+    "subordinate_commander": 0.35,
+    "nominal_or_political_leader": 0.2,
+    "unclear_role": 0.4
+  },
+  "manual_override_count": 25,
+  "classified_rows": 60512,
+  "role_weighted_rows": 1067,
+  "headline_model_replaced": false
+}

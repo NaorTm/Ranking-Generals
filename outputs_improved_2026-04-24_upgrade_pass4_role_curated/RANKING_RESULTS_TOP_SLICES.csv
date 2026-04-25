@@ -1,0 +1,1226 @@
+﻿model_name,slice_name,rank,display_name,primary_era_bucket,score_normalized
+baseline_conservative,top_25,1,Khalid ibn al-Walid,medieval,99.55505761843789
+baseline_conservative,top_25,2,Jean Lannes,revolutionary_napoleonic,99.28937259923175
+baseline_conservative,top_25,3,Napoleon Bonaparte,revolutionary_napoleonic,98.1370038412292
+baseline_conservative,top_25,4,Alexander Suvorov,revolutionary_napoleonic,98.02176696542894
+baseline_conservative,top_25,5,"Alexander Farnese, Duke of Parma",early_modern,97.33034571062741
+baseline_conservative,top_25,6,Takeda Shingen,early_modern,97.2247119078105
+baseline_conservative,top_25,7,Louis-Gabriel Suchet,revolutionary_napoleonic,96.02432778489117
+baseline_conservative,top_25,8,"Maurice, Prince of Orange",early_modern,95.95070422535211
+baseline_conservative,top_25,9,"Sébastien Le Prestre, Marquis of Vauban",early_modern,95.85467349551857
+baseline_conservative,top_25,10,Abu Ubayda ibn al-Jarrah,medieval,95.59859154929578
+baseline_conservative,top_25,11,Francis Vere,early_modern,94.06209987195902
+baseline_conservative,top_25,12,Nathan Bedford Forrest,long_nineteenth_century,93.67797695262483
+baseline_conservative,top_25,13,Amr ibn al-As,medieval,93.30345710627401
+baseline_conservative,top_25,14,Subutai,medieval,92.70486555697823
+baseline_conservative,top_25,15,Charles XIV John,revolutionary_napoleonic,92.48719590268887
+baseline_conservative,top_25,16,Stanisław Żółkiewski,early_modern,92.25352112676057
+baseline_conservative,top_25,17,Maurice de Saxe,early_modern,92.14148527528809
+baseline_conservative,top_25,18,Robert L. Eichelberger,world_wars,92.02624839948783
+baseline_conservative,top_25,19,Walter Krueger,world_wars,92.02624839948783
+baseline_conservative,top_25,20,Mahmud Pasha Angelović,medieval,92.02304737516005
+baseline_conservative,top_25,21,Louis-Nicolas Davout,revolutionary_napoleonic,91.66453265044814
+baseline_conservative,top_25,22,André Masséna,revolutionary_napoleonic,91.1235595390525
+baseline_conservative,top_25,23,Jean Victor Marie Moreau,revolutionary_napoleonic,90.45454545454547
+baseline_conservative,top_25,24,Baybars,medieval,90.29769526248398
+baseline_conservative,top_25,25,Ubadah ibn al-Samit,medieval,90.22087067861715
+baseline_conservative,top_50,1,Khalid ibn al-Walid,medieval,99.55505761843789
+baseline_conservative,top_50,2,Jean Lannes,revolutionary_napoleonic,99.28937259923175
+baseline_conservative,top_50,3,Napoleon Bonaparte,revolutionary_napoleonic,98.1370038412292
+baseline_conservative,top_50,4,Alexander Suvorov,revolutionary_napoleonic,98.02176696542894
+baseline_conservative,top_50,5,"Alexander Farnese, Duke of Parma",early_modern,97.33034571062741
+baseline_conservative,top_50,6,Takeda Shingen,early_modern,97.2247119078105
+baseline_conservative,top_50,7,Louis-Gabriel Suchet,revolutionary_napoleonic,96.02432778489117
+baseline_conservative,top_50,8,"Maurice, Prince of Orange",early_modern,95.95070422535211
+baseline_conservative,top_50,9,"Sébastien Le Prestre, Marquis of Vauban",early_modern,95.85467349551857
+baseline_conservative,top_50,10,Abu Ubayda ibn al-Jarrah,medieval,95.59859154929578
+baseline_conservative,top_50,11,Francis Vere,early_modern,94.06209987195902
+baseline_conservative,top_50,12,Nathan Bedford Forrest,long_nineteenth_century,93.67797695262483
+baseline_conservative,top_50,13,Amr ibn al-As,medieval,93.30345710627401
+baseline_conservative,top_50,14,Subutai,medieval,92.70486555697823
+baseline_conservative,top_50,15,Charles XIV John,revolutionary_napoleonic,92.48719590268887
+baseline_conservative,top_50,16,Stanisław Żółkiewski,early_modern,92.25352112676057
+baseline_conservative,top_50,17,Maurice de Saxe,early_modern,92.14148527528809
+baseline_conservative,top_50,18,Robert L. Eichelberger,world_wars,92.02624839948783
+baseline_conservative,top_50,19,Walter Krueger,world_wars,92.02624839948783
+baseline_conservative,top_50,20,Mahmud Pasha Angelović,medieval,92.02304737516005
+baseline_conservative,top_50,21,Louis-Nicolas Davout,revolutionary_napoleonic,91.66453265044814
+baseline_conservative,top_50,22,André Masséna,revolutionary_napoleonic,91.1235595390525
+baseline_conservative,top_50,23,Jean Victor Marie Moreau,revolutionary_napoleonic,90.45454545454547
+baseline_conservative,top_50,24,Baybars,medieval,90.29769526248398
+baseline_conservative,top_50,25,Ubadah ibn al-Samit,medieval,90.22087067861715
+baseline_conservative,top_50,26,Jan Karol Chodkiewicz,early_modern,89.76952624839949
+baseline_conservative,top_50,27,Charles XII of Sweden,early_modern,89.20614596670936
+baseline_conservative,top_50,28,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,89.07810499359795
+baseline_conservative,top_50,29,Ferdinand Foch,world_wars,89.00128040973112
+baseline_conservative,top_50,30,Matvei Platov,revolutionary_napoleonic,88.93085787451984
+baseline_conservative,top_50,31,Louis XIV,early_modern,88.73879641485274
+baseline_conservative,top_50,32,Belisarius,medieval,88.7067861715749
+baseline_conservative,top_50,33,P. G. T. Beauregard,long_nineteenth_century,88.52112676056338
+baseline_conservative,top_50,34,Mehmed II,medieval,88.4955185659411
+baseline_conservative,top_50,35,John Monash,world_wars,88.26184379001279
+baseline_conservative,top_50,36,Katō Kiyomasa,early_modern,88.24903969270167
+baseline_conservative,top_50,37,Karađorđe Petrović,revolutionary_napoleonic,88.14660691421254
+baseline_conservative,top_50,38,Hannibal,ancient,87.80409731113956
+baseline_conservative,top_50,39,Charles Mangin,world_wars,87.70166453265044
+baseline_conservative,top_50,40,Saladin,medieval,86.949423815621
+baseline_conservative,top_50,41,Konishi Yukinaga,early_modern,86.11715749039693
+baseline_conservative,top_50,42,Heinz Guderian,world_wars,85.80985915492958
+baseline_conservative,top_50,43,Prince Friedrich Karl of Prussia,long_nineteenth_century,85.70422535211267
+baseline_conservative,top_50,44,Douglas MacArthur,world_wars,85.49615877080666
+baseline_conservative,top_50,45,Alauddin Khalji,medieval,84.8719590268886
+baseline_conservative,top_50,46,Ivan Paskevich,long_nineteenth_century,84.64148527528809
+baseline_conservative,top_50,47,Jerzy Sebastian Lubomirski,early_modern,84.64148527528809
+baseline_conservative,top_50,48,Maeda Toshiie,early_modern,84.16773367477593
+baseline_conservative,top_50,49,Hari Singh Nalwa,long_nineteenth_century,83.7067861715749
+baseline_conservative,top_50,50,"François-Henri de Montmorency, duc de Luxembourg",early_modern,83.45710627400767
+baseline_conservative,top_100,1,Khalid ibn al-Walid,medieval,99.55505761843789
+baseline_conservative,top_100,2,Jean Lannes,revolutionary_napoleonic,99.28937259923175
+baseline_conservative,top_100,3,Napoleon Bonaparte,revolutionary_napoleonic,98.1370038412292
+baseline_conservative,top_100,4,Alexander Suvorov,revolutionary_napoleonic,98.02176696542894
+baseline_conservative,top_100,5,"Alexander Farnese, Duke of Parma",early_modern,97.33034571062741
+baseline_conservative,top_100,6,Takeda Shingen,early_modern,97.2247119078105
+baseline_conservative,top_100,7,Louis-Gabriel Suchet,revolutionary_napoleonic,96.02432778489117
+baseline_conservative,top_100,8,"Maurice, Prince of Orange",early_modern,95.95070422535211
+baseline_conservative,top_100,9,"Sébastien Le Prestre, Marquis of Vauban",early_modern,95.85467349551857
+baseline_conservative,top_100,10,Abu Ubayda ibn al-Jarrah,medieval,95.59859154929578
+baseline_conservative,top_100,11,Francis Vere,early_modern,94.06209987195902
+baseline_conservative,top_100,12,Nathan Bedford Forrest,long_nineteenth_century,93.67797695262483
+baseline_conservative,top_100,13,Amr ibn al-As,medieval,93.30345710627401
+baseline_conservative,top_100,14,Subutai,medieval,92.70486555697823
+baseline_conservative,top_100,15,Charles XIV John,revolutionary_napoleonic,92.48719590268887
+baseline_conservative,top_100,16,Stanisław Żółkiewski,early_modern,92.25352112676057
+baseline_conservative,top_100,17,Maurice de Saxe,early_modern,92.14148527528809
+baseline_conservative,top_100,18,Robert L. Eichelberger,world_wars,92.02624839948783
+baseline_conservative,top_100,19,Walter Krueger,world_wars,92.02624839948783
+baseline_conservative,top_100,20,Mahmud Pasha Angelović,medieval,92.02304737516005
+baseline_conservative,top_100,21,Louis-Nicolas Davout,revolutionary_napoleonic,91.66453265044814
+baseline_conservative,top_100,22,André Masséna,revolutionary_napoleonic,91.1235595390525
+baseline_conservative,top_100,23,Jean Victor Marie Moreau,revolutionary_napoleonic,90.45454545454547
+baseline_conservative,top_100,24,Baybars,medieval,90.29769526248398
+baseline_conservative,top_100,25,Ubadah ibn al-Samit,medieval,90.22087067861715
+baseline_conservative,top_100,26,Jan Karol Chodkiewicz,early_modern,89.76952624839949
+baseline_conservative,top_100,27,Charles XII of Sweden,early_modern,89.20614596670936
+baseline_conservative,top_100,28,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,89.07810499359795
+baseline_conservative,top_100,29,Ferdinand Foch,world_wars,89.00128040973112
+baseline_conservative,top_100,30,Matvei Platov,revolutionary_napoleonic,88.93085787451984
+baseline_conservative,top_100,31,Louis XIV,early_modern,88.73879641485274
+baseline_conservative,top_100,32,Belisarius,medieval,88.7067861715749
+baseline_conservative,top_100,33,P. G. T. Beauregard,long_nineteenth_century,88.52112676056338
+baseline_conservative,top_100,34,Mehmed II,medieval,88.4955185659411
+baseline_conservative,top_100,35,John Monash,world_wars,88.26184379001279
+baseline_conservative,top_100,36,Katō Kiyomasa,early_modern,88.24903969270167
+baseline_conservative,top_100,37,Karađorđe Petrović,revolutionary_napoleonic,88.14660691421254
+baseline_conservative,top_100,38,Hannibal,ancient,87.80409731113956
+baseline_conservative,top_100,39,Charles Mangin,world_wars,87.70166453265044
+baseline_conservative,top_100,40,Saladin,medieval,86.949423815621
+baseline_conservative,top_100,41,Konishi Yukinaga,early_modern,86.11715749039693
+baseline_conservative,top_100,42,Heinz Guderian,world_wars,85.80985915492958
+baseline_conservative,top_100,43,Prince Friedrich Karl of Prussia,long_nineteenth_century,85.70422535211267
+baseline_conservative,top_100,44,Douglas MacArthur,world_wars,85.49615877080666
+baseline_conservative,top_100,45,Alauddin Khalji,medieval,84.8719590268886
+baseline_conservative,top_100,46,Ivan Paskevich,long_nineteenth_century,84.64148527528809
+baseline_conservative,top_100,47,Jerzy Sebastian Lubomirski,early_modern,84.64148527528809
+baseline_conservative,top_100,48,Maeda Toshiie,early_modern,84.16773367477593
+baseline_conservative,top_100,49,Hari Singh Nalwa,long_nineteenth_century,83.7067861715749
+baseline_conservative,top_100,50,"François-Henri de Montmorency, duc de Luxembourg",early_modern,83.45710627400767
+baseline_conservative,top_100,51,Lennart Torstensson,early_modern,83.45710627400767
+baseline_conservative,top_100,52,Charles X Gustav,early_modern,83.10179257362356
+baseline_conservative,top_100,53,Cardinal-Infante Ferdinand of Austria,early_modern,83.03457106274008
+baseline_conservative,top_100,54,Philip the Good,medieval,82.93854033290653
+baseline_conservative,top_100,55,Julian,ancient,82.59282970550576
+baseline_conservative,top_100,56,Hubert Gough,world_wars,82.5416133162612
+baseline_conservative,top_100,57,Alexander the Great,ancient,82.32714468629962
+baseline_conservative,top_100,58,Fedor von Bock,world_wars,82.28553137003841
+baseline_conservative,top_100,59,Peter Wittgenstein,revolutionary_napoleonic,82.13828425096031
+baseline_conservative,top_100,60,Erich Hoepner,world_wars,81.43405889884762
+baseline_conservative,top_100,61,Guru Gobind Singh,early_modern,80.88668373879642
+baseline_conservative,top_100,62,Frederick the Great,early_modern,80.2944942381562
+baseline_conservative,top_100,63,Charles-Pierre Augereau,revolutionary_napoleonic,80.05761843790013
+baseline_conservative,top_100,64,Arthur Currie,world_wars,79.97119078104993
+baseline_conservative,top_100,65,John III Sobieski,early_modern,79.71190781049935
+baseline_conservative,top_100,66,Stonewall Jackson,long_nineteenth_century,79.50064020486556
+baseline_conservative,top_100,67,Ahmad Shah Durrani,early_modern,79.46542893725992
+baseline_conservative,top_100,68,Suleiman the Magnificent,early_modern,79.45582586427658
+baseline_conservative,top_100,69,Paul von Lettow-Vorbeck,world_wars,79.39820742637644
+baseline_conservative,top_100,70,Émile Fayolle,world_wars,79.03008962868118
+baseline_conservative,top_100,71,Robert Clive,early_modern,79.02048655569783
+baseline_conservative,top_100,72,Antonio Duvergé,long_nineteenth_century,78.854033290653
+baseline_conservative,top_100,73,Alasdair Mac Colla,early_modern,78.63636363636364
+baseline_conservative,top_100,74,Jeremi Wiśniowiecki,early_modern,78.58194622279129
+baseline_conservative,top_100,75,Allen H. Turnage,world_wars,78.50832266325224
+baseline_conservative,top_100,76,Juan Yagüe,world_wars,78.50832266325224
+baseline_conservative,top_100,77,Smedley Butler,long_nineteenth_century,78.50832266325224
+baseline_conservative,top_100,78,Al-Qa'qa' ibn Amr al-Tamimi,medieval,78.35147247119079
+baseline_conservative,top_100,79,Qutb ud-Din Aibak,medieval,78.35147247119079
+baseline_conservative,top_100,80,Harry Chauvel,world_wars,78.21702944942382
+baseline_conservative,top_100,81,Tokugawa Ieyasu,early_modern,78.20422535211269
+baseline_conservative,top_100,82,"Frederick Henry, Prince of Orange",early_modern,78.1754161331626
+baseline_conservative,top_100,83,Shurahbil ibn Hasana,medieval,78.12419974391804
+baseline_conservative,top_100,84,Basil II,medieval,77.9449423815621
+baseline_conservative,top_100,85,Aurangzeb,early_modern,77.71446862996159
+baseline_conservative,top_100,86,Oliver Cromwell,early_modern,77.27912932138283
+baseline_conservative,top_100,87,Joseph Souham,revolutionary_napoleonic,77.23431498079385
+baseline_conservative,top_100,88,Ōyama Iwao,long_nineteenth_century,77.15749039692703
+baseline_conservative,top_100,89,Nader Shah,early_modern,77.09346991037131
+baseline_conservative,top_100,90,Genghis Khan,medieval,76.93021766965428
+baseline_conservative,top_100,91,Tolui,medieval,76.76696542893725
+baseline_conservative,top_100,92,Stanisław Koniecpolski,early_modern,76.66773367477593
+baseline_conservative,top_100,93,Richmond K. Turner,world_wars,76.63892445582586
+baseline_conservative,top_100,94,Mustafa Kemal Atatürk,world_wars,76.59731113956467
+baseline_conservative,top_100,95,"Louis Joseph, Duke of Vendôme",early_modern,76.50768245838668
+baseline_conservative,top_100,96,Sidney Smith,revolutionary_napoleonic,76.36363636363636
+baseline_conservative,top_100,97,Mikhail Kutuzov,revolutionary_napoleonic,76.36043533930858
+baseline_conservative,top_100,98,Friedrich Wilhelm Freiherr von Bülow,revolutionary_napoleonic,76.23559539052498
+baseline_conservative,top_100,99,Abu Bakr,medieval,76.0819462227913
+baseline_conservative,top_100,100,Joan of Arc,medieval,76.00512163892446
+battle_only_baseline,top_25,1,Khalid ibn al-Walid,medieval,99.97383842611971
+battle_only_baseline,top_25,2,Jean Lannes,revolutionary_napoleonic,99.81163666806196
+battle_only_baseline,top_25,3,Napoleon Bonaparte,revolutionary_napoleonic,99.65466722478024
+battle_only_baseline,top_25,4,Alexander Suvorov,revolutionary_napoleonic,99.63373796567602
+battle_only_baseline,top_25,5,Takeda Shingen,early_modern,99.57618250313939
+battle_only_baseline,top_25,6,Saladin,medieval,99.356425282545
+battle_only_baseline,top_25,7,"Alexander Farnese, Duke of Parma",early_modern,99.35119296776894
+battle_only_baseline,top_25,8,Louis-Nicolas Davout,revolutionary_napoleonic,99.21515278359146
+battle_only_baseline,top_25,9,"Sébastien Le Prestre, Marquis of Vauban",early_modern,98.91167852658015
+battle_only_baseline,top_25,10,Louis-Gabriel Suchet,revolutionary_napoleonic,98.81749686061114
+battle_only_baseline,top_25,11,Amr ibn al-As,medieval,98.63436584344916
+battle_only_baseline,top_25,12,Nathan Bedford Forrest,long_nineteenth_century,98.61866889912096
+battle_only_baseline,top_25,13,Charles XIV John,revolutionary_napoleonic,98.59250732524069
+battle_only_baseline,top_25,14,"Maurice, Prince of Orange",early_modern,98.51925491837588
+battle_only_baseline,top_25,15,Abu Ubayda ibn al-Jarrah,medieval,98.50879028882377
+battle_only_baseline,top_25,16,Hannibal,ancient,98.30473001255754
+battle_only_baseline,top_25,17,Francis Vere,early_modern,98.04834658853076
+battle_only_baseline,top_25,18,Katō Kiyomasa,early_modern,98.0326496442026
+battle_only_baseline,top_25,19,P. G. T. Beauregard,long_nineteenth_century,97.9227710339054
+battle_only_baseline,top_25,20,Stanisław Żółkiewski,early_modern,97.71871075763919
+battle_only_baseline,top_25,21,Mahmud Pasha Angelović,medieval,97.62452909167015
+battle_only_baseline,top_25,22,Fedor von Bock,world_wars,97.56174131435746
+battle_only_baseline,top_25,23,"François-Henri de Montmorency, duc de Luxembourg",early_modern,97.48848890749267
+battle_only_baseline,top_25,24,Lennart Torstensson,early_modern,97.48848890749267
+battle_only_baseline,top_25,25,Maurice de Saxe,early_modern,97.45186270406026
+battle_only_baseline,top_50,1,Khalid ibn al-Walid,medieval,99.97383842611971
+battle_only_baseline,top_50,2,Jean Lannes,revolutionary_napoleonic,99.81163666806196
+battle_only_baseline,top_50,3,Napoleon Bonaparte,revolutionary_napoleonic,99.65466722478024
+battle_only_baseline,top_50,4,Alexander Suvorov,revolutionary_napoleonic,99.63373796567602
+battle_only_baseline,top_50,5,Takeda Shingen,early_modern,99.57618250313939
+battle_only_baseline,top_50,6,Saladin,medieval,99.356425282545
+battle_only_baseline,top_50,7,"Alexander Farnese, Duke of Parma",early_modern,99.35119296776894
+battle_only_baseline,top_50,8,Louis-Nicolas Davout,revolutionary_napoleonic,99.21515278359146
+battle_only_baseline,top_50,9,"Sébastien Le Prestre, Marquis of Vauban",early_modern,98.91167852658015
+battle_only_baseline,top_50,10,Louis-Gabriel Suchet,revolutionary_napoleonic,98.81749686061114
+battle_only_baseline,top_50,11,Amr ibn al-As,medieval,98.63436584344916
+battle_only_baseline,top_50,12,Nathan Bedford Forrest,long_nineteenth_century,98.61866889912096
+battle_only_baseline,top_50,13,Charles XIV John,revolutionary_napoleonic,98.59250732524069
+battle_only_baseline,top_50,14,"Maurice, Prince of Orange",early_modern,98.51925491837588
+battle_only_baseline,top_50,15,Abu Ubayda ibn al-Jarrah,medieval,98.50879028882377
+battle_only_baseline,top_50,16,Hannibal,ancient,98.30473001255754
+battle_only_baseline,top_50,17,Francis Vere,early_modern,98.04834658853076
+battle_only_baseline,top_50,18,Katō Kiyomasa,early_modern,98.0326496442026
+battle_only_baseline,top_50,19,P. G. T. Beauregard,long_nineteenth_century,97.9227710339054
+battle_only_baseline,top_50,20,Stanisław Żółkiewski,early_modern,97.71871075763919
+battle_only_baseline,top_50,21,Mahmud Pasha Angelović,medieval,97.62452909167015
+battle_only_baseline,top_50,22,Fedor von Bock,world_wars,97.56174131435746
+battle_only_baseline,top_50,23,"François-Henri de Montmorency, duc de Luxembourg",early_modern,97.48848890749267
+battle_only_baseline,top_50,24,Lennart Torstensson,early_modern,97.48848890749267
+battle_only_baseline,top_50,25,Maurice de Saxe,early_modern,97.45186270406026
+battle_only_baseline,top_50,26,Robert L. Eichelberger,world_wars,97.40477187107575
+battle_only_baseline,top_50,27,Walter Krueger,world_wars,97.40477187107575
+battle_only_baseline,top_50,28,Subutai,medieval,97.2791963164504
+battle_only_baseline,top_50,29,John Monash,world_wars,97.23210548346589
+battle_only_baseline,top_50,30,Jan Karol Chodkiewicz,early_modern,97.19024696525742
+battle_only_baseline,top_50,31,Karađorđe Petrović,revolutionary_napoleonic,97.18501465048138
+battle_only_baseline,top_50,32,André Masséna,revolutionary_napoleonic,97.08560066973628
+battle_only_baseline,top_50,33,Arthur Currie,world_wars,97.04897446630389
+battle_only_baseline,top_50,34,Oliver Cromwell,early_modern,96.89723733779824
+battle_only_baseline,top_50,35,Matvei Platov,revolutionary_napoleonic,96.81352030138135
+battle_only_baseline,top_50,36,Ferdinand Foch,world_wars,96.72980326496443
+battle_only_baseline,top_50,37,Baybars,medieval,96.69840937630808
+battle_only_baseline,top_50,38,Ubadah ibn al-Samit,medieval,96.66701548765174
+battle_only_baseline,top_50,39,Alexander the Great,ancient,96.5728338216827
+battle_only_baseline,top_50,40,Jeremi Wiśniowiecki,early_modern,96.49434910004186
+battle_only_baseline,top_50,41,Jean Victor Marie Moreau,revolutionary_napoleonic,96.48388447048976
+battle_only_baseline,top_50,42,Louis XIV,early_modern,96.41586437840101
+battle_only_baseline,top_50,43,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,96.32168271243198
+battle_only_baseline,top_50,44,Cardinal-Infante Ferdinand of Austria,early_modern,96.25889493511929
+battle_only_baseline,top_50,45,Erich Hoepner,world_wars,96.00774382586857
+battle_only_baseline,top_50,46,Charles XII of Sweden,early_modern,95.99727919631646
+battle_only_baseline,top_50,47,Charles Mangin,world_wars,95.99204688154039
+battle_only_baseline,top_50,48,Mehmed II,medieval,95.95018836333193
+battle_only_baseline,top_50,49,Robert Clive,early_modern,95.72519882796149
+battle_only_baseline,top_50,50,Belisarius,medieval,95.61008790288824
+battle_only_baseline,top_100,1,Khalid ibn al-Walid,medieval,99.97383842611971
+battle_only_baseline,top_100,2,Jean Lannes,revolutionary_napoleonic,99.81163666806196
+battle_only_baseline,top_100,3,Napoleon Bonaparte,revolutionary_napoleonic,99.65466722478024
+battle_only_baseline,top_100,4,Alexander Suvorov,revolutionary_napoleonic,99.63373796567602
+battle_only_baseline,top_100,5,Takeda Shingen,early_modern,99.57618250313939
+battle_only_baseline,top_100,6,Saladin,medieval,99.356425282545
+battle_only_baseline,top_100,7,"Alexander Farnese, Duke of Parma",early_modern,99.35119296776894
+battle_only_baseline,top_100,8,Louis-Nicolas Davout,revolutionary_napoleonic,99.21515278359146
+battle_only_baseline,top_100,9,"Sébastien Le Prestre, Marquis of Vauban",early_modern,98.91167852658015
+battle_only_baseline,top_100,10,Louis-Gabriel Suchet,revolutionary_napoleonic,98.81749686061114
+battle_only_baseline,top_100,11,Amr ibn al-As,medieval,98.63436584344916
+battle_only_baseline,top_100,12,Nathan Bedford Forrest,long_nineteenth_century,98.61866889912096
+battle_only_baseline,top_100,13,Charles XIV John,revolutionary_napoleonic,98.59250732524069
+battle_only_baseline,top_100,14,"Maurice, Prince of Orange",early_modern,98.51925491837588
+battle_only_baseline,top_100,15,Abu Ubayda ibn al-Jarrah,medieval,98.50879028882377
+battle_only_baseline,top_100,16,Hannibal,ancient,98.30473001255754
+battle_only_baseline,top_100,17,Francis Vere,early_modern,98.04834658853076
+battle_only_baseline,top_100,18,Katō Kiyomasa,early_modern,98.0326496442026
+battle_only_baseline,top_100,19,P. G. T. Beauregard,long_nineteenth_century,97.9227710339054
+battle_only_baseline,top_100,20,Stanisław Żółkiewski,early_modern,97.71871075763919
+battle_only_baseline,top_100,21,Mahmud Pasha Angelović,medieval,97.62452909167015
+battle_only_baseline,top_100,22,Fedor von Bock,world_wars,97.56174131435746
+battle_only_baseline,top_100,23,"François-Henri de Montmorency, duc de Luxembourg",early_modern,97.48848890749267
+battle_only_baseline,top_100,24,Lennart Torstensson,early_modern,97.48848890749267
+battle_only_baseline,top_100,25,Maurice de Saxe,early_modern,97.45186270406026
+battle_only_baseline,top_100,26,Robert L. Eichelberger,world_wars,97.40477187107575
+battle_only_baseline,top_100,27,Walter Krueger,world_wars,97.40477187107575
+battle_only_baseline,top_100,28,Subutai,medieval,97.2791963164504
+battle_only_baseline,top_100,29,John Monash,world_wars,97.23210548346589
+battle_only_baseline,top_100,30,Jan Karol Chodkiewicz,early_modern,97.19024696525742
+battle_only_baseline,top_100,31,Karađorđe Petrović,revolutionary_napoleonic,97.18501465048138
+battle_only_baseline,top_100,32,André Masséna,revolutionary_napoleonic,97.08560066973628
+battle_only_baseline,top_100,33,Arthur Currie,world_wars,97.04897446630389
+battle_only_baseline,top_100,34,Oliver Cromwell,early_modern,96.89723733779824
+battle_only_baseline,top_100,35,Matvei Platov,revolutionary_napoleonic,96.81352030138135
+battle_only_baseline,top_100,36,Ferdinand Foch,world_wars,96.72980326496443
+battle_only_baseline,top_100,37,Baybars,medieval,96.69840937630808
+battle_only_baseline,top_100,38,Ubadah ibn al-Samit,medieval,96.66701548765174
+battle_only_baseline,top_100,39,Alexander the Great,ancient,96.5728338216827
+battle_only_baseline,top_100,40,Jeremi Wiśniowiecki,early_modern,96.49434910004186
+battle_only_baseline,top_100,41,Jean Victor Marie Moreau,revolutionary_napoleonic,96.48388447048976
+battle_only_baseline,top_100,42,Louis XIV,early_modern,96.41586437840101
+battle_only_baseline,top_100,43,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,96.32168271243198
+battle_only_baseline,top_100,44,Cardinal-Infante Ferdinand of Austria,early_modern,96.25889493511929
+battle_only_baseline,top_100,45,Erich Hoepner,world_wars,96.00774382586857
+battle_only_baseline,top_100,46,Charles XII of Sweden,early_modern,95.99727919631646
+battle_only_baseline,top_100,47,Charles Mangin,world_wars,95.99204688154039
+battle_only_baseline,top_100,48,Mehmed II,medieval,95.95018836333193
+battle_only_baseline,top_100,49,Robert Clive,early_modern,95.72519882796149
+battle_only_baseline,top_100,50,Belisarius,medieval,95.61008790288824
+battle_only_baseline,top_100,51,Konishi Yukinaga,early_modern,95.58392632900795
+battle_only_baseline,top_100,52,Alasdair Mac Colla,early_modern,95.56822938467978
+battle_only_baseline,top_100,53,Heinz Guderian,world_wars,95.45835077438258
+battle_only_baseline,top_100,54,Stanisław Koniecpolski,early_modern,95.3955629970699
+battle_only_baseline,top_100,55,Bernard Montgomery,world_wars,95.28568438677272
+battle_only_baseline,top_100,56,Mikhail Kutuzov,revolutionary_napoleonic,95.26998744244455
+battle_only_baseline,top_100,57,Alauddin Khalji,medieval,95.24382586856424
+battle_only_baseline,top_100,58,Kuroda Yoshitaka,early_modern,95.24382586856424
+battle_only_baseline,top_100,59,Prince Friedrich Karl of Prussia,long_nineteenth_century,95.17580577647551
+battle_only_baseline,top_100,60,Ivan Paskevich,long_nineteenth_century,95.14964420259523
+battle_only_baseline,top_100,61,Jerzy Sebastian Lubomirski,early_modern,95.14964420259523
+battle_only_baseline,top_100,62,Maeda Toshiie,early_modern,94.86709920468815
+battle_only_baseline,top_100,63,Babur,early_modern,94.73629133528674
+battle_only_baseline,top_100,64,Al-Qa'qa' ibn Amr al-Tamimi,medieval,94.71012976140645
+battle_only_baseline,top_100,65,Qutb ud-Din Aibak,medieval,94.71012976140645
+battle_only_baseline,top_100,66,Hari Singh Nalwa,long_nineteenth_century,94.67873587275011
+battle_only_baseline,top_100,67,Émile Fayolle,world_wars,94.58455420678109
+battle_only_baseline,top_100,68,Sarath Fonseka,contemporary,94.38049393051486
+battle_only_baseline,top_100,69,Philip the Good,medieval,94.04562578484722
+battle_only_baseline,top_100,70,Sidney Smith,revolutionary_napoleonic,93.93574717455002
+battle_only_baseline,top_100,71,Joseph Souham,revolutionary_napoleonic,93.88865634156551
+battle_only_baseline,top_100,72,Ōyama Iwao,long_nineteenth_century,93.85726245290917
+battle_only_baseline,top_100,73,Mikołaj Potocki,early_modern,93.66889912097112
+battle_only_baseline,top_100,74,Constantine the Great,ancient,93.5014650481373
+battle_only_baseline,top_100,75,Wolfram von Richthofen,world_wars,93.5014650481373
+battle_only_baseline,top_100,76,Friedrich Wilhelm Freiherr von Bülow,revolutionary_napoleonic,93.48053578903307
+battle_only_baseline,top_100,77,Abu Bakr,medieval,93.41774801172039
+battle_only_baseline,top_100,78,Joan of Arc,medieval,93.38635412306404
+battle_only_baseline,top_100,79,Douglas MacArthur,world_wars,93.33926329007954
+battle_only_baseline,top_100,80,Antonio Duvergé,long_nineteenth_century,93.33926329007951
+battle_only_baseline,top_100,81,Allen H. Turnage,world_wars,93.19799079112599
+battle_only_baseline,top_100,82,Juan Yagüe,world_wars,93.19799079112599
+battle_only_baseline,top_100,83,Smedley Butler,long_nineteenth_century,93.19799079112599
+battle_only_baseline,top_100,84,Enver Pasha,world_wars,93.19799079112599
+battle_only_baseline,top_100,85,Batu Khan,medieval,93.10904143993302
+battle_only_baseline,top_100,86,Hubert Gough,world_wars,93.07764755127667
+battle_only_baseline,top_100,87,Shurahbil ibn Hasana,medieval,93.04102134784429
+battle_only_baseline,top_100,88,Winfield Scott,long_nineteenth_century,92.9782335705316
+battle_only_baseline,top_100,89,Harry Chauvel,world_wars,92.89974884889075
+battle_only_baseline,top_100,90,Date Masamune,early_modern,92.83696107157806
+battle_only_baseline,top_100,91,Manuel Belgrano,revolutionary_napoleonic,92.81079949769779
+battle_only_baseline,top_100,92,Hans Karl von Diebitsch,long_nineteenth_century,92.74801172038511
+battle_only_baseline,top_100,93,Jubal Early,long_nineteenth_century,92.51255755546254
+battle_only_baseline,top_100,94,Agha Petros,world_wars,92.46023440770196
+battle_only_baseline,top_100,95,Gustav III,revolutionary_napoleonic,92.46023440770196
+battle_only_baseline,top_100,96,Guru Gobind Singh,early_modern,92.25094181665969
+battle_only_baseline,top_100,97,Peter Wittgenstein,revolutionary_napoleonic,92.21954792800334
+battle_only_baseline,top_100,98,Peng Dehuai,cold_war,92.00502302218501
+battle_only_baseline,top_100,99,Hori Hidemasa,early_modern,91.99455839263291
+battle_only_baseline,top_100,100,George Wootten,world_wars,91.98932607785684
+hierarchical_weighted,top_25,1,Alexander Suvorov,revolutionary_napoleonic,91.16947828803501
+hierarchical_weighted,top_25,2,Ivan Paskevich,long_nineteenth_century,88.30615432677288
+hierarchical_weighted,top_25,3,Subutai,medieval,87.68228678537959
+hierarchical_weighted,top_25,4,"Sébastien Le Prestre, Marquis of Vauban",early_modern,87.21274601686973
+hierarchical_weighted,top_25,5,"Maurice, Prince of Orange",early_modern,87.11012183692598
+hierarchical_weighted,top_25,6,Napoleon Bonaparte,revolutionary_napoleonic,87.04389253358326
+hierarchical_weighted,top_25,7,Louis XIV,early_modern,85.8186504217432
+hierarchical_weighted,top_25,8,Louis-Nicolas Davout,revolutionary_napoleonic,85.50062480474851
+hierarchical_weighted,top_25,9,Jean Lannes,revolutionary_napoleonic,85.12949078412996
+hierarchical_weighted,top_25,10,Charles XIV John,revolutionary_napoleonic,84.87550765385818
+hierarchical_weighted,top_25,11,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,83.84786004373635
+hierarchical_weighted,top_25,12,Louis-Gabriel Suchet,revolutionary_napoleonic,83.59278350515466
+hierarchical_weighted,top_25,13,Belisarius,medieval,83.41096532333646
+hierarchical_weighted,top_25,14,Douglas MacArthur,world_wars,83.40378006872852
+hierarchical_weighted,top_25,15,Winfield Scott,long_nineteenth_century,83.23992502343019
+hierarchical_weighted,top_25,16,Mehmed II,medieval,82.87878787878789
+hierarchical_weighted,top_25,17,"Alexander Farnese, Duke of Parma",early_modern,82.56904092471103
+hierarchical_weighted,top_25,18,Maharaja Ranjit Singh,long_nineteenth_century,82.36082474226804
+hierarchical_weighted,top_25,19,Baybars,medieval,81.97594501718213
+hierarchical_weighted,top_25,20,Petar Bojović,long_nineteenth_century,81.8675413933146
+hierarchical_weighted,top_25,21,Khalid ibn al-Walid,medieval,81.81333958138083
+hierarchical_weighted,top_25,22,Alexander the Great,ancient,81.58091221493282
+hierarchical_weighted,top_25,23,Ōyama Iwao,long_nineteenth_century,81.42236800999687
+hierarchical_weighted,top_25,24,André Masséna,revolutionary_napoleonic,81.41487035301468
+hierarchical_weighted,top_25,25,Hubert Gough,world_wars,81.20306154326772
+hierarchical_weighted,top_50,1,Alexander Suvorov,revolutionary_napoleonic,91.16947828803501
+hierarchical_weighted,top_50,2,Ivan Paskevich,long_nineteenth_century,88.30615432677288
+hierarchical_weighted,top_50,3,Subutai,medieval,87.68228678537959
+hierarchical_weighted,top_50,4,"Sébastien Le Prestre, Marquis of Vauban",early_modern,87.21274601686973
+hierarchical_weighted,top_50,5,"Maurice, Prince of Orange",early_modern,87.11012183692598
+hierarchical_weighted,top_50,6,Napoleon Bonaparte,revolutionary_napoleonic,87.04389253358326
+hierarchical_weighted,top_50,7,Louis XIV,early_modern,85.8186504217432
+hierarchical_weighted,top_50,8,Louis-Nicolas Davout,revolutionary_napoleonic,85.50062480474851
+hierarchical_weighted,top_50,9,Jean Lannes,revolutionary_napoleonic,85.12949078412996
+hierarchical_weighted,top_50,10,Charles XIV John,revolutionary_napoleonic,84.87550765385818
+hierarchical_weighted,top_50,11,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,83.84786004373635
+hierarchical_weighted,top_50,12,Louis-Gabriel Suchet,revolutionary_napoleonic,83.59278350515466
+hierarchical_weighted,top_50,13,Belisarius,medieval,83.41096532333646
+hierarchical_weighted,top_50,14,Douglas MacArthur,world_wars,83.40378006872852
+hierarchical_weighted,top_50,15,Winfield Scott,long_nineteenth_century,83.23992502343019
+hierarchical_weighted,top_50,16,Mehmed II,medieval,82.87878787878789
+hierarchical_weighted,top_50,17,"Alexander Farnese, Duke of Parma",early_modern,82.56904092471103
+hierarchical_weighted,top_50,18,Maharaja Ranjit Singh,long_nineteenth_century,82.36082474226804
+hierarchical_weighted,top_50,19,Baybars,medieval,81.97594501718213
+hierarchical_weighted,top_50,20,Petar Bojović,long_nineteenth_century,81.8675413933146
+hierarchical_weighted,top_50,21,Khalid ibn al-Walid,medieval,81.81333958138083
+hierarchical_weighted,top_50,22,Alexander the Great,ancient,81.58091221493282
+hierarchical_weighted,top_50,23,Ōyama Iwao,long_nineteenth_century,81.42236800999687
+hierarchical_weighted,top_50,24,André Masséna,revolutionary_napoleonic,81.41487035301468
+hierarchical_weighted,top_50,25,Hubert Gough,world_wars,81.20306154326772
+hierarchical_weighted,top_50,26,Živojin Mišić,world_wars,81.17681974383005
+hierarchical_weighted,top_50,27,Bernard Montgomery,world_wars,81.17541393314589
+hierarchical_weighted,top_50,28,Hannibal,ancient,80.77460168697283
+hierarchical_weighted,top_50,29,Genghis Khan,medieval,80.66963448922212
+hierarchical_weighted,top_50,30,Hari Singh Nalwa,long_nineteenth_century,80.32677288347392
+hierarchical_weighted,top_50,31,Tolui,medieval,80.04951577631991
+hierarchical_weighted,top_50,32,Yamagata Aritomo,long_nineteenth_century,80.02249297094657
+hierarchical_weighted,top_50,33,Heinz Guderian,world_wars,79.93830053108404
+hierarchical_weighted,top_50,34,Date Masamune,early_modern,79.9100281162137
+hierarchical_weighted,top_50,35,Katō Kiyomasa,early_modern,79.68431740081225
+hierarchical_weighted,top_50,36,Amr ibn al-As,medieval,79.65745079662605
+hierarchical_weighted,top_50,37,Takeda Shingen,early_modern,79.38956576069977
+hierarchical_weighted,top_50,38,Peng Dehuai,cold_war,79.26382380506091
+hierarchical_weighted,top_50,39,Stanisław Żółkiewski,early_modern,79.02811621368322
+hierarchical_weighted,top_50,40,"François-Henri de Montmorency, duc de Luxembourg",early_modern,78.98641049671977
+hierarchical_weighted,top_50,41,Philip the Good,medieval,78.7986566697907
+hierarchical_weighted,top_50,42,Aurangzeb,early_modern,78.71337082161824
+hierarchical_weighted,top_50,43,Enver Pasha,world_wars,78.52327397688224
+hierarchical_weighted,top_50,44,Maeda Toshiie,early_modern,78.27975632614809
+hierarchical_weighted,top_50,45,Mikhail Kutuzov,revolutionary_napoleonic,78.19634489222119
+hierarchical_weighted,top_50,46,Ögedei Khan,medieval,78.10402999062794
+hierarchical_weighted,top_50,47,Fyodor Tolbukhin,world_wars,77.85941893158386
+hierarchical_weighted,top_50,48,Walter Krueger,world_wars,77.85926273039676
+hierarchical_weighted,top_50,49,Aleksandr Vasilevsky,world_wars,77.81458919087787
+hierarchical_weighted,top_50,50,Abu Ubayda ibn al-Jarrah,medieval,77.65588878475477
+hierarchical_weighted,top_100,1,Alexander Suvorov,revolutionary_napoleonic,91.16947828803501
+hierarchical_weighted,top_100,2,Ivan Paskevich,long_nineteenth_century,88.30615432677288
+hierarchical_weighted,top_100,3,Subutai,medieval,87.68228678537959
+hierarchical_weighted,top_100,4,"Sébastien Le Prestre, Marquis of Vauban",early_modern,87.21274601686973
+hierarchical_weighted,top_100,5,"Maurice, Prince of Orange",early_modern,87.11012183692598
+hierarchical_weighted,top_100,6,Napoleon Bonaparte,revolutionary_napoleonic,87.04389253358326
+hierarchical_weighted,top_100,7,Louis XIV,early_modern,85.8186504217432
+hierarchical_weighted,top_100,8,Louis-Nicolas Davout,revolutionary_napoleonic,85.50062480474851
+hierarchical_weighted,top_100,9,Jean Lannes,revolutionary_napoleonic,85.12949078412996
+hierarchical_weighted,top_100,10,Charles XIV John,revolutionary_napoleonic,84.87550765385818
+hierarchical_weighted,top_100,11,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,83.84786004373635
+hierarchical_weighted,top_100,12,Louis-Gabriel Suchet,revolutionary_napoleonic,83.59278350515466
+hierarchical_weighted,top_100,13,Belisarius,medieval,83.41096532333646
+hierarchical_weighted,top_100,14,Douglas MacArthur,world_wars,83.40378006872852
+hierarchical_weighted,top_100,15,Winfield Scott,long_nineteenth_century,83.23992502343019
+hierarchical_weighted,top_100,16,Mehmed II,medieval,82.87878787878789
+hierarchical_weighted,top_100,17,"Alexander Farnese, Duke of Parma",early_modern,82.56904092471103
+hierarchical_weighted,top_100,18,Maharaja Ranjit Singh,long_nineteenth_century,82.36082474226804
+hierarchical_weighted,top_100,19,Baybars,medieval,81.97594501718213
+hierarchical_weighted,top_100,20,Petar Bojović,long_nineteenth_century,81.8675413933146
+hierarchical_weighted,top_100,21,Khalid ibn al-Walid,medieval,81.81333958138083
+hierarchical_weighted,top_100,22,Alexander the Great,ancient,81.58091221493282
+hierarchical_weighted,top_100,23,Ōyama Iwao,long_nineteenth_century,81.42236800999687
+hierarchical_weighted,top_100,24,André Masséna,revolutionary_napoleonic,81.41487035301468
+hierarchical_weighted,top_100,25,Hubert Gough,world_wars,81.20306154326772
+hierarchical_weighted,top_100,26,Živojin Mišić,world_wars,81.17681974383005
+hierarchical_weighted,top_100,27,Bernard Montgomery,world_wars,81.17541393314589
+hierarchical_weighted,top_100,28,Hannibal,ancient,80.77460168697283
+hierarchical_weighted,top_100,29,Genghis Khan,medieval,80.66963448922212
+hierarchical_weighted,top_100,30,Hari Singh Nalwa,long_nineteenth_century,80.32677288347392
+hierarchical_weighted,top_100,31,Tolui,medieval,80.04951577631991
+hierarchical_weighted,top_100,32,Yamagata Aritomo,long_nineteenth_century,80.02249297094657
+hierarchical_weighted,top_100,33,Heinz Guderian,world_wars,79.93830053108404
+hierarchical_weighted,top_100,34,Date Masamune,early_modern,79.9100281162137
+hierarchical_weighted,top_100,35,Katō Kiyomasa,early_modern,79.68431740081225
+hierarchical_weighted,top_100,36,Amr ibn al-As,medieval,79.65745079662605
+hierarchical_weighted,top_100,37,Takeda Shingen,early_modern,79.38956576069977
+hierarchical_weighted,top_100,38,Peng Dehuai,cold_war,79.26382380506091
+hierarchical_weighted,top_100,39,Stanisław Żółkiewski,early_modern,79.02811621368322
+hierarchical_weighted,top_100,40,"François-Henri de Montmorency, duc de Luxembourg",early_modern,78.98641049671977
+hierarchical_weighted,top_100,41,Philip the Good,medieval,78.7986566697907
+hierarchical_weighted,top_100,42,Aurangzeb,early_modern,78.71337082161824
+hierarchical_weighted,top_100,43,Enver Pasha,world_wars,78.52327397688224
+hierarchical_weighted,top_100,44,Maeda Toshiie,early_modern,78.27975632614809
+hierarchical_weighted,top_100,45,Mikhail Kutuzov,revolutionary_napoleonic,78.19634489222119
+hierarchical_weighted,top_100,46,Ögedei Khan,medieval,78.10402999062794
+hierarchical_weighted,top_100,47,Fyodor Tolbukhin,world_wars,77.85941893158386
+hierarchical_weighted,top_100,48,Walter Krueger,world_wars,77.85926273039676
+hierarchical_weighted,top_100,49,Aleksandr Vasilevsky,world_wars,77.81458919087787
+hierarchical_weighted,top_100,50,Abu Ubayda ibn al-Jarrah,medieval,77.65588878475477
+hierarchical_weighted,top_100,51,Nikolai Vatutin,world_wars,77.58856607310216
+hierarchical_weighted,top_100,52,Mahmud Pasha Angelović,medieval,77.52233676975945
+hierarchical_weighted,top_100,53,Tokugawa Ieyasu,early_modern,77.32427366447985
+hierarchical_weighted,top_100,54,Sayenqueraghta,early_modern,77.24789128397377
+hierarchical_weighted,top_100,55,Oliver Cromwell,early_modern,77.09871915026555
+hierarchical_weighted,top_100,56,Nozu Michitsura,long_nineteenth_century,77.072633552015
+hierarchical_weighted,top_100,57,Saladin,medieval,76.98531708840987
+hierarchical_weighted,top_100,58,Jan Zamoyski,early_modern,76.86488597313341
+hierarchical_weighted,top_100,59,Dwight D. Eisenhower,world_wars,76.36676038737895
+hierarchical_weighted,top_100,60,Ivan Bagramyan,world_wars,76.1877538269291
+hierarchical_weighted,top_100,61,Charles XII of Sweden,early_modern,76.11730709153389
+hierarchical_weighted,top_100,62,Babur,early_modern,76.08466104342394
+hierarchical_weighted,top_100,63,Rodion Malinovsky,world_wars,75.95657606997813
+hierarchical_weighted,top_100,64,Peter Wittgenstein,revolutionary_napoleonic,75.8034989065917
+hierarchical_weighted,top_100,65,Frederick the Great,early_modern,75.70399875039051
+hierarchical_weighted,top_100,66,Francis Vere,early_modern,75.58731646360512
+hierarchical_weighted,top_100,67,George S. Patton,world_wars,75.48609809434551
+hierarchical_weighted,top_100,68,Fedor von Bock,world_wars,75.47953764448609
+hierarchical_weighted,top_100,69,Charles-Pierre Augereau,revolutionary_napoleonic,75.39831302717901
+hierarchical_weighted,top_100,70,Lennart Torstensson,early_modern,75.33348953452047
+hierarchical_weighted,top_100,71,Jean Victor Marie Moreau,revolutionary_napoleonic,75.26319900031241
+hierarchical_weighted,top_100,72,Konstantin Rokossovsky,world_wars,75.22852233676977
+hierarchical_weighted,top_100,73,Ras Alula,long_nineteenth_century,75.10246797875665
+hierarchical_weighted,top_100,74,John III Sobieski,early_modern,75.0838800374883
+hierarchical_weighted,top_100,75,Suharto,cold_war,75.03889409559513
+hierarchical_weighted,top_100,76,Jassa Singh Ahluwalia,early_modern,74.93720712277414
+hierarchical_weighted,top_100,77,Ahmad Shah Durrani,early_modern,74.91799437675726
+hierarchical_weighted,top_100,78,Jan Karol Chodkiewicz,early_modern,74.83005310840363
+hierarchical_weighted,top_100,79,Georgy Zhukov,world_wars,74.62058731646361
+hierarchical_weighted,top_100,80,Qasem Soleimani,contemporary,74.3901905654483
+hierarchical_weighted,top_100,81,Stilicho,ancient,74.32739768822245
+hierarchical_weighted,top_100,82,Robert Clive,early_modern,74.27350827866293
+hierarchical_weighted,top_100,83,Kirill Meretskov,world_wars,74.11262105592003
+hierarchical_weighted,top_100,84,Publius Cornelius Scipio,ancient,74.08794126835365
+hierarchical_weighted,top_100,85,Asif Ali Zardari,contemporary,73.99174008122463
+hierarchical_weighted,top_100,86,François de Créquy,early_modern,73.84036238675414
+hierarchical_weighted,top_100,87,Ernst Gideon von Laudon,early_modern,73.77179006560449
+hierarchical_weighted,top_100,88,Ferdinand Foch,world_wars,73.75710715401438
+hierarchical_weighted,top_100,89,Valery Gerasimov,contemporary,73.61936113714465
+hierarchical_weighted,top_100,90,Emperor Taizong of Tang,medieval,73.54592314901595
+hierarchical_weighted,top_100,91,Honda Tadakatsu,early_modern,73.42596063730086
+hierarchical_weighted,top_100,92,Bertrand du Guesclin,medieval,73.38378631677601
+hierarchical_weighted,top_100,93,Carl Gustaf Wrangel,early_modern,73.36691658856608
+hierarchical_weighted,top_100,94,Abdul Rashid Dostum,contemporary,73.21430802874103
+hierarchical_weighted,top_100,95,Rama Raya,early_modern,73.1947828803499
+hierarchical_weighted,top_100,96,Maurice de Saxe,early_modern,73.15916900968449
+hierarchical_weighted,top_100,97,Charles Mangin,world_wars,73.1323024054983
+hierarchical_weighted,top_100,98,John Gorham,early_modern,73.09559512652298
+hierarchical_weighted,top_100,99,Zubayr ibn al-Awwam,medieval,73.05139019056547
+hierarchical_weighted,top_100,100,Mustafa Kemal Atatürk,world_wars,72.88597313339581
+hierarchical_trust_v2,top_25,1,Alexander Suvorov,revolutionary_napoleonic,91.36363636363637
+hierarchical_trust_v2,top_25,2,"Maurice, Prince of Orange",early_modern,88.55014058106843
+hierarchical_trust_v2,top_25,3,Napoleon Bonaparte,revolutionary_napoleonic,88.42174320524836
+hierarchical_trust_v2,top_25,4,Subutai,medieval,88.30178069353329
+hierarchical_trust_v2,top_25,5,"Sébastien Le Prestre, Marquis of Vauban",early_modern,86.81443298969073
+hierarchical_trust_v2,top_25,6,Jean Lannes,revolutionary_napoleonic,86.81162136832239
+hierarchical_trust_v2,top_25,7,Louis-Nicolas Davout,revolutionary_napoleonic,86.67104029990628
+hierarchical_trust_v2,top_25,8,Douglas MacArthur,world_wars,86.27553889409559
+hierarchical_trust_v2,top_25,9,Charles XIV John,revolutionary_napoleonic,86.09090909090911
+hierarchical_trust_v2,top_25,10,Ivan Paskevich,long_nineteenth_century,86.08247422680412
+hierarchical_trust_v2,top_25,11,Louis XIV,early_modern,85.58950328022492
+hierarchical_trust_v2,top_25,12,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,85.47985004686036
+hierarchical_trust_v2,top_25,13,Mehmed II,medieval,85.11152764761013
+hierarchical_trust_v2,top_25,14,Belisarius,medieval,85.02999062792877
+hierarchical_trust_v2,top_25,15,Louis-Gabriel Suchet,revolutionary_napoleonic,84.89409559512653
+hierarchical_trust_v2,top_25,16,André Masséna,revolutionary_napoleonic,84.28584817244611
+hierarchical_trust_v2,top_25,17,"Alexander Farnese, Duke of Parma",early_modern,83.99250234301782
+hierarchical_trust_v2,top_25,18,Khalid ibn al-Walid,medieval,83.5801312089972
+hierarchical_trust_v2,top_25,19,Genghis Khan,medieval,83.50609184629803
+hierarchical_trust_v2,top_25,20,Hubert Gough,world_wars,83.04029990627929
+hierarchical_trust_v2,top_25,21,Bernard Montgomery,world_wars,82.21180880974696
+hierarchical_trust_v2,top_25,22,Maharaja Ranjit Singh,long_nineteenth_century,82.12089971883786
+hierarchical_trust_v2,top_25,23,Alexander the Great,ancient,81.81630740393626
+hierarchical_trust_v2,top_25,24,Winfield Scott,long_nineteenth_century,81.72352389878164
+hierarchical_trust_v2,top_25,25,Hannibal,ancient,81.60262417994377
+hierarchical_trust_v2,top_50,1,Alexander Suvorov,revolutionary_napoleonic,91.36363636363637
+hierarchical_trust_v2,top_50,2,"Maurice, Prince of Orange",early_modern,88.55014058106843
+hierarchical_trust_v2,top_50,3,Napoleon Bonaparte,revolutionary_napoleonic,88.42174320524836
+hierarchical_trust_v2,top_50,4,Subutai,medieval,88.30178069353329
+hierarchical_trust_v2,top_50,5,"Sébastien Le Prestre, Marquis of Vauban",early_modern,86.81443298969073
+hierarchical_trust_v2,top_50,6,Jean Lannes,revolutionary_napoleonic,86.81162136832239
+hierarchical_trust_v2,top_50,7,Louis-Nicolas Davout,revolutionary_napoleonic,86.67104029990628
+hierarchical_trust_v2,top_50,8,Douglas MacArthur,world_wars,86.27553889409559
+hierarchical_trust_v2,top_50,9,Charles XIV John,revolutionary_napoleonic,86.09090909090911
+hierarchical_trust_v2,top_50,10,Ivan Paskevich,long_nineteenth_century,86.08247422680412
+hierarchical_trust_v2,top_50,11,Louis XIV,early_modern,85.58950328022492
+hierarchical_trust_v2,top_50,12,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,85.47985004686036
+hierarchical_trust_v2,top_50,13,Mehmed II,medieval,85.11152764761013
+hierarchical_trust_v2,top_50,14,Belisarius,medieval,85.02999062792877
+hierarchical_trust_v2,top_50,15,Louis-Gabriel Suchet,revolutionary_napoleonic,84.89409559512653
+hierarchical_trust_v2,top_50,16,André Masséna,revolutionary_napoleonic,84.28584817244611
+hierarchical_trust_v2,top_50,17,"Alexander Farnese, Duke of Parma",early_modern,83.99250234301782
+hierarchical_trust_v2,top_50,18,Khalid ibn al-Walid,medieval,83.5801312089972
+hierarchical_trust_v2,top_50,19,Genghis Khan,medieval,83.50609184629803
+hierarchical_trust_v2,top_50,20,Hubert Gough,world_wars,83.04029990627929
+hierarchical_trust_v2,top_50,21,Bernard Montgomery,world_wars,82.21180880974696
+hierarchical_trust_v2,top_50,22,Maharaja Ranjit Singh,long_nineteenth_century,82.12089971883786
+hierarchical_trust_v2,top_50,23,Alexander the Great,ancient,81.81630740393626
+hierarchical_trust_v2,top_50,24,Winfield Scott,long_nineteenth_century,81.72352389878164
+hierarchical_trust_v2,top_50,25,Hannibal,ancient,81.60262417994377
+hierarchical_trust_v2,top_50,26,Enver Pasha,world_wars,81.10777881911903
+hierarchical_trust_v2,top_50,27,Baybars,medieval,80.92502343017806
+hierarchical_trust_v2,top_50,28,Peng Dehuai,cold_war,80.7535145267104
+hierarchical_trust_v2,top_50,29,Frederick the Great,early_modern,80.29334582942832
+hierarchical_trust_v2,top_50,30,Heinz Guderian,world_wars,80.22961574507967
+hierarchical_trust_v2,top_50,31,Charles-Pierre Augereau,revolutionary_napoleonic,80.22961574507967
+hierarchical_trust_v2,top_50,32,Takeda Shingen,early_modern,80.02999062792877
+hierarchical_trust_v2,top_50,33,Hari Singh Nalwa,long_nineteenth_century,79.99812558575447
+hierarchical_trust_v2,top_50,34,Aurangzeb,early_modern,79.99718837863168
+hierarchical_trust_v2,top_50,35,Ögedei Khan,medieval,79.54732895970011
+hierarchical_trust_v2,top_50,36,Dwight D. Eisenhower,world_wars,79.46110590440486
+hierarchical_trust_v2,top_50,37,Katō Kiyomasa,early_modern,79.41799437675726
+hierarchical_trust_v2,top_50,38,Tokugawa Ieyasu,early_modern,79.38800374882848
+hierarchical_trust_v2,top_50,39,Georgy Zhukov,world_wars,79.34020618556703
+hierarchical_trust_v2,top_50,40,Mikhail Kutuzov,revolutionary_napoleonic,79.11246485473292
+hierarchical_trust_v2,top_50,41,Stanisław Żółkiewski,early_modern,79.0834114339269
+hierarchical_trust_v2,top_50,42,Charles XII of Sweden,early_modern,79.06466729147141
+hierarchical_trust_v2,top_50,43,Fyodor Tolbukhin,world_wars,79.01686972820991
+hierarchical_trust_v2,top_50,44,Nikolai Vatutin,world_wars,78.97563261480786
+hierarchical_trust_v2,top_50,45,Rodion Malinovsky,world_wars,78.86035613870665
+hierarchical_trust_v2,top_50,46,Mustafa Kemal Atatürk,world_wars,78.66073102155575
+hierarchical_trust_v2,top_50,47,Konstantin Rokossovsky,world_wars,78.61855670103094
+hierarchical_trust_v2,top_50,48,Peter Wittgenstein,revolutionary_napoleonic,78.55576382380507
+hierarchical_trust_v2,top_50,49,Tolui,medieval,78.4714151827554
+hierarchical_trust_v2,top_50,50,Fedor von Bock,world_wars,78.41705716963448
+hierarchical_trust_v2,top_100,1,Alexander Suvorov,revolutionary_napoleonic,91.36363636363637
+hierarchical_trust_v2,top_100,2,"Maurice, Prince of Orange",early_modern,88.55014058106843
+hierarchical_trust_v2,top_100,3,Napoleon Bonaparte,revolutionary_napoleonic,88.42174320524836
+hierarchical_trust_v2,top_100,4,Subutai,medieval,88.30178069353329
+hierarchical_trust_v2,top_100,5,"Sébastien Le Prestre, Marquis of Vauban",early_modern,86.81443298969073
+hierarchical_trust_v2,top_100,6,Jean Lannes,revolutionary_napoleonic,86.81162136832239
+hierarchical_trust_v2,top_100,7,Louis-Nicolas Davout,revolutionary_napoleonic,86.67104029990628
+hierarchical_trust_v2,top_100,8,Douglas MacArthur,world_wars,86.27553889409559
+hierarchical_trust_v2,top_100,9,Charles XIV John,revolutionary_napoleonic,86.09090909090911
+hierarchical_trust_v2,top_100,10,Ivan Paskevich,long_nineteenth_century,86.08247422680412
+hierarchical_trust_v2,top_100,11,Louis XIV,early_modern,85.58950328022492
+hierarchical_trust_v2,top_100,12,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,85.47985004686036
+hierarchical_trust_v2,top_100,13,Mehmed II,medieval,85.11152764761013
+hierarchical_trust_v2,top_100,14,Belisarius,medieval,85.02999062792877
+hierarchical_trust_v2,top_100,15,Louis-Gabriel Suchet,revolutionary_napoleonic,84.89409559512653
+hierarchical_trust_v2,top_100,16,André Masséna,revolutionary_napoleonic,84.28584817244611
+hierarchical_trust_v2,top_100,17,"Alexander Farnese, Duke of Parma",early_modern,83.99250234301782
+hierarchical_trust_v2,top_100,18,Khalid ibn al-Walid,medieval,83.5801312089972
+hierarchical_trust_v2,top_100,19,Genghis Khan,medieval,83.50609184629803
+hierarchical_trust_v2,top_100,20,Hubert Gough,world_wars,83.04029990627929
+hierarchical_trust_v2,top_100,21,Bernard Montgomery,world_wars,82.21180880974696
+hierarchical_trust_v2,top_100,22,Maharaja Ranjit Singh,long_nineteenth_century,82.12089971883786
+hierarchical_trust_v2,top_100,23,Alexander the Great,ancient,81.81630740393626
+hierarchical_trust_v2,top_100,24,Winfield Scott,long_nineteenth_century,81.72352389878164
+hierarchical_trust_v2,top_100,25,Hannibal,ancient,81.60262417994377
+hierarchical_trust_v2,top_100,26,Enver Pasha,world_wars,81.10777881911903
+hierarchical_trust_v2,top_100,27,Baybars,medieval,80.92502343017806
+hierarchical_trust_v2,top_100,28,Peng Dehuai,cold_war,80.7535145267104
+hierarchical_trust_v2,top_100,29,Frederick the Great,early_modern,80.29334582942832
+hierarchical_trust_v2,top_100,30,Heinz Guderian,world_wars,80.22961574507967
+hierarchical_trust_v2,top_100,31,Charles-Pierre Augereau,revolutionary_napoleonic,80.22961574507967
+hierarchical_trust_v2,top_100,32,Takeda Shingen,early_modern,80.02999062792877
+hierarchical_trust_v2,top_100,33,Hari Singh Nalwa,long_nineteenth_century,79.99812558575447
+hierarchical_trust_v2,top_100,34,Aurangzeb,early_modern,79.99718837863168
+hierarchical_trust_v2,top_100,35,Ögedei Khan,medieval,79.54732895970011
+hierarchical_trust_v2,top_100,36,Dwight D. Eisenhower,world_wars,79.46110590440486
+hierarchical_trust_v2,top_100,37,Katō Kiyomasa,early_modern,79.41799437675726
+hierarchical_trust_v2,top_100,38,Tokugawa Ieyasu,early_modern,79.38800374882848
+hierarchical_trust_v2,top_100,39,Georgy Zhukov,world_wars,79.34020618556703
+hierarchical_trust_v2,top_100,40,Mikhail Kutuzov,revolutionary_napoleonic,79.11246485473292
+hierarchical_trust_v2,top_100,41,Stanisław Żółkiewski,early_modern,79.0834114339269
+hierarchical_trust_v2,top_100,42,Charles XII of Sweden,early_modern,79.06466729147141
+hierarchical_trust_v2,top_100,43,Fyodor Tolbukhin,world_wars,79.01686972820991
+hierarchical_trust_v2,top_100,44,Nikolai Vatutin,world_wars,78.97563261480786
+hierarchical_trust_v2,top_100,45,Rodion Malinovsky,world_wars,78.86035613870665
+hierarchical_trust_v2,top_100,46,Mustafa Kemal Atatürk,world_wars,78.66073102155575
+hierarchical_trust_v2,top_100,47,Konstantin Rokossovsky,world_wars,78.61855670103094
+hierarchical_trust_v2,top_100,48,Peter Wittgenstein,revolutionary_napoleonic,78.55576382380507
+hierarchical_trust_v2,top_100,49,Tolui,medieval,78.4714151827554
+hierarchical_trust_v2,top_100,50,Fedor von Bock,world_wars,78.41705716963448
+hierarchical_trust_v2,top_100,51,Jean Victor Marie Moreau,revolutionary_napoleonic,78.28022492970948
+hierarchical_trust_v2,top_100,52,Ōyama Iwao,long_nineteenth_century,78.18931583880037
+hierarchical_trust_v2,top_100,53,Amr ibn al-As,medieval,78.00281162136832
+hierarchical_trust_v2,top_100,54,Mahmud Pasha Angelović,medieval,77.98313027179006
+hierarchical_trust_v2,top_100,55,Maeda Toshiie,early_modern,77.9821930646673
+hierarchical_trust_v2,top_100,56,Walter Krueger,world_wars,77.98031865042176
+hierarchical_trust_v2,top_100,57,Oliver Cromwell,early_modern,77.86504217432054
+hierarchical_trust_v2,top_100,58,Abu Ubayda ibn al-Jarrah,medieval,77.29147141518277
+hierarchical_trust_v2,top_100,59,Aleksandr Vasilevsky,world_wars,77.25679475164013
+hierarchical_trust_v2,top_100,60,Saladin,medieval,77.2464854732896
+hierarchical_trust_v2,top_100,61,Claude-Victor Perrin,revolutionary_napoleonic,77.14339268978445
+hierarchical_trust_v2,top_100,62,Francis Vere,early_modern,77.11527647610122
+hierarchical_trust_v2,top_100,63,Philip the Good,medieval,77.06747891283976
+hierarchical_trust_v2,top_100,64,John III Sobieski,early_modern,77.01312089971884
+hierarchical_trust_v2,top_100,65,Sayenqueraghta,early_modern,76.91752577319589
+hierarchical_trust_v2,top_100,66,Petar Bojović,long_nineteenth_century,76.91181818181818
+hierarchical_trust_v2,top_100,67,George S. Patton,world_wars,76.86129334582941
+hierarchical_trust_v2,top_100,68,Ahmad Shah Durrani,early_modern,76.76194939081537
+hierarchical_trust_v2,top_100,69,"François-Henri de Montmorency, duc de Luxembourg",early_modern,76.60168697282099
+hierarchical_trust_v2,top_100,70,Ernst Gideon von Laudon,early_modern,76.56982193064667
+hierarchical_trust_v2,top_100,71,Živojin Mišić,world_wars,76.51545454545455
+hierarchical_trust_v2,top_100,72,Kirill Meretskov,world_wars,76.47235238987817
+hierarchical_trust_v2,top_100,73,"Édouard Mortier, Duke of Treviso",revolutionary_napoleonic,76.4208059981256
+hierarchical_trust_v2,top_100,74,Nader Shah,early_modern,76.33833177132148
+hierarchical_trust_v2,top_100,75,Ferdinand Foch,world_wars,76.3045923149016
+hierarchical_trust_v2,top_100,76,Ivan Konev,world_wars,75.9597000937207
+hierarchical_trust_v2,top_100,77,Babur,early_modern,75.88940955951267
+hierarchical_trust_v2,top_100,78,Michel Ney,revolutionary_napoleonic,75.65979381443299
+hierarchical_trust_v2,top_100,79,Jan Karol Chodkiewicz,early_modern,75.50609184629803
+hierarchical_trust_v2,top_100,80,Jassa Singh Ahluwalia,early_modern,75.39737582005624
+hierarchical_trust_v2,top_100,81,Bertrand du Guesclin,medieval,75.2427366447985
+hierarchical_trust_v2,top_100,82,Joseph Stalin,world_wars,75.19868791002811
+hierarchical_trust_v2,top_100,83,Suleiman the Magnificent,early_modern,74.97000937207123
+hierarchical_trust_v2,top_100,84,Murad II,medieval,74.89784442361763
+hierarchical_trust_v2,top_100,85,Ivan Bagramyan,world_wars,74.87535145267104
+hierarchical_trust_v2,top_100,86,Gustavus Adolphus,early_modern,74.7572633552015
+hierarchical_trust_v2,top_100,87,Carl Gustaf Wrangel,early_modern,74.70384254920339
+hierarchical_trust_v2,top_100,88,Michiel de Ruyter,early_modern,74.53889409559511
+hierarchical_trust_v2,top_100,89,Prince Rupert of the Rhine,early_modern,74.41049671977505
+hierarchical_trust_v2,top_100,90,Yamagata Aritomo,long_nineteenth_century,74.39727272727274
+hierarchical_trust_v2,top_100,91,Ambrogio Spinola,early_modern,74.18650421743205
+hierarchical_trust_v2,top_100,92,Laurent de Gouvion Saint-Cyr,revolutionary_napoleonic,73.98031865042175
+hierarchical_trust_v2,top_100,93,Zubayr ibn al-Awwam,medieval,73.69353327085287
+hierarchical_trust_v2,top_100,94,Guru Gobind Singh,early_modern,73.630740393627
+hierarchical_trust_v2,top_100,95,Date Masamune,early_modern,73.61818181818182
+hierarchical_trust_v2,top_100,96,Lennart Torstensson,early_modern,73.61105904404874
+hierarchical_trust_v2,top_100,97,Honda Tadakatsu,early_modern,73.56513589503281
+hierarchical_trust_v2,top_100,98,François Joseph Lefebvre,revolutionary_napoleonic,73.4461105904405
+hierarchical_trust_v2,top_100,99,"Louis, Grand Condé",early_modern,73.43205248359888
+hierarchical_trust_v2,top_100,100,Skanderbeg,medieval,73.26897844423618
+hierarchical_full_credit,top_25,1,Alexander Suvorov,revolutionary_napoleonic,91.12730396751016
+hierarchical_full_credit,top_25,2,Ivan Paskevich,long_nineteenth_century,88.17963136519839
+hierarchical_full_credit,top_25,3,"Sébastien Le Prestre, Marquis of Vauban",early_modern,87.2970946579194
+hierarchical_full_credit,top_25,4,"Maurice, Prince of Orange",early_modern,87.02577319587631
+hierarchical_full_credit,top_25,5,Napoleon Bonaparte,revolutionary_napoleonic,86.91736957200877
+hierarchical_full_credit,top_25,6,Subutai,medieval,86.8809746954077
+hierarchical_full_credit,top_25,7,Louis XIV,early_modern,85.8186504217432
+hierarchical_full_credit,top_25,8,Charles XIV John,revolutionary_napoleonic,85.21290221805687
+hierarchical_full_credit,top_25,9,Jean Lannes,revolutionary_napoleonic,85.00296782255543
+hierarchical_full_credit,top_25,10,Genghis Khan,medieval,84.9714151827554
+hierarchical_full_credit,top_25,11,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,84.92330521711966
+hierarchical_full_credit,top_25,12,Louis-Gabriel Suchet,revolutionary_napoleonic,84.14104967197751
+hierarchical_full_credit,top_25,13,Mehmed II,medieval,84.0596688534833
+hierarchical_full_credit,top_25,14,Alexander the Great,ancient,83.35223367697597
+hierarchical_full_credit,top_25,15,André Masséna,revolutionary_napoleonic,83.10184317400812
+hierarchical_full_credit,top_25,16,Hubert Gough,world_wars,83.10090596688535
+hierarchical_full_credit,top_25,17,Winfield Scott,long_nineteenth_century,82.83926897844424
+hierarchical_full_credit,top_25,18,Ōyama Iwao,long_nineteenth_century,82.68759762574196
+hierarchical_full_credit,top_25,19,"Alexander Farnese, Duke of Parma",early_modern,82.31599500156203
+hierarchical_full_credit,top_25,20,Baybars,medieval,82.22899094033114
+hierarchical_full_credit,top_25,21,Petar Bojović,long_nineteenth_century,81.97297719462667
+hierarchical_full_credit,top_25,22,Aurangzeb,early_modern,81.96079350203061
+hierarchical_full_credit,top_25,23,Khalid ibn al-Walid,medieval,81.81333958138083
+hierarchical_full_credit,top_25,24,Tokugawa Ieyasu,early_modern,81.58388003748829
+hierarchical_full_credit,top_25,25,Živojin Mišić,world_wars,81.28225554514215
+hierarchical_full_credit,top_50,1,Alexander Suvorov,revolutionary_napoleonic,91.12730396751016
+hierarchical_full_credit,top_50,2,Ivan Paskevich,long_nineteenth_century,88.17963136519839
+hierarchical_full_credit,top_50,3,"Sébastien Le Prestre, Marquis of Vauban",early_modern,87.2970946579194
+hierarchical_full_credit,top_50,4,"Maurice, Prince of Orange",early_modern,87.02577319587631
+hierarchical_full_credit,top_50,5,Napoleon Bonaparte,revolutionary_napoleonic,86.91736957200877
+hierarchical_full_credit,top_50,6,Subutai,medieval,86.8809746954077
+hierarchical_full_credit,top_50,7,Louis XIV,early_modern,85.8186504217432
+hierarchical_full_credit,top_50,8,Charles XIV John,revolutionary_napoleonic,85.21290221805687
+hierarchical_full_credit,top_50,9,Jean Lannes,revolutionary_napoleonic,85.00296782255543
+hierarchical_full_credit,top_50,10,Genghis Khan,medieval,84.9714151827554
+hierarchical_full_credit,top_50,11,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,84.92330521711966
+hierarchical_full_credit,top_50,12,Louis-Gabriel Suchet,revolutionary_napoleonic,84.14104967197751
+hierarchical_full_credit,top_50,13,Mehmed II,medieval,84.0596688534833
+hierarchical_full_credit,top_50,14,Alexander the Great,ancient,83.35223367697597
+hierarchical_full_credit,top_50,15,André Masséna,revolutionary_napoleonic,83.10184317400812
+hierarchical_full_credit,top_50,16,Hubert Gough,world_wars,83.10090596688535
+hierarchical_full_credit,top_50,17,Winfield Scott,long_nineteenth_century,82.83926897844424
+hierarchical_full_credit,top_50,18,Ōyama Iwao,long_nineteenth_century,82.68759762574196
+hierarchical_full_credit,top_50,19,"Alexander Farnese, Duke of Parma",early_modern,82.31599500156203
+hierarchical_full_credit,top_50,20,Baybars,medieval,82.22899094033114
+hierarchical_full_credit,top_50,21,Petar Bojović,long_nineteenth_century,81.97297719462667
+hierarchical_full_credit,top_50,22,Aurangzeb,early_modern,81.96079350203061
+hierarchical_full_credit,top_50,23,Khalid ibn al-Walid,medieval,81.81333958138083
+hierarchical_full_credit,top_50,24,Tokugawa Ieyasu,early_modern,81.58388003748829
+hierarchical_full_credit,top_50,25,Živojin Mišić,world_wars,81.28225554514215
+hierarchical_full_credit,top_50,26,Bernard Montgomery,world_wars,81.25976257419555
+hierarchical_full_credit,top_50,27,Douglas MacArthur,world_wars,81.08419243986255
+hierarchical_full_credit,top_50,28,Dwight D. Eisenhower,world_wars,80.62636676038737
+hierarchical_full_credit,top_50,29,Yamagata Aritomo,long_nineteenth_century,79.91705716963449
+hierarchical_full_credit,top_50,30,Date Masamune,early_modern,79.9100281162137
+hierarchical_full_credit,top_50,31,Tolui,medieval,79.88081849422056
+hierarchical_full_credit,top_50,32,Ögedei Khan,medieval,79.87535145267105
+hierarchical_full_credit,top_50,33,Peng Dehuai,cold_war,79.7277413308341
+hierarchical_full_credit,top_50,34,Maharaja Ranjit Singh,long_nineteenth_century,79.66166822867854
+hierarchical_full_credit,top_50,35,Amr ibn al-As,medieval,79.65745079662605
+hierarchical_full_credit,top_50,36,Hannibal,ancient,79.50937207122776
+hierarchical_full_credit,top_50,37,Charles-Pierre Augereau,revolutionary_napoleonic,79.48922211808811
+hierarchical_full_credit,top_50,38,Takeda Shingen,early_modern,79.26304279912527
+hierarchical_full_credit,top_50,39,"François-Henri de Montmorency, duc de Luxembourg",early_modern,78.94423617619493
+hierarchical_full_credit,top_50,40,Georgy Zhukov,world_wars,78.58497344579821
+hierarchical_full_credit,top_50,41,Heinz Guderian,world_wars,78.52546079350203
+hierarchical_full_credit,top_50,42,Hari Singh Nalwa,long_nineteenth_century,78.51327710090597
+hierarchical_full_credit,top_50,43,Frederick the Great,early_modern,78.40315526398001
+hierarchical_full_credit,top_50,44,Louis-Nicolas Davout,revolutionary_napoleonic,78.3309903155264
+hierarchical_full_credit,top_50,45,Philip the Good,medieval,78.27147766323026
+hierarchical_full_credit,top_50,46,Fyodor Tolbukhin,world_wars,78.23898781630739
+hierarchical_full_credit,top_50,47,Katō Kiyomasa,early_modern,78.2293033427054
+hierarchical_full_credit,top_50,48,Walter Krueger,world_wars,77.94361137144644
+hierarchical_full_credit,top_50,49,Aleksandr Vasilevsky,world_wars,77.85676351140269
+hierarchical_full_credit,top_50,50,Rodion Malinovsky,world_wars,77.81224617307092
+hierarchical_full_credit,top_100,1,Alexander Suvorov,revolutionary_napoleonic,91.12730396751016
+hierarchical_full_credit,top_100,2,Ivan Paskevich,long_nineteenth_century,88.17963136519839
+hierarchical_full_credit,top_100,3,"Sébastien Le Prestre, Marquis of Vauban",early_modern,87.2970946579194
+hierarchical_full_credit,top_100,4,"Maurice, Prince of Orange",early_modern,87.02577319587631
+hierarchical_full_credit,top_100,5,Napoleon Bonaparte,revolutionary_napoleonic,86.91736957200877
+hierarchical_full_credit,top_100,6,Subutai,medieval,86.8809746954077
+hierarchical_full_credit,top_100,7,Louis XIV,early_modern,85.8186504217432
+hierarchical_full_credit,top_100,8,Charles XIV John,revolutionary_napoleonic,85.21290221805687
+hierarchical_full_credit,top_100,9,Jean Lannes,revolutionary_napoleonic,85.00296782255543
+hierarchical_full_credit,top_100,10,Genghis Khan,medieval,84.9714151827554
+hierarchical_full_credit,top_100,11,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,84.92330521711966
+hierarchical_full_credit,top_100,12,Louis-Gabriel Suchet,revolutionary_napoleonic,84.14104967197751
+hierarchical_full_credit,top_100,13,Mehmed II,medieval,84.0596688534833
+hierarchical_full_credit,top_100,14,Alexander the Great,ancient,83.35223367697597
+hierarchical_full_credit,top_100,15,André Masséna,revolutionary_napoleonic,83.10184317400812
+hierarchical_full_credit,top_100,16,Hubert Gough,world_wars,83.10090596688535
+hierarchical_full_credit,top_100,17,Winfield Scott,long_nineteenth_century,82.83926897844424
+hierarchical_full_credit,top_100,18,Ōyama Iwao,long_nineteenth_century,82.68759762574196
+hierarchical_full_credit,top_100,19,"Alexander Farnese, Duke of Parma",early_modern,82.31599500156203
+hierarchical_full_credit,top_100,20,Baybars,medieval,82.22899094033114
+hierarchical_full_credit,top_100,21,Petar Bojović,long_nineteenth_century,81.97297719462667
+hierarchical_full_credit,top_100,22,Aurangzeb,early_modern,81.96079350203061
+hierarchical_full_credit,top_100,23,Khalid ibn al-Walid,medieval,81.81333958138083
+hierarchical_full_credit,top_100,24,Tokugawa Ieyasu,early_modern,81.58388003748829
+hierarchical_full_credit,top_100,25,Živojin Mišić,world_wars,81.28225554514215
+hierarchical_full_credit,top_100,26,Bernard Montgomery,world_wars,81.25976257419555
+hierarchical_full_credit,top_100,27,Douglas MacArthur,world_wars,81.08419243986255
+hierarchical_full_credit,top_100,28,Dwight D. Eisenhower,world_wars,80.62636676038737
+hierarchical_full_credit,top_100,29,Yamagata Aritomo,long_nineteenth_century,79.91705716963449
+hierarchical_full_credit,top_100,30,Date Masamune,early_modern,79.9100281162137
+hierarchical_full_credit,top_100,31,Tolui,medieval,79.88081849422056
+hierarchical_full_credit,top_100,32,Ögedei Khan,medieval,79.87535145267105
+hierarchical_full_credit,top_100,33,Peng Dehuai,cold_war,79.7277413308341
+hierarchical_full_credit,top_100,34,Maharaja Ranjit Singh,long_nineteenth_century,79.66166822867854
+hierarchical_full_credit,top_100,35,Amr ibn al-As,medieval,79.65745079662605
+hierarchical_full_credit,top_100,36,Hannibal,ancient,79.50937207122776
+hierarchical_full_credit,top_100,37,Charles-Pierre Augereau,revolutionary_napoleonic,79.48922211808811
+hierarchical_full_credit,top_100,38,Takeda Shingen,early_modern,79.26304279912527
+hierarchical_full_credit,top_100,39,"François-Henri de Montmorency, duc de Luxembourg",early_modern,78.94423617619493
+hierarchical_full_credit,top_100,40,Georgy Zhukov,world_wars,78.58497344579821
+hierarchical_full_credit,top_100,41,Heinz Guderian,world_wars,78.52546079350203
+hierarchical_full_credit,top_100,42,Hari Singh Nalwa,long_nineteenth_century,78.51327710090597
+hierarchical_full_credit,top_100,43,Frederick the Great,early_modern,78.40315526398001
+hierarchical_full_credit,top_100,44,Louis-Nicolas Davout,revolutionary_napoleonic,78.3309903155264
+hierarchical_full_credit,top_100,45,Philip the Good,medieval,78.27147766323026
+hierarchical_full_credit,top_100,46,Fyodor Tolbukhin,world_wars,78.23898781630739
+hierarchical_full_credit,top_100,47,Katō Kiyomasa,early_modern,78.2293033427054
+hierarchical_full_credit,top_100,48,Walter Krueger,world_wars,77.94361137144644
+hierarchical_full_credit,top_100,49,Aleksandr Vasilevsky,world_wars,77.85676351140269
+hierarchical_full_credit,top_100,50,Rodion Malinovsky,world_wars,77.81224617307092
+hierarchical_full_credit,top_100,51,Stanisław Żółkiewski,early_modern,77.72071227741331
+hierarchical_full_credit,top_100,52,Publius Cornelius Scipio,ancient,77.63058419243987
+hierarchical_full_credit,top_100,53,Maeda Toshiie,early_modern,77.43626991565137
+hierarchical_full_credit,top_100,54,George S. Patton,world_wars,77.38394251796312
+hierarchical_full_credit,top_100,55,Nikolai Vatutin,world_wars,77.2933458294283
+hierarchical_full_credit,top_100,56,Michiel de Ruyter,early_modern,77.21337082161824
+hierarchical_full_credit,top_100,57,Abu Ubayda ibn al-Jarrah,medieval,77.14979693845675
+hierarchical_full_credit,top_100,58,Saladin,medieval,77.02749140893471
+hierarchical_full_credit,top_100,59,Oliver Cromwell,early_modern,76.99328334895347
+hierarchical_full_credit,top_100,60,Nozu Michitsura,long_nineteenth_century,76.96719775070291
+hierarchical_full_credit,top_100,61,Belisarius,medieval,76.87394564198688
+hierarchical_full_credit,top_100,62,Jan Zamoyski,early_modern,76.75945017182131
+hierarchical_full_credit,top_100,63,Ahmad Shah Durrani,early_modern,76.60496719775071
+hierarchical_full_credit,top_100,64,Konstantin Rokossovsky,world_wars,76.49375195251486
+hierarchical_full_credit,top_100,65,Mahmud Pasha Angelović,medieval,76.42580443611372
+hierarchical_full_credit,top_100,66,Aleksey Yermolov,revolutionary_napoleonic,76.31505779443926
+hierarchical_full_credit,top_100,67,Ivan Bagramyan,world_wars,76.27210246797875
+hierarchical_full_credit,top_100,68,Joseph Stalin,world_wars,76.26351140268666
+hierarchical_full_credit,top_100,69,Lennart Torstensson,early_modern,75.46001249609498
+hierarchical_full_credit,top_100,70,Mikhail Kutuzov,revolutionary_napoleonic,75.41283973758202
+hierarchical_full_credit,top_100,71,Ras Alula,long_nineteenth_century,75.39768822243052
+hierarchical_full_credit,top_100,72,Jan Karol Chodkiewicz,early_modern,75.251796313652
+hierarchical_full_credit,top_100,73,Fedor von Bock,world_wars,75.2475788815995
+hierarchical_full_credit,top_100,74,Carl Gustaf Wrangel,early_modern,75.24367385192129
+hierarchical_full_credit,top_100,75,Suleiman the Magnificent,early_modern,75.18869103405186
+hierarchical_full_credit,top_100,76,Stepa Stepanović,world_wars,75.11730709153392
+hierarchical_full_credit,top_100,77,Ernst Gideon von Laudon,early_modern,74.69962511715089
+hierarchical_full_credit,top_100,78,Qasem Soleimani,contemporary,74.55888784754764
+hierarchical_full_credit,top_100,79,Ferdinand Foch,world_wars,74.53733208372384
+hierarchical_full_credit,top_100,80,Mao Zedong,cold_war,74.53561387066543
+hierarchical_full_credit,top_100,81,Francis Vere,early_modern,74.5118712902218
+hierarchical_full_credit,top_100,82,Asif Ali Zardari,contemporary,74.47674476726026
+hierarchical_full_credit,top_100,83,Babur,early_modern,74.3976882224305
+hierarchical_full_credit,top_100,84,Stilicho,ancient,74.22196188691036
+hierarchical_full_credit,top_100,85,Jassa Singh Ahluwalia,early_modern,74.22024367385193
+hierarchical_full_credit,top_100,86,Valery Gerasimov,contemporary,74.20031240237427
+hierarchical_full_credit,top_100,87,Nader Shah,early_modern,74.1098094345517
+hierarchical_full_credit,top_100,88,François de Créquy,early_modern,74.05123398937833
+hierarchical_full_credit,top_100,89,Honda Tadakatsu,early_modern,74.03748828491098
+hierarchical_full_credit,top_100,90,Yakov Kulnev,revolutionary_napoleonic,73.63136519837552
+hierarchical_full_credit,top_100,91,Kirill Meretskov,world_wars,73.48000624804749
+hierarchical_full_credit,top_100,92,John III Sobieski,early_modern,73.43908153701969
+hierarchical_full_credit,top_100,93,John Gorham,early_modern,73.32755388940957
+hierarchical_full_credit,top_100,94,Maurice de Saxe,early_modern,73.13808184942206
+hierarchical_full_credit,top_100,95,Rama Raya,early_modern,73.08934707903782
+hierarchical_full_credit,top_100,96,Gustavus Adolphus,early_modern,73.06060606060606
+hierarchical_full_credit,top_100,97,Radomir Putnik,long_nineteenth_century,73.05217119650109
+hierarchical_full_credit,top_100,98,Omar Bradley,world_wars,72.91580756013745
+hierarchical_full_credit,top_100,99,Charles XII of Sweden,early_modern,72.86988441112153
+hierarchical_full_credit,top_100,100,Alauddin Khalji,medieval,72.8448922211809
+hierarchical_equal_split,top_25,1,Alexander Suvorov,revolutionary_napoleonic,90.98203686348018
+hierarchical_equal_split,top_25,2,Napoleon Bonaparte,revolutionary_napoleonic,87.32224304904717
+hierarchical_equal_split,top_25,3,"Maurice, Prince of Orange",early_modern,87.14948453608248
+hierarchical_equal_split,top_25,4,Subutai,medieval,85.98500468603564
+hierarchical_equal_split,top_25,5,"Sébastien Le Prestre, Marquis of Vauban",early_modern,85.74695407685098
+hierarchical_equal_split,top_25,6,Baybars,medieval,85.31427678850358
+hierarchical_equal_split,top_25,7,Ivan Paskevich,long_nineteenth_century,83.91815057794439
+hierarchical_equal_split,top_25,8,Mehmed II,medieval,83.89378319275228
+hierarchical_equal_split,top_25,9,Louis-Nicolas Davout,revolutionary_napoleonic,83.6711965010934
+hierarchical_equal_split,top_25,10,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,83.65573258356766
+hierarchical_equal_split,top_25,11,Charles XIV John,revolutionary_napoleonic,83.33005310840363
+hierarchical_equal_split,top_25,12,Belisarius,medieval,83.15229615745079
+hierarchical_equal_split,top_25,13,Jean Lannes,revolutionary_napoleonic,83.14636051233987
+hierarchical_equal_split,top_25,14,"Alexander Farnese, Duke of Parma",early_modern,83.06107466416745
+hierarchical_equal_split,top_25,15,Louis-Gabriel Suchet,revolutionary_napoleonic,82.79240862230554
+hierarchical_equal_split,top_25,16,Louis XIV,early_modern,82.44189315838801
+hierarchical_equal_split,top_25,17,Maharaja Ranjit Singh,long_nineteenth_century,82.24554826616682
+hierarchical_equal_split,top_25,18,Khalid ibn al-Walid,medieval,81.83208372383632
+hierarchical_equal_split,top_25,19,Winfield Scott,long_nineteenth_century,81.7713214620431
+hierarchical_equal_split,top_25,20,Hubert Gough,world_wars,81.65760699781319
+hierarchical_equal_split,top_25,21,Hannibal,ancient,81.50000000000001
+hierarchical_equal_split,top_25,22,Douglas MacArthur,world_wars,81.48344267416432
+hierarchical_equal_split,top_25,23,Alexander the Great,ancient,81.3213058419244
+hierarchical_equal_split,top_25,24,Philip the Good,medieval,80.74617307091535
+hierarchical_equal_split,top_25,25,Genghis Khan,medieval,80.33130271790067
+hierarchical_equal_split,top_50,1,Alexander Suvorov,revolutionary_napoleonic,90.98203686348018
+hierarchical_equal_split,top_50,2,Napoleon Bonaparte,revolutionary_napoleonic,87.32224304904717
+hierarchical_equal_split,top_50,3,"Maurice, Prince of Orange",early_modern,87.14948453608248
+hierarchical_equal_split,top_50,4,Subutai,medieval,85.98500468603564
+hierarchical_equal_split,top_50,5,"Sébastien Le Prestre, Marquis of Vauban",early_modern,85.74695407685098
+hierarchical_equal_split,top_50,6,Baybars,medieval,85.31427678850358
+hierarchical_equal_split,top_50,7,Ivan Paskevich,long_nineteenth_century,83.91815057794439
+hierarchical_equal_split,top_50,8,Mehmed II,medieval,83.89378319275228
+hierarchical_equal_split,top_50,9,Louis-Nicolas Davout,revolutionary_napoleonic,83.6711965010934
+hierarchical_equal_split,top_50,10,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,83.65573258356766
+hierarchical_equal_split,top_50,11,Charles XIV John,revolutionary_napoleonic,83.33005310840363
+hierarchical_equal_split,top_50,12,Belisarius,medieval,83.15229615745079
+hierarchical_equal_split,top_50,13,Jean Lannes,revolutionary_napoleonic,83.14636051233987
+hierarchical_equal_split,top_50,14,"Alexander Farnese, Duke of Parma",early_modern,83.06107466416745
+hierarchical_equal_split,top_50,15,Louis-Gabriel Suchet,revolutionary_napoleonic,82.79240862230554
+hierarchical_equal_split,top_50,16,Louis XIV,early_modern,82.44189315838801
+hierarchical_equal_split,top_50,17,Maharaja Ranjit Singh,long_nineteenth_century,82.24554826616682
+hierarchical_equal_split,top_50,18,Khalid ibn al-Walid,medieval,81.83208372383632
+hierarchical_equal_split,top_50,19,Winfield Scott,long_nineteenth_century,81.7713214620431
+hierarchical_equal_split,top_50,20,Hubert Gough,world_wars,81.65760699781319
+hierarchical_equal_split,top_50,21,Hannibal,ancient,81.50000000000001
+hierarchical_equal_split,top_50,22,Douglas MacArthur,world_wars,81.48344267416432
+hierarchical_equal_split,top_50,23,Alexander the Great,ancient,81.3213058419244
+hierarchical_equal_split,top_50,24,Philip the Good,medieval,80.74617307091535
+hierarchical_equal_split,top_50,25,Genghis Khan,medieval,80.33130271790067
+hierarchical_equal_split,top_50,26,Hari Singh Nalwa,long_nineteenth_century,80.27147766323024
+hierarchical_equal_split,top_50,27,André Masséna,revolutionary_napoleonic,80.08778506716651
+hierarchical_equal_split,top_50,28,Bernard Montgomery,world_wars,80.02452358637926
+hierarchical_equal_split,top_50,29,Jan Zamoyski,early_modern,79.89487660106217
+hierarchical_equal_split,top_50,30,Stanisław Żółkiewski,early_modern,79.57169634489222
+hierarchical_equal_split,top_50,31,Takeda Shingen,early_modern,79.51608872227429
+hierarchical_equal_split,top_50,32,Tolui,medieval,79.08325523273977
+hierarchical_equal_split,top_50,33,Amr ibn al-As,medieval,79.01546391752576
+hierarchical_equal_split,top_50,34,Yamagata Aritomo,long_nineteenth_century,78.89784442361761
+hierarchical_equal_split,top_50,35,Petar Bojović,long_nineteenth_century,78.89190877850672
+hierarchical_equal_split,top_50,36,Peng Dehuai,cold_war,78.8477038425492
+hierarchical_equal_split,top_50,37,Heinz Guderian,world_wars,78.51843174008123
+hierarchical_equal_split,top_50,38,Živojin Mišić,world_wars,78.2293033427054
+hierarchical_equal_split,top_50,39,"François-Henri de Montmorency, duc de Luxembourg",early_modern,78.09981255857544
+hierarchical_equal_split,top_50,40,Ōyama Iwao,long_nineteenth_century,77.83942517963136
+hierarchical_equal_split,top_50,41,Date Masamune,early_modern,77.82099343955015
+hierarchical_equal_split,top_50,42,Aurangzeb,early_modern,77.81084036238674
+hierarchical_equal_split,top_50,43,Oliver Cromwell,early_modern,77.59356451109028
+hierarchical_equal_split,top_50,44,Katō Kiyomasa,early_modern,77.10793502030616
+hierarchical_equal_split,top_50,45,Saladin,medieval,77.09778194314276
+hierarchical_equal_split,top_50,46,Nozu Michitsura,long_nineteenth_century,77.08481724461106
+hierarchical_equal_split,top_50,47,Fyodor Tolbukhin,world_wars,77.02717900656044
+hierarchical_equal_split,top_50,48,Sayenqueraghta,early_modern,76.94798500468605
+hierarchical_equal_split,top_50,49,Stilicho,ancient,76.90940331146517
+hierarchical_equal_split,top_50,50,Ras Alula,long_nineteenth_century,76.86066854108093
+hierarchical_equal_split,top_100,1,Alexander Suvorov,revolutionary_napoleonic,90.98203686348018
+hierarchical_equal_split,top_100,2,Napoleon Bonaparte,revolutionary_napoleonic,87.32224304904717
+hierarchical_equal_split,top_100,3,"Maurice, Prince of Orange",early_modern,87.14948453608248
+hierarchical_equal_split,top_100,4,Subutai,medieval,85.98500468603564
+hierarchical_equal_split,top_100,5,"Sébastien Le Prestre, Marquis of Vauban",early_modern,85.74695407685098
+hierarchical_equal_split,top_100,6,Baybars,medieval,85.31427678850358
+hierarchical_equal_split,top_100,7,Ivan Paskevich,long_nineteenth_century,83.91815057794439
+hierarchical_equal_split,top_100,8,Mehmed II,medieval,83.89378319275228
+hierarchical_equal_split,top_100,9,Louis-Nicolas Davout,revolutionary_napoleonic,83.6711965010934
+hierarchical_equal_split,top_100,10,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,83.65573258356766
+hierarchical_equal_split,top_100,11,Charles XIV John,revolutionary_napoleonic,83.33005310840363
+hierarchical_equal_split,top_100,12,Belisarius,medieval,83.15229615745079
+hierarchical_equal_split,top_100,13,Jean Lannes,revolutionary_napoleonic,83.14636051233987
+hierarchical_equal_split,top_100,14,"Alexander Farnese, Duke of Parma",early_modern,83.06107466416745
+hierarchical_equal_split,top_100,15,Louis-Gabriel Suchet,revolutionary_napoleonic,82.79240862230554
+hierarchical_equal_split,top_100,16,Louis XIV,early_modern,82.44189315838801
+hierarchical_equal_split,top_100,17,Maharaja Ranjit Singh,long_nineteenth_century,82.24554826616682
+hierarchical_equal_split,top_100,18,Khalid ibn al-Walid,medieval,81.83208372383632
+hierarchical_equal_split,top_100,19,Winfield Scott,long_nineteenth_century,81.7713214620431
+hierarchical_equal_split,top_100,20,Hubert Gough,world_wars,81.65760699781319
+hierarchical_equal_split,top_100,21,Hannibal,ancient,81.50000000000001
+hierarchical_equal_split,top_100,22,Douglas MacArthur,world_wars,81.48344267416432
+hierarchical_equal_split,top_100,23,Alexander the Great,ancient,81.3213058419244
+hierarchical_equal_split,top_100,24,Philip the Good,medieval,80.74617307091535
+hierarchical_equal_split,top_100,25,Genghis Khan,medieval,80.33130271790067
+hierarchical_equal_split,top_100,26,Hari Singh Nalwa,long_nineteenth_century,80.27147766323024
+hierarchical_equal_split,top_100,27,André Masséna,revolutionary_napoleonic,80.08778506716651
+hierarchical_equal_split,top_100,28,Bernard Montgomery,world_wars,80.02452358637926
+hierarchical_equal_split,top_100,29,Jan Zamoyski,early_modern,79.89487660106217
+hierarchical_equal_split,top_100,30,Stanisław Żółkiewski,early_modern,79.57169634489222
+hierarchical_equal_split,top_100,31,Takeda Shingen,early_modern,79.51608872227429
+hierarchical_equal_split,top_100,32,Tolui,medieval,79.08325523273977
+hierarchical_equal_split,top_100,33,Amr ibn al-As,medieval,79.01546391752576
+hierarchical_equal_split,top_100,34,Yamagata Aritomo,long_nineteenth_century,78.89784442361761
+hierarchical_equal_split,top_100,35,Petar Bojović,long_nineteenth_century,78.89190877850672
+hierarchical_equal_split,top_100,36,Peng Dehuai,cold_war,78.8477038425492
+hierarchical_equal_split,top_100,37,Heinz Guderian,world_wars,78.51843174008123
+hierarchical_equal_split,top_100,38,Živojin Mišić,world_wars,78.2293033427054
+hierarchical_equal_split,top_100,39,"François-Henri de Montmorency, duc de Luxembourg",early_modern,78.09981255857544
+hierarchical_equal_split,top_100,40,Ōyama Iwao,long_nineteenth_century,77.83942517963136
+hierarchical_equal_split,top_100,41,Date Masamune,early_modern,77.82099343955015
+hierarchical_equal_split,top_100,42,Aurangzeb,early_modern,77.81084036238674
+hierarchical_equal_split,top_100,43,Oliver Cromwell,early_modern,77.59356451109028
+hierarchical_equal_split,top_100,44,Katō Kiyomasa,early_modern,77.10793502030616
+hierarchical_equal_split,top_100,45,Saladin,medieval,77.09778194314276
+hierarchical_equal_split,top_100,46,Nozu Michitsura,long_nineteenth_century,77.08481724461106
+hierarchical_equal_split,top_100,47,Fyodor Tolbukhin,world_wars,77.02717900656044
+hierarchical_equal_split,top_100,48,Sayenqueraghta,early_modern,76.94798500468605
+hierarchical_equal_split,top_100,49,Stilicho,ancient,76.90940331146517
+hierarchical_equal_split,top_100,50,Ras Alula,long_nineteenth_century,76.86066854108093
+hierarchical_equal_split,top_100,51,Walter Krueger,world_wars,76.79553264604812
+hierarchical_equal_split,top_100,52,Ivan Bagramyan,world_wars,76.51483911277728
+hierarchical_equal_split,top_100,53,Babur,early_modern,76.2018119337707
+hierarchical_equal_split,top_100,54,Ögedei Khan,medieval,76.15370196813497
+hierarchical_equal_split,top_100,55,Ahmad Shah Durrani,early_modern,75.98453608247422
+hierarchical_equal_split,top_100,56,Charles XII of Sweden,early_modern,75.97766323024055
+hierarchical_equal_split,top_100,57,Mahmud Pasha Angelović,medieval,75.97125898156825
+hierarchical_equal_split,top_100,58,Enver Pasha,world_wars,75.76132458606688
+hierarchical_equal_split,top_100,59,John III Sobieski,early_modern,75.71180880974697
+hierarchical_equal_split,top_100,60,Rama Raya,early_modern,75.65307716338644
+hierarchical_equal_split,top_100,61,Publius Cornelius Scipio,ancient,75.64183067791315
+hierarchical_equal_split,top_100,62,Jan Karol Chodkiewicz,early_modern,75.51890034364261
+hierarchical_equal_split,top_100,63,François de Créquy,early_modern,75.51233989378319
+hierarchical_equal_split,top_100,64,Fedor von Bock,world_wars,75.4898469228366
+hierarchical_equal_split,top_100,65,Frederick the Great,early_modern,75.4800062480475
+hierarchical_equal_split,top_100,66,Francis Vere,early_modern,75.41861918150578
+hierarchical_equal_split,top_100,67,Jean Victor Marie Moreau,revolutionary_napoleonic,75.31943142767886
+hierarchical_equal_split,top_100,68,Peter Wittgenstein,revolutionary_napoleonic,75.12402374258046
+hierarchical_equal_split,top_100,69,Konstantin Rokossovsky,world_wars,74.87050921587006
+hierarchical_equal_split,top_100,70,Rodion Malinovsky,world_wars,74.86566697906905
+hierarchical_equal_split,top_100,71,Bertrand du Guesclin,medieval,74.5
+hierarchical_equal_split,top_100,72,Alauddin Khalji,medieval,74.45923149015933
+hierarchical_equal_split,top_100,73,Abu Ubayda ibn al-Jarrah,medieval,74.37097781943143
+hierarchical_equal_split,top_100,74,Antigonus II Gonatas,ancient,74.3519212746017
+hierarchical_equal_split,top_100,75,Nikolai Vatutin,world_wars,74.31583880037489
+hierarchical_equal_split,top_100,76,Ernst Gideon von Laudon,early_modern,74.27600749765698
+hierarchical_equal_split,top_100,77,Cardinal-Infante Ferdinand of Austria,early_modern,74.18384879725087
+hierarchical_equal_split,top_100,78,Georgy Zhukov,world_wars,74.02264917213373
+hierarchical_equal_split,top_100,79,Carl Gustaf Wrangel,early_modern,73.73242736644798
+hierarchical_equal_split,top_100,80,Charles-Pierre Augereau,revolutionary_napoleonic,73.59981255857544
+hierarchical_equal_split,top_100,81,Mahmud of Ghazni,medieval,73.46672914714152
+hierarchical_equal_split,top_100,82,Ferdinand Foch,world_wars,73.32130584192439
+hierarchical_equal_split,top_100,83,Robert Clive,early_modern,73.30443611371447
+hierarchical_equal_split,top_100,84,Maurice de Saxe,early_modern,73.25663855045299
+hierarchical_equal_split,top_100,85,Valery Gerasimov,contemporary,73.23116994689158
+hierarchical_equal_split,top_100,86,Stanisław Koniecpolski,early_modern,73.17307091533897
+hierarchical_equal_split,top_100,87,George S. Patton,world_wars,73.09528272414869
+hierarchical_equal_split,top_100,88,Charles Mangin,world_wars,73.09481412058734
+hierarchical_equal_split,top_100,89,Lennart Torstensson,early_modern,73.06825991877537
+hierarchical_equal_split,top_100,90,Hans Karl von Diebitsch,long_nineteenth_century,72.97485160887223
+hierarchical_equal_split,top_100,91,Emperor Taizong of Tang,medieval,72.84676663542643
+hierarchical_equal_split,top_100,92,Ambrogio Spinola,early_modern,72.67275851296469
+hierarchical_equal_split,top_100,93,Prince Friedrich Karl of Prussia,long_nineteenth_century,72.65526398000625
+hierarchical_equal_split,top_100,94,John Gorham,early_modern,72.54451733833179
+hierarchical_equal_split,top_100,95,Mustafa Kemal Atatürk,world_wars,72.45954389253357
+hierarchical_equal_split,top_100,96,Nader Shah,early_modern,72.29631365198377
+hierarchical_equal_split,top_100,97,Murad II,medieval,72.20446735395188
+hierarchical_equal_split,top_100,98,Suharto,cold_war,72.19259606373008
+hierarchical_equal_split,top_100,99,Aleksandr Vasilevsky,world_wars,72.18197438300533
+hierarchical_equal_split,top_100,100,Mikhail Kutuzov,revolutionary_napoleonic,72.1157450796626
+hierarchical_broader_eligibility,top_25,1,Alexander Suvorov,revolutionary_napoleonic,91.41344940701488
+hierarchical_broader_eligibility,top_25,2,Ivan Paskevich,long_nineteenth_century,89.2515770880646
+hierarchical_broader_eligibility,top_25,3,Subutai,medieval,88.51312137269744
+hierarchical_broader_eligibility,top_25,4,Louis XIV,early_modern,87.42518294221551
+hierarchical_broader_eligibility,top_25,5,Napoleon Bonaparte,revolutionary_napoleonic,86.44776684330053
+hierarchical_broader_eligibility,top_25,6,"Maurice, Prince of Orange",early_modern,86.27163764824628
+hierarchical_broader_eligibility,top_25,7,Babur,early_modern,85.88203381276811
+hierarchical_broader_eligibility,top_25,8,Petar Bojović,long_nineteenth_century,85.36348725712845
+hierarchical_broader_eligibility,top_25,9,Bernard Montgomery,world_wars,84.8386323492304
+hierarchical_broader_eligibility,top_25,10,"Sébastien Le Prestre, Marquis of Vauban",early_modern,84.83055765833966
+hierarchical_broader_eligibility,top_25,11,Stanisław Żółkiewski,early_modern,84.52119606358818
+hierarchical_broader_eligibility,top_25,12,Mahmud Pasha Angelović,medieval,84.47224325006309
+hierarchical_broader_eligibility,top_25,13,Mikhail Kutuzov,revolutionary_napoleonic,84.36828160484481
+hierarchical_broader_eligibility,top_25,14,Suleiman the Magnificent,early_modern,84.25599293464546
+hierarchical_broader_eligibility,top_25,15,Douglas MacArthur,world_wars,84.21006813020439
+hierarchical_broader_eligibility,top_25,16,Charles XIV John,revolutionary_napoleonic,84.19518041887461
+hierarchical_broader_eligibility,top_25,17,Jean Lannes,revolutionary_napoleonic,83.83459500378501
+hierarchical_broader_eligibility,top_25,18,Louis-Nicolas Davout,revolutionary_napoleonic,83.49671965682563
+hierarchical_broader_eligibility,top_25,19,Ivan Sirko,early_modern,83.41370174110521
+hierarchical_broader_eligibility,top_25,20,Živojin Mišić,world_wars,83.33005299015896
+hierarchical_broader_eligibility,top_25,21,Heinz Guderian,world_wars,82.62793338380014
+hierarchical_broader_eligibility,top_25,22,Amr ibn al-As,medieval,82.56257885440323
+hierarchical_broader_eligibility,top_25,23,Dwight D. Eisenhower,world_wars,82.51968205904619
+hierarchical_broader_eligibility,top_25,24,Belisarius,medieval,82.16161998485994
+hierarchical_broader_eligibility,top_25,25,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,81.95558920010092
+hierarchical_broader_eligibility,top_50,1,Alexander Suvorov,revolutionary_napoleonic,91.41344940701488
+hierarchical_broader_eligibility,top_50,2,Ivan Paskevich,long_nineteenth_century,89.2515770880646
+hierarchical_broader_eligibility,top_50,3,Subutai,medieval,88.51312137269744
+hierarchical_broader_eligibility,top_50,4,Louis XIV,early_modern,87.42518294221551
+hierarchical_broader_eligibility,top_50,5,Napoleon Bonaparte,revolutionary_napoleonic,86.44776684330053
+hierarchical_broader_eligibility,top_50,6,"Maurice, Prince of Orange",early_modern,86.27163764824628
+hierarchical_broader_eligibility,top_50,7,Babur,early_modern,85.88203381276811
+hierarchical_broader_eligibility,top_50,8,Petar Bojović,long_nineteenth_century,85.36348725712845
+hierarchical_broader_eligibility,top_50,9,Bernard Montgomery,world_wars,84.8386323492304
+hierarchical_broader_eligibility,top_50,10,"Sébastien Le Prestre, Marquis of Vauban",early_modern,84.83055765833966
+hierarchical_broader_eligibility,top_50,11,Stanisław Żółkiewski,early_modern,84.52119606358818
+hierarchical_broader_eligibility,top_50,12,Mahmud Pasha Angelović,medieval,84.47224325006309
+hierarchical_broader_eligibility,top_50,13,Mikhail Kutuzov,revolutionary_napoleonic,84.36828160484481
+hierarchical_broader_eligibility,top_50,14,Suleiman the Magnificent,early_modern,84.25599293464546
+hierarchical_broader_eligibility,top_50,15,Douglas MacArthur,world_wars,84.21006813020439
+hierarchical_broader_eligibility,top_50,16,Charles XIV John,revolutionary_napoleonic,84.19518041887461
+hierarchical_broader_eligibility,top_50,17,Jean Lannes,revolutionary_napoleonic,83.83459500378501
+hierarchical_broader_eligibility,top_50,18,Louis-Nicolas Davout,revolutionary_napoleonic,83.49671965682563
+hierarchical_broader_eligibility,top_50,19,Ivan Sirko,early_modern,83.41370174110521
+hierarchical_broader_eligibility,top_50,20,Živojin Mišić,world_wars,83.33005299015896
+hierarchical_broader_eligibility,top_50,21,Heinz Guderian,world_wars,82.62793338380014
+hierarchical_broader_eligibility,top_50,22,Amr ibn al-As,medieval,82.56257885440323
+hierarchical_broader_eligibility,top_50,23,Dwight D. Eisenhower,world_wars,82.51968205904619
+hierarchical_broader_eligibility,top_50,24,Belisarius,medieval,82.16161998485994
+hierarchical_broader_eligibility,top_50,25,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,81.95558920010092
+hierarchical_broader_eligibility,top_50,26,Tolui,medieval,81.9251829422155
+hierarchical_broader_eligibility,top_50,27,Mehmed II,medieval,81.77517032551098
+hierarchical_broader_eligibility,top_50,28,Genghis Khan,medieval,81.6551854655564
+hierarchical_broader_eligibility,top_50,29,Khalid ibn al-Walid,medieval,81.51413070905879
+hierarchical_broader_eligibility,top_50,30,"Alexander Farnese, Duke of Parma",early_modern,81.3926318445622
+hierarchical_broader_eligibility,top_50,31,Muhammad Ali of Egypt,long_nineteenth_century,81.2636891244007
+hierarchical_broader_eligibility,top_50,32,Winfield Scott,long_nineteenth_century,81.16994700984102
+hierarchical_broader_eligibility,top_50,33,Louis-Gabriel Suchet,revolutionary_napoleonic,81.01905122382036
+hierarchical_broader_eligibility,top_50,34,Aurangzeb,early_modern,80.95193035579105
+hierarchical_broader_eligibility,top_50,35,Abu Ubayda ibn al-Jarrah,medieval,80.83093615947516
+hierarchical_broader_eligibility,top_50,36,Philip the Good,medieval,80.49217764319958
+hierarchical_broader_eligibility,top_50,37,Jan Karol Chodkiewicz,early_modern,80.31882412313902
+hierarchical_broader_eligibility,top_50,38,Maharaja Ranjit Singh,long_nineteenth_century,80.1884935654807
+hierarchical_broader_eligibility,top_50,39,Nikolai Vatutin,world_wars,80.16654049962149
+hierarchical_broader_eligibility,top_50,40,Enver Pasha,world_wars,80.14711077466565
+hierarchical_broader_eligibility,top_50,41,Fyodor Tolbukhin,world_wars,79.8758516275549
+hierarchical_broader_eligibility,top_50,42,Hubert Gough,world_wars,79.8483472117083
+hierarchical_broader_eligibility,top_50,43,André Masséna,revolutionary_napoleonic,79.77592732778197
+hierarchical_broader_eligibility,top_50,44,Peng Dehuai,cold_war,79.55980317940954
+hierarchical_broader_eligibility,top_50,45,Baybars,medieval,79.44713600807468
+hierarchical_broader_eligibility,top_50,46,Ögedei Khan,medieval,79.32816048448144
+hierarchical_broader_eligibility,top_50,47,Ōyama Iwao,long_nineteenth_century,79.17537219278324
+hierarchical_broader_eligibility,top_50,48,Jean Victor Marie Moreau,revolutionary_napoleonic,79.15505929851123
+hierarchical_broader_eligibility,top_50,49,Ivan Bagramyan,world_wars,79.02699974766591
+hierarchical_broader_eligibility,top_50,50,Agha Petros,world_wars,78.90007570022709
+hierarchical_broader_eligibility,top_100,1,Alexander Suvorov,revolutionary_napoleonic,91.41344940701488
+hierarchical_broader_eligibility,top_100,2,Ivan Paskevich,long_nineteenth_century,89.2515770880646
+hierarchical_broader_eligibility,top_100,3,Subutai,medieval,88.51312137269744
+hierarchical_broader_eligibility,top_100,4,Louis XIV,early_modern,87.42518294221551
+hierarchical_broader_eligibility,top_100,5,Napoleon Bonaparte,revolutionary_napoleonic,86.44776684330053
+hierarchical_broader_eligibility,top_100,6,"Maurice, Prince of Orange",early_modern,86.27163764824628
+hierarchical_broader_eligibility,top_100,7,Babur,early_modern,85.88203381276811
+hierarchical_broader_eligibility,top_100,8,Petar Bojović,long_nineteenth_century,85.36348725712845
+hierarchical_broader_eligibility,top_100,9,Bernard Montgomery,world_wars,84.8386323492304
+hierarchical_broader_eligibility,top_100,10,"Sébastien Le Prestre, Marquis of Vauban",early_modern,84.83055765833966
+hierarchical_broader_eligibility,top_100,11,Stanisław Żółkiewski,early_modern,84.52119606358818
+hierarchical_broader_eligibility,top_100,12,Mahmud Pasha Angelović,medieval,84.47224325006309
+hierarchical_broader_eligibility,top_100,13,Mikhail Kutuzov,revolutionary_napoleonic,84.36828160484481
+hierarchical_broader_eligibility,top_100,14,Suleiman the Magnificent,early_modern,84.25599293464546
+hierarchical_broader_eligibility,top_100,15,Douglas MacArthur,world_wars,84.21006813020439
+hierarchical_broader_eligibility,top_100,16,Charles XIV John,revolutionary_napoleonic,84.19518041887461
+hierarchical_broader_eligibility,top_100,17,Jean Lannes,revolutionary_napoleonic,83.83459500378501
+hierarchical_broader_eligibility,top_100,18,Louis-Nicolas Davout,revolutionary_napoleonic,83.49671965682563
+hierarchical_broader_eligibility,top_100,19,Ivan Sirko,early_modern,83.41370174110521
+hierarchical_broader_eligibility,top_100,20,Živojin Mišić,world_wars,83.33005299015896
+hierarchical_broader_eligibility,top_100,21,Heinz Guderian,world_wars,82.62793338380014
+hierarchical_broader_eligibility,top_100,22,Amr ibn al-As,medieval,82.56257885440323
+hierarchical_broader_eligibility,top_100,23,Dwight D. Eisenhower,world_wars,82.51968205904619
+hierarchical_broader_eligibility,top_100,24,Belisarius,medieval,82.16161998485994
+hierarchical_broader_eligibility,top_100,25,"Henri de La Tour d'Auvergne, Viscount of Turenne",early_modern,81.95558920010092
+hierarchical_broader_eligibility,top_100,26,Tolui,medieval,81.9251829422155
+hierarchical_broader_eligibility,top_100,27,Mehmed II,medieval,81.77517032551098
+hierarchical_broader_eligibility,top_100,28,Genghis Khan,medieval,81.6551854655564
+hierarchical_broader_eligibility,top_100,29,Khalid ibn al-Walid,medieval,81.51413070905879
+hierarchical_broader_eligibility,top_100,30,"Alexander Farnese, Duke of Parma",early_modern,81.3926318445622
+hierarchical_broader_eligibility,top_100,31,Muhammad Ali of Egypt,long_nineteenth_century,81.2636891244007
+hierarchical_broader_eligibility,top_100,32,Winfield Scott,long_nineteenth_century,81.16994700984102
+hierarchical_broader_eligibility,top_100,33,Louis-Gabriel Suchet,revolutionary_napoleonic,81.01905122382036
+hierarchical_broader_eligibility,top_100,34,Aurangzeb,early_modern,80.95193035579105
+hierarchical_broader_eligibility,top_100,35,Abu Ubayda ibn al-Jarrah,medieval,80.83093615947516
+hierarchical_broader_eligibility,top_100,36,Philip the Good,medieval,80.49217764319958
+hierarchical_broader_eligibility,top_100,37,Jan Karol Chodkiewicz,early_modern,80.31882412313902
+hierarchical_broader_eligibility,top_100,38,Maharaja Ranjit Singh,long_nineteenth_century,80.1884935654807
+hierarchical_broader_eligibility,top_100,39,Nikolai Vatutin,world_wars,80.16654049962149
+hierarchical_broader_eligibility,top_100,40,Enver Pasha,world_wars,80.14711077466565
+hierarchical_broader_eligibility,top_100,41,Fyodor Tolbukhin,world_wars,79.8758516275549
+hierarchical_broader_eligibility,top_100,42,Hubert Gough,world_wars,79.8483472117083
+hierarchical_broader_eligibility,top_100,43,André Masséna,revolutionary_napoleonic,79.77592732778197
+hierarchical_broader_eligibility,top_100,44,Peng Dehuai,cold_war,79.55980317940954
+hierarchical_broader_eligibility,top_100,45,Baybars,medieval,79.44713600807468
+hierarchical_broader_eligibility,top_100,46,Ögedei Khan,medieval,79.32816048448144
+hierarchical_broader_eligibility,top_100,47,Ōyama Iwao,long_nineteenth_century,79.17537219278324
+hierarchical_broader_eligibility,top_100,48,Jean Victor Marie Moreau,revolutionary_napoleonic,79.15505929851123
+hierarchical_broader_eligibility,top_100,49,Ivan Bagramyan,world_wars,79.02699974766591
+hierarchical_broader_eligibility,top_100,50,Agha Petros,world_wars,78.90007570022709
+hierarchical_broader_eligibility,top_100,51,Aleksandr Vasilevsky,world_wars,78.88771132980065
+hierarchical_broader_eligibility,top_100,52,Alexander the Great,ancient,78.82904365379763
+hierarchical_broader_eligibility,top_100,53,Francis Vere,early_modern,78.390991672975
+hierarchical_broader_eligibility,top_100,54,Oliver Cromwell,early_modern,78.38884683320717
+hierarchical_broader_eligibility,top_100,55,Hannibal,ancient,78.33547817310118
+hierarchical_broader_eligibility,top_100,56,Konstantin Rokossovsky,world_wars,78.21889982336614
+hierarchical_broader_eligibility,top_100,57,Theodoros Kolokotronis,long_nineteenth_century,78.0669947009841
+hierarchical_broader_eligibility,top_100,58,Takeda Shingen,early_modern,77.99545798637396
+hierarchical_broader_eligibility,top_100,59,Yamagata Aritomo,long_nineteenth_century,77.980444107999
+hierarchical_broader_eligibility,top_100,60,Hans Karl von Diebitsch,long_nineteenth_century,77.97236941710824
+hierarchical_broader_eligibility,top_100,61,George S. Patton,world_wars,77.96694423416604
+hierarchical_broader_eligibility,top_100,62,Ferdinand Foch,world_wars,77.78362351753724
+hierarchical_broader_eligibility,top_100,63,Jan Zamoyski,early_modern,77.69909159727479
+hierarchical_broader_eligibility,top_100,64,Hari Singh Nalwa,long_nineteenth_century,77.68395155185465
+hierarchical_broader_eligibility,top_100,65,Fedor von Bock,world_wars,77.46959374211455
+hierarchical_broader_eligibility,top_100,66,Date Masamune,early_modern,77.45205652283624
+hierarchical_broader_eligibility,top_100,67,Emperor Taizong of Tang,medieval,77.3487257128438
+hierarchical_broader_eligibility,top_100,68,Charles-Pierre Augereau,revolutionary_napoleonic,77.23984355286399
+hierarchical_broader_eligibility,top_100,69,John III Sobieski,early_modern,77.10232147363108
+hierarchical_broader_eligibility,top_100,70,Rodion Malinovsky,world_wars,77.09815796114056
+hierarchical_broader_eligibility,top_100,71,Katō Kiyomasa,early_modern,77.08491042139792
+hierarchical_broader_eligibility,top_100,72,Andranik Ozanian,world_wars,76.93136512742872
+hierarchical_broader_eligibility,top_100,73,Walter Krueger,world_wars,76.7346707040121
+hierarchical_broader_eligibility,top_100,74,"François-Henri de Montmorency, duc de Luxembourg",early_modern,76.67877870300278
+hierarchical_broader_eligibility,top_100,75,Radomir Putnik,long_nineteenth_century,76.58137774413323
+hierarchical_broader_eligibility,top_100,76,Abdul Rashid Dostum,contemporary,76.30090840272521
+hierarchical_broader_eligibility,top_100,77,Carl Gustaf Wrangel,early_modern,76.28475902094372
+hierarchical_broader_eligibility,top_100,78,Stanisław Koniecpolski,early_modern,76.27479182437547
+hierarchical_broader_eligibility,top_100,79,Wolfram von Richthofen,world_wars,76.26532929598788
+hierarchical_broader_eligibility,top_100,80,Holland M. Smith,world_wars,76.08718142821095
+hierarchical_broader_eligibility,top_100,81,Joseph Souham,revolutionary_napoleonic,75.84039868786273
+hierarchical_broader_eligibility,top_100,82,Nelson A. Miles,long_nineteenth_century,75.83043149129448
+hierarchical_broader_eligibility,top_100,83,Qasem Soleimani,contemporary,75.74601942972494
+hierarchical_broader_eligibility,top_100,84,Charles X Gustav,early_modern,75.68634872571285
+hierarchical_broader_eligibility,top_100,85,Maeda Toshiie,early_modern,75.54289679535705
+hierarchical_broader_eligibility,top_100,86,Joseph Stalin,world_wars,75.46719656825638
+hierarchical_broader_eligibility,top_100,87,Saladin,medieval,75.44398183194551
+hierarchical_broader_eligibility,top_100,88,Stilicho,ancient,75.43464547060309
+hierarchical_broader_eligibility,top_100,89,Ras Alula,long_nineteenth_century,75.31238960383548
+hierarchical_broader_eligibility,top_100,90,Sayenqueraghta,early_modern,75.23403986878628
+hierarchical_broader_eligibility,top_100,91,Abbas the Great,early_modern,75.13890991672974
+hierarchical_broader_eligibility,top_100,92,Gustavus Adolphus,early_modern,75.11948019177392
+hierarchical_broader_eligibility,top_100,93,Kirill Meretskov,world_wars,75.07582639414584
+hierarchical_broader_eligibility,top_100,94,Valery Gerasimov,contemporary,75.05599293464547
+hierarchical_broader_eligibility,top_100,95,Frederick the Great,early_modern,75.02561191016906
+hierarchical_broader_eligibility,top_100,96,Jean de Lattre de Tassigny,world_wars,75.02422407267221
+hierarchical_broader_eligibility,top_100,97,Fyodor Ushakov,revolutionary_napoleonic,74.94928084784254
+hierarchical_broader_eligibility,top_100,98,Ambrogio Spinola,early_modern,74.94360333080998
+hierarchical_broader_eligibility,top_100,99,Nozu Michitsura,long_nineteenth_century,74.85553873328287
+hierarchical_broader_eligibility,top_100,100,Robert Clive,early_modern,74.7457734039869

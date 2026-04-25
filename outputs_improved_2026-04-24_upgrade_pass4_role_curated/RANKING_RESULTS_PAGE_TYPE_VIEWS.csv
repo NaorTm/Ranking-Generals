@@ -1,0 +1,1849 @@
+﻿model_name,page_type_profile_class,rank_in_profile,global_rank,display_name,score_normalized,primary_era_bucket
+baseline_conservative,battle_dominant,1,1,Khalid ibn al-Walid,99.55505761843789,medieval
+baseline_conservative,battle_dominant,2,2,Jean Lannes,99.28937259923175,revolutionary_napoleonic
+baseline_conservative,battle_dominant,3,3,Napoleon Bonaparte,98.1370038412292,revolutionary_napoleonic
+baseline_conservative,battle_dominant,4,4,Alexander Suvorov,98.02176696542894,revolutionary_napoleonic
+baseline_conservative,battle_dominant,5,5,"Alexander Farnese, Duke of Parma",97.33034571062741,early_modern
+baseline_conservative,battle_dominant,6,6,Takeda Shingen,97.2247119078105,early_modern
+baseline_conservative,battle_dominant,7,7,Louis-Gabriel Suchet,96.02432778489117,revolutionary_napoleonic
+baseline_conservative,battle_dominant,8,8,"Maurice, Prince of Orange",95.95070422535211,early_modern
+baseline_conservative,battle_dominant,9,9,"Sébastien Le Prestre, Marquis of Vauban",95.85467349551857,early_modern
+baseline_conservative,battle_dominant,10,10,Abu Ubayda ibn al-Jarrah,95.59859154929578,medieval
+baseline_conservative,battle_dominant,11,11,Francis Vere,94.06209987195902,early_modern
+baseline_conservative,battle_dominant,12,12,Nathan Bedford Forrest,93.67797695262483,long_nineteenth_century
+baseline_conservative,battle_dominant,13,13,Amr ibn al-As,93.30345710627401,medieval
+baseline_conservative,battle_dominant,14,14,Subutai,92.70486555697823,medieval
+baseline_conservative,battle_dominant,15,15,Charles XIV John,92.48719590268887,revolutionary_napoleonic
+baseline_conservative,battle_dominant,16,16,Stanisław Żółkiewski,92.25352112676057,early_modern
+baseline_conservative,battle_dominant,17,17,Maurice de Saxe,92.14148527528809,early_modern
+baseline_conservative,battle_dominant,18,18,Robert L. Eichelberger,92.02624839948783,world_wars
+baseline_conservative,battle_dominant,19,19,Walter Krueger,92.02624839948783,world_wars
+baseline_conservative,battle_dominant,20,20,Mahmud Pasha Angelović,92.02304737516005,medieval
+baseline_conservative,battle_dominant,21,21,Louis-Nicolas Davout,91.66453265044814,revolutionary_napoleonic
+baseline_conservative,battle_dominant,22,22,André Masséna,91.1235595390525,revolutionary_napoleonic
+baseline_conservative,battle_dominant,23,23,Jean Victor Marie Moreau,90.45454545454547,revolutionary_napoleonic
+baseline_conservative,battle_dominant,24,24,Baybars,90.29769526248398,medieval
+baseline_conservative,battle_dominant,25,25,Ubadah ibn al-Samit,90.22087067861715,medieval
+baseline_conservative,battle_dominant,26,26,Jan Karol Chodkiewicz,89.76952624839949,early_modern
+baseline_conservative,battle_dominant,27,27,Charles XII of Sweden,89.20614596670936,early_modern
+baseline_conservative,battle_dominant,28,28,"Henri de La Tour d'Auvergne, Viscount of Turenne",89.07810499359795,early_modern
+baseline_conservative,battle_dominant,29,29,Ferdinand Foch,89.00128040973112,world_wars
+baseline_conservative,battle_dominant,30,30,Matvei Platov,88.93085787451984,revolutionary_napoleonic
+baseline_conservative,battle_dominant,31,31,Louis XIV,88.73879641485274,early_modern
+baseline_conservative,battle_dominant,32,32,Belisarius,88.7067861715749,medieval
+baseline_conservative,battle_dominant,33,33,P. G. T. Beauregard,88.52112676056338,long_nineteenth_century
+baseline_conservative,battle_dominant,34,34,Mehmed II,88.4955185659411,medieval
+baseline_conservative,battle_dominant,35,35,John Monash,88.26184379001279,world_wars
+baseline_conservative,battle_dominant,36,36,Katō Kiyomasa,88.24903969270167,early_modern
+baseline_conservative,battle_dominant,37,37,Karađorđe Petrović,88.14660691421254,revolutionary_napoleonic
+baseline_conservative,battle_dominant,38,38,Hannibal,87.80409731113956,ancient
+baseline_conservative,battle_dominant,39,39,Charles Mangin,87.70166453265044,world_wars
+baseline_conservative,battle_dominant,40,40,Saladin,86.949423815621,medieval
+baseline_conservative,battle_dominant,41,41,Konishi Yukinaga,86.11715749039693,early_modern
+baseline_conservative,battle_dominant,42,42,Heinz Guderian,85.80985915492958,world_wars
+baseline_conservative,battle_dominant,43,43,Prince Friedrich Karl of Prussia,85.70422535211267,long_nineteenth_century
+baseline_conservative,battle_dominant,44,44,Douglas MacArthur,85.49615877080666,world_wars
+baseline_conservative,battle_dominant,45,45,Alauddin Khalji,84.8719590268886,medieval
+baseline_conservative,battle_dominant,46,46,Ivan Paskevich,84.64148527528809,long_nineteenth_century
+baseline_conservative,battle_dominant,47,47,Jerzy Sebastian Lubomirski,84.64148527528809,early_modern
+baseline_conservative,battle_dominant,48,48,Maeda Toshiie,84.16773367477593,early_modern
+baseline_conservative,battle_dominant,49,49,Hari Singh Nalwa,83.7067861715749,long_nineteenth_century
+baseline_conservative,battle_dominant,50,50,"François-Henri de Montmorency, duc de Luxembourg",83.45710627400767,early_modern
+baseline_conservative,battle_dominant,51,51,Lennart Torstensson,83.45710627400767,early_modern
+baseline_conservative,battle_dominant,52,52,Charles X Gustav,83.10179257362356,early_modern
+baseline_conservative,battle_dominant,53,53,Cardinal-Infante Ferdinand of Austria,83.03457106274008,early_modern
+baseline_conservative,battle_dominant,54,54,Philip the Good,82.93854033290653,medieval
+baseline_conservative,battle_dominant,55,55,Julian,82.59282970550576,ancient
+baseline_conservative,battle_dominant,56,56,Hubert Gough,82.5416133162612,world_wars
+baseline_conservative,battle_dominant,57,57,Alexander the Great,82.32714468629962,ancient
+baseline_conservative,battle_dominant,58,58,Fedor von Bock,82.28553137003841,world_wars
+baseline_conservative,battle_dominant,59,59,Peter Wittgenstein,82.13828425096031,revolutionary_napoleonic
+baseline_conservative,battle_dominant,60,60,Erich Hoepner,81.43405889884762,world_wars
+baseline_conservative,battle_dominant,61,61,Guru Gobind Singh,80.88668373879642,early_modern
+baseline_conservative,battle_dominant,62,62,Frederick the Great,80.2944942381562,early_modern
+baseline_conservative,battle_dominant,63,63,Charles-Pierre Augereau,80.05761843790013,revolutionary_napoleonic
+baseline_conservative,battle_dominant,64,64,Arthur Currie,79.97119078104993,world_wars
+baseline_conservative,battle_dominant,65,65,John III Sobieski,79.71190781049935,early_modern
+baseline_conservative,battle_dominant,66,66,Stonewall Jackson,79.50064020486556,long_nineteenth_century
+baseline_conservative,battle_dominant,67,67,Ahmad Shah Durrani,79.46542893725992,early_modern
+baseline_conservative,battle_dominant,68,68,Suleiman the Magnificent,79.45582586427658,early_modern
+baseline_conservative,battle_dominant,69,69,Paul von Lettow-Vorbeck,79.39820742637644,world_wars
+baseline_conservative,battle_dominant,70,70,Émile Fayolle,79.03008962868118,world_wars
+baseline_conservative,battle_dominant,71,71,Robert Clive,79.02048655569783,early_modern
+baseline_conservative,battle_dominant,72,72,Antonio Duvergé,78.854033290653,long_nineteenth_century
+baseline_conservative,battle_dominant,73,73,Alasdair Mac Colla,78.63636363636364,early_modern
+baseline_conservative,battle_dominant,74,74,Jeremi Wiśniowiecki,78.58194622279129,early_modern
+baseline_conservative,battle_dominant,75,75,Allen H. Turnage,78.50832266325224,world_wars
+baseline_conservative,battle_dominant,76,76,Juan Yagüe,78.50832266325224,world_wars
+baseline_conservative,battle_dominant,77,77,Smedley Butler,78.50832266325224,long_nineteenth_century
+baseline_conservative,battle_dominant,78,78,Al-Qa'qa' ibn Amr al-Tamimi,78.35147247119079,medieval
+baseline_conservative,battle_dominant,79,79,Qutb ud-Din Aibak,78.35147247119079,medieval
+baseline_conservative,battle_dominant,80,80,Harry Chauvel,78.21702944942382,world_wars
+baseline_conservative,battle_dominant,81,81,Tokugawa Ieyasu,78.20422535211269,early_modern
+baseline_conservative,battle_dominant,82,82,"Frederick Henry, Prince of Orange",78.1754161331626,early_modern
+baseline_conservative,battle_dominant,83,83,Shurahbil ibn Hasana,78.12419974391804,medieval
+baseline_conservative,battle_dominant,84,84,Basil II,77.9449423815621,medieval
+baseline_conservative,battle_dominant,85,85,Aurangzeb,77.71446862996159,early_modern
+baseline_conservative,battle_dominant,86,86,Oliver Cromwell,77.27912932138283,early_modern
+baseline_conservative,battle_dominant,87,87,Joseph Souham,77.23431498079385,revolutionary_napoleonic
+baseline_conservative,battle_dominant,88,88,Ōyama Iwao,77.15749039692703,long_nineteenth_century
+baseline_conservative,battle_dominant,89,89,Nader Shah,77.09346991037131,early_modern
+baseline_conservative,battle_dominant,90,90,Genghis Khan,76.93021766965428,medieval
+baseline_conservative,battle_dominant,91,91,Tolui,76.76696542893725,medieval
+baseline_conservative,battle_dominant,92,92,Stanisław Koniecpolski,76.66773367477593,early_modern
+baseline_conservative,battle_dominant,93,93,Richmond K. Turner,76.63892445582586,world_wars
+baseline_conservative,battle_dominant,94,94,Mustafa Kemal Atatürk,76.59731113956467,world_wars
+baseline_conservative,battle_dominant,95,95,"Louis Joseph, Duke of Vendôme",76.50768245838668,early_modern
+baseline_conservative,battle_dominant,96,96,Sidney Smith,76.36363636363636,revolutionary_napoleonic
+baseline_conservative,battle_dominant,97,97,Mikhail Kutuzov,76.36043533930858,revolutionary_napoleonic
+baseline_conservative,battle_dominant,98,98,Friedrich Wilhelm Freiherr von Bülow,76.23559539052498,revolutionary_napoleonic
+baseline_conservative,battle_dominant,99,99,Abu Bakr,76.0819462227913,medieval
+baseline_conservative,battle_dominant,100,100,Joan of Arc,76.00512163892446,medieval
+baseline_conservative,battle_dominant,101,101,John Norris,75.7202304737516,early_modern
+baseline_conservative,battle_dominant,102,102,Jubal Early,75.67221510883482,long_nineteenth_century
+baseline_conservative,battle_dominant,103,103,Kuroda Yoshitaka,75.55377720870678,early_modern
+baseline_conservative,battle_dominant,104,104,José María Morelos,75.47055057618438,revolutionary_napoleonic
+baseline_conservative,battle_dominant,105,105,Nikolay Kamensky,75.18886043533931,revolutionary_napoleonic
+baseline_conservative,battle_dominant,106,106,Babur,75.05441741357234,early_modern
+baseline_conservative,battle_dominant,107,107,Winfield Scott,75.00640204865557,long_nineteenth_century
+baseline_conservative,battle_dominant,108,108,Ögedei Khan,74.85595390524968,medieval
+baseline_conservative,battle_dominant,109,109,Honda Tadakatsu,74.81754161331625,early_modern
+baseline_conservative,battle_dominant,110,110,Bertrand du Guesclin,74.79513444302175,medieval
+baseline_conservative,battle_dominant,111,111,"Édouard Mortier, Duke of Treviso",74.78873239436619,revolutionary_napoleonic
+baseline_conservative,battle_dominant,112,112,Georgy Zhukov,74.56786171574905,world_wars
+baseline_conservative,battle_dominant,113,113,Bernard Montgomery,74.4910371318822,world_wars
+baseline_conservative,battle_dominant,114,114,Al-Muthanna ibn Haritha,74.30857874519846,medieval
+baseline_conservative,battle_dominant,115,115,Mikołaj Potocki,73.98847631241998,early_modern
+baseline_conservative,battle_dominant,116,116,Jassa Singh Ahluwalia,73.9596670934699,early_modern
+baseline_conservative,battle_dominant,117,117,Skanderbeg,73.92765685019207,medieval
+baseline_conservative,battle_dominant,118,118,Michiel de Ruyter,73.68117797695263,early_modern
+baseline_conservative,battle_dominant,119,119,Hans Karl von Diebitsch,73.54993597951345,long_nineteenth_century
+baseline_conservative,battle_dominant,120,120,Laurent de Gouvion Saint-Cyr,73.35787451984635,revolutionary_napoleonic
+baseline_conservative,battle_dominant,121,121,Sayenqueraghta,73.30985915492958,early_modern
+baseline_conservative,battle_dominant,122,122,Sarath Fonseka,73.25224071702944,contemporary
+baseline_conservative,battle_dominant,123,123,Mizuno Katsushige,73.09218950064022,early_modern
+baseline_conservative,battle_dominant,124,124,Banastre Tarleton,72.95134443021767,early_modern
+baseline_conservative,battle_dominant,125,125,Enver Pasha,72.83610755441742,world_wars
+baseline_conservative,battle_dominant,126,126,Basil Aubrey Coad,72.69526248399488,cold_war
+baseline_conservative,battle_dominant,127,127,Carl Gustaf Wrangel,72.44558258642765,early_modern
+baseline_conservative,battle_dominant,128,128,Date Masamune,72.40076824583866,early_modern
+baseline_conservative,battle_dominant,129,129,Ambrogio Spinola,72.25992317541613,early_modern
+baseline_conservative,battle_dominant,130,130,Peng Dehuai,72.13508322663252,cold_war
+baseline_conservative,battle_dominant,131,131,Géraud Duroc,72.09346991037131,revolutionary_napoleonic
+baseline_conservative,battle_dominant,132,132,Murad II,71.86939820742637,medieval
+baseline_conservative,battle_dominant,133,133,Nikolai Ruzsky,71.74135723431498,world_wars
+baseline_conservative,battle_dominant,134,134,Shimazu Yoshihiro,71.6549295774648,early_modern
+baseline_conservative,battle_dominant,135,135,Agha Petros,71.47887323943661,world_wars
+baseline_conservative,battle_dominant,136,136,Gustav III,71.47887323943661,revolutionary_napoleonic
+baseline_conservative,battle_dominant,137,137,Gustavus Adolphus,71.27400768245838,early_modern
+baseline_conservative,battle_dominant,138,138,Ivan Konev,71.21638924455826,world_wars
+baseline_conservative,battle_dominant,139,139,Constantine the Great,71.101152368758,ancient
+baseline_conservative,battle_dominant,140,140,Wolfram von Richthofen,71.101152368758,world_wars
+baseline_conservative,battle_dominant,141,141,Ralph Abercromby,70.55377720870678,revolutionary_napoleonic
+baseline_conservative,battle_dominant,142,142,Nikolai Vatutin,70.47375160051216,world_wars
+baseline_conservative,battle_dominant,143,143,George Wootten,70.32650448143404,world_wars
+baseline_conservative,battle_dominant,144,144,Nozu Michitsura,70.32650448143404,long_nineteenth_century
+baseline_conservative,battle_dominant,145,145,Stepa Stepanović,70.32650448143404,world_wars
+baseline_conservative,battle_dominant,146,146,Taira no Tomomori,70.32650448143404,medieval
+baseline_conservative,battle_dominant,147,147,"Louis, Grand Condé",70.20486555697823,early_modern
+baseline_conservative,battle_dominant,148,148,Narses,70.19846350832266,medieval
+baseline_conservative,battle_dominant,149,149,Batu Khan,70.14084507042253,medieval
+baseline_conservative,battle_dominant,150,150,Publius Cornelius Scipio,70.00640204865557,ancient
+baseline_conservative,battle_dominant,151,151,Ishikawa Kazumasa,69.85915492957746,early_modern
+baseline_conservative,battle_dominant,152,152,Ernst Gideon von Laudon,69.70870678617158,early_modern
+baseline_conservative,battle_dominant,153,153,"Emmanuel de Grouchy, marquis de Grouchy",69.5550576184379,revolutionary_napoleonic
+baseline_conservative,battle_dominant,154,154,Shapur I,69.50384122919334,ancient
+baseline_conservative,battle_dominant,155,155,Jan Zamoyski,69.36619718309858,early_modern
+baseline_conservative,battle_dominant,156,156,Stilicho,69.36619718309858,ancient
+baseline_conservative,battle_dominant,157,157,Jean-Baptiste Bessières,69.35019206145967,revolutionary_napoleonic
+baseline_conservative,battle_dominant,158,158,Adolf Strauss,69.02048655569783,world_wars
+baseline_conservative,battle_dominant,159,159,Alexander Vandegrift,68.89244558258642,world_wars
+baseline_conservative,battle_dominant,160,160,Ali İhsan Sâbis,68.89244558258642,world_wars
+baseline_conservative,battle_dominant,161,161,Gedik Ahmed Pasha,68.89244558258642,medieval
+baseline_conservative,battle_dominant,162,162,Holland M. Smith,68.89244558258642,world_wars
+baseline_conservative,battle_dominant,163,163,Oscar Griswold,68.89244558258642,world_wars
+baseline_conservative,battle_dominant,164,164,Radomir Putnik,68.89244558258642,long_nineteenth_century
+baseline_conservative,battle_dominant,165,165,Ulrich Friedrich Woldemar von Löwendal,68.89244558258642,early_modern
+baseline_conservative,battle_dominant,166,166,Sakai Tadatsugu,68.8348271446863,early_modern
+baseline_conservative,battle_dominant,167,167,Joachim Murat,68.80281690140845,revolutionary_napoleonic
+baseline_conservative,battle_dominant,168,168,Carl Gustav Rehnskiöld,68.7900128040973,early_modern
+baseline_conservative,battle_dominant,169,169,Bairam Khan,68.52752880921895,early_modern
+baseline_conservative,battle_dominant,170,170,Henri de la Rochejaquelein,68.46030729833548,revolutionary_napoleonic
+baseline_conservative,battle_dominant,171,171,Itagaki Nobukata,68.40588988476313,early_modern
+baseline_conservative,battle_dominant,172,172,Oda Nobunaga,68.25544174135723,early_modern
+baseline_conservative,battle_dominant,173,173,Dragut,68.22663252240717,early_modern
+baseline_conservative,battle_dominant,174,174,Aurelian,67.86491677336747,ancient
+baseline_conservative,battle_dominant,175,175,Manuel Belgrano,67.8169014084507,revolutionary_napoleonic
+baseline_conservative,battle_dominant,176,176,Zubayr ibn al-Awwam,67.75928297055057,medieval
+baseline_conservative,battle_dominant,177,177,Carlos Coloma,67.74007682458387,early_modern
+baseline_conservative,battle_dominant,178,178,Charles de Lambert,67.74007682458387,revolutionary_napoleonic
+baseline_conservative,battle_dominant,179,179,Fyodor Tolbukhin,67.74007682458387,world_wars
+baseline_conservative,battle_dominant,180,180,Henry Maitland Wilson,67.74007682458387,world_wars
+baseline_conservative,battle_dominant,181,181,Henry V of England,67.74007682458387,medieval
+baseline_conservative,battle_dominant,182,182,John J. Pershing,67.74007682458387,world_wars
+baseline_conservative,battle_dominant,183,183,Joseph Radetzky von Radetz,67.74007682458387,long_nineteenth_century
+baseline_conservative,battle_dominant,184,184,Kaloyan of Bulgaria,67.74007682458387,medieval
+baseline_conservative,battle_dominant,185,185,Krum,67.74007682458387,medieval
+baseline_conservative,battle_dominant,186,186,Masinissa,67.74007682458387,ancient
+baseline_conservative,battle_dominant,187,187,Rama Raya,67.74007682458387,early_modern
+baseline_conservative,battle_dominant,188,188,Władysław Sikorski,67.74007682458387,world_wars
+baseline_conservative,battle_dominant,189,189,Yazid ibn Abi Sufyan,67.74007682458387,medieval
+baseline_conservative,battle_dominant,190,190,Yakov Kulnev,67.70166453265045,revolutionary_napoleonic
+baseline_conservative,battle_dominant,191,191,Auguste de Marmont,67.67605633802818,revolutionary_napoleonic
+baseline_conservative,battle_dominant,192,192,Heraclius,67.63444302176697,medieval
+baseline_conservative,battle_dominant,193,193,Georg von Küchler,67.5608194622279,world_wars
+baseline_conservative,battle_dominant,194,194,Selim I,67.55441741357235,early_modern
+baseline_conservative,battle_dominant,195,195,Jean-Mathieu-Philibert Sérurier,67.54801536491678,revolutionary_napoleonic
+baseline_conservative,battle_dominant,196,196,Maharaja Ranjit Singh,67.4583866837388,long_nineteenth_century
+baseline_conservative,battle_dominant,197,197,Hori Hidemasa,67.41357234314981,early_modern
+baseline_conservative,battle_dominant,198,198,Toyotomi Hidenaga,67.3303457106274,early_modern
+baseline_conservative,battle_dominant,199,199,"Nizam-ul-Mulk, Asaf Jah I",67.17349551856594,early_modern
+baseline_conservative,battle_dominant,200,200,Walter Model,66.98143405889886,world_wars
+baseline_conservative,battle_dominant,201,201,"Archduke Charles, Duke of Teschen",66.93661971830986,revolutionary_napoleonic
+baseline_conservative,battle_dominant,202,202,Fyodor Ushakov,66.7797695262484,revolutionary_napoleonic
+baseline_conservative,battle_dominant,203,203,George Crook,66.58770806658131,long_nineteenth_century
+baseline_conservative,battle_dominant,204,204,Jean Reynier,66.53008962868118,revolutionary_napoleonic
+baseline_conservative,battle_dominant,205,205,Abbas the Great,66.4852752880922,early_modern
+baseline_conservative,battle_dominant,206,206,Mikhail Miloradovich,66.29641485275287,revolutionary_napoleonic
+baseline_conservative,battle_dominant,207,207,Francisco Pizarro,65.58898847631242,early_modern
+baseline_conservative,battle_dominant,208,208,Claude-Victor Perrin,65.550576184379,revolutionary_napoleonic
+baseline_conservative,battle_dominant,209,209,Antonio Ricardos,65.08962868117797,revolutionary_napoleonic
+baseline_conservative,battle_dominant,210,210,Takeda Katsuyori,65.03201024327784,early_modern
+baseline_conservative,battle_dominant,211,211,Jebe,64.87195902688862,medieval
+baseline_conservative,battle_dominant,212,212,Sterling Price,64.79833546734955,long_nineteenth_century
+baseline_conservative,battle_dominant,213,213,Niels Juel,64.63828425096031,early_modern
+baseline_conservative,battle_dominant,214,214,Jan Žižka,64.59026888604353,medieval
+baseline_conservative,battle_dominant,215,215,Cornelis Tromp,64.48783610755441,early_modern
+baseline_conservative,battle_dominant,216,216,Toyotomi Hideyoshi,64.46862996158771,early_modern
+baseline_conservative,battle_dominant,217,217,Konstantin Rokossovsky,64.46222791293214,world_wars
+baseline_conservative,battle_dominant,218,218,Gebhard Leberecht von Blücher,64.26376440460947,revolutionary_napoleonic
+baseline_conservative,battle_dominant,219,219,Philips van Almonde,64.10371318822024,early_modern
+baseline_conservative,battle_dominant,220,220,"Johann Tserclaes, Count of Tilly",64.06209987195902,early_modern
+baseline_conservative,battle_dominant,221,221,Prince Rupert of the Rhine,63.91165172855314,early_modern
+baseline_conservative,battle_dominant,222,222,Hermann Hoth,63.87964148527529,world_wars
+baseline_conservative,battle_dominant,223,223,Shapur II,63.5595390524968,ancient
+baseline_conservative,battle_dominant,224,224,György Klapka,63.50192061459667,long_nineteenth_century
+baseline_conservative,battle_dominant,225,225,Jean-de-Dieu Soult,63.31306017925736,revolutionary_napoleonic
+baseline_conservative,battle_dominant,226,226,Oku Yasukata,63.25864276568502,long_nineteenth_century
+baseline_conservative,battle_dominant,227,227,"Prince Emanuele Filiberto, Duke of Aosta",63.098591549295776,world_wars
+baseline_conservative,battle_dominant,228,228,"Louis William, Margrave of Baden-Baden",62.58962868117797,early_modern
+baseline_conservative,battle_dominant,229,229,Luigi Cadorna,62.56402048655569,world_wars
+baseline_conservative,battle_dominant,230,230,Ngô Quang Trưởng,62.50320102432778,cold_war
+baseline_conservative,battle_dominant,231,231,Robert E. Lee,62.37836107554418,long_nineteenth_century
+baseline_conservative,battle_dominant,232,232,Stefan Czarniecki,62.32074263764404,early_modern
+baseline_conservative,battle_dominant,233,233,Alexios I Komnenos,62.22151088348272,medieval
+baseline_conservative,battle_dominant,234,234,Johan Banér,62.22151088348272,early_modern
+baseline_conservative,battle_dominant,235,235,Bhai Daya Singh,62.093469910371326,early_modern
+baseline_conservative,battle_dominant,236,236,Ikeda Tsuneoki,61.92701664532651,early_modern
+baseline_conservative,battle_dominant,237,237,Jean-Charles Pichegru,61.88220230473752,revolutionary_napoleonic
+baseline_conservative,battle_dominant,238,238,Abdulaziz Ibn Saud,61.46927016645326,long_nineteenth_century
+baseline_conservative,battle_dominant,239,239,Jean-Louis Raduit de Souches,61.41485275288092,early_modern
+baseline_conservative,battle_dominant,240,240,William Halsey Jr.,61.41485275288092,world_wars
+baseline_conservative,battle_dominant,241,241,Yamagata Aritomo,61.41485275288092,long_nineteenth_century
+baseline_conservative,battle_dominant,242,242,François Joseph Lefebvre,61.370038412291926,revolutionary_napoleonic
+baseline_conservative,battle_dominant,243,243,Guillaume Brune,61.07554417413572,revolutionary_napoleonic
+baseline_conservative,battle_dominant,244,244,Prince Eugene of Savoy,60.91549295774648,early_modern
+baseline_conservative,battle_dominant,245,245,Craterus,60.87387964148527,ancient
+baseline_conservative,battle_dominant,246,246,Murari Rao,60.72023047375159,early_modern
+baseline_conservative,battle_dominant,247,247,Shavendra Silva,60.65300896286812,contemporary
+baseline_conservative,battle_dominant,248,248,Burkhard Christoph von Münnich,60.64660691421255,early_modern
+baseline_conservative,battle_dominant,249,249,Eugène de Beauharnais,60.63380281690141,revolutionary_napoleonic
+baseline_conservative,battle_dominant,250,250,Günther von Kluge,60.5921895006402,world_wars
+baseline_conservative,battle_dominant,251,251,Uesugi Kagekatsu,60.48015364916773,early_modern
+baseline_conservative,battle_dominant,252,252,Mahmud of Ghazni,60.467349551856586,medieval
+baseline_conservative,battle_dominant,253,253,Tōdō Takatora,60.20806658130603,early_modern
+baseline_conservative,battle_dominant,254,254,Ismail I,60.13444302176697,early_modern
+baseline_conservative,battle_dominant,255,255,Sakakibara Yasumasa,60.028809218950066,early_modern
+baseline_conservative,battle_dominant,256,256,Prince Josias of Saxe-Coburg-Saalfeld,59.79833546734955,revolutionary_napoleonic
+baseline_conservative,battle_dominant,257,257,"Henry de Nassau, Lord Overkirk",59.414212548015364,early_modern
+baseline_conservative,battle_dominant,258,258,Aleksey Yermolov,59.391805377720864,revolutionary_napoleonic
+baseline_conservative,battle_dominant,259,259,Peter the Great,59.26056338028169,early_modern
+baseline_conservative,battle_dominant,260,260,Joseph E. Johnston,59.16133162612036,long_nineteenth_century
+baseline_conservative,battle_dominant,261,261,Michel Ney,59.02368758002561,revolutionary_napoleonic
+baseline_conservative,battle_dominant,262,262,Joseph Wheeler,59.01088348271447,long_nineteenth_century
+baseline_conservative,battle_dominant,263,263,Tughril I,58.95646606914212,medieval
+baseline_conservative,battle_dominant,264,264,Sō Yoshitoshi,58.90524967989758,early_modern
+baseline_conservative,battle_dominant,265,265,Gustav Horn,58.81562099871959,early_modern
+baseline_conservative,battle_dominant,266,266,Roy Geiger,58.64916773367478,world_wars
+baseline_conservative,battle_dominant,267,267,Andrew Jackson,58.59795134443023,revolutionary_napoleonic
+baseline_conservative,battle_dominant,268,268,Charat Singh,58.594750320102435,early_modern
+baseline_conservative,battle_dominant,269,269,Louis-François de Boufflers,58.58834827144686,early_modern
+baseline_conservative,battle_dominant,270,270,Bohemond I of Antioch,58.585147247119075,medieval
+baseline_conservative,battle_dominant,271,271,John II Komnenos,58.57234314980794,medieval
+baseline_conservative,battle_dominant,272,272,Charles de Bonchamps,58.46350832266325,revolutionary_napoleonic
+baseline_conservative,battle_dominant,273,273,Louis Marie de Lescure,58.46350832266325,revolutionary_napoleonic
+baseline_conservative,battle_dominant,274,274,Carlos Asensio Cabanillas,58.30985915492959,world_wars
+baseline_conservative,battle_dominant,275,275,Francisco Franco,58.30985915492959,world_wars
+baseline_conservative,battle_dominant,276,276,François de Créquy,58.30985915492959,early_modern
+baseline_conservative,battle_dominant,277,277,Sancho d'Avila,58.30985915492959,early_modern
+baseline_conservative,battle_dominant,278,278,Carl Johan Adlercreutz,58.18822023047375,revolutionary_napoleonic
+baseline_conservative,battle_dominant,279,279,Louis Desaix,58.18501920614596,revolutionary_napoleonic
+baseline_conservative,battle_dominant,280,280,Boris Sheremetev,58.124199743918055,early_modern
+baseline_conservative,battle_dominant,281,281,Umar ibn al-Khattab,58.03457106274008,medieval
+baseline_conservative,battle_dominant,282,282,Alexander Danilovich Menshikov,58.0313700384123,early_modern
+baseline_conservative,battle_dominant,283,283,Michael Jones,57.97375160051216,early_modern
+baseline_conservative,battle_dominant,284,284,Tomitarō Horii,57.97375160051216,world_wars
+baseline_conservative,battle_dominant,285,285,Vasily Chuikov,57.96414852752881,world_wars
+baseline_conservative,battle_dominant,286,286,George S. Patton,57.95774647887324,world_wars
+baseline_conservative,battle_dominant,287,287,Köprülüzade Fazıl Ahmed Pasha,57.9449423815621,early_modern
+baseline_conservative,battle_dominant,288,288,Kâzım Karabekir,57.7336747759283,world_wars
+baseline_conservative,battle_dominant,289,289,Attila the Hun,57.50320102432779,ancient
+baseline_conservative,battle_dominant,290,290,Domenico Pino,57.50320102432779,revolutionary_napoleonic
+baseline_conservative,battle_dominant,291,291,Gordon Bremer,57.50320102432779,long_nineteenth_century
+baseline_conservative,battle_dominant,292,292,Jacques François Dugommier,57.50320102432779,revolutionary_napoleonic
+baseline_conservative,battle_dominant,293,293,Jai Singh Kanhaiya,57.50320102432779,early_modern
+baseline_conservative,battle_dominant,294,294,José Enrique Varela,57.50320102432779,world_wars
+baseline_conservative,battle_dominant,295,295,Mikhail Skobelev,57.50320102432779,long_nineteenth_century
+baseline_conservative,battle_dominant,296,296,Nebuchadnezzar II,57.50320102432779,ancient
+baseline_conservative,battle_dominant,297,297,Quintus Fabius Maximus Rullianus,57.50320102432779,ancient
+baseline_conservative,battle_dominant,298,298,Theodoros Kolokotronis,57.50320102432779,long_nineteenth_century
+baseline_conservative,battle_dominant,299,299,Živojin Mišić,57.50320102432779,world_wars
+baseline_conservative,battle_dominant,300,300,Nikolai Yudenich,57.3303457106274,world_wars
+baseline_conservative,battle_dominant,301,301,Jean-Baptiste Kléber,57.205505761843796,revolutionary_napoleonic
+baseline_conservative,battle_dominant,302,302,Étienne Maurice Gérard,57.112676056338024,revolutionary_napoleonic
+baseline_conservative,battle_dominant,303,303,Reşid Mehmed Pasha,57.071062740076826,long_nineteenth_century
+baseline_conservative,battle_dominant,304,304,Stefan Lazarević,56.81177976952625,medieval
+baseline_conservative,battle_dominant,305,305,"François, Duke of Guise",56.773367477592835,early_modern
+baseline_conservative,battle_dominant,306,306,Henri Gouraud,56.773367477592835,world_wars
+baseline_conservative,battle_dominant,307,307,Takeo Takagi,56.773367477592835,world_wars
+baseline_conservative,battle_dominant,308,308,Thomas C. Kinkaid,56.773367477592835,world_wars
+baseline_conservative,battle_dominant,309,309,Dominique Vandamme,56.57170294494238,revolutionary_napoleonic
+baseline_conservative,battle_dominant,310,310,Gaius Marius,56.49807938540332,ancient
+baseline_conservative,battle_dominant,311,311,Gonzalo Fernández de Córdoba,56.44686299615877,early_modern
+baseline_conservative,battle_dominant,312,312,"François Sébastien Charles Joseph de Croix, Count of Clerfayt",56.35403329065301,revolutionary_napoleonic
+baseline_conservative,battle_dominant,313,313,Banda Singh Bahadur,56.30281690140845,early_modern
+baseline_conservative,battle_dominant,314,314,Prince Friedrich Franz Xaver of Hohenzollern-Hechingen,56.18758002560819,revolutionary_napoleonic
+baseline_conservative,battle_dominant,315,315,John,56.13956466069142,medieval
+baseline_conservative,battle_dominant,316,316,Tewodros II,55.72983354673496,long_nineteenth_century
+baseline_conservative,battle_dominant,317,317,Michael von Melas,55.71702944942382,revolutionary_napoleonic
+baseline_conservative,battle_dominant,318,318,Maximilian von Weichs,55.49615877080665,world_wars
+baseline_conservative,battle_dominant,319,319,Željko Ražnatović,55.34571062740078,contemporary
+baseline_conservative,battle_dominant,320,320,Rodion Malinovsky,55.24327784891165,world_wars
+baseline_conservative,battle_dominant,321,321,William I of the Netherlands,55.22727272727273,revolutionary_napoleonic
+baseline_conservative,battle_dominant,322,322,"Tancred, Prince of Galilee",55.18886043533931,medieval
+baseline_conservative,battle_dominant,323,323,Julius Jacob von Haynau,55.064020486555705,long_nineteenth_century
+baseline_conservative,battle_dominant,324,324,Akbar,54.942381562099875,early_modern
+baseline_conservative,battle_dominant,325,325,Taira no Shigehira,54.756722151088354,medieval
+baseline_conservative,battle_dominant,326,326,Karl von Bülow,54.65428937259924,world_wars
+baseline_conservative,battle_dominant,327,327,Mór Perczel,54.4686299615877,long_nineteenth_century
+baseline_conservative,battle_dominant,328,328,Jugurtha,54.449423815621,ancient
+baseline_conservative,battle_dominant,329,329,Minamoto no Yoshinaka,54.404609475032,medieval
+baseline_conservative,battle_dominant,330,330,Pedro de Valdivia,54.404609475032,early_modern
+baseline_conservative,battle_dominant,331,331,"Charles William Ferdinand, Duke of Brunswick",54.38220230473752,revolutionary_napoleonic
+baseline_conservative,battle_dominant,332,332,Seishirō Itagaki,54.21895006402049,world_wars
+baseline_conservative,battle_dominant,333,333,François Joseph Paul de Grasse,54.065300896286814,early_modern
+baseline_conservative,battle_dominant,334,334,Alexander I of Russia,54.06209987195903,revolutionary_napoleonic
+baseline_conservative,battle_dominant,335,335,Cristóbal de Mondragón,54.03969270166453,early_modern
+baseline_conservative,battle_dominant,336,336,Joseph Brant,53.98847631241998,early_modern
+baseline_conservative,battle_dominant,337,337,Duke Ferdinand of Brunswick-Wolfenbüttel,53.85083226632523,early_modern
+baseline_conservative,battle_dominant,338,338,Kuroda Nagamasa,53.8348271446863,early_modern
+baseline_conservative,battle_dominant,339,339,Benedict Arnold,53.78361075544174,early_modern
+baseline_conservative,battle_dominant,340,340,Hadj Ag Gamou,53.75800256081945,contemporary
+baseline_conservative,battle_dominant,341,341,Yi Sun-sin,53.66197183098593,early_modern
+baseline_conservative,battle_dominant,342,342,Horace François Bastien Sébastiani de La Porta,53.6427656850192,revolutionary_napoleonic
+baseline_conservative,battle_dominant,343,343,Arvid Wittenberg,53.57554417413572,early_modern
+baseline_conservative,battle_dominant,344,344,Constantine I of Greece,53.50192061459667,long_nineteenth_century
+baseline_conservative,battle_dominant,345,345,Muhammad of Ghor,53.076184379001276,medieval
+baseline_conservative,battle_dominant,346,346,William II of the Netherlands,52.88732394366197,long_nineteenth_century
+baseline_conservative,battle_dominant,347,347,Flavius Aetius,52.7336747759283,ancient
+baseline_conservative,battle_dominant,348,348,John Hunyadi,52.506402048655566,medieval
+baseline_conservative,battle_dominant,349,349,Stanisław Rewera Potocki,52.45198463508322,early_modern
+baseline_conservative,battle_dominant,350,350,Radko Dimitriev,52.40076824583867,long_nineteenth_century
+baseline_conservative,battle_dominant,351,351,Karl Philipp von Wrede,52.23111395646606,revolutionary_napoleonic
+baseline_conservative,battle_dominant,352,352,"Prince Frederick, Duke of York and Albany",52.15428937259923,revolutionary_napoleonic
+baseline_conservative,battle_dominant,353,353,Zhang Fakui,52.1190781049936,world_wars
+baseline_conservative,battle_dominant,354,354,John II Casimir Vasa,52.07426376440461,early_modern
+baseline_conservative,battle_dominant,355,355,Joseph Joffre,51.923815620998724,world_wars
+baseline_conservative,battle_dominant,356,356,Constantine V,51.91421254801536,medieval
+baseline_conservative,battle_dominant,357,357,Friedrich Graf Kleist von Nollendorf,51.824583866837386,revolutionary_napoleonic
+baseline_conservative,battle_dominant,358,358,Rodolfo Graziani,51.79897567221511,world_wars
+baseline_conservative,battle_dominant,359,359,Yasuji Okamura,51.72215108834827,world_wars
+baseline_conservative,battle_dominant,360,360,George Alan Vasey,51.57810499359794,world_wars
+baseline_conservative,battle_dominant,361,361,Kōriki Kiyonaga,51.51088348271447,early_modern
+baseline_conservative,battle_dominant,362,362,Louis-Alexandre Berthier,51.5044814340589,revolutionary_napoleonic
+baseline_conservative,battle_dominant,363,363,Humayun,51.35723431498079,early_modern
+baseline_conservative,battle_dominant,364,364,Matthew Ridgway,51.35083226632523,cold_war
+baseline_conservative,battle_dominant,365,365,Philip Sheridan,51.328425096030735,long_nineteenth_century
+baseline_conservative,battle_dominant,366,366,Bayezid I,51.267605633802816,medieval
+baseline_conservative,battle_dominant,367,367,Matthias Corvinus,51.19398207426375,medieval
+baseline_conservative,battle_dominant,368,368,Omar Bradley,51.04353393085787,world_wars
+baseline_conservative,battle_dominant,369,369,Jean-Baptiste Jourdan,50.934699103713186,revolutionary_napoleonic
+baseline_conservative,battle_dominant,370,370,Honda Shigetsugu,50.89628681177977,early_modern
+baseline_conservative,battle_dominant,371,371,Douglas H. Cooper,50.80665813060179,long_nineteenth_century
+baseline_conservative,battle_dominant,372,372,"Rupprecht, Crown Prince of Bavaria",50.7842509603073,world_wars
+baseline_conservative,battle_dominant,373,373,Gonzalo Fernández de Córdoba,50.761843790012804,early_modern
+baseline_conservative,battle_dominant,374,374,Hattori Hanzō,50.68501920614597,early_modern
+baseline_conservative,battle_dominant,375,375,Faisal bin Hussein,50.6562099871959,world_wars
+baseline_conservative,battle_dominant,376,376,Niwa Nagahide,50.627400768245835,early_modern
+baseline_conservative,battle_dominant,377,377,Gerd von Rundstedt,50.608194622279136,world_wars
+baseline_conservative,battle_dominant,378,378,Nathaniel P. Banks,50.46414852752881,long_nineteenth_century
+baseline_conservative,battle_dominant,379,379,Malhar Rao Holkar,50.20486555697823,early_modern
+baseline_conservative,battle_dominant,380,380,Paul Grenier,49.897567221510876,revolutionary_napoleonic
+baseline_conservative,battle_dominant,381,381,"Arthur III, Duke of Brittany",49.81434058898848,medieval
+baseline_conservative,battle_dominant,382,382,Helmuth von Moltke the Elder,49.70550576184379,long_nineteenth_century
+baseline_conservative,battle_dominant,383,383,John O'Sullivan,49.70550576184379,early_modern
+baseline_conservative,battle_dominant,384,384,Prokop the Great,49.70550576184379,medieval
+baseline_conservative,battle_dominant,385,385,Bai Chongxi,49.62868117797695,world_wars
+baseline_conservative,battle_dominant,386,386,Jacques Lauriston,49.60947503201025,revolutionary_napoleonic
+baseline_conservative,battle_dominant,387,387,Nicolas Oudinot,49.33418693982074,revolutionary_napoleonic
+baseline_conservative,battle_dominant,388,388,Paul von Plehwe,49.250960307298335,world_wars
+baseline_conservative,battle_dominant,389,389,"Jean-Baptiste Drouet, Comte d'Erlon",49.20614596670935,revolutionary_napoleonic
+baseline_conservative,battle_dominant,390,390,Antipater,49.167733674775924,ancient
+baseline_conservative,battle_dominant,391,391,Arthur MacArthur Jr.,49.167733674775924,long_nineteenth_century
+baseline_conservative,battle_dominant,392,392,"Frederick III, German Emperor",49.167733674775924,long_nineteenth_century
+baseline_conservative,battle_dominant,393,393,Hayreddin Barbarossa,49.167733674775924,early_modern
+baseline_conservative,battle_dominant,394,394,Tommy Franks,49.167733674775924,contemporary
+baseline_conservative,battle_dominant,395,395,Charles I of England,49.16453265044814,early_modern
+baseline_conservative,battle_dominant,396,396,"William Louis, Count of Nassau-Dillenburg",49.1101152368758,early_modern
+baseline_conservative,battle_dominant,397,397,George Washington,49.09090909090909,early_modern
+baseline_conservative,battle_dominant,398,398,Jahan Khan Popalzai,49.02048655569782,early_modern
+baseline_conservative,battle_dominant,399,399,Cornplanter,48.99487836107555,early_modern
+baseline_conservative,battle_dominant,400,400,Honoré Charles Reille,48.879641485275286,revolutionary_napoleonic
+baseline_conservative,battle_dominant,401,401,Pyotr Bagration,48.83802816901408,revolutionary_napoleonic
+baseline_conservative,battle_dominant,402,402,Gustaf Otto Stenbock,48.81562099871959,early_modern
+baseline_conservative,battle_dominant,403,403,François Anthoine,48.80921895006402,world_wars
+baseline_conservative,battle_dominant,404,404,Xu Huang,48.74519846350832,ancient
+baseline_conservative,battle_dominant,405,405,Andrei Rosenberg,48.61075544174136,revolutionary_napoleonic
+baseline_conservative,battle_dominant,406,406,Henry Lee III,48.59154929577465,early_modern
+baseline_conservative,battle_dominant,407,407,Prospero Colonna,48.53393085787452,early_modern
+baseline_conservative,battle_dominant,408,408,Francis Drake,48.50512163892446,early_modern
+baseline_conservative,battle_dominant,409,409,Shahrbaraz,48.42829705505762,medieval
+baseline_conservative,battle_dominant,410,410,Charles Michel de Langlade,48.38028169014085,early_modern
+baseline_conservative,battle_dominant,411,411,Xue Yue,48.36747759282971,world_wars
+baseline_conservative,battle_dominant,412,412,Pablo Morillo,48.361075544174135,revolutionary_napoleonic
+baseline_conservative,battle_dominant,413,413,Karl Wilhelm von Toll,48.27784891165172,long_nineteenth_century
+baseline_conservative,battle_dominant,414,414,Ukita Hideie,48.265044814340584,early_modern
+baseline_conservative,battle_dominant,415,415,Baghel Singh,48.053777208706784,early_modern
+baseline_conservative,battle_dominant,416,416,Paul Ludwig Ewald von Kleist,47.986555697823306,world_wars
+baseline_conservative,battle_dominant,417,417,Philippe Pétain,47.81370038412292,world_wars
+baseline_conservative,battle_dominant,418,418,Harald Hardrada,47.752880921895,medieval
+baseline_conservative,battle_dominant,419,419,Fevzi Çakmak,47.68886043533931,world_wars
+baseline_conservative,battle_dominant,420,420,Étienne Macdonald,47.66005121638925,revolutionary_napoleonic
+baseline_conservative,battle_dominant,421,421,Paul von Hindenburg,47.21190781049936,world_wars
+baseline_conservative,battle_dominant,422,422,Pietro Frugoni,47.12548015364917,world_wars
+baseline_conservative,battle_dominant,423,423,"Charles V, Duke of Lorraine",47.00384122919334,early_modern
+baseline_conservative,battle_dominant,424,424,Nathanael Greene,46.98463508322663,early_modern
+baseline_conservative,battle_dominant,425,425,"John II, Duke of Alençon",46.82458386683739,medieval
+baseline_conservative,battle_dominant,426,426,James G. Blunt,46.78617157490397,long_nineteenth_century
+baseline_conservative,battle_dominant,427,427,Frederick William III of Prussia,46.58130601792574,revolutionary_napoleonic
+baseline_conservative,battle_dominant,428,428,Otto Liman von Sanders,46.54609475032011,world_wars
+baseline_conservative,battle_dominant,429,429,François Nicolas Fagel,46.510883482714476,early_modern
+baseline_conservative,battle_dominant,430,430,Jassa Singh Ramgarhia,46.43405889884763,early_modern
+baseline_conservative,battle_dominant,431,431,Totila,46.056338028169016,medieval
+baseline_conservative,battle_dominant,432,432,Paul Kray,46.05633802816901,revolutionary_napoleonic
+baseline_conservative,battle_dominant,433,433,Charles Martel,46.01152368758002,medieval
+baseline_conservative,battle_dominant,434,434,Kilij Arslan I,46.01152368758002,medieval
+baseline_conservative,battle_dominant,435,435,Wilhelm von Knyphausen,45.99871959026889,early_modern
+baseline_conservative,battle_dominant,436,436,Chen Cheng,45.89628681177977,world_wars
+baseline_conservative,battle_dominant,437,437,Chief Joseph,45.76824583866838,long_nineteenth_century
+baseline_conservative,battle_dominant,438,438,György Kmety,45.73943661971831,long_nineteenth_century
+baseline_conservative,battle_dominant,439,439,Maximilian II Emanuel,45.736235595390525,early_modern
+baseline_conservative,battle_dominant,440,440,Wilhelm List,45.67221510883483,world_wars
+baseline_conservative,battle_dominant,441,441,Martin,45.6145966709347,medieval
+baseline_conservative,battle_dominant,442,442,Baba Nobuharu,45.58898847631242,early_modern
+baseline_conservative,battle_dominant,443,443,Kobayakawa Takakage,45.37131882202305,early_modern
+baseline_conservative,battle_dominant,444,444,Mark W. Clark,45.20486555697823,world_wars
+baseline_conservative,battle_dominant,445,445,William III of England,45.15044814340589,early_modern
+baseline_conservative,battle_dominant,446,446,John Burgoyne,45.13444302176696,early_modern
+baseline_conservative,battle_dominant,447,447,Hamid Hassy,45.057618437900125,contemporary
+baseline_conservative,battle_dominant,448,448,Stephen the Great,45.02880921895006,medieval
+baseline_conservative,battle_dominant,449,449,Joseph Bonaparte,44.97439180537772,revolutionary_napoleonic
+baseline_conservative,battle_dominant,450,450,Omer Vrioni,44.81754161331626,long_nineteenth_century
+baseline_conservative,battle_dominant,451,451,Ottavio Piccolomini,44.743918053777215,early_modern
+baseline_conservative,battle_dominant,452,452,Abbas Mirza,44.71190781049936,revolutionary_napoleonic
+baseline_conservative,battle_dominant,453,453,Józef Poniatowski,44.702304737516,revolutionary_napoleonic
+baseline_conservative,battle_dominant,454,454,Mu'awiya ibn Abi Sufyan,44.59667093469911,medieval
+baseline_conservative,battle_dominant,455,455,Dwight D. Eisenhower,44.51984635083226,world_wars
+baseline_conservative,battle_dominant,456,456,Li Zongren,44.423815620998724,world_wars
+baseline_conservative,battle_dominant,457,457,François Séverin Marceau,44.41421254801536,revolutionary_napoleonic
+baseline_conservative,battle_dominant,458,458,Mao Zedong,44.37900128040972,cold_war
+baseline_conservative,battle_dominant,459,459,Prince Georg Friedrich of Waldeck,44.00768245838668,early_modern
+baseline_conservative,battle_dominant,460,460,Gabriel Jean Joseph Molitor,44.00128040973112,revolutionary_napoleonic
+baseline_conservative,battle_dominant,461,461,Alexander Tormasov,43.91165172855314,revolutionary_napoleonic
+baseline_conservative,battle_dominant,462,462,Leopold Joseph von Daun,43.818822023047375,early_modern
+baseline_conservative,battle_dominant,463,463,Eberhard von Mackensen,43.815620998719595,world_wars
+baseline_conservative,battle_dominant,464,464,Cristóvão da Gama,43.74519846350832,early_modern
+baseline_conservative,battle_dominant,465,465,Manuel I Komnenos,43.521126760563384,medieval
+baseline_conservative,battle_dominant,466,466,Louis XII,43.46350832266326,medieval
+baseline_conservative,battle_dominant,467,467,Friedrich Sixt von Armin,43.434699103713186,world_wars
+baseline_conservative,battle_dominant,468,468,Al-Adil I,43.18822023047375,medieval
+baseline_conservative,battle_dominant,469,469,Levin August von Bennigsen,42.9449423815621,revolutionary_napoleonic
+baseline_conservative,battle_dominant,470,470,Shimazu Toshihisa,42.90653008962868,early_modern
+baseline_conservative,battle_dominant,471,471,"Albert, King of Saxony",42.829705505761844,long_nineteenth_century
+baseline_conservative,battle_dominant,472,472,Hosokawa Tadaoki,42.77208706786172,early_modern
+baseline_conservative,battle_dominant,473,473,Fukushima Masanori,42.752880921895006,early_modern
+baseline_conservative,battle_dominant,474,474,Antoine Charles Louis de Lasalle,42.74647887323944,revolutionary_napoleonic
+baseline_conservative,battle_dominant,475,475,Albert I of Belgium,42.74327784891165,world_wars
+baseline_conservative,battle_dominant,476,476,Aliagha Shikhlinski,42.69526248399488,world_wars
+baseline_conservative,battle_dominant,477,477,Magnus Gustav von Essen,42.31113956466069,revolutionary_napoleonic
+baseline_conservative,battle_dominant,478,478,Halil Kut,42.282330345710626,world_wars
+baseline_conservative,battle_dominant,479,479,Marian Langiewicz,42.08066581306018,long_nineteenth_century
+baseline_conservative,battle_dominant,480,480,Philippe de La Mothe-Houdancourt,41.9270166453265,early_modern
+baseline_conservative,battle_dominant,481,481,Sepp Dietrich,41.75416133162613,world_wars
+baseline_conservative,battle_dominant,482,482,Alexander Ivanovich Ostermann-Tolstoy,41.74775928297055,revolutionary_napoleonic
+baseline_conservative,battle_dominant,483,483,Samuel of Bulgaria,41.74135723431499,medieval
+baseline_conservative,battle_dominant,484,484,Antigonus I Monophthalmus,41.44366197183099,ancient
+baseline_conservative,battle_dominant,485,485,George of Hesse-Darmstadt,41.37003841229194,early_modern
+baseline_conservative,battle_dominant,486,486,Erich von Falkenhayn,41.171574903969265,world_wars
+baseline_conservative,battle_dominant,487,487,Nicolas Catinat,41.158770806658126,early_modern
+baseline_conservative,battle_dominant,488,488,Pierre Dupont de l'Étang,41.06274007682459,revolutionary_napoleonic
+baseline_conservative,battle_dominant,489,489,Miguel Grau,41.0179257362356,long_nineteenth_century
+baseline_conservative,battle_dominant,490,490,Jean-Nicolas Stofflet,40.99231754161332,revolutionary_napoleonic
+baseline_conservative,battle_dominant,491,491,Juan del Águila,40.97951344430217,early_modern
+baseline_conservative,battle_dominant,492,492,Shamil Basayev,40.825864276568495,contemporary
+baseline_conservative,battle_dominant,493,493,Jacob De la Gardie,40.60819462227913,early_modern
+baseline_conservative,battle_dominant,494,494,Marcin Kalinowski,40.44174135723432,early_modern
+baseline_conservative,battle_dominant,495,495,Henry IV of France,40.438540332906534,early_modern
+baseline_conservative,battle_dominant,496,496,Friedrich Paulus,40.37131882202305,world_wars
+baseline_conservative,battle_dominant,497,497,Ignacio López Rayón,40.31370038412291,revolutionary_napoleonic
+baseline_conservative,battle_dominant,498,498,Francisco Verdugo,40.26248399487836,early_modern
+baseline_conservative,battle_dominant,499,499,Witte de With,40.217669654289374,early_modern
+baseline_conservative,battle_dominant,500,500,Peter Ernst I von Mansfeld-Vorderort,39.929577464788736,early_modern
+baseline_conservative,battle_dominant,501,501,"Albert VII, Archduke of Austria",39.8527528809219,early_modern
+baseline_conservative,battle_dominant,502,502,Satake Yoshinobu,39.833546734955185,early_modern
+baseline_conservative,battle_dominant,503,503,Ibrahim Pasha of Egypt,39.66069142125481,long_nineteenth_century
+baseline_conservative,battle_dominant,504,504,Peter Karl Ott von Bátorkéz,39.58386683738796,revolutionary_napoleonic
+baseline_conservative,battle_dominant,505,505,Maarten Tromp,39.44302176696543,early_modern
+baseline_conservative,battle_dominant,506,506,Antiochus III the Great,39.362996158770805,ancient
+baseline_conservative,battle_dominant,507,507,Prince Charles Alexander of Lorraine,39.362996158770805,early_modern
+baseline_conservative,battle_dominant,508,508,Franz Conrad von Hötzendorf,39.30857874519846,world_wars
+baseline_conservative,battle_dominant,509,509,François Étienne de Kellermann,39.238156209987196,revolutionary_napoleonic
+baseline_conservative,battle_dominant,510,510,Tipu Sultan,39.20934699103713,revolutionary_napoleonic
+baseline_conservative,battle_dominant,511,511,"Enrique O'Donnell, Conde de La Bisbal",39.16133162612036,revolutionary_napoleonic
+baseline_conservative,battle_dominant,512,512,Benjamin Blake,39.00768245838668,early_modern
+baseline_conservative,battle_dominant,513,513,John Sullivan,38.96927016645326,early_modern
+baseline_conservative,battle_dominant,514,514,George Armstrong Custer,38.95646606914213,long_nineteenth_century
+baseline_conservative,battle_dominant,515,515,Claude Lecourbe,38.90204865556978,revolutionary_napoleonic
+baseline_conservative,battle_dominant,516,516,Michael Andreas Barclay de Tolly,38.87003841229193,revolutionary_napoleonic
+baseline_conservative,battle_dominant,517,517,Toghtekin,38.72599231754162,medieval
+baseline_conservative,battle_dominant,518,518,Erich Ludendorff,38.67797695262484,world_wars
+baseline_conservative,battle_dominant,519,519,Dagobert Sigmund von Wurmser,38.47951344430217,revolutionary_napoleonic
+baseline_conservative,battle_dominant,520,520,Raimondo Montecuccoli,38.45070422535212,early_modern
+baseline_conservative,battle_dominant,521,521,Pedro de Zubiaur,38.431498079385406,early_modern
+baseline_conservative,battle_dominant,522,522,Joaquín Blake,38.38028169014085,revolutionary_napoleonic
+baseline_conservative,battle_dominant,523,523,Bhim Chand,38.29065300896286,early_modern
+baseline_conservative,battle_dominant,524,524,Mariano Matamoros y Guridi,38.16261203585147,revolutionary_napoleonic
+baseline_conservative,battle_dominant,525,525,Henry II of Castile,37.95134443021767,medieval
+baseline_conservative,battle_dominant,526,526,Bohdan Khmelnytsky,37.94814340588988,early_modern
+baseline_conservative,battle_dominant,527,527,Władysław Anders,37.932138284250954,world_wars
+baseline_conservative,battle_dominant,528,528,Erich von Manstein,37.83290653008963,world_wars
+baseline_conservative,battle_dominant,529,529,Boris Yeltsin,37.75928297055058,contemporary
+baseline_conservative,battle_dominant,530,530,Mikhail Dmitrievich Gorchakov,37.66325224071703,long_nineteenth_century
+baseline_conservative,battle_dominant,531,531,Gamō Ujisato,37.59923175416133,early_modern
+baseline_conservative,battle_dominant,532,532,Zhang,37.528809218950066,ancient
+baseline_conservative,battle_dominant,533,533,Herman Willem Daendels,37.445582586427655,revolutionary_napoleonic
+baseline_conservative,battle_dominant,534,534,Ivan Bohun,37.371959026888604,early_modern
+baseline_conservative,battle_dominant,535,535,Max von Gallwitz,37.1606914212548,world_wars
+baseline_conservative,battle_dominant,536,536,Lazare Hoche,37.01024327784891,revolutionary_napoleonic
+baseline_conservative,battle_dominant,537,537,Grand Duke Konstantin Pavlovich of Russia,36.97183098591549,revolutionary_napoleonic
+baseline_conservative,battle_dominant,538,538,Oda Nagamasu,36.911011523687584,early_modern
+baseline_conservative,battle_dominant,539,539,Sanada Masayuki,36.837387964148526,early_modern
+baseline_conservative,battle_dominant,540,540,Fritz von Below,36.72215108834828,world_wars
+baseline_conservative,battle_dominant,541,541,Cao Ren,36.44686299615877,ancient
+baseline_conservative,battle_dominant,542,542,"Leopold I, Prince of Anhalt-Dessau",36.318822023047375,early_modern
+baseline_conservative,battle_dominant,543,543,Aeneas de Caprara,36.29961587708067,early_modern
+baseline_conservative,battle_dominant,544,544,Janusz Radziwiłł,36.17797695262484,early_modern
+baseline_conservative,battle_dominant,545,545,Ishida Mitsunari,36.14596670934699,early_modern
+baseline_conservative,battle_dominant,546,546,Ratko Mladić,36.13956466069142,contemporary
+baseline_conservative,battle_dominant,547,547,Fyodor Apraksin,36.08834827144686,early_modern
+baseline_conservative,battle_dominant,548,548,Niiro Tadamoto,36.06914212548015,early_modern
+baseline_conservative,battle_dominant,549,549,Louis XIII,36.02752880921895,early_modern
+baseline_conservative,battle_dominant,550,550,Robert the Bruce,36.02752880921895,medieval
+baseline_conservative,battle_dominant,551,551,Yashwantrao Holkar,35.83226632522407,revolutionary_napoleonic
+baseline_conservative,battle_dominant,552,552,"Wilhelm, German Crown Prince",35.65300896286812,world_wars
+baseline_conservative,battle_dominant,553,553,Tachibana Muneshige,35.601792573623555,early_modern
+baseline_conservative,battle_dominant,554,554,Charles Emmanuel III,35.524967989756725,early_modern
+baseline_conservative,battle_dominant,555,555,Muqtada al-Sadr,35.52176696542893,contemporary
+baseline_conservative,battle_dominant,556,556,Thrasybulus,35.3585147247119,ancient
+baseline_conservative,battle_dominant,557,557,İsmet İnönü,35.294494238156204,world_wars
+baseline_conservative,battle_dominant,558,558,Anthony Wayne,35.28169014084507,early_modern
+baseline_conservative,battle_dominant,559,559,Walter von Reichenau,35.217669654289374,world_wars
+baseline_conservative,battle_dominant,560,560,Liao Yaoxiang,35.0640204865557,world_wars
+baseline_conservative,battle_dominant,561,561,Minoru Sasaki,35.06081946222791,world_wars
+baseline_conservative,battle_dominant,562,562,Tomoyuki Yamashita,35.03841229193341,world_wars
+baseline_conservative,battle_dominant,563,563,Joseph François Dupleix,34.98719590268887,early_modern
+baseline_conservative,battle_dominant,564,564,Count Claude Florimond de Mercy,34.98719590268886,early_modern
+baseline_conservative,battle_dominant,565,565,Bhai Mohkam Singh,34.782330345710626,early_modern
+baseline_conservative,battle_dominant,566,566,George Rooke,34.75672215108835,early_modern
+baseline_conservative,battle_dominant,567,567,Muammar Gaddafi,34.683098591549296,contemporary
+baseline_conservative,battle_dominant,568,568,Hatazō Adachi,34.65428937259923,world_wars
+baseline_conservative,battle_dominant,569,569,Cevat Çobanlı,34.39500640204866,world_wars
+baseline_conservative,battle_dominant,570,570,Binod Singh,34.24455825864277,early_modern
+baseline_conservative,battle_dominant,571,571,Venancio Flores,34.225352112676056,long_nineteenth_century
+baseline_conservative,battle_dominant,572,572,Alfonso d'Avalos,33.62996158770807,early_modern
+baseline_conservative,battle_dominant,573,573,Constantius II,33.59154929577464,ancient
+baseline_conservative,battle_dominant,574,574,Velupillai Prabhakaran,33.4955185659411,contemporary
+baseline_conservative,battle_dominant,575,575,Hoàng Cầm,33.45710627400768,cold_war
+baseline_conservative,battle_dominant,576,576,"Prince William, Duke of Cumberland",33.223431498079385,early_modern
+baseline_conservative,battle_dominant,577,577,Stefan Dąb-Biernacki,33.0921895006402,world_wars
+baseline_conservative,battle_dominant,578,578,Barthélemy Louis Joseph Schérer,32.989756722151085,revolutionary_napoleonic
+baseline_conservative,battle_dominant,579,579,Ernst von Mansfeld,32.91293213828425,early_modern
+baseline_conservative,battle_dominant,580,580,Tadeusz Kościuszko,32.90653008962868,revolutionary_napoleonic
+baseline_conservative,battle_dominant,581,581,Michael von Kienmayer,32.83610755441741,revolutionary_napoleonic
+baseline_conservative,battle_dominant,582,582,Paul von Rennenkampf,32.765685019206146,world_wars
+baseline_conservative,battle_dominant,583,583,Harukichi Hyakutake,32.75608194622279,world_wars
+baseline_conservative,battle_dominant,584,584,Sharif Sheikh Ahmed,32.432778489116515,contemporary
+baseline_conservative,battle_dominant,585,585,Władysław IV Vasa,32.432778489116515,early_modern
+baseline_conservative,battle_dominant,586,586,"Noël Édouard, vicomte de Curières de Castelnau",32.40076824583866,world_wars
+baseline_conservative,battle_dominant,587,587,Sakuma Nobumori,32.34314980793854,early_modern
+baseline_conservative,battle_dominant,588,588,Katō Yoshiaki,32.295134443021766,early_modern
+baseline_conservative,battle_dominant,589,589,Lala Shahin Pasha,32.183098591549296,medieval
+baseline_conservative,battle_dominant,590,590,Antonio López de Santa Anna,32.17669654289372,long_nineteenth_century
+baseline_conservative,battle_dominant,591,591,Erwin Rommel,32.05825864276568,world_wars
+baseline_conservative,battle_dominant,592,592,Albert Kesselring,32.026248399487834,world_wars
+baseline_conservative,battle_dominant,593,593,"Francis II, Holy Roman Emperor",32.01664532650448,revolutionary_napoleonic
+baseline_conservative,battle_dominant,594,594,"Johann I Joseph, Prince of Liechtenstein",31.93982074263764,revolutionary_napoleonic
+baseline_conservative,battle_dominant,595,595,Cemal Mersinli,31.606914212548013,world_wars
+baseline_conservative,battle_dominant,596,596,Jan Smuts,31.49807938540333,world_wars
+baseline_conservative,battle_dominant,597,597,Pargalı Ibrahim Pasha,31.49807938540333,early_modern
+baseline_conservative,battle_dominant,598,598,Naoe Kanetsugu,31.45966709346991,early_modern
+baseline_conservative,battle_dominant,599,599,Michał Serwacy Wiśniowiecki,31.325224071702944,early_modern
+baseline_conservative,battle_dominant,600,600,Melchior von Hatzfeldt,31.29961587708066,early_modern
+baseline_conservative,battle_dominant,601,601,"James Hamilton, Duke of Châtellerault",31.203585147247118,early_modern
+baseline_conservative,battle_dominant,602,602,Manuel Bulnes,31.203585147247118,long_nineteenth_century
+baseline_conservative,battle_dominant,603,603,Arthur Arz von Straußenburg,31.09475032010243,world_wars
+baseline_conservative,battle_dominant,604,604,Georg von der Marwitz,31.024327784891163,world_wars
+baseline_conservative,battle_dominant,605,605,Shimazu Iehisa,30.915492957746476,early_modern
+baseline_conservative,battle_dominant,606,606,Gaspard III de Coligny,30.902688860435337,early_modern
+baseline_conservative,battle_dominant,607,607,"Robert Douglas, Count of Skenninge",30.902688860435337,early_modern
+baseline_conservative,battle_dominant,608,608,Wazir Khan,30.832266325224072,early_modern
+baseline_conservative,battle_dominant,609,609,Abdal-Latif Mirza,30.78745198463508,medieval
+baseline_conservative,battle_dominant,610,610,Jan Henryk Dąbrowski,30.758642765685018,revolutionary_napoleonic
+baseline_conservative,battle_dominant,611,611,Ferdinand Schörner,30.68181818181818,world_wars
+baseline_conservative,battle_dominant,612,612,Đurađ Branković,30.659411011523687,medieval
+baseline_conservative,battle_dominant,613,613,Maximilian Ulysses Browne,30.582586427656853,early_modern
+baseline_conservative,battle_dominant,614,614,Pedro Navarro,30.53777208706786,early_modern
+baseline_conservative,battle_dominant,615,615,Dong Fuxiang,30.454545454545453,long_nineteenth_century
+baseline_conservative,battle_dominant,616,616,Joseph Stalin,30.30729833546735,world_wars
+baseline_conservative,battle_dominant,617,617,Pyrrhus of Epirus,30.27848911651728,ancient
+baseline_conservative,battle_dominant,618,618,Ahmad ibn Ibrahim al-Ghazi,30.198463508322664,early_modern
+baseline_conservative,battle_dominant,619,619,Takigawa Kazumasu,30.18245838668374,early_modern
+baseline_conservative,battle_dominant,620,620,Johann von Werth,30.019206145966706,early_modern
+baseline_conservative,battle_dominant,621,621,Alexander Hamilton,29.94238156209987,early_modern
+baseline_conservative,battle_dominant,622,622,John Joseph of Austria,29.846350832266328,early_modern
+baseline_conservative,battle_dominant,623,623,Peter Graf von der Pahlen,29.788732394366196,revolutionary_napoleonic
+baseline_conservative,battle_dominant,624,624,William the Silent,29.731113956466068,early_modern
+baseline_conservative,battle_dominant,625,625,Emilio Aguinaldo,29.699103713188222,long_nineteenth_century
+baseline_conservative,battle_dominant,626,626,August von Mackensen,29.651088348271443,world_wars
+baseline_conservative,battle_dominant,627,627,Sanada Yukimura,29.37900128040973,early_modern
+baseline_conservative,battle_dominant,628,628,Charles the Bold,29.14852752880922,medieval
+baseline_conservative,battle_dominant,629,629,Scipio Aemilianus,29.09731113956466,ancient
+baseline_conservative,battle_dominant,630,630,Judas Maccabeus,29.087708066581303,ancient
+baseline_conservative,battle_dominant,631,631,Husayn ibn Numayr al-Sakuni,29.078104993597954,medieval
+baseline_conservative,battle_dominant,632,632,Patrice de MacMahon,29.07810499359795,long_nineteenth_century
+baseline_conservative,battle_dominant,633,633,Jalal al-Din Mangburni,29.07170294494238,medieval
+baseline_conservative,battle_dominant,634,634,Josip Jelačić,29.07170294494238,long_nineteenth_century
+baseline_conservative,battle_dominant,635,635,Chiang Kai-shek,28.93405889884763,world_wars
+baseline_conservative,battle_dominant,636,636,Svetozar Boroević,28.914852752880925,world_wars
+baseline_conservative,battle_dominant,637,637,Archduke Eugen of Austria,28.89244558258643,world_wars
+baseline_conservative,battle_dominant,638,638,Louis Botha,28.777208706786173,long_nineteenth_century
+baseline_conservative,battle_dominant,639,639,Wei Lihuang,28.636363636363637,world_wars
+baseline_conservative,battle_dominant,640,640,Hernando Pizarro,28.386683738796414,early_modern
+baseline_conservative,battle_dominant,641,641,Bon-Adrien Jeannot de Moncey,28.271446862996157,revolutionary_napoleonic
+baseline_conservative,battle_dominant,642,642,Thomas Sumter,28.271446862996157,early_modern
+baseline_conservative,battle_dominant,643,643,Baldwin II of Jerusalem,28.08898847631242,medieval
+baseline_conservative,battle_dominant,644,644,Ali Fuat Cebesoy,28.079385403329063,world_wars
+baseline_conservative,battle_dominant,645,645,Wincenty Korwin Gosiewski,28.021766965428935,early_modern
+baseline_conservative,battle_dominant,646,646,Kikkawa Motoharu,28.002560819462225,early_modern
+baseline_conservative,battle_dominant,647,647,Johann von Hiller,27.765685019206146,revolutionary_napoleonic
+baseline_conservative,battle_dominant,648,648,Hasdrubal Gisco,27.63764404609475,ancient
+baseline_conservative,battle_dominant,649,649,Kuki Yoshitaka,27.586427656850194,early_modern
+baseline_conservative,battle_dominant,650,650,Ferdinand von Wintzingerode,27.4583866837388,revolutionary_napoleonic
+baseline_conservative,battle_dominant,651,651,Daulat Rao Sindhia,27.445582586427655,revolutionary_napoleonic
+baseline_conservative,battle_dominant,652,652,Semyon Budyonny,27.397567221510883,world_wars
+baseline_conservative,battle_dominant,653,653,Sassa Narimasa,27.387964148527526,early_modern
+baseline_conservative,battle_dominant,654,654,Alexander Zakharchenko,27.311139564660692,contemporary
+baseline_conservative,battle_dominant,655,655,Baldwin I of Jerusalem,27.11587708066581,medieval
+baseline_conservative,battle_dominant,656,656,Hugh Roe O'Donnell,26.927016645326503,early_modern
+baseline_conservative,battle_dominant,657,657,Hitoshi Imamura,26.920614596670934,world_wars
+baseline_conservative,battle_dominant,658,658,Semyon Timoshenko,26.869398207426375,world_wars
+baseline_conservative,battle_dominant,659,659,François Joseph Westermann,26.850192061459666,revolutionary_napoleonic
+baseline_conservative,battle_dominant,660,660,Hyder Ali,26.84699103713188,early_modern
+baseline_conservative,battle_dominant,661,661,Aleksander Koniecpolski,26.773367477592828,early_modern
+baseline_conservative,battle_dominant,662,662,Demetrius I Poliorcetes,26.77016645326504,ancient
+baseline_conservative,battle_dominant,663,663,"Sigismund, Holy Roman Emperor",26.754161331626122,medieval
+baseline_conservative,battle_dominant,664,664,Ferenc Ottinger,26.690140845070424,long_nineteenth_century
+baseline_conservative,battle_dominant,665,665,Bouzes,26.562099871959028,medieval
+baseline_conservative,battle_dominant,666,666,Masatane Kanda,26.53649167733675,world_wars
+baseline_conservative,battle_dominant,667,667,"Friedrich Wilhelm, Fürst zu Hohenlohe-Kirchberg",26.46606914212548,revolutionary_napoleonic
+baseline_conservative,battle_dominant,668,668,Frederik van den Bergh,26.370038412291933,early_modern
+baseline_conservative,battle_dominant,669,669,Ludwig von Wohlgemuth,26.31241997439181,long_nineteenth_century
+baseline_conservative,battle_dominant,670,670,Dmitry Dokhturov,26.30921895006402,revolutionary_napoleonic
+baseline_conservative,battle_dominant,671,671,Fabian Gottlieb von der Osten-Sacken,26.30281690140845,revolutionary_napoleonic
+baseline_conservative,battle_dominant,672,672,Jean-Andoche Junot,26.15236875800256,revolutionary_napoleonic
+baseline_conservative,battle_dominant,673,673,Franz Schlik,26.024327784891167,long_nineteenth_century
+baseline_conservative,battle_dominant,674,674,Shivaji,25.87067861715749,early_modern
+baseline_conservative,battle_dominant,675,675,Julián Romero,25.85147247119078,early_modern
+baseline_conservative,battle_dominant,676,676,Theepan,25.79385403329065,contemporary
+baseline_conservative,battle_dominant,677,677,Zamorin,25.765044814340584,early_modern
+baseline_conservative,battle_dominant,678,678,Enrique Líster,25.691421254801536,world_wars
+baseline_conservative,battle_dominant,679,679,Luigi Capello,25.467349551856593,world_wars
+baseline_conservative,battle_dominant,680,680,"Maximilian Anton Karl, Count Baillet de Latour",25.380921895006402,revolutionary_napoleonic
+baseline_conservative,battle_dominant,681,681,Li Hongzhang,25.102432778489117,long_nineteenth_century
+baseline_conservative,battle_dominant,682,682,"Albrecht, Duke of Württemberg",25.044814340588985,world_wars
+baseline_conservative,battle_dominant,683,683,Andrei Grechko,25.044814340588985,world_wars
+baseline_conservative,battle_dominant,684,684,Khosrow I,25.00640204865557,medieval
+baseline_conservative,battle_dominant,685,685,Nikolay Raevsky,24.82074263764405,revolutionary_napoleonic
+baseline_conservative,battle_dominant,686,686,Ferrante Gonzaga,24.77592829705506,early_modern
+baseline_conservative,battle_dominant,687,687,Saddam Hussein,24.622279129321385,cold_war
+baseline_conservative,battle_dominant,688,688,Murakami Yoshikiyo,24.545454545454543,early_modern
+baseline_conservative,battle_dominant,689,689,Menno van Coehoorn,24.39180537772087,early_modern
+baseline_conservative,battle_dominant,690,690,Michelangelo Alessandro Colli-Marchi,24.385403329065298,revolutionary_napoleonic
+baseline_conservative,battle_dominant,691,691,Viktor Dankl von Krasnik,24.308578745198467,world_wars
+baseline_conservative,battle_dominant,692,692,Franz von Hipper,24.308578745198464,world_wars
+baseline_conservative,battle_dominant,693,693,Ahmed Muhtar Pasha,24.161331626120358,long_nineteenth_century
+baseline_conservative,battle_dominant,694,694,Quizquiz,24.154929577464788,early_modern
+baseline_conservative,battle_dominant,695,695,Józef Bem,24.078104993597954,long_nineteenth_century
+baseline_conservative,battle_dominant,696,696,Wakisaka Yasuharu,23.99807938540333,early_modern
+baseline_conservative,battle_dominant,697,697,Selim I Giray,23.847631241997437,early_modern
+baseline_conservative,battle_dominant,698,698,Samuel D. Sturgis,23.770806658130603,long_nineteenth_century
+baseline_conservative,battle_dominant,699,699,"Maximilian, Count of Merveldt",23.6235595390525,revolutionary_napoleonic
+baseline_conservative,battle_dominant,700,700,Vicente Rojo Lluch,23.54673495518566,world_wars
+baseline_conservative,battle_dominant,701,701,August Kork,23.54033290653009,world_wars
+baseline_conservative,battle_dominant,702,702,Marquis de Lafayette,23.335467349551855,early_modern
+baseline_conservative,battle_dominant,703,703,Shibata Katsuie,23.053777208706787,early_modern
+baseline_conservative,battle_dominant,704,704,Aleksey Kuropatkin,23.0089628681178,long_nineteenth_century
+baseline_conservative,battle_dominant,705,705,Maximilien Sébastien Foy,22.79769526248399,revolutionary_napoleonic
+baseline_conservative,battle_dominant,706,706,Jacques-François Menou,22.644046094750315,revolutionary_napoleonic
+baseline_conservative,battle_dominant,707,707,Josef Philipp Vukassovich,22.61843790012804,revolutionary_napoleonic
+baseline_conservative,battle_dominant,708,708,Otto von Below,22.53841229193342,world_wars
+baseline_conservative,battle_dominant,709,709,Oleksandr Syrskyi,22.471190781049938,contemporary
+baseline_conservative,battle_dominant,710,710,"Charles, Duke of Brittany",22.36235595390525,medieval
+baseline_conservative,battle_dominant,711,711,Archduke John of Austria,22.195902688860436,revolutionary_napoleonic
+baseline_conservative,battle_dominant,712,712,Suluk,22.195902688860436,medieval
+baseline_conservative,battle_dominant,713,713,Paik Sun-yup,22.163892445582587,cold_war
+baseline_conservative,battle_dominant,714,714,Koos de la Rey,22.093469910371315,long_nineteenth_century
+baseline_conservative,battle_dominant,715,715,Tulayha ibn Khuwaylid,22.02944942381562,medieval
+baseline_conservative,battle_dominant,716,716,Henri Dentz,21.927016645326503,world_wars
+baseline_conservative,battle_dominant,717,717,Friedrich Freiherr von Hotze,21.626120358514722,revolutionary_napoleonic
+baseline_conservative,battle_dominant,718,718,Fu Zuoyi,21.31241997439181,world_wars
+baseline_conservative,battle_dominant,719,719,José Miaja,21.177976952624842,world_wars
+baseline_conservative,battle_dominant,720,720,Charles XIII,21.024327784891167,revolutionary_napoleonic
+baseline_conservative,battle_dominant,721,721,Inaba Yoshimichi,20.93469910371319,early_modern
+baseline_conservative,battle_dominant,722,722,Augustus II the Strong,20.774647887323944,early_modern
+baseline_conservative,battle_dominant,723,723,Wolmar Anton von Schlippenbach,20.723431498079385,early_modern
+baseline_conservative,battle_dominant,724,724,William I of Württemberg,20.627400768245842,revolutionary_napoleonic
+baseline_conservative,battle_dominant,725,725,Józef Zajączek,20.339308578745197,revolutionary_napoleonic
+baseline_conservative,battle_dominant,726,726,Oda Nobutada,20.339308578745197,early_modern
+baseline_conservative,battle_dominant,727,727,James II of England,20.28169014084507,early_modern
+baseline_conservative,battle_dominant,728,728,Friedrich Freiherr Kress von Kressenstein,20.166453265044815,world_wars
+baseline_conservative,battle_dominant,729,729,Aylmer Hunter-Weston,20.108834827144687,world_wars
+baseline_conservative,battle_dominant,730,730,Khan Temir,20.102432778489117,early_modern
+baseline_conservative,battle_dominant,731,731,Heinrich von Bellegarde,20.083226632522408,revolutionary_napoleonic
+baseline_conservative,battle_dominant,732,732,YouTube,19.859154929577464,contemporary
+baseline_conservative,battle_dominant,733,733,Hurshid Pasha,19.628681177976954,revolutionary_napoleonic
+baseline_conservative,battle_dominant,734,734,Johann Peter Beaulieu,19.62227912932138,revolutionary_napoleonic
+baseline_conservative,battle_dominant,735,735,Leonid Govorov,19.417413572343147,world_wars
+baseline_conservative,battle_dominant,736,736,Chūichi Nagumo,19.090909090909093,world_wars
+baseline_conservative,battle_dominant,737,737,Dmitry Golitsyn,19.03329065300896,revolutionary_napoleonic
+baseline_conservative,battle_dominant,738,738,Victor Amadeus II,19.007682458386682,early_modern
+baseline_conservative,battle_dominant,739,739,Anton Lipthay de Kisfalud,18.956466069142124,revolutionary_napoleonic
+baseline_conservative,battle_dominant,740,740,Benjamin Lincoln,18.623559539052497,early_modern
+baseline_conservative,battle_dominant,741,741,Inigo Campioni,18.55313700384123,world_wars
+baseline_conservative,battle_dominant,742,742,"Friedrich Ludwig, Prince of Hohenlohe-Ingelfingen",18.4955185659411,revolutionary_napoleonic
+baseline_conservative,battle_dominant,743,743,"Raymond VI, Count of Toulouse",18.47631241997439,medieval
+baseline_conservative,battle_dominant,744,744,Johann von Thielmann,18.265044814340587,revolutionary_napoleonic
+baseline_conservative,battle_dominant,745,745,Johann Matthias von der Schulenburg,18.0089628681178,early_modern
+baseline_conservative,battle_dominant,746,746,Grzegorz Antoni Ogiński,17.95774647887324,early_modern
+baseline_conservative,battle_dominant,747,747,Zhang Zizhong,17.804097311139564,world_wars
+baseline_conservative,battle_dominant,748,748,Petrus Johannes Liebenberg,17.6696542893726,long_nineteenth_century
+baseline_conservative,battle_dominant,749,749,Roman emperor,17.59282970550576,ancient
+baseline_conservative,battle_dominant,750,750,Nitta Yoshisada,17.22791293213828,medieval
+baseline_conservative,battle_dominant,751,751,Imam Shamil,17.04865556978233,long_nineteenth_century
+baseline_conservative,battle_dominant,752,752,Louis of Nassau,16.862996158770805,early_modern
+baseline_conservative,battle_dominant,753,753,Christiaan de Wet,16.805377720870677,long_nineteenth_century
+baseline_conservative,battle_dominant,754,754,The Guardian,16.626120358514726,contemporary
+baseline_conservative,battle_dominant,755,755,Andries Pretorius,16.094750320102435,long_nineteenth_century
+baseline_conservative,battle_dominant,756,756,Max von Boehn,15.883482714468629,world_wars
+baseline_conservative,battle_dominant,757,757,Gregorio García de la Cuesta,15.787451984635084,revolutionary_napoleonic
+baseline_conservative,battle_dominant,758,758,Stanisław Lanckoroński,15.172855313700383,early_modern
+baseline_conservative,battle_dominant,759,759,Bartolomeo d'Alviano,14.63508322663252,early_modern
+baseline_conservative,battle_dominant,760,760,Inkpaduta,14.462227912932137,long_nineteenth_century
+baseline_conservative,battle_dominant,761,761,Osman Nuri Pasha,14.40460947503201,long_nineteenth_century
+baseline_conservative,battle_dominant,762,762,Wehib Pasha,14.308578745198464,world_wars
+baseline_conservative,battle_dominant,763,763,Alaric I,14.052496798975671,ancient
+baseline_conservative,battle_dominant,764,764,Djemal Pasha,14.052496798975671,world_wars
+baseline_conservative,battle_dominant,765,765,"Charles, Duke of Mayenne",13.943661971830986,early_modern
+baseline_conservative,battle_dominant,766,766,Hōjō Ujimasa,13.725992317541612,early_modern
+baseline_conservative,battle_dominant,767,767,Piet Cronjé,13.725992317541612,long_nineteenth_century
+baseline_conservative,battle_dominant,768,768,Juan Modesto,13.629961587708067,world_wars
+baseline_conservative,battle_dominant,769,769,Maarten Schenck van Nydeggen,10.409731113956468,early_modern
+baseline_conservative,battle_dominant,770,770,Julian Cesarini,10.140845070422536,medieval
+baseline_conservative,battle_dominant,771,771,Zhu,10.140845070422536,world_wars
+baseline_conservative,battle_dominant,772,772,Eduard von Böhm-Ermolli,9.71830985915493,world_wars
+baseline_conservative,battle_dominant,773,773,Franz Sigel,9.71830985915493,long_nineteenth_century
+baseline_conservative,battle_dominant,774,774,Antonio Luna,8.489116517285531,long_nineteenth_century
+baseline_conservative,battle_dominant,775,775,Ashraf Hotak,8.489116517285531,early_modern
+baseline_conservative,battle_dominant,776,776,Charles Albert of Sardinia,8.489116517285531,long_nineteenth_century
+baseline_conservative,battle_dominant,777,777,Franjo Jelačić,8.489116517285531,revolutionary_napoleonic
+baseline_conservative,battle_dominant,778,778,Lautaro,8.489116517285531,early_modern
+baseline_conservative,battle_dominant,779,779,Ruslan Gelayev,8.489116517285531,contemporary
+baseline_conservative,battle_dominant,780,780,Theodoric I,8.489116517285531,ancient
+baseline_conservative,battle_dominant,781,781,Martín Perfecto de Cos,8.104993597951344,long_nineteenth_century
+hierarchical_weighted,battle_dominant,1,1,Alexander Suvorov,91.16947828803501,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,2,2,Ivan Paskevich,88.30615432677288,long_nineteenth_century
+hierarchical_weighted,battle_dominant,3,3,Subutai,87.68228678537959,medieval
+hierarchical_weighted,battle_dominant,4,4,"Sébastien Le Prestre, Marquis of Vauban",87.21274601686973,early_modern
+hierarchical_weighted,battle_dominant,5,5,"Maurice, Prince of Orange",87.11012183692598,early_modern
+hierarchical_weighted,battle_dominant,6,6,Napoleon Bonaparte,87.04389253358326,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,7,8,Louis-Nicolas Davout,85.50062480474851,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,8,9,Jean Lannes,85.12949078412996,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,9,10,Charles XIV John,84.87550765385818,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,10,11,"Henri de La Tour d'Auvergne, Viscount of Turenne",83.84786004373635,early_modern
+hierarchical_weighted,battle_dominant,11,12,Louis-Gabriel Suchet,83.59278350515466,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,12,13,Belisarius,83.41096532333646,medieval
+hierarchical_weighted,battle_dominant,13,14,Douglas MacArthur,83.40378006872852,world_wars
+hierarchical_weighted,battle_dominant,14,16,Mehmed II,82.87878787878789,medieval
+hierarchical_weighted,battle_dominant,15,17,"Alexander Farnese, Duke of Parma",82.56904092471103,early_modern
+hierarchical_weighted,battle_dominant,16,18,Maharaja Ranjit Singh,82.36082474226804,long_nineteenth_century
+hierarchical_weighted,battle_dominant,17,19,Baybars,81.97594501718213,medieval
+hierarchical_weighted,battle_dominant,18,21,Khalid ibn al-Walid,81.81333958138083,medieval
+hierarchical_weighted,battle_dominant,19,22,Alexander the Great,81.58091221493282,ancient
+hierarchical_weighted,battle_dominant,20,23,Ōyama Iwao,81.42236800999687,long_nineteenth_century
+hierarchical_weighted,battle_dominant,21,24,André Masséna,81.41487035301468,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,22,25,Hubert Gough,81.20306154326772,world_wars
+hierarchical_weighted,battle_dominant,23,28,Hannibal,80.77460168697283,ancient
+hierarchical_weighted,battle_dominant,24,29,Genghis Khan,80.66963448922212,medieval
+hierarchical_weighted,battle_dominant,25,30,Hari Singh Nalwa,80.32677288347392,long_nineteenth_century
+hierarchical_weighted,battle_dominant,26,31,Tolui,80.04951577631991,medieval
+hierarchical_weighted,battle_dominant,27,33,Heinz Guderian,79.93830053108404,world_wars
+hierarchical_weighted,battle_dominant,28,34,Date Masamune,79.9100281162137,early_modern
+hierarchical_weighted,battle_dominant,29,35,Katō Kiyomasa,79.68431740081225,early_modern
+hierarchical_weighted,battle_dominant,30,36,Amr ibn al-As,79.65745079662605,medieval
+hierarchical_weighted,battle_dominant,31,37,Takeda Shingen,79.38956576069977,early_modern
+hierarchical_weighted,battle_dominant,32,38,Peng Dehuai,79.26382380506091,cold_war
+hierarchical_weighted,battle_dominant,33,39,Stanisław Żółkiewski,79.02811621368322,early_modern
+hierarchical_weighted,battle_dominant,34,40,"François-Henri de Montmorency, duc de Luxembourg",78.98641049671977,early_modern
+hierarchical_weighted,battle_dominant,35,41,Philip the Good,78.7986566697907,medieval
+hierarchical_weighted,battle_dominant,36,42,Aurangzeb,78.71337082161824,early_modern
+hierarchical_weighted,battle_dominant,37,44,Maeda Toshiie,78.27975632614809,early_modern
+hierarchical_weighted,battle_dominant,38,45,Mikhail Kutuzov,78.19634489222119,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,39,46,Ögedei Khan,78.10402999062794,medieval
+hierarchical_weighted,battle_dominant,40,48,Walter Krueger,77.85926273039676,world_wars
+hierarchical_weighted,battle_dominant,41,50,Abu Ubayda ibn al-Jarrah,77.65588878475477,medieval
+hierarchical_weighted,battle_dominant,42,52,Mahmud Pasha Angelović,77.52233676975945,medieval
+hierarchical_weighted,battle_dominant,43,53,Tokugawa Ieyasu,77.32427366447985,early_modern
+hierarchical_weighted,battle_dominant,44,54,Sayenqueraghta,77.24789128397377,early_modern
+hierarchical_weighted,battle_dominant,45,55,Oliver Cromwell,77.09871915026555,early_modern
+hierarchical_weighted,battle_dominant,46,56,Nozu Michitsura,77.072633552015,long_nineteenth_century
+hierarchical_weighted,battle_dominant,47,57,Saladin,76.98531708840987,medieval
+hierarchical_weighted,battle_dominant,48,58,Jan Zamoyski,76.86488597313341,early_modern
+hierarchical_weighted,battle_dominant,49,61,Charles XII of Sweden,76.11730709153389,early_modern
+hierarchical_weighted,battle_dominant,50,62,Babur,76.08466104342394,early_modern
+hierarchical_weighted,battle_dominant,51,64,Peter Wittgenstein,75.8034989065917,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,52,65,Frederick the Great,75.70399875039051,early_modern
+hierarchical_weighted,battle_dominant,53,66,Francis Vere,75.58731646360512,early_modern
+hierarchical_weighted,battle_dominant,54,68,Fedor von Bock,75.47953764448609,world_wars
+hierarchical_weighted,battle_dominant,55,69,Charles-Pierre Augereau,75.39831302717901,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,56,70,Lennart Torstensson,75.33348953452047,early_modern
+hierarchical_weighted,battle_dominant,57,71,Jean Victor Marie Moreau,75.26319900031241,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,58,74,John III Sobieski,75.0838800374883,early_modern
+hierarchical_weighted,battle_dominant,59,76,Jassa Singh Ahluwalia,74.93720712277414,early_modern
+hierarchical_weighted,battle_dominant,60,77,Ahmad Shah Durrani,74.91799437675726,early_modern
+hierarchical_weighted,battle_dominant,61,78,Jan Karol Chodkiewicz,74.83005310840363,early_modern
+hierarchical_weighted,battle_dominant,62,79,Georgy Zhukov,74.62058731646361,world_wars
+hierarchical_weighted,battle_dominant,63,81,Stilicho,74.32739768822245,ancient
+hierarchical_weighted,battle_dominant,64,82,Robert Clive,74.27350827866293,early_modern
+hierarchical_weighted,battle_dominant,65,84,Publius Cornelius Scipio,74.08794126835365,ancient
+hierarchical_weighted,battle_dominant,66,87,Ernst Gideon von Laudon,73.77179006560449,early_modern
+hierarchical_weighted,battle_dominant,67,88,Ferdinand Foch,73.75710715401438,world_wars
+hierarchical_weighted,battle_dominant,68,91,Honda Tadakatsu,73.42596063730086,early_modern
+hierarchical_weighted,battle_dominant,69,92,Bertrand du Guesclin,73.38378631677601,medieval
+hierarchical_weighted,battle_dominant,70,93,Carl Gustaf Wrangel,73.36691658856608,early_modern
+hierarchical_weighted,battle_dominant,71,95,Rama Raya,73.1947828803499,early_modern
+hierarchical_weighted,battle_dominant,72,96,Maurice de Saxe,73.15916900968449,early_modern
+hierarchical_weighted,battle_dominant,73,97,Charles Mangin,73.1323024054983,world_wars
+hierarchical_weighted,battle_dominant,74,98,John Gorham,73.09559512652298,early_modern
+hierarchical_weighted,battle_dominant,75,99,Zubayr ibn al-Awwam,73.05139019056547,medieval
+hierarchical_weighted,battle_dominant,76,100,Mustafa Kemal Atatürk,72.88597313339581,world_wars
+hierarchical_weighted,battle_dominant,77,101,Cardinal-Infante Ferdinand of Austria,72.78272414870355,early_modern
+hierarchical_weighted,battle_dominant,78,102,Alauddin Khalji,72.7394564198688,medieval
+hierarchical_weighted,battle_dominant,79,103,Matvei Platov,72.53545766947829,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,80,104,Abu Bakr,72.4940643548891,medieval
+hierarchical_weighted,battle_dominant,81,105,Hans Karl von Diebitsch,72.31412058731647,long_nineteenth_century
+hierarchical_weighted,battle_dominant,82,106,Stanisław Koniecpolski,72.25929397063419,early_modern
+hierarchical_weighted,battle_dominant,83,107,Prince Friedrich Karl of Prussia,72.14917213370823,long_nineteenth_century
+hierarchical_weighted,battle_dominant,84,108,Ambrogio Spinola,71.88456732271165,early_modern
+hierarchical_weighted,battle_dominant,85,111,"Jean-Baptiste Drouet, Comte d'Erlon",71.68181818181819,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,86,114,Konishi Yukinaga,71.42689784442362,early_modern
+hierarchical_weighted,battle_dominant,87,115,Wolfram von Richthofen,71.30412371134021,world_wars
+hierarchical_weighted,battle_dominant,88,116,Nader Shah,71.24195563886286,early_modern
+hierarchical_weighted,battle_dominant,89,117,"Édouard Mortier, Duke of Treviso",71.14542330521714,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,90,118,Murad II,71.05826304279913,medieval
+hierarchical_weighted,battle_dominant,91,119,Jebe,71.0506091846298,medieval
+hierarchical_weighted,battle_dominant,92,120,Jeremi Wiśniowiecki,70.95360824742268,early_modern
+hierarchical_weighted,battle_dominant,93,122,Ubadah ibn al-Samit,70.88847235238988,medieval
+hierarchical_weighted,battle_dominant,94,123,Claude-Victor Perrin,70.79209621993127,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,95,124,Henry V of England,70.79084661043426,medieval
+hierarchical_weighted,battle_dominant,96,125,Skanderbeg,70.67510153077164,medieval
+hierarchical_weighted,battle_dominant,97,126,Guru Gobind Singh,70.62621055920026,early_modern
+hierarchical_weighted,battle_dominant,98,127,Joseph Souham,70.47938144329896,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,99,128,Aleksey Yermolov,70.45282724148706,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,100,129,Nikolay Kamensky,70.39019056544831,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,101,130,Erich Hoepner,70.38659793814432,world_wars
+hierarchical_weighted,battle_dominant,102,132,Suleiman the Magnificent,70.29646985317089,early_modern
+hierarchical_weighted,battle_dominant,103,134,Henri Gouraud,70.11636988441111,world_wars
+hierarchical_weighted,battle_dominant,104,135,Gustavus Adolphus,70.10840362386755,early_modern
+hierarchical_weighted,battle_dominant,105,136,Mahmud of Ghazni,69.98031865042175,medieval
+hierarchical_weighted,battle_dominant,106,138,Jerzy Sebastian Lubomirski,69.8653545766948,early_modern
+hierarchical_weighted,battle_dominant,107,139,Matthew Ridgway,69.86519837550766,cold_war
+hierarchical_weighted,battle_dominant,108,142,Antigonus II Gonatas,69.36879100281163,ancient
+hierarchical_weighted,battle_dominant,109,143,Basil II,69.34598562949078,medieval
+hierarchical_weighted,battle_dominant,110,144,Kuroda Yoshitaka,69.30318650421745,early_modern
+hierarchical_weighted,battle_dominant,111,146,Ivan Konev,69.18869103405186,world_wars
+hierarchical_weighted,battle_dominant,112,147,"Louis, Grand Condé",69.12730396751014,early_modern
+hierarchical_weighted,battle_dominant,113,148,Robert L. Eichelberger,69.07029053420807,world_wars
+hierarchical_weighted,battle_dominant,114,149,"Nizam-ul-Mulk, Asaf Jah I",69.02452358637927,early_modern
+hierarchical_weighted,battle_dominant,115,150,Niels Juel,68.98437988128711,early_modern
+hierarchical_weighted,battle_dominant,116,151,Carlos Coloma,68.68056857232115,early_modern
+hierarchical_weighted,battle_dominant,117,152,Holland M. Smith,68.63136519837552,world_wars
+hierarchical_weighted,battle_dominant,118,153,Prince Rupert of the Rhine,68.49172133708217,early_modern
+hierarchical_weighted,battle_dominant,119,154,Qutb ud-Din Aibak,68.47157138394253,medieval
+hierarchical_weighted,battle_dominant,120,155,Philips van Almonde,68.27210246797877,early_modern
+hierarchical_weighted,battle_dominant,121,156,Mizuno Katsushige,68.25960637300844,early_modern
+hierarchical_weighted,battle_dominant,122,157,Michel Ney,68.1619806310528,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,123,158,Laurent de Gouvion Saint-Cyr,68.09856294907841,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,124,160,François Joseph Lefebvre,67.99015932521087,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,125,163,"Louis Joseph, Duke of Vendôme",67.86925960637302,early_modern
+hierarchical_weighted,battle_dominant,126,164,Dragut,67.86098094345519,early_modern
+hierarchical_weighted,battle_dominant,127,167,Oscar Griswold,67.60137457044674,world_wars
+hierarchical_weighted,battle_dominant,128,168,Mikołaj Potocki,67.44470477975634,early_modern
+hierarchical_weighted,battle_dominant,129,169,Alexios I Komnenos,67.42580443611372,medieval
+hierarchical_weighted,battle_dominant,130,171,"Frederick Henry, Prince of Orange",67.36129334582942,early_modern
+hierarchical_weighted,battle_dominant,131,174,Charles X Gustav,67.20681037175883,early_modern
+hierarchical_weighted,battle_dominant,132,175,Thomas C. Kinkaid,67.12714776632302,world_wars
+hierarchical_weighted,battle_dominant,133,176,Masinissa,67.06232427366449,ancient
+hierarchical_weighted,battle_dominant,134,177,Karađorđe Petrović,67.02014995313965,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,135,178,Sidney Smith,67.00499843798814,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,136,179,Simon Grundel-Helmfelt,66.98109965635739,early_modern
+hierarchical_weighted,battle_dominant,137,180,Bairam Khan,66.80146829115901,early_modern
+hierarchical_weighted,battle_dominant,138,181,Craterus,66.63808184942205,ancient
+hierarchical_weighted,battle_dominant,139,182,Yakov Kulnev,66.6093408309903,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,140,183,Nathan Bedford Forrest,66.48781630740393,long_nineteenth_century
+hierarchical_weighted,battle_dominant,141,184,Friedrich Wilhelm Freiherr von Bülow,66.36472977194627,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,142,186,Peter the Great,66.19431427678852,early_modern
+hierarchical_weighted,battle_dominant,143,187,Smedley Butler,66.17666354264293,long_nineteenth_century
+hierarchical_weighted,battle_dominant,144,188,Juan Yagüe,66.09778194314276,world_wars
+hierarchical_weighted,battle_dominant,145,189,Sarath Fonseka,65.92924086223054,contemporary
+hierarchical_weighted,battle_dominant,146,190,Arthur Currie,65.91908778506718,world_wars
+hierarchical_weighted,battle_dominant,147,191,Joachim Murat,65.89190877850673,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,148,192,Jean-Louis Raduit de Souches,65.84426741643236,early_modern
+hierarchical_weighted,battle_dominant,149,193,Guillaume Brune,65.80365510777882,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,150,195,Sakakibara Yasumasa,65.74304904717278,early_modern
+hierarchical_weighted,battle_dominant,151,196,"Emmanuel de Grouchy, marquis de Grouchy",65.71227741330833,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,152,198,Shimazu Yoshihiro,65.68088097469541,early_modern
+hierarchical_weighted,battle_dominant,153,199,Alexander Vandegrift,65.65745079662605,world_wars
+hierarchical_weighted,battle_dominant,154,200,Constantine I of Greece,65.52717900656046,long_nineteenth_century
+hierarchical_weighted,battle_dominant,155,201,José Enrique Varela,65.41221493283349,world_wars
+hierarchical_weighted,battle_dominant,156,202,"Archduke Charles, Duke of Teschen",65.39565760699782,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,157,203,Uesugi Kagekatsu,65.39331458919087,early_modern
+hierarchical_weighted,battle_dominant,158,204,Jean-Baptiste Bessières,65.30615432677288,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,159,205,Fyodor Ushakov,65.2097781943143,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,160,206,Cornelis Tromp,65.18681661980631,early_modern
+hierarchical_weighted,battle_dominant,161,207,"Louis William, Margrave of Baden-Baden",65.14620431115277,early_modern
+hierarchical_weighted,battle_dominant,162,208,"Charles William Ferdinand, Duke of Brunswick",65.12777257107155,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,163,209,Gordon Bremer,65.06935332708528,long_nineteenth_century
+hierarchical_weighted,battle_dominant,164,210,Al-Qa'qa' ibn Amr al-Tamimi,65.03124023742579,medieval
+hierarchical_weighted,battle_dominant,165,211,Carl Gustav Rehnskiöld,65.014526710403,early_modern
+hierarchical_weighted,battle_dominant,166,212,Jugurtha,65.01030927835052,ancient
+hierarchical_weighted,battle_dominant,167,213,Ishikawa Kazumasa,64.94439237738207,early_modern
+hierarchical_weighted,battle_dominant,168,214,John J. Pershing,64.7788191190253,world_wars
+hierarchical_weighted,battle_dominant,169,216,Auguste de Marmont,64.55342080599813,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,170,217,Shapur I,64.51405810684162,ancient
+hierarchical_weighted,battle_dominant,171,218,Asad Khan,64.46782255545142,early_modern
+hierarchical_weighted,battle_dominant,172,220,Prince Eugene of Savoy,64.37316463605124,early_modern
+hierarchical_weighted,battle_dominant,173,221,Ralph Abercromby,64.04076850984067,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,174,222,Nebuchadnezzar II,64.02124336144955,ancient
+hierarchical_weighted,battle_dominant,175,223,John Monash,63.979693845673225,world_wars
+hierarchical_weighted,battle_dominant,176,224,Narses,63.96251171508904,medieval
+hierarchical_weighted,battle_dominant,177,225,Géraud Duroc,63.77428928459856,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,178,226,Agha Petros,63.77100905966887,world_wars
+hierarchical_weighted,battle_dominant,179,227,Karl Philipp von Wrede,63.652764761012186,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,180,228,Sterling Price,63.649484536082475,long_nineteenth_century
+hierarchical_weighted,battle_dominant,181,229,Abdulaziz Ibn Saud,63.639331458919095,long_nineteenth_century
+hierarchical_weighted,battle_dominant,182,230,Gustav III,63.62089971883786,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,183,231,Alasdair Mac Colla,63.59356451109028,early_modern
+hierarchical_weighted,battle_dominant,184,232,Abbas the Great,63.57435176507341,early_modern
+hierarchical_weighted,battle_dominant,185,233,Gedik Ahmed Pasha,63.5673227116526,medieval
+hierarchical_weighted,battle_dominant,186,234,Malhar Rao Holkar,63.49094033114652,early_modern
+hierarchical_weighted,battle_dominant,187,235,Taira no Tomomori,63.44126835363948,medieval
+hierarchical_weighted,battle_dominant,188,237,Eyre Coote,63.12464854732896,early_modern
+hierarchical_weighted,battle_dominant,189,238,Sancho d'Avila,63.10199937519525,early_modern
+hierarchical_weighted,battle_dominant,190,240,Batu Khan,62.986722899094026,medieval
+hierarchical_weighted,battle_dominant,191,242,P. G. T. Beauregard,62.898781630740395,long_nineteenth_century
+hierarchical_weighted,battle_dominant,192,243,George Wootten,62.85332708528585,world_wars
+hierarchical_weighted,battle_dominant,193,245,George Crook,62.79459543892534,long_nineteenth_century
+hierarchical_weighted,battle_dominant,194,246,Julian,62.715245235863804,ancient
+hierarchical_weighted,battle_dominant,195,247,Antipater,62.61012183692596,ancient
+hierarchical_weighted,battle_dominant,196,248,Quintus Fabius Maximus Rullianus,62.58809746954077,ancient
+hierarchical_weighted,battle_dominant,197,249,Ulrich Friedrich Woldemar von Löwendal,62.55716963448923,early_modern
+hierarchical_weighted,battle_dominant,198,250,Johan Banér,62.54904717275851,early_modern
+hierarchical_weighted,battle_dominant,199,251,Ii Naomasa,62.53170884098719,early_modern
+hierarchical_weighted,battle_dominant,200,252,Pavle Jurišić Šturm,62.52702280537333,world_wars
+hierarchical_weighted,battle_dominant,201,253,Fernando d'Ávalos,62.51405810684161,early_modern
+hierarchical_weighted,battle_dominant,202,254,John Norris,62.47485160887222,early_modern
+hierarchical_weighted,battle_dominant,203,256,Stefan Czarniecki,62.320368634801625,early_modern
+hierarchical_weighted,battle_dominant,204,257,Constantine the Great,62.250234301780694,ancient
+hierarchical_weighted,battle_dominant,205,258,Henry Maitland Wilson,62.18181818181819,world_wars
+hierarchical_weighted,battle_dominant,206,259,Oda Nobunaga,62.16635426429242,early_modern
+hierarchical_weighted,battle_dominant,207,260,Jai Singh Kanhaiya,62.04998437988129,early_modern
+hierarchical_weighted,battle_dominant,208,261,Mikhail Miloradovich,61.97985004686035,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,209,262,Antonio Duvergé,61.762417994376754,long_nineteenth_century
+hierarchical_weighted,battle_dominant,210,264,Nabeshima Naoshige,61.71571383942518,early_modern
+hierarchical_weighted,battle_dominant,211,265,Louis-François de Boufflers,61.69681349578257,early_modern
+hierarchical_weighted,battle_dominant,212,266,Sakai Tadatsugu,61.591377694470474,early_modern
+hierarchical_weighted,battle_dominant,213,270,Eugène de Beauharnais,61.42002499218993,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,214,271,Andrew Jackson,61.40752889721962,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,215,272,Louis-Alexandre Berthier,61.4009684473602,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,216,273,Émile Fayolle,61.39784442361763,world_wars
+hierarchical_weighted,battle_dominant,217,279,Radko Dimitriev,61.0160887222743,long_nineteenth_century
+hierarchical_weighted,battle_dominant,218,280,Shurahbil ibn Hasana,61.00328022492971,medieval
+hierarchical_weighted,battle_dominant,219,281,Jean-de-Dieu Soult,60.99094033114652,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,220,283,Gerd von Rundstedt,60.93049047172759,world_wars
+hierarchical_weighted,battle_dominant,221,285,Toyotomi Hideyoshi,60.57591377694471,early_modern
+hierarchical_weighted,battle_dominant,222,286,Joseph Wheeler,60.573102155576386,long_nineteenth_century
+hierarchical_weighted,battle_dominant,223,287,Murari Rao,60.53264604810997,early_modern
+hierarchical_weighted,battle_dominant,224,288,Paul von Lettow-Vorbeck,60.49625117150891,world_wars
+hierarchical_weighted,battle_dominant,225,289,Ali İhsan Sâbis,60.462980318650416,world_wars
+hierarchical_weighted,battle_dominant,226,290,Attila the Hun,60.457513277100915,ancient
+hierarchical_weighted,battle_dominant,227,293,Kâzım Karabekir,60.34192439862543,world_wars
+hierarchical_weighted,battle_dominant,228,294,Pedro de Valdivia,60.33676975945017,early_modern
+hierarchical_weighted,battle_dominant,229,295,Louis XII,60.16073102155577,medieval
+hierarchical_weighted,battle_dominant,230,296,"Henry de Nassau, Lord Overkirk",60.15838800374884,early_modern
+hierarchical_weighted,battle_dominant,231,298,"Johann Tserclaes, Count of Tilly",60.09621993127147,early_modern
+hierarchical_weighted,battle_dominant,232,299,Ismail I,59.98953452046235,early_modern
+hierarchical_weighted,battle_dominant,233,300,Wilhelm List,59.97407060293658,world_wars
+hierarchical_weighted,battle_dominant,234,301,Yasuji Okamura,59.96048109965637,world_wars
+hierarchical_weighted,battle_dominant,235,302,Ptolemy I Soter,59.948297407060295,ancient
+hierarchical_weighted,battle_dominant,236,303,Theodoros Kolokotronis,59.909247110278045,long_nineteenth_century
+hierarchical_weighted,battle_dominant,237,305,Władysław Sikorski,59.83770696657294,world_wars
+hierarchical_weighted,battle_dominant,238,307,Al-Muthanna ibn Haritha,59.70759137769447,medieval
+hierarchical_weighted,battle_dominant,239,309,Jacques François Dugommier,59.63714464229928,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,240,311,Umar ibn al-Khattab,59.510777881911906,medieval
+hierarchical_weighted,battle_dominant,241,312,Stringer Lawrence,59.45220243673851,early_modern
+hierarchical_weighted,battle_dominant,242,313,John Burgoyne,59.41127772571072,early_modern
+hierarchical_weighted,battle_dominant,243,314,Gonzalo Fernández de Córdoba,59.35895032802249,early_modern
+hierarchical_weighted,battle_dominant,244,315,Hayreddin Barbarossa,59.30162449234615,early_modern
+hierarchical_weighted,battle_dominant,245,316,Philippe Pétain,59.30146829115902,world_wars
+hierarchical_weighted,battle_dominant,246,317,Akbar,59.226647922524215,early_modern
+hierarchical_weighted,battle_dominant,247,318,Étienne Maurice Gérard,59.16869728209935,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,248,320,Richmond K. Turner,59.10153077163387,world_wars
+hierarchical_weighted,battle_dominant,249,321,Tōdō Takatora,59.06419868791003,early_modern
+hierarchical_weighted,battle_dominant,250,322,Władysław Anders,59.04623555139019,world_wars
+hierarchical_weighted,battle_dominant,251,323,Shavendra Silva,59.00265542018119,contemporary
+hierarchical_weighted,battle_dominant,252,324,"Friedrich Adolf, Count von Kalckreuth",59.00234301780693,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,253,325,Selim I,58.97282099343955,early_modern
+hierarchical_weighted,battle_dominant,254,326,Gaius Marius,58.96532333645736,ancient
+hierarchical_weighted,battle_dominant,255,327,Cornplanter,58.907841299593876,early_modern
+hierarchical_weighted,battle_dominant,256,328,Nikolai Yudenich,58.7970946579194,world_wars
+hierarchical_weighted,battle_dominant,257,329,Xue Yue,58.749921899406445,world_wars
+hierarchical_weighted,battle_dominant,258,330,William II of the Netherlands,58.68322399250235,long_nineteenth_century
+hierarchical_weighted,battle_dominant,259,332,Ikeda Tsuneoki,58.499062792877226,early_modern
+hierarchical_weighted,battle_dominant,260,333,Manuel Belgrano,58.48859731333958,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,261,334,Oku Yasukata,58.486254295532646,long_nineteenth_century
+hierarchical_weighted,battle_dominant,262,335,Seishirō Itagaki,58.46485473289596,world_wars
+hierarchical_weighted,battle_dominant,263,336,Chagatai Khan,58.354108091221484,medieval
+hierarchical_weighted,battle_dominant,264,337,Allen H. Turnage,58.29240862230553,world_wars
+hierarchical_weighted,battle_dominant,265,338,Tewodros II,58.277413308341146,long_nineteenth_century
+hierarchical_weighted,battle_dominant,266,339,Heraclius,58.25101530771634,medieval
+hierarchical_weighted,battle_dominant,267,340,Gebhard Leberecht von Blücher,58.10106216807248,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,268,341,Francisco Pizarro,58.08622305529522,early_modern
+hierarchical_weighted,battle_dominant,269,342,"François, Duke of Guise",58.08169322086849,early_modern
+hierarchical_weighted,battle_dominant,270,343,Satake Yoshinobu,58.078569197125894,early_modern
+hierarchical_weighted,battle_dominant,271,344,Hori Hidemasa,58.074976569821935,early_modern
+hierarchical_weighted,battle_dominant,272,346,Humayun,58.039050296782264,early_modern
+hierarchical_weighted,battle_dominant,273,347,Muammar Gaddafi,57.97625741955638,contemporary
+hierarchical_weighted,battle_dominant,274,348,Takeda Katsuyori,57.96251171508904,early_modern
+hierarchical_weighted,battle_dominant,275,351,Roy Geiger,57.81146516713526,world_wars
+hierarchical_weighted,battle_dominant,276,352,William I of the Netherlands,57.81052796001249,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,277,353,Johann Maria Philipp Frimont,57.73164636051234,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,278,354,Joan of Arc,57.663074039362705,medieval
+hierarchical_weighted,battle_dominant,279,355,Flavius Aetius,57.6447985004686,ancient
+hierarchical_weighted,battle_dominant,280,356,Charat Singh,57.63402061855671,early_modern
+hierarchical_weighted,battle_dominant,281,357,Charles VII of France,57.53045923149016,medieval
+hierarchical_weighted,battle_dominant,282,358,Charles I of England,57.50281162136832,early_modern
+hierarchical_weighted,battle_dominant,283,359,John II Komnenos,57.46594814120588,medieval
+hierarchical_weighted,battle_dominant,284,361,"Charles Louis Auguste Fouquet, duc de Belle-Isle",57.336457357075915,early_modern
+hierarchical_weighted,battle_dominant,285,362,Fidel Dávila Arrondo,57.29975007810059,world_wars
+hierarchical_weighted,battle_dominant,286,364,Witte de With,57.24992189940644,early_modern
+hierarchical_weighted,battle_dominant,287,368,Rudolf Veiel,57.09059668853484,world_wars
+hierarchical_weighted,battle_dominant,288,370,Jubal Early,57.0220243673852,long_nineteenth_century
+hierarchical_weighted,battle_dominant,289,372,Burkhard Christoph von Münnich,56.92799125273352,early_modern
+hierarchical_weighted,battle_dominant,290,373,Kōriki Kiyonaga,56.85941893158388,early_modern
+hierarchical_weighted,battle_dominant,291,375,Toyotomi Hidenaga,56.7755388940956,early_modern
+hierarchical_weighted,battle_dominant,292,376,Shapur II,56.75866916588566,ancient
+hierarchical_weighted,battle_dominant,293,377,Krum,56.72961574507966,medieval
+hierarchical_weighted,battle_dominant,294,378,Bohemond I of Antioch,56.707591377694484,medieval
+hierarchical_weighted,battle_dominant,295,380,Louis XV,56.33630115588878,early_modern
+hierarchical_weighted,battle_dominant,296,381,Jean Reynier,56.26975945017182,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,297,382,Stefan Lazarević,56.252889721961886,medieval
+hierarchical_weighted,battle_dominant,298,383,Helmuth von Moltke the Elder,56.13495782567948,long_nineteenth_century
+hierarchical_weighted,battle_dominant,299,384,Adolf Strauss,56.03920649796938,world_wars
+hierarchical_weighted,battle_dominant,300,387,Itagaki Nobukata,56.01265229615745,early_modern
+hierarchical_weighted,battle_dominant,301,388,Hadj Ag Gamou,55.97344579818806,contemporary
+hierarchical_weighted,battle_dominant,302,389,Pyotr Bagration,55.96938456732272,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,303,390,Harald Hardrada,55.85051546391753,medieval
+hierarchical_weighted,battle_dominant,304,391,Raymond A. Spruance,55.82536707278975,world_wars
+hierarchical_weighted,battle_dominant,305,394,Martin,55.51593252108716,medieval
+hierarchical_weighted,battle_dominant,306,395,Dominique Vandamme,55.485473289596996,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,307,397,Honda Shigetsugu,55.43017806935333,early_modern
+hierarchical_weighted,battle_dominant,308,398,Henri de la Rochejaquelein,55.38519212746017,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,309,399,Raimondo Montecuccoli,55.37316463605123,early_modern
+hierarchical_weighted,battle_dominant,310,400,Jan Žižka,55.336457357075915,medieval
+hierarchical_weighted,battle_dominant,311,401,Nikolai Ruzsky,55.32349265854421,world_wars
+hierarchical_weighted,battle_dominant,312,402,Constantine V,55.30271790065605,medieval
+hierarchical_weighted,battle_dominant,313,404,Karl Wilhelm von Toll,55.21508903467667,long_nineteenth_century
+hierarchical_weighted,battle_dominant,314,405,Bhai Daya Singh,55.19884411121524,early_modern
+hierarchical_weighted,battle_dominant,315,406,Kaloyan of Bulgaria,55.09887535145267,medieval
+hierarchical_weighted,battle_dominant,316,407,Fevzi Çakmak,55.06169946891597,world_wars
+hierarchical_weighted,battle_dominant,317,409,Harry Chauvel,55.02014995313965,world_wars
+hierarchical_weighted,battle_dominant,318,411,Gustav Horn,54.89268978444236,early_modern
+hierarchical_weighted,battle_dominant,319,412,"Frederick III, German Emperor",54.87535145267104,long_nineteenth_century
+hierarchical_weighted,battle_dominant,320,414,Jean-Mathieu-Philibert Sérurier,54.80209309590752,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,321,415,Gabriel Jean Joseph Molitor,54.76850984067479,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,322,416,Xu Huang,54.71321462043113,ancient
+hierarchical_weighted,battle_dominant,323,417,Yazid ibn Abi Sufyan,54.67713214620431,medieval
+hierarchical_weighted,battle_dominant,324,418,Manuel I Komnenos,54.62027491408935,medieval
+hierarchical_weighted,battle_dominant,325,419,Mu'awiya ibn Abi Sufyan,54.61636988441112,medieval
+hierarchical_weighted,battle_dominant,326,420,"Henry of Grosmont, Duke of Lancaster",54.46157450796626,medieval
+hierarchical_weighted,battle_dominant,327,421,Köprülüzade Fazıl Ahmed Pasha,54.37644486098094,early_modern
+hierarchical_weighted,battle_dominant,328,422,Tughril I,54.33505154639175,medieval
+hierarchical_weighted,battle_dominant,329,425,Adam Ludwig Lewenhaupt,54.230396751015306,early_modern
+hierarchical_weighted,battle_dominant,330,426,Hattori Hanzō,54.208528584817245,early_modern
+hierarchical_weighted,battle_dominant,331,427,Paul Grenier,54.19853170884099,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,332,428,George Washington,54.18994064354889,early_modern
+hierarchical_weighted,battle_dominant,333,429,Joseph Radetzky von Radetz,54.04451733833177,long_nineteenth_century
+hierarchical_weighted,battle_dominant,334,430,Maximilian II Emanuel,54.0398313027179,early_modern
+hierarchical_weighted,battle_dominant,335,432,Jacques Lauriston,53.97813183380194,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,336,433,Stephen the Great,53.9348641049672,medieval
+hierarchical_weighted,battle_dominant,337,434,Jean-Baptiste Kléber,53.93095907528897,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,338,435,José María Morelos,53.91799437675726,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,339,436,Matthias Corvinus,53.89643861293346,medieval
+hierarchical_weighted,battle_dominant,340,438,Stanisław Rewera Potocki,53.84739144017495,early_modern
+hierarchical_weighted,battle_dominant,341,439,Aliagha Shikhlinski,53.844579818806615,long_nineteenth_century
+hierarchical_weighted,battle_dominant,342,440,Philippe de La Mothe-Houdancourt,53.81693220868479,early_modern
+hierarchical_weighted,battle_dominant,343,441,Władysław IV Vasa,53.791315213995624,early_modern
+hierarchical_weighted,battle_dominant,344,445,"Charles V, Duke of Lorraine",53.72961574507967,early_modern
+hierarchical_weighted,battle_dominant,345,446,Baghel Singh,53.70759137769448,early_modern
+hierarchical_weighted,battle_dominant,346,447,Charles Martel,53.66916588566073,medieval
+hierarchical_weighted,battle_dominant,347,448,Pablo Morillo,53.61980631052797,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,348,450,Mikhail Skobelev,53.51280849734459,long_nineteenth_century
+hierarchical_weighted,battle_dominant,349,453,Domenico Pino,53.358950328022495,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,350,454,Stonewall Jackson,53.28537956888473,long_nineteenth_century
+hierarchical_weighted,battle_dominant,351,455,John,53.28537956888473,medieval
+hierarchical_weighted,battle_dominant,352,456,William III of England,53.17478912839737,early_modern
+hierarchical_weighted,battle_dominant,353,457,Charles de Lambert,53.16588566073102,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,354,458,Vasily Chuikov,53.16010621680726,world_wars
+hierarchical_weighted,battle_dominant,355,459,Hermann Hoth,53.15542018119338,world_wars
+hierarchical_weighted,battle_dominant,356,460,Matthew C. Perry,53.14979693845673,long_nineteenth_century
+hierarchical_weighted,battle_dominant,357,461,Michael Jones,53.067166510465476,early_modern
+hierarchical_weighted,battle_dominant,358,462,Aurelian,53.058887847547645,ancient
+hierarchical_weighted,battle_dominant,359,463,"Arthur III, Duke of Brittany",53.05873164636052,medieval
+hierarchical_weighted,battle_dominant,360,465,Banastre Tarleton,52.941736957200874,early_modern
+hierarchical_weighted,battle_dominant,361,466,Faisal bin Hussein,52.83161512027491,world_wars
+hierarchical_weighted,battle_dominant,362,468,Sō Yoshitoshi,52.751171508903475,early_modern
+hierarchical_weighted,battle_dominant,363,470,Niwa Nagahide,52.71071540143705,early_modern
+hierarchical_weighted,battle_dominant,364,472,Horace François Bastien Sébastiani de La Porta,52.59106529209622,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,365,473,Taira no Shigehira,52.49000312402373,medieval
+hierarchical_weighted,battle_dominant,366,476,Louis Desaix,52.37972508591066,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,367,477,Henry II of Castile,52.24476726023117,medieval
+hierarchical_weighted,battle_dominant,368,479,Minamoto no Yoshinaka,52.05654482974071,medieval
+hierarchical_weighted,battle_dominant,369,480,Józef Poniatowski,52.034832864729765,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,370,483,Alexander Danilovich Menshikov,51.835051546391746,early_modern
+hierarchical_weighted,battle_dominant,371,484,Prokop the Great,51.82583567635115,medieval
+hierarchical_weighted,battle_dominant,372,487,Jassa Singh Ramgarhia,51.70524835988754,early_modern
+hierarchical_weighted,battle_dominant,373,488,Kuroki Tamemoto,51.616526085598245,long_nineteenth_century
+hierarchical_weighted,battle_dominant,374,489,Jean-Baptiste Jourdan,51.60231177756951,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,375,490,Cristóbal de Mondragón,51.570290534208056,early_modern
+hierarchical_weighted,battle_dominant,376,491,Evert Horn,51.569821930646675,early_modern
+hierarchical_weighted,battle_dominant,377,492,Johan August Sandels,51.48125585754452,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,378,494,Basil Aubrey Coad,51.408622305529526,cold_war
+hierarchical_weighted,battle_dominant,379,495,Maarten Tromp,51.292564823492654,early_modern
+hierarchical_weighted,battle_dominant,380,496,Antonio Ricardos,51.27585129646985,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,381,497,Kuroda Nagamasa,51.227428928459865,early_modern
+hierarchical_weighted,battle_dominant,382,498,Gonzalo Fernández de Córdoba,51.208684786004376,early_modern
+hierarchical_weighted,battle_dominant,383,499,Tipu Sultan,51.1679162761637,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,384,500,Ratko Mladić,51.12824117463293,contemporary
+hierarchical_weighted,battle_dominant,385,501,Francis Drake,51.06216807247735,early_modern
+hierarchical_weighted,battle_dominant,386,502,Boris Sheremetev,51.049203373945645,early_modern
+hierarchical_weighted,battle_dominant,387,503,John Hunyadi,51.022961574507974,medieval
+hierarchical_weighted,battle_dominant,388,504,Benedict Arnold,50.96079350203062,early_modern
+hierarchical_weighted,battle_dominant,389,505,Prince Josias of Saxe-Coburg-Saalfeld,50.95673227116526,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,390,506,Velupillai Prabhakaran,50.862386754139344,contemporary
+hierarchical_weighted,battle_dominant,391,508,Gustaf Otto Stenbock,50.77366447985005,early_modern
+hierarchical_weighted,battle_dominant,392,509,Prospero Colonna,50.736176194939084,early_modern
+hierarchical_weighted,battle_dominant,393,510,Arvid Wittenberg,50.65995001562012,early_modern
+hierarchical_weighted,battle_dominant,394,512,Arthur MacArthur Jr.,50.609497032177444,long_nineteenth_century
+hierarchical_weighted,battle_dominant,395,513,Carl Johan Adlercreutz,50.60668541080911,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,396,514,Fukushima Masanori,50.54029990627929,early_modern
+hierarchical_weighted,battle_dominant,397,515,Takeo Takagi,50.53248984692284,world_wars
+hierarchical_weighted,battle_dominant,398,516,John II Casimir Vasa,50.52733520774758,early_modern
+hierarchical_weighted,battle_dominant,399,517,Francisco Franco,50.50984067478913,world_wars
+hierarchical_weighted,battle_dominant,400,518,Robert E. Lee,50.47422680412371,long_nineteenth_century
+hierarchical_weighted,battle_dominant,401,520,"Tancred, Prince of Galilee",50.36316776007499,medieval
+hierarchical_weighted,battle_dominant,402,521,Ukita Hideie,50.2378944079975,early_modern
+hierarchical_weighted,battle_dominant,403,522,Hosokawa Tadaoki,50.20118712902218,early_modern
+hierarchical_weighted,battle_dominant,404,525,Jean-Baptiste Hertel de Rouville,50.02702280537332,early_modern
+hierarchical_weighted,battle_dominant,405,527,Pedro Navarro,49.97297719462668,early_modern
+hierarchical_weighted,battle_dominant,406,528,Lee Kwon Mu,49.97172758512965,cold_war
+hierarchical_weighted,battle_dominant,407,529,Carlos Asensio Cabanillas,49.9639175257732,world_wars
+hierarchical_weighted,battle_dominant,408,530,Frederick William III of Prussia,49.93923773820681,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,409,531,Muhammad of Ghor,49.9036238675414,medieval
+hierarchical_weighted,battle_dominant,410,532,Al-Harith ibn Jabalah,49.79506404248672,medieval
+hierarchical_weighted,battle_dominant,411,533,Emilio Aguinaldo,49.78381755701343,long_nineteenth_century
+hierarchical_weighted,battle_dominant,412,534,Lazare Hoche,49.74679787566386,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,413,537,Željko Ražnatović,49.563417681974386,contemporary
+hierarchical_weighted,battle_dominant,414,538,Bohdan Khmelnytsky,49.534364261168385,early_modern
+hierarchical_weighted,battle_dominant,415,540,Henry III of England,49.39768822243049,medieval
+hierarchical_weighted,battle_dominant,416,541,Nicolas Oudinot,49.38253670727898,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,417,542,Charles de Bonchamps,49.35598250546703,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,418,543,Louis Marie de Lescure,49.35598250546703,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,419,544,Ludwig von Benedek,49.30927835051546,long_nineteenth_century
+hierarchical_weighted,battle_dominant,420,545,Baba Nobuharu,49.243205248359885,early_modern
+hierarchical_weighted,battle_dominant,421,546,"Prince Emanuele Filiberto, Duke of Aosta",49.20634176819743,world_wars
+hierarchical_weighted,battle_dominant,422,547,James Wilkinson,49.17728834739143,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,423,548,Charles Elliot,49.15260855982505,long_nineteenth_century
+hierarchical_weighted,battle_dominant,424,549,Luigi Cadorna,48.94329896907217,world_wars
+hierarchical_weighted,battle_dominant,425,551,Étienne Macdonald,48.80037488284911,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,426,553,Gamō Ujisato,48.65417057169634,early_modern
+hierarchical_weighted,battle_dominant,427,554,"Albert, King of Saxony",48.62839737582005,long_nineteenth_century
+hierarchical_weighted,battle_dominant,428,555,Jacob Brown,48.62824117463293,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,429,556,Antigonus I Monophthalmus,48.62652296157451,ancient
+hierarchical_weighted,battle_dominant,430,558,Prince Georg Friedrich of Waldeck,48.519212746016876,early_modern
+hierarchical_weighted,battle_dominant,431,559,Bon-Adrien Jeannot de Moncey,48.47485160887223,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,432,560,Nicolas Catinat,48.44283036551077,early_modern
+hierarchical_weighted,battle_dominant,433,561,Pyrrhus of Epirus,48.36129334582943,ancient
+hierarchical_weighted,battle_dominant,434,563,Prince Friedrich Franz Xaver of Hohenzollern-Hechingen,48.116682286785384,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,435,564,Michael Andreas Barclay de Tolly,48.116369884411114,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,436,565,Reşid Mehmed Pasha,48.10809122149328,long_nineteenth_century
+hierarchical_weighted,battle_dominant,437,566,Ibrahim Pasha of Egypt,48.029053420806,long_nineteenth_century
+hierarchical_weighted,battle_dominant,438,567,"Rupprecht, Crown Prince of Bavaria",48.00452983442675,world_wars
+hierarchical_weighted,battle_dominant,439,568,Kobayakawa Takakage,47.92830365510778,early_modern
+hierarchical_weighted,battle_dominant,440,569,Jahan Khan Popalzai,47.92580443611371,early_modern
+hierarchical_weighted,battle_dominant,441,570,Giorgio Basta,47.83333333333333,early_modern
+hierarchical_weighted,battle_dominant,442,571,François de Franquetot de Coigny,47.83161512027492,early_modern
+hierarchical_weighted,battle_dominant,443,572,Bayezid I,47.803655107778816,medieval
+hierarchical_weighted,battle_dominant,444,573,Charles Aimé de Royrand,47.77163386441737,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,445,574,Yi Sun-sin,47.75866916588567,early_modern
+hierarchical_weighted,battle_dominant,446,575,Leopold Joseph von Daun,47.71727585129646,early_modern
+hierarchical_weighted,battle_dominant,447,576,Manuel Bulnes,47.70165573258357,long_nineteenth_century
+hierarchical_weighted,battle_dominant,448,578,François Séverin Marceau,47.59528272414871,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,449,579,Sigismund III Vasa,47.55201499531397,early_modern
+hierarchical_weighted,battle_dominant,450,580,Khosrow I,47.53545766947828,medieval
+hierarchical_weighted,battle_dominant,451,581,Albert I of Belgium,47.48594189315839,world_wars
+hierarchical_weighted,battle_dominant,452,583,"William Louis, Count of Nassau-Dillenburg",47.36847860043736,early_modern
+hierarchical_weighted,battle_dominant,453,584,Paul Ludwig Ewald von Kleist,47.34536082474227,world_wars
+hierarchical_weighted,battle_dominant,454,585,Emperor Meiji,47.32411746329272,long_nineteenth_century
+hierarchical_weighted,battle_dominant,455,586,Itagaki Taisuke,47.32411746329272,long_nineteenth_century
+hierarchical_weighted,battle_dominant,456,588,Sanada Masayuki,47.227272727272734,early_modern
+hierarchical_weighted,battle_dominant,457,589,François Joseph Paul de Grasse,47.16854108091221,early_modern
+hierarchical_weighted,battle_dominant,458,592,François Certain de Canrobert,46.94470477975633,long_nineteenth_century
+hierarchical_weighted,battle_dominant,459,593,Jacob De la Gardie,46.93673851921275,early_modern
+hierarchical_weighted,battle_dominant,460,596,Joseph Brant,46.73664479850047,early_modern
+hierarchical_weighted,battle_dominant,461,597,Li Hongzhang,46.73086535457669,long_nineteenth_century
+hierarchical_weighted,battle_dominant,462,600,J. Lawton Collins,46.70493595751328,world_wars
+hierarchical_weighted,battle_dominant,463,601,Totila,46.64386129334583,medieval
+hierarchical_weighted,battle_dominant,464,603,Georg Andreas von Rosen,46.59778194314276,long_nineteenth_century
+hierarchical_weighted,battle_dominant,465,604,Mikhail Dmitrievich Gorchakov,46.58434864104967,long_nineteenth_century
+hierarchical_weighted,battle_dominant,466,605,Juan del Águila,46.52811621368323,early_modern
+hierarchical_weighted,battle_dominant,467,606,Peter Ernst I von Mansfeld-Vorderort,46.437519525148396,early_modern
+hierarchical_weighted,battle_dominant,468,608,Zhang,46.384098719150266,ancient
+hierarchical_weighted,battle_dominant,469,609,Boiorix,46.34707903780068,ancient
+hierarchical_weighted,battle_dominant,470,610,Occhiali,46.34692283661356,early_modern
+hierarchical_weighted,battle_dominant,471,611,Đurađ Branković,46.303655107778816,medieval
+hierarchical_weighted,battle_dominant,472,612,Tomitarō Horii,46.282567947516405,world_wars
+hierarchical_weighted,battle_dominant,473,613,Al-Adil I,46.268978444236176,medieval
+hierarchical_weighted,battle_dominant,474,614,Kilij Arslan I,46.1980631052796,medieval
+hierarchical_weighted,battle_dominant,475,620,Antiochus III the Great,45.88331771321462,ancient
+hierarchical_weighted,battle_dominant,476,621,François de Charette,45.88316151202749,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,477,622,Joseph E. Johnston,45.867385192127465,long_nineteenth_century
+hierarchical_weighted,battle_dominant,478,624,Karl von Bülow,45.70915338956576,world_wars
+hierarchical_weighted,battle_dominant,479,625,Michael von Melas,45.692439862542955,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,480,626,Erich von Falkenhayn,45.66276163698845,world_wars
+hierarchical_weighted,battle_dominant,481,629,Paul von Hindenburg,45.48531708840987,world_wars
+hierarchical_weighted,battle_dominant,482,631,Ma Zhancang,45.41221493283348,world_wars
+hierarchical_weighted,battle_dominant,483,633,Louis Botha,45.30959075288972,long_nineteenth_century
+hierarchical_weighted,battle_dominant,484,635,Levin August von Bennigsen,45.1850984067479,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,485,636,"Noël Édouard, vicomte de Curières de Castelnau",45.17541393314589,world_wars
+hierarchical_weighted,battle_dominant,486,637,Ferrante Gonzaga,45.1458919087785,early_modern
+hierarchical_weighted,battle_dominant,487,638,Shimazu Toshihisa,45.13964386129335,early_modern
+hierarchical_weighted,battle_dominant,488,639,Abbas Mirza,45.0834114339269,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,489,640,Magnus Stenbock,44.977819431427676,early_modern
+hierarchical_weighted,battle_dominant,490,641,Ernst von Mansfeld,44.919400187441425,early_modern
+hierarchical_weighted,battle_dominant,491,643,Patrice de MacMahon,44.802717900656035,long_nineteenth_century
+hierarchical_weighted,battle_dominant,492,644,François Nicolas Fagel,44.79381443298969,early_modern
+hierarchical_weighted,battle_dominant,493,645,Zamorin,44.7933458294283,early_modern
+hierarchical_weighted,battle_dominant,494,648,Dom Estevão da Gama,44.57169634489222,early_modern
+hierarchical_weighted,battle_dominant,495,649,George Alan Vasey,44.562636676038736,world_wars
+hierarchical_weighted,battle_dominant,496,651,Jan Henryk Dąbrowski,44.43189628241175,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,497,652,François Étienne de Kellermann,44.35691971258982,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,498,654,John O'Sullivan,44.31021555763825,early_modern
+hierarchical_weighted,battle_dominant,499,656,Henry Lee III,44.23992502343019,early_modern
+hierarchical_weighted,battle_dominant,500,658,Count Claude Florimond de Mercy,44.20259293970634,early_modern
+hierarchical_weighted,battle_dominant,501,659,Honoré Charles Reille,44.103092783505154,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,502,661,"John II, Duke of Alençon",44.08762886597939,medieval
+hierarchical_weighted,battle_dominant,503,662,Cristóvão da Gama,44.08091221493284,early_modern
+hierarchical_weighted,battle_dominant,504,663,Jean-Charles Pichegru,44.01390190565449,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,505,664,Magnus Gustav von Essen,44.002343017806936,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,506,665,Pedro de Zubiaur,43.95626366760387,early_modern
+hierarchical_weighted,battle_dominant,507,666,Charles Emmanuel III,43.77788191190253,early_modern
+hierarchical_weighted,battle_dominant,508,667,George of Hesse-Darmstadt,43.72914714151828,early_modern
+hierarchical_weighted,battle_dominant,509,669,Antoine Charles Louis de Lasalle,43.63917525773196,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,510,670,Alexander Litvinov,43.55654482974071,world_wars
+hierarchical_weighted,battle_dominant,511,671,Menno van Coehoorn,43.518275538894095,early_modern
+hierarchical_weighted,battle_dominant,512,674,Selim I Giray,43.42939706341769,early_modern
+hierarchical_weighted,battle_dominant,513,675,Charles Michel de Langlade,43.276007497656984,early_modern
+hierarchical_weighted,battle_dominant,514,676,Joseph François Dupleix,43.25976257419556,early_modern
+hierarchical_weighted,battle_dominant,515,677,Julius Jacob von Haynau,43.254920337394566,long_nineteenth_century
+hierarchical_weighted,battle_dominant,516,678,Antonio López de Santa Anna,43.24601686972821,long_nineteenth_century
+hierarchical_weighted,battle_dominant,517,680,"Joaquim Marques Lisboa, Marquis of Tamandaré",43.19103405185879,long_nineteenth_century
+hierarchical_weighted,battle_dominant,518,681,Philip II of France,43.18384879725086,medieval
+hierarchical_weighted,battle_dominant,519,682,Aleksey Kuropatkin,43.12043111527648,long_nineteenth_century
+hierarchical_weighted,battle_dominant,520,683,Cao Ren,43.07872539831303,ancient
+hierarchical_weighted,battle_dominant,521,685,Cevat Çobanlı,43.069821930646675,world_wars
+hierarchical_weighted,battle_dominant,522,686,Samuel of Bulgaria,42.85988753514527,medieval
+hierarchical_weighted,battle_dominant,523,689,Eumenes,42.75898156825991,ancient
+hierarchical_weighted,battle_dominant,524,690,Scipio Aemilianus,42.728209934395494,ancient
+hierarchical_weighted,battle_dominant,525,692,Anthony Wayne,42.68791002811621,early_modern
+hierarchical_weighted,battle_dominant,526,693,Chief Joseph,42.61605748203685,long_nineteenth_century
+hierarchical_weighted,battle_dominant,527,695,Ottavio Piccolomini,42.396438612933466,early_modern
+hierarchical_weighted,battle_dominant,528,696,Peter Graf von der Pahlen,42.39034676663543,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,529,697,Claude Lecourbe,42.38987816307404,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,530,698,Otto Liman von Sanders,42.34832864729773,world_wars
+hierarchical_weighted,battle_dominant,531,699,Banda Singh Bahadur,42.31068416119963,early_modern
+hierarchical_weighted,battle_dominant,532,700,György Klapka,42.28959700093721,long_nineteenth_century
+hierarchical_weighted,battle_dominant,533,701,Duke Ferdinand of Brunswick-Wolfenbüttel,42.268822243049044,early_modern
+hierarchical_weighted,battle_dominant,534,702,"Prince William, Duke of Cumberland",42.21212121212121,early_modern
+hierarchical_weighted,battle_dominant,535,703,Sharif Sheikh Ahmed,42.1619806310528,contemporary
+hierarchical_weighted,battle_dominant,536,704,Eberhard von Mackensen,42.07403936269916,world_wars
+hierarchical_weighted,battle_dominant,537,705,George Rooke,42.05342080599812,early_modern
+hierarchical_weighted,battle_dominant,538,706,Stefan Dąb-Biernacki,42.00921587004061,world_wars
+hierarchical_weighted,battle_dominant,539,707,Thrasybulus,41.94220556076227,ancient
+hierarchical_weighted,battle_dominant,540,708,Kazimierz Jan Sapieha,41.91471415182755,early_modern
+hierarchical_weighted,battle_dominant,541,709,Khoja Zufar,41.89081537019681,early_modern
+hierarchical_weighted,battle_dominant,542,710,Koca Sinan Pasha,41.86176194939081,early_modern
+hierarchical_weighted,battle_dominant,543,711,Ivan Bohun,41.76101218369259,early_modern
+hierarchical_weighted,battle_dominant,544,712,Tachibana Muneshige,41.73492658544205,early_modern
+hierarchical_weighted,battle_dominant,545,713,Hyder Ali,41.68322399250235,early_modern
+hierarchical_weighted,battle_dominant,546,715,Leo Geyr von Schweppenburg,41.64776632302405,world_wars
+hierarchical_weighted,battle_dominant,547,716,Louis XIII,41.60606060606061,early_modern
+hierarchical_weighted,battle_dominant,548,717,Alexander Tormasov,41.54998437988129,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,549,719,Miguel Grau,41.37019681349579,long_nineteenth_century
+hierarchical_weighted,battle_dominant,550,720,Demetrius I Poliorcetes,41.33145891908778,ancient
+hierarchical_weighted,battle_dominant,551,721,Niiro Tadamoto,41.308809746954076,early_modern
+hierarchical_weighted,battle_dominant,552,722,Henry IV of France,41.25585754451734,early_modern
+hierarchical_weighted,battle_dominant,553,724,Husayn ibn Numayr al-Sakuni,41.22680412371135,medieval
+hierarchical_weighted,battle_dominant,554,725,Pierre Dupont de l'Étang,41.218994064354895,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,555,726,Francisco Verdugo,41.20837238363011,early_modern
+hierarchical_weighted,battle_dominant,556,727,Venancio Flores,41.20696657294595,long_nineteenth_century
+hierarchical_weighted,battle_dominant,557,728,Liao Yaoxiang,41.199156513589514,world_wars
+hierarchical_weighted,battle_dominant,558,729,Isamu Yokoyama,41.17291471415182,world_wars
+hierarchical_weighted,battle_dominant,559,730,Khan Temir,41.12761636988441,early_modern
+hierarchical_weighted,battle_dominant,560,731,Alfonso d'Avalos,41.02139956263668,early_modern
+hierarchical_weighted,battle_dominant,561,732,Ishida Mitsunari,40.98781630740394,early_modern
+hierarchical_weighted,battle_dominant,562,733,"James Hamilton, Duke of Châtellerault",40.97922524211184,early_modern
+hierarchical_weighted,battle_dominant,563,734,Walter von Reichenau,40.972664792252424,world_wars
+hierarchical_weighted,battle_dominant,564,735,Kurt Student,40.969072164948464,world_wars
+hierarchical_weighted,battle_dominant,565,736,Friedrich Graf Kleist von Nollendorf,40.826772883473915,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,566,737,Toghtekin,40.806935332708534,medieval
+hierarchical_weighted,battle_dominant,567,740,"Prince Frederick, Duke of York and Albany",40.573726960324905,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,568,741,Maximilian Ulysses Browne,40.562949078413,early_modern
+hierarchical_weighted,battle_dominant,569,743,Hamid Hassy,40.558263042799126,contemporary
+hierarchical_weighted,battle_dominant,570,744,Andrei Rosenberg,40.25585754451734,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,571,745,Wilhelm von Knyphausen,40.2464854732896,early_modern
+hierarchical_weighted,battle_dominant,572,746,"François Sébastien Charles Joseph de Croix, Count of Clerfayt",40.220868478600444,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,573,747,Melchior von Hatzfeldt,40.16323024054984,early_modern
+hierarchical_weighted,battle_dominant,574,748,Naoe Kanetsugu,40.1560449859419,early_modern
+hierarchical_weighted,battle_dominant,575,749,Friedrich Sixt von Armin,40.13823805060918,world_wars
+hierarchical_weighted,battle_dominant,576,751,Ikrima ibn Amr,40.03092783505154,medieval
+hierarchical_weighted,battle_dominant,577,752,Nathanael Greene,39.99953139643861,early_modern
+hierarchical_weighted,battle_dominant,578,753,Shahrbaraz,39.987972508591064,medieval
+hierarchical_weighted,battle_dominant,579,754,Bhim Chand,39.981724461105905,early_modern
+hierarchical_weighted,battle_dominant,580,755,Aeneas de Caprara,39.825679475164016,early_modern
+hierarchical_weighted,battle_dominant,581,756,Alexander Ivanovich Ostermann-Tolstoy,39.78803498906592,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,582,757,Oda Nagamasu,39.78397375820056,early_modern
+hierarchical_weighted,battle_dominant,583,758,Paul von Plehwe,39.766479225242115,world_wars
+hierarchical_weighted,battle_dominant,584,760,Kikkawa Motoharu,39.713214620431124,early_modern
+hierarchical_weighted,battle_dominant,585,762,Bogislav Friedrich Emanuel von Tauentzien,39.6943142767885,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,586,763,Lala Shahin Pasha,39.69228366135583,medieval
+hierarchical_weighted,battle_dominant,587,764,Halil Kut,39.68650421743206,world_wars
+hierarchical_weighted,battle_dominant,588,765,"Johann I Joseph, Prince of Liechtenstein",39.66854108091221,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,589,766,Inaba Yoshimichi,39.639019056544825,early_modern
+hierarchical_weighted,battle_dominant,590,767,Pargalı Ibrahim Pasha,39.51483911277727,early_modern
+hierarchical_weighted,battle_dominant,591,768,Anne Hilarion de Tourville,39.48766010621681,early_modern
+hierarchical_weighted,battle_dominant,592,769,Philip Sheridan,39.443767572633554,long_nineteenth_century
+hierarchical_weighted,battle_dominant,593,770,Hoàng Minh Thảo,39.34161199625117,cold_war
+hierarchical_weighted,battle_dominant,594,771,"Albert VII, Archduke of Austria",39.20071852546079,early_modern
+hierarchical_weighted,battle_dominant,595,772,Alexander Zakharchenko,38.973133395813804,contemporary
+hierarchical_weighted,battle_dominant,596,773,Yashwantrao Holkar,38.79943767572633,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,597,775,Nikolai Linevich,38.750078100593555,long_nineteenth_century
+hierarchical_weighted,battle_dominant,598,776,Barthélemy Louis Joseph Schérer,38.74304904717276,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,599,777,Douglas H. Cooper,38.68228678537957,long_nineteenth_century
+hierarchical_weighted,battle_dominant,600,779,Mór Perczel,38.435332708528584,long_nineteenth_century
+hierarchical_weighted,battle_dominant,601,780,Andrei Grechko,38.36676038737895,world_wars
+hierarchical_weighted,battle_dominant,602,781,Sun Li-jen,38.366604186191815,world_wars
+hierarchical_weighted,battle_dominant,603,783,Erich Ludendorff,38.32974070602936,world_wars
+hierarchical_weighted,battle_dominant,604,784,John Joseph of Austria,38.315995001562015,early_modern
+hierarchical_weighted,battle_dominant,605,785,Grand Duke Konstantin Pavlovich of Russia,38.27756950952828,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,606,786,Marcin Kalinowski,38.24507966260544,early_modern
+hierarchical_weighted,battle_dominant,607,787,Angelo Iachino,38.09825054670416,world_wars
+hierarchical_weighted,battle_dominant,608,789,Pietro Frugoni,37.81115276476102,world_wars
+hierarchical_weighted,battle_dominant,609,791,François Anthoine,37.766947828803495,world_wars
+hierarchical_weighted,battle_dominant,610,792,Franz Conrad von Hötzendorf,37.723367697594504,world_wars
+hierarchical_weighted,battle_dominant,611,793,Sanada Yukimura,37.71430802874102,early_modern
+hierarchical_weighted,battle_dominant,612,794,Fyodor Apraksin,37.68791002811621,early_modern
+hierarchical_weighted,battle_dominant,613,795,Joseph Joffre,37.65838800374883,world_wars
+hierarchical_weighted,battle_dominant,614,796,Constantius II,37.60356138706654,ancient
+hierarchical_weighted,battle_dominant,615,797,"Wilhelm, German Crown Prince",37.56248047485161,world_wars
+hierarchical_weighted,battle_dominant,616,798,Paul Kray,37.500937207122774,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,617,801,Robert the Bruce,37.39175257731959,medieval
+hierarchical_weighted,battle_dominant,618,802,Philip Vian,37.3875351452671,world_wars
+hierarchical_weighted,battle_dominant,619,803,Bouzes,37.3380193689472,medieval
+hierarchical_weighted,battle_dominant,620,804,Luigi Capello,37.31630740393628,world_wars
+hierarchical_weighted,battle_dominant,621,805,Jean-Nicolas Stofflet,37.30771633864417,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,622,806,August von Mackensen,37.25851296469853,world_wars
+hierarchical_weighted,battle_dominant,623,807,George Armstrong Custer,37.251796313651994,long_nineteenth_century
+hierarchical_weighted,battle_dominant,624,808,Nathaniel P. Banks,37.19353327085287,long_nineteenth_century
+hierarchical_weighted,battle_dominant,625,810,Ahmed Muhtar Pasha,37.099968759762575,long_nineteenth_century
+hierarchical_weighted,battle_dominant,626,811,"Charles, Duke of Brittany",37.07450796626054,medieval
+hierarchical_weighted,battle_dominant,627,814,Albert Kesselring,36.85863792564824,world_wars
+hierarchical_weighted,battle_dominant,628,815,Benjamin Blake,36.843017806935336,early_modern
+hierarchical_weighted,battle_dominant,629,816,"Robert Douglas, Count of Skenninge",36.831927522649174,early_modern
+hierarchical_weighted,battle_dominant,630,818,The Guardian,36.75710715401437,contemporary
+hierarchical_weighted,battle_dominant,631,820,Omer Vrioni,36.45970009372071,long_nineteenth_century
+hierarchical_weighted,battle_dominant,632,821,Janusz Radziwiłł,36.449078412995945,early_modern
+hierarchical_weighted,battle_dominant,633,824,Tadeusz Kościuszko,36.38691034051859,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,634,826,Gunichi Mikawa,36.280693533270856,world_wars
+hierarchical_weighted,battle_dominant,635,829,Jalal al-Din Mangburni,36.10028116213683,medieval
+hierarchical_weighted,battle_dominant,636,831,"Ferdinand I, Holy Roman Emperor",35.965010934083104,early_modern
+hierarchical_weighted,battle_dominant,637,832,Afonso V of Portugal,35.964386129334585,medieval
+hierarchical_weighted,battle_dominant,638,833,Erwin Rommel,35.883942517963135,world_wars
+hierarchical_weighted,battle_dominant,639,834,Looking Glass,35.797875663855045,long_nineteenth_century
+hierarchical_weighted,battle_dominant,640,837,Jacques de La Palice,35.52249297094658,early_modern
+hierarchical_weighted,battle_dominant,641,838,Samuel D. Sturgis,35.503592627303966,long_nineteenth_century
+hierarchical_weighted,battle_dominant,642,839,Leonid Govorov,35.48641049671978,world_wars
+hierarchical_weighted,battle_dominant,643,840,Marian Langiewicz,35.44798500468604,long_nineteenth_century
+hierarchical_weighted,battle_dominant,644,841,John Sullivan,35.44329896907217,early_modern
+hierarchical_weighted,battle_dominant,645,843,Bhai Mohkam Singh,35.32068103717588,early_modern
+hierarchical_weighted,battle_dominant,646,844,Julián Romero,35.24976569821931,early_modern
+hierarchical_weighted,battle_dominant,647,845,Katō Yoshiaki,35.231177756950956,early_modern
+hierarchical_weighted,battle_dominant,648,846,Charles the Bold,35.151515151515156,medieval
+hierarchical_weighted,battle_dominant,649,847,Archduke John of Austria,35.11308965948141,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,650,848,Shivaji,35.08872227428929,early_modern
+hierarchical_weighted,battle_dominant,651,850,Józef Potocki,34.973289597000935,early_modern
+hierarchical_weighted,battle_dominant,652,851,Ettore Bastico,34.857075913776946,world_wars
+hierarchical_weighted,battle_dominant,653,852,Sakuma Nobumori,34.803655107778816,early_modern
+hierarchical_weighted,battle_dominant,654,853,Aleksei Evert,34.76788503592628,world_wars
+hierarchical_weighted,battle_dominant,655,855,Victor Amadeus II,34.580756013745706,early_modern
+hierarchical_weighted,battle_dominant,656,856,Max von Gallwitz,34.54451733833177,world_wars
+hierarchical_weighted,battle_dominant,657,857,"Enrique O'Donnell, Conde de La Bisbal",34.46860356138706,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,658,858,James G. Blunt,34.42877225866917,long_nineteenth_century
+hierarchical_weighted,battle_dominant,659,859,Binod Singh,34.40534208059981,early_modern
+hierarchical_weighted,battle_dominant,660,861,Gregorio García de la Cuesta,34.152764761012186,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,661,863,Pierre-Charles Villeneuve,33.95485785691971,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,662,864,"Maximilian, Count of Merveldt",33.94782880349891,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,663,865,Wincenty Korwin Gosiewski,33.91877538269291,early_modern
+hierarchical_weighted,battle_dominant,664,866,Roman emperor,33.77600749765698,ancient
+hierarchical_weighted,battle_dominant,665,867,Wazir Khan,33.714308028741016,early_modern
+hierarchical_weighted,battle_dominant,666,868,Johann Matthias von der Schulenburg,33.700249921899406,early_modern
+hierarchical_weighted,battle_dominant,667,870,Johann von Werth,33.567478912839746,early_modern
+hierarchical_weighted,battle_dominant,668,871,Hernando Pizarro,33.562792877225874,early_modern
+hierarchical_weighted,battle_dominant,669,873,Gaspard III de Coligny,33.51421430802874,early_modern
+hierarchical_weighted,battle_dominant,670,874,Shimazu Iehisa,33.47000937207123,early_modern
+hierarchical_weighted,battle_dominant,671,875,Ali Fuat Cebesoy,33.40971571383943,world_wars
+hierarchical_weighted,battle_dominant,672,876,Baldwin II of Jerusalem,33.40346766635427,medieval
+hierarchical_weighted,battle_dominant,673,878,Ignacio López Rayón,33.3369259606373,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,674,880,Datis,33.24820368634801,ancient
+hierarchical_weighted,battle_dominant,675,881,György Kmety,33.23851921274601,long_nineteenth_century
+hierarchical_weighted,battle_dominant,676,883,Svetozar Boroević,33.151358950328024,world_wars
+hierarchical_weighted,battle_dominant,677,887,Muhammad Ahmad,33.0495157763199,long_nineteenth_century
+hierarchical_weighted,battle_dominant,678,888,Wakisaka Yasuharu,32.96860356138706,early_modern
+hierarchical_weighted,battle_dominant,679,890,William the Silent,32.85473289597,early_modern
+hierarchical_weighted,battle_dominant,680,891,Jean-Andoche Junot,32.84254920337394,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,681,892,"Sigismund, Holy Roman Emperor",32.815213995626365,medieval
+hierarchical_weighted,battle_dominant,682,894,Gotthard Heinrici,32.73805060918463,world_wars
+hierarchical_weighted,battle_dominant,683,895,Michał Serwacy Wiśniowiecki,32.67150890346767,early_modern
+hierarchical_weighted,battle_dominant,684,896,Sassa Narimasa,32.66651046547953,early_modern
+hierarchical_weighted,battle_dominant,685,897,Mariano Matamoros y Guridi,32.66213683223992,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,686,898,Kirill Moskalenko,32.633395813808185,world_wars
+hierarchical_weighted,battle_dominant,687,899,Fabian Gottlieb von der Osten-Sacken,32.52811621368322,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,688,900,Otto von Below,32.51483911277726,world_wars
+hierarchical_weighted,battle_dominant,689,901,Tomoyuki Yamashita,32.49656357388316,world_wars
+hierarchical_weighted,battle_dominant,690,902,Herman Willem Daendels,32.44657919400187,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,691,903,Theepan,32.36925960637301,contemporary
+hierarchical_weighted,battle_dominant,692,904,Peter Karl Ott von Bátorkéz,32.129490784129956,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,693,905,"Friedrich Ludwig, Prince of Hohenlohe-Ingelfingen",32.038894095595126,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,694,907,Kuki Yoshitaka,31.826148078725396,early_modern
+hierarchical_weighted,battle_dominant,695,910,Shibata Katsuie,31.60043736332396,early_modern
+hierarchical_weighted,battle_dominant,696,911,Hugh Roe O'Donnell,31.53842549203374,early_modern
+hierarchical_weighted,battle_dominant,697,912,Frederick I of Sweden,31.473601999375198,early_modern
+hierarchical_weighted,battle_dominant,698,914,Dmitry Golitsyn,31.459387691346453,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,699,915,Aleksander Koniecpolski,31.369728209934394,early_modern
+hierarchical_weighted,battle_dominant,700,916,Zhu,31.36051233989378,world_wars
+hierarchical_weighted,battle_dominant,701,917,Wehib Pasha,31.35473289597001,world_wars
+hierarchical_weighted,battle_dominant,702,919,Murakami Yoshikiyo,31.17994376757263,early_modern
+hierarchical_weighted,battle_dominant,703,920,YouTube,31.09403311465167,contemporary
+hierarchical_weighted,battle_dominant,704,921,Hurshid Pasha,30.967510153077164,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,705,922,Bartolomé Mitre,30.965167135270228,long_nineteenth_century
+hierarchical_weighted,battle_dominant,706,923,Alexander Hamilton,30.956419868791006,early_modern
+hierarchical_weighted,battle_dominant,707,924,Suluk,30.784910965323338,medieval
+hierarchical_weighted,battle_dominant,708,925,Nikolay Raevsky,30.63089659481412,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,709,926,Paul von Rennenkampf,30.542642924086223,world_wars
+hierarchical_weighted,battle_dominant,710,928,Wolmar Anton von Schlippenbach,30.40893470790378,early_modern
+hierarchical_weighted,battle_dominant,711,929,Augustus II the Strong,30.386441736957195,early_modern
+hierarchical_weighted,battle_dominant,712,930,Baldwin I of Jerusalem,30.329896907216494,medieval
+hierarchical_weighted,battle_dominant,713,931,Frederik van den Bergh,30.246485473289596,early_modern
+hierarchical_weighted,battle_dominant,714,932,Harukichi Hyakutake,30.223836301155895,world_wars
+hierarchical_weighted,battle_dominant,715,935,Hasdrubal Gisco,30.166822867853796,ancient
+hierarchical_weighted,battle_dominant,716,936,Ruslan Gelayev,30.160731021555765,contemporary
+hierarchical_weighted,battle_dominant,717,939,Marquis de Lafayette,30.09075288972196,early_modern
+hierarchical_weighted,battle_dominant,718,941,Arthur Arz von Straußenburg,30.04920337394564,world_wars
+hierarchical_weighted,battle_dominant,719,942,Heinrich von Bellegarde,29.985473289596996,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,720,943,Daulat Rao Sindhia,29.94189315838801,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,721,944,Józef Bem,29.910496719775068,long_nineteenth_century
+hierarchical_weighted,battle_dominant,722,946,Georg von der Marwitz,29.901749453295846,world_wars
+hierarchical_weighted,battle_dominant,723,947,Chūichi Nagumo,29.880974695407687,world_wars
+hierarchical_weighted,battle_dominant,724,948,Michael von Kienmayer,29.767728834739145,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,725,949,Judas Maccabeus,29.694001874414248,ancient
+hierarchical_weighted,battle_dominant,726,950,Osman Nuri Pasha,29.64214308028741,long_nineteenth_century
+hierarchical_weighted,battle_dominant,727,951,Dmitry Dokhturov,29.52702280537332,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,728,955,Mago Barca,29.236019993751952,ancient
+hierarchical_weighted,battle_dominant,729,956,Grzegorz Antoni Ogiński,29.227272727272723,early_modern
+hierarchical_weighted,battle_dominant,730,957,Owen Roe O'Neill,29.199156513589507,early_modern
+hierarchical_weighted,battle_dominant,731,958,Józef Zajączek,29.100749765698218,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,732,959,Dagobert Sigmund von Wurmser,29.062480474851608,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,733,960,Joaquín Blake,28.979693845673225,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,734,961,François Joseph Westermann,28.954076850984066,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,735,962,Bartolomeo d'Alviano,28.913152139956264,early_modern
+hierarchical_weighted,battle_dominant,736,963,"Friedrich Wilhelm, Fürst zu Hohenlohe-Kirchberg",28.911121524523587,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,737,964,Quizquiz,28.626835363948764,early_modern
+hierarchical_weighted,battle_dominant,738,965,Tulayha ibn Khuwaylid,28.57981880662293,medieval
+hierarchical_weighted,battle_dominant,739,966,Hatazō Adachi,28.51749453295845,world_wars
+hierarchical_weighted,battle_dominant,740,968,José Miaja,28.375039050296785,world_wars
+hierarchical_weighted,battle_dominant,741,969,Hōjō Ujimasa,28.260543580131205,early_modern
+hierarchical_weighted,battle_dominant,742,970,Theodoric I,28.24726647922524,ancient
+hierarchical_weighted,battle_dominant,743,971,August Kork,28.071852546079345,world_wars
+hierarchical_weighted,battle_dominant,744,974,Christiaan de Wet,27.555920024992187,long_nineteenth_century
+hierarchical_weighted,battle_dominant,745,975,Osman Digna,27.266166822867856,long_nineteenth_century
+hierarchical_weighted,battle_dominant,746,976,Raghoji II of Nagpur,27.259918775382697,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,747,977,Dong Fuxiang,27.24117463292721,long_nineteenth_century
+hierarchical_weighted,battle_dominant,748,978,Gottfried Heinrich Graf zu Pappenheim,27.18259918775383,early_modern
+hierarchical_weighted,battle_dominant,749,979,Maarten Schenck van Nydeggen,27.172602311777567,early_modern
+hierarchical_weighted,battle_dominant,750,980,Jacques-François Menou,27.08591065292096,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,751,981,Stanisław Lanckoroński,26.855513901905656,early_modern
+hierarchical_weighted,battle_dominant,752,982,Imam Shamil,26.845829428303652,long_nineteenth_century
+hierarchical_weighted,battle_dominant,753,983,Thomas Sumter,26.793814432989688,early_modern
+hierarchical_weighted,battle_dominant,754,984,Andries Pretorius,26.739925023430178,long_nineteenth_century
+hierarchical_weighted,battle_dominant,755,985,Abdal-Latif Mirza,26.63120899718838,medieval
+hierarchical_weighted,battle_dominant,756,987,Ashraf Hotak,26.456888472352393,early_modern
+hierarchical_weighted,battle_dominant,757,988,Nitta Yoshisada,26.204779756326147,medieval
+hierarchical_weighted,battle_dominant,758,989,Vicente Rojo Lluch,26.14323648859731,world_wars
+hierarchical_weighted,battle_dominant,759,990,Martín Perfecto de Cos,26.061699468915958,long_nineteenth_century
+hierarchical_weighted,battle_dominant,760,991,Ludwig von Wohlgemuth,25.77460168697282,long_nineteenth_century
+hierarchical_weighted,battle_dominant,761,992,Josef Philipp Vukassovich,25.72992814745392,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,762,993,"Charles, Duke of Mayenne",25.36144954701656,early_modern
+hierarchical_weighted,battle_dominant,763,995,Ferdinand von Wintzingerode,25.13230240549828,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,764,996,Piet Cronjé,25.08856607310215,long_nineteenth_century
+hierarchical_weighted,battle_dominant,765,997,Takigawa Kazumasu,24.98453608247423,early_modern
+hierarchical_weighted,battle_dominant,766,1000,Dai Anlan,24.89815682599188,world_wars
+hierarchical_weighted,battle_dominant,767,1001,Alaric I,24.8961262105592,ancient
+hierarchical_weighted,battle_dominant,768,1002,Liu Yongfu,24.8805060918463,long_nineteenth_century
+hierarchical_weighted,battle_dominant,769,1003,Louis of Nassau,24.649953139643863,early_modern
+hierarchical_weighted,battle_dominant,770,1004,Johann von Hiller,24.644329896907216,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,771,1005,Christian the Younger of Brunswick,24.58809746954077,early_modern
+hierarchical_weighted,battle_dominant,772,1006,Cemal Mersinli,24.53327085285848,world_wars
+hierarchical_weighted,battle_dominant,773,1007,Koos de la Rey,24.443611371446423,long_nineteenth_century
+hierarchical_weighted,battle_dominant,774,1009,Archduke Eugen of Austria,24.39565760699781,world_wars
+hierarchical_weighted,battle_dominant,775,1011,Zhang Zizhong,24.271009059668856,world_wars
+hierarchical_weighted,battle_dominant,776,1012,"Raymond VI, Count of Toulouse",24.059512652296156,medieval
+hierarchical_weighted,battle_dominant,777,1013,Inigo Campioni,24.054045610746645,world_wars
+hierarchical_weighted,battle_dominant,778,1014,Johann von Thielmann,23.96173070915339,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,779,1015,John Forbes,23.935176507341456,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,780,1016,Johann Peter Beaulieu,23.88394251796314,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,781,1017,Friedrich Freiherr Kress von Kressenstein,23.849890659169006,world_wars
+hierarchical_weighted,battle_dominant,782,1018,Maximilien Sébastien Foy,23.62277413308341,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,783,1019,"Maximilian Anton Karl, Count Baillet de Latour",23.609028428616057,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,784,1020,Oda Nobutada,23.506560449859418,early_modern
+hierarchical_weighted,battle_dominant,785,1021,Franz von Hipper,23.460637300843487,world_wars
+hierarchical_weighted,battle_dominant,786,1022,Friedrich Freiherr von Hotze,23.41518275538894,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,787,1024,Masatane Kanda,23.176663542642924,world_wars
+hierarchical_weighted,battle_dominant,788,1025,Petrus Johannes Liebenberg,23.14183067791315,long_nineteenth_century
+hierarchical_weighted,battle_dominant,789,1026,Nur Ahmad Jan Bughra,22.67416432364886,world_wars
+hierarchical_weighted,battle_dominant,790,1027,Viktor Dankl von Krasnik,22.623711340206185,world_wars
+hierarchical_weighted,battle_dominant,791,1030,Fritz von Below,22.324117463292723,world_wars
+hierarchical_weighted,battle_dominant,792,1031,Michelangelo Alessandro Colli-Marchi,21.88815995001562,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,793,1032,Franz Schlik,21.872539831302717,long_nineteenth_century
+hierarchical_weighted,battle_dominant,794,1034,Ronglu,21.711652608559824,long_nineteenth_century
+hierarchical_weighted,battle_dominant,795,1035,Franjo Jelačić,21.671196501093405,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,796,1036,Julian Cesarini,21.57357075913777,medieval
+hierarchical_weighted,battle_dominant,797,1037,William I of Württemberg,21.47282099343955,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,798,1039,Josip Jelačić,21.16260543580131,long_nineteenth_century
+hierarchical_weighted,battle_dominant,799,1040,Juan Modesto,20.981568259918774,world_wars
+hierarchical_weighted,battle_dominant,800,1043,Benjamin Lincoln,20.037019681349577,early_modern
+hierarchical_weighted,battle_dominant,801,1044,Enrique Líster,19.81302717900656,world_wars
+hierarchical_weighted,battle_dominant,802,1045,Antonio Luna,19.737894407997505,long_nineteenth_century
+hierarchical_weighted,battle_dominant,803,1046,Max von Boehn,19.670884098719153,world_wars
+hierarchical_weighted,battle_dominant,804,1047,Minoru Sasaki,19.524835988753516,world_wars
+hierarchical_weighted,battle_dominant,805,1048,Ferenc Ottinger,19.43345829428304,long_nineteenth_century
+hierarchical_weighted,battle_dominant,806,1052,Paik Sun-yup,18.8622305529522,cold_war
+hierarchical_weighted,battle_dominant,807,1053,Aylmer Hunter-Weston,18.83130271790066,world_wars
+hierarchical_weighted,battle_dominant,808,1055,Anton Lipthay de Kisfalud,18.069821930646675,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,809,1056,John Murphy,18.037019681349577,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,810,1058,Djemal Pasha,17.14386129334583,world_wars
+hierarchical_weighted,battle_dominant,811,1059,Lautaro,16.545454545454547,early_modern
+hierarchical_weighted,battle_dominant,812,1060,Anton Wilhelm von L'Estocq,16.53452046235551,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,813,1061,"Luis Fermín de Carvajal, Conde de la Unión",16.50312402374258,revolutionary_napoleonic
+hierarchical_weighted,battle_dominant,814,1062,Hijikata Toshizō,16.452514839112776,long_nineteenth_century
+hierarchical_weighted,battle_dominant,815,1064,Franz Sigel,15.139643861293347,long_nineteenth_century
+hierarchical_weighted,battle_dominant,816,1065,Henri Dentz,14.21087160262418,world_wars
+hierarchical_weighted,battle_dominant,817,1066,Inkpaduta,14.12652296157451,long_nineteenth_century
+hierarchical_weighted,battle_dominant,818,1067,Charles Albert of Sardinia,13.016869728209937,long_nineteenth_century
+hierarchical_weighted,mixed_profile,1,7,Louis XIV,85.8186504217432,early_modern
+hierarchical_weighted,mixed_profile,2,15,Winfield Scott,83.23992502343019,long_nineteenth_century
+hierarchical_weighted,mixed_profile,3,20,Petar Bojović,81.8675413933146,long_nineteenth_century
+hierarchical_weighted,mixed_profile,4,26,Živojin Mišić,81.17681974383005,world_wars
+hierarchical_weighted,mixed_profile,5,32,Yamagata Aritomo,80.02249297094657,long_nineteenth_century
+hierarchical_weighted,mixed_profile,6,43,Enver Pasha,78.52327397688224,world_wars
+hierarchical_weighted,mixed_profile,7,51,Nikolai Vatutin,77.58856607310216,world_wars
+hierarchical_weighted,mixed_profile,8,73,Ras Alula,75.10246797875665,long_nineteenth_century
+hierarchical_weighted,mixed_profile,9,75,Suharto,75.03889409559513,cold_war
+hierarchical_weighted,mixed_profile,10,80,Qasem Soleimani,74.3901905654483,contemporary
+hierarchical_weighted,mixed_profile,11,86,François de Créquy,73.84036238675414,early_modern
+hierarchical_weighted,mixed_profile,12,90,Emperor Taizong of Tang,73.54592314901595,medieval
+hierarchical_weighted,mixed_profile,13,94,Abdul Rashid Dostum,73.21430802874103,contemporary
+hierarchical_weighted,mixed_profile,14,109,Radomir Putnik,71.87129022180568,long_nineteenth_century
+hierarchical_weighted,mixed_profile,15,112,Mao Zedong,71.58341143392691,cold_war
+hierarchical_weighted,mixed_profile,16,131,Michiel de Ruyter,70.29678225554512,early_modern
+hierarchical_weighted,mixed_profile,17,137,Adna Chaffee,69.97328959700094,long_nineteenth_century
+hierarchical_weighted,mixed_profile,18,145,Joseph Stalin,69.26257419556389,world_wars
+hierarchical_weighted,mixed_profile,19,159,Eumenes II,68.01890034364261,ancient
+hierarchical_weighted,mixed_profile,20,162,Pyotr Rumyantsev,67.8923773820681,early_modern
+hierarchical_weighted,mixed_profile,21,165,Stepa Stepanović,67.7368009996876,world_wars
+hierarchical_weighted,mixed_profile,22,166,Chen Cheng,67.64104967197753,world_wars
+hierarchical_weighted,mixed_profile,23,170,Muhammad Ali of Egypt,67.37613245860669,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,24,172,Rodolfo Graziani,67.35816932208684,world_wars
+hierarchical_weighted,mixed_profile,25,219,Zhang Fakui,64.40799750078101,world_wars
+hierarchical_weighted,mixed_profile,26,236,Lê Trọng Tấn,63.34520462355515,cold_war
+hierarchical_weighted,mixed_profile,27,239,Giovanni Messe,63.06794751640113,world_wars
+hierarchical_weighted,mixed_profile,28,241,Ariel Sharon,62.91495157763199,cold_war
+hierarchical_weighted,mixed_profile,29,255,Christian IV of Denmark,62.42502343017806,early_modern
+hierarchical_weighted,mixed_profile,30,263,Ngô Quang Trưởng,61.76007497656983,cold_war
+hierarchical_weighted,mixed_profile,31,268,Alexander I of Russia,61.44892221180882,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,32,269,Boris Yeltsin,61.44798500468603,contemporary
+hierarchical_weighted,mixed_profile,33,276,Nelson A. Miles,61.23773820681038,long_nineteenth_century
+hierarchical_weighted,mixed_profile,34,278,Sepp Dietrich,61.10777881911903,world_wars
+hierarchical_weighted,mixed_profile,35,282,Max Hoffmann,60.98203686348017,world_wars
+hierarchical_weighted,mixed_profile,36,304,Bai Chongxi,59.8820681037176,world_wars
+hierarchical_weighted,mixed_profile,37,306,"Leopold I, Prince of Anhalt-Dessau",59.73477038425492,early_modern
+hierarchical_weighted,mixed_profile,38,308,Mark W. Clark,59.6866604186192,world_wars
+hierarchical_weighted,mixed_profile,39,319,Georg von Frundsberg,59.12667916276164,early_modern
+hierarchical_weighted,mixed_profile,40,331,Shamil Basayev,58.58934707903781,contemporary
+hierarchical_weighted,mixed_profile,41,345,Kuroda Kiyotaka,58.03998750390503,long_nineteenth_century
+hierarchical_weighted,mixed_profile,42,349,Dom Francisco de Almeida,57.865510777881916,early_modern
+hierarchical_weighted,mixed_profile,43,360,Stephen Decatur,57.34161199625118,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,44,365,Aleksei Brusilov,57.164792252421115,world_wars
+hierarchical_weighted,mixed_profile,45,366,Hisaichi Terauchi,57.16135582630429,world_wars
+hierarchical_weighted,mixed_profile,46,367,Li Zongren,57.14464229928148,world_wars
+hierarchical_weighted,mixed_profile,47,369,Józef Haller,57.04295532646047,world_wars
+hierarchical_weighted,mixed_profile,48,371,"Álvaro de Bazán, Marquis of Santa Cruz",57.010621680724775,early_modern
+hierarchical_weighted,mixed_profile,49,374,Jan Smuts,56.78865979381443,world_wars
+hierarchical_weighted,mixed_profile,50,379,Hulegu Khan,56.54748516088722,medieval
+hierarchical_weighted,mixed_profile,51,392,Friedrich Wilhelm von Buxhoeveden,55.65151515151515,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,52,393,Bernardo de Gálvez,55.58231802561699,early_modern
+hierarchical_weighted,mixed_profile,53,408,Chiang Kai-shek,55.029522024367395,world_wars
+hierarchical_weighted,mixed_profile,54,410,Võ Nguyên Giáp,54.93033427054046,cold_war
+hierarchical_weighted,mixed_profile,55,424,Wilhelm I,54.28209934395502,long_nineteenth_century
+hierarchical_weighted,mixed_profile,56,442,Lopo Soares de Albergaria,53.7524211184005,early_modern
+hierarchical_weighted,mixed_profile,57,443,John of Gaunt,53.73648859731334,medieval
+hierarchical_weighted,mixed_profile,58,444,Pavlos Kountouriotis,53.73133395813808,long_nineteenth_century
+hierarchical_weighted,mixed_profile,59,451,Joseph Bonaparte,53.49468915963762,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,60,467,Friedrich Paulus,52.82786629178381,world_wars
+hierarchical_weighted,mixed_profile,61,469,Ahmad ibn Ibrahim al-Ghazi,52.71196501093408,early_modern
+hierarchical_weighted,mixed_profile,62,474,Charles XI of Sweden,52.48250546704155,early_modern
+hierarchical_weighted,mixed_profile,63,478,Władysław II Jagiełło,52.201499531396436,medieval
+hierarchical_weighted,mixed_profile,64,481,Afonso de Albuquerque,51.99422055607622,early_modern
+hierarchical_weighted,mixed_profile,65,482,Shuja-ud-Daula,51.89518900343642,early_modern
+hierarchical_weighted,mixed_profile,66,486,William Henry Harrison,51.77038425492034,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,67,493,Saddam Hussein,51.469540768509844,cold_war
+hierarchical_weighted,mixed_profile,68,507,İsmet İnönü,50.7933458294283,world_wars
+hierarchical_weighted,mixed_profile,69,511,Leonard Wood,50.61137144642299,long_nineteenth_century
+hierarchical_weighted,mixed_profile,70,519,Günther von Kluge,50.43626991565136,world_wars
+hierarchical_weighted,mixed_profile,71,523,Wei Lihuang,50.17681974383006,world_wars
+hierarchical_weighted,mixed_profile,72,524,"Francis II, Holy Roman Emperor",50.071071540143706,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,73,526,Federico Gravina,50.01749453295845,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,74,536,Abraham Duquesne,49.57169634489222,early_modern
+hierarchical_weighted,mixed_profile,75,539,James II of England,49.41127772571072,early_modern
+hierarchical_weighted,mixed_profile,76,550,Chu Huy Mân,48.910340518587944,cold_war
+hierarchical_weighted,mixed_profile,77,557,Louis Franchet d'Espèrey,48.52249297094659,world_wars
+hierarchical_weighted,mixed_profile,78,562,Louis-Joseph de Montcalm,48.1194939081537,early_modern
+hierarchical_weighted,mixed_profile,79,577,"Nizam Ali Khan, Asaf Jah II",47.63808184942205,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,80,582,Alexander II of Russia,47.475945017182134,long_nineteenth_century
+hierarchical_weighted,mixed_profile,81,587,Arthur Harris,47.26554201811935,world_wars
+hierarchical_weighted,mixed_profile,82,591,Trajan,47.03545766947828,ancient
+hierarchical_weighted,mixed_profile,83,595,Henry Knox,46.82333645735708,early_modern
+hierarchical_weighted,mixed_profile,84,598,Piet Joubert,46.72336769759451,long_nineteenth_century
+hierarchical_weighted,mixed_profile,85,599,Charles XIII,46.70727897532021,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,86,607,Semyon Budyonny,46.40877850671665,world_wars
+hierarchical_weighted,mixed_profile,87,617,Juan de Lángara,46.051390190565456,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,88,618,Fu Zuoyi,45.98281786941581,world_wars
+hierarchical_weighted,mixed_profile,89,619,Oleksandr Syrskyi,45.93345829428304,contemporary
+hierarchical_weighted,mixed_profile,90,627,Ibn al-Khattab,45.62839737582005,contemporary
+hierarchical_weighted,mixed_profile,91,628,Xue Rengui,45.496875976257414,medieval
+hierarchical_weighted,mixed_profile,92,630,Tang Enbo,45.42236800999688,world_wars
+hierarchical_weighted,mixed_profile,93,642,Louis II de la Trémoille,44.84754764136207,early_modern
+hierarchical_weighted,mixed_profile,94,650,Muqtada al-Sadr,44.498281786941575,contemporary
+hierarchical_weighted,mixed_profile,95,655,Eberhard von Vegesack,44.265698219306465,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,96,657,Philip VI of France,44.21977507029054,medieval
+hierarchical_weighted,mixed_profile,97,672,Ali Abdullah Saleh,43.50702905342081,contemporary
+hierarchical_weighted,mixed_profile,98,673,Prince Charles Alexander of Lorraine,43.490315526398,early_modern
+hierarchical_weighted,mixed_profile,99,679,Alfonso Ferrero La Marmora,43.200249921899406,long_nineteenth_century
+hierarchical_weighted,mixed_profile,100,691,Horatio Gates,42.6932208684786,early_modern
+hierarchical_weighted,mixed_profile,101,718,"John, King of England",41.501718213058425,medieval
+hierarchical_weighted,mixed_profile,102,742,Hugo Sperrle,40.55857544517339,world_wars
+hierarchical_weighted,mixed_profile,103,750,Nobutake Kondō,40.064667291471416,world_wars
+hierarchical_weighted,mixed_profile,104,761,Nikola Ivanov,39.694939081537015,long_nineteenth_century
+hierarchical_weighted,mixed_profile,105,774,"Albrecht, Duke of Württemberg",38.78459856294907,world_wars
+hierarchical_weighted,mixed_profile,106,778,Hans Joachim von Zieten,38.444392377382066,early_modern
+hierarchical_weighted,mixed_profile,107,782,John of Austria,38.360356138706656,early_modern
+hierarchical_weighted,mixed_profile,108,788,Semyon Timoshenko,37.85363948766011,world_wars
+hierarchical_weighted,mixed_profile,109,790,"Frederick William, the Great Elector",37.7728834739144,early_modern
+hierarchical_weighted,mixed_profile,110,812,Vytautas the Great,37.07185254607935,medieval
+hierarchical_weighted,mixed_profile,111,813,Hitoshi Imamura,36.905185879412684,world_wars
+hierarchical_weighted,mixed_profile,112,817,Ma Zhongying,36.82396126210559,world_wars
+hierarchical_weighted,mixed_profile,113,822,Mihr-Mihroe,36.445017182130584,medieval
+hierarchical_weighted,mixed_profile,114,823,Osama bin Laden,36.417853795688856,contemporary
+hierarchical_weighted,mixed_profile,115,827,Otto Wilhelm Königsmarck,36.14714151827554,early_modern
+hierarchical_weighted,mixed_profile,116,835,Francesco Morosini,35.78600437363324,early_modern
+hierarchical_weighted,mixed_profile,117,860,James Wolfe,34.30662293033427,early_modern
+hierarchical_weighted,mixed_profile,118,869,Nureddin Pasha,33.64026866604187,world_wars
+hierarchical_weighted,mixed_profile,119,872,Pontiac,33.56232427366449,early_modern
+hierarchical_weighted,mixed_profile,120,882,Fidel Castro,33.19743830053108,cold_war
+hierarchical_weighted,mixed_profile,121,885,Mihail Savov,33.13152139956264,long_nineteenth_century
+hierarchical_weighted,mixed_profile,122,909,Sefer Halilović,31.62949078412996,contemporary
+hierarchical_weighted,mixed_profile,123,918,Tej Singh,31.26382380506092,long_nineteenth_century
+hierarchical_weighted,mixed_profile,124,927,Jérôme Bonaparte,30.45688847235239,revolutionary_napoleonic
+hierarchical_weighted,mixed_profile,125,934,Thomas Gage,30.17057169634489,early_modern
+hierarchical_weighted,mixed_profile,126,937,Najib ad-Dawlah,30.119181505779444,early_modern
+hierarchical_weighted,mixed_profile,127,938,Abu Omar al-Shishani,30.112933458294282,contemporary
+hierarchical_weighted,mixed_profile,128,940,"Charles, Prince of Soubise",30.05014058106842,early_modern
+hierarchical_weighted,mixed_profile,129,953,Benny Peled,29.24492346141831,cold_war
+hierarchical_weighted,mixed_profile,130,954,"Jean d'Estrées, Count of Estrées",29.2416432364886,early_modern
+hierarchical_weighted,mixed_profile,131,1010,Aslan Maskhadov,24.333333333333336,contemporary
+hierarchical_weighted,mixed_profile,132,1023,Gregorio Luperón,23.297875663855045,long_nineteenth_century
+hierarchical_weighted,mixed_profile,133,1041,Abdullah Bughra,20.57200874726648,world_wars
+hierarchical_weighted,mixed_profile,134,1050,Christian V of Denmark,18.953920649796938,early_modern
+hierarchical_weighted,operation_heavy,1,27,Bernard Montgomery,81.17541393314589,world_wars
+hierarchical_weighted,operation_heavy,2,47,Fyodor Tolbukhin,77.85941893158386,world_wars
+hierarchical_weighted,operation_heavy,3,49,Aleksandr Vasilevsky,77.81458919087787,world_wars
+hierarchical_weighted,operation_heavy,4,59,Dwight D. Eisenhower,76.36676038737895,world_wars
+hierarchical_weighted,operation_heavy,5,60,Ivan Bagramyan,76.1877538269291,world_wars
+hierarchical_weighted,operation_heavy,6,63,Rodion Malinovsky,75.95657606997813,world_wars
+hierarchical_weighted,operation_heavy,7,67,George S. Patton,75.48609809434551,world_wars
+hierarchical_weighted,operation_heavy,8,72,Konstantin Rokossovsky,75.22852233676977,world_wars
+hierarchical_weighted,operation_heavy,9,83,Kirill Meretskov,74.11262105592003,world_wars
+hierarchical_weighted,operation_heavy,10,85,Asif Ali Zardari,73.99174008122463,contemporary
+hierarchical_weighted,operation_heavy,11,110,Jean de Lattre de Tassigny,71.68744142455483,world_wars
+hierarchical_weighted,operation_heavy,12,113,Tommy Franks,71.57913152139955,contemporary
+hierarchical_weighted,operation_heavy,13,121,Georg von Küchler,70.91143392689784,world_wars
+hierarchical_weighted,operation_heavy,14,133,Ivan Chernyakhovsky,70.16791627616371,world_wars
+hierarchical_weighted,operation_heavy,15,140,Omar Bradley,69.83708216182443,world_wars
+hierarchical_weighted,operation_heavy,16,161,Marc Mitscher,67.96579194001875,world_wars
+hierarchical_weighted,operation_heavy,17,173,Georgi Todorov,67.33755076538583,world_wars
+hierarchical_weighted,operation_heavy,18,185,Suhayl al-Hasan,66.27459387691346,contemporary
+hierarchical_weighted,operation_heavy,19,194,Henry Kent Hewitt,65.77522649172134,world_wars
+hierarchical_weighted,operation_heavy,20,197,David Petraeus,65.70149953139644,contemporary
+hierarchical_weighted,operation_heavy,21,215,William Halsey Jr.,64.67338331771322,world_wars
+hierarchical_weighted,operation_heavy,22,244,Ghiath Dalla,62.844536082474235,contemporary
+hierarchical_weighted,operation_heavy,23,274,Hulusi Akar,61.387797563261486,contemporary
+hierarchical_weighted,operation_heavy,24,275,Creighton Abrams,61.37888784754765,cold_war
+hierarchical_weighted,operation_heavy,25,277,Abu Mohammad al-Julani,61.181513589503275,contemporary
+hierarchical_weighted,operation_heavy,26,291,Walter Model,60.434083099031554,world_wars
+hierarchical_weighted,operation_heavy,27,310,James Somerville,59.51999375195252,world_wars
+hierarchical_weighted,operation_heavy,28,350,Nguyễn Văn Toàn,57.83880037488285,cold_war
+hierarchical_weighted,operation_heavy,29,385,Đỗ Cao Trí,56.03765698219305,cold_war
+hierarchical_weighted,operation_heavy,30,386,José Solchaga,56.024679787566384,world_wars
+hierarchical_weighted,operation_heavy,31,396,Valerian Frolov,55.4717463292721,world_wars
+hierarchical_weighted,operation_heavy,32,403,Markian Popov,55.25179631365198,world_wars
+hierarchical_weighted,operation_heavy,33,413,Miles Dempsey,54.80646672914713,world_wars
+hierarchical_weighted,operation_heavy,34,423,Ashfaq Parvez Kayani,54.3238300531084,contemporary
+hierarchical_weighted,operation_heavy,35,431,Maximilian von Weichs,54.01530771633865,world_wars
+hierarchical_weighted,operation_heavy,36,437,Nikolaus von Falkenhorst,53.869728209934394,world_wars
+hierarchical_weighted,operation_heavy,37,449,Josip Broz Tito,53.513745704467354,world_wars
+hierarchical_weighted,operation_heavy,38,452,Harry Crerar,53.36402374258044,world_wars
+hierarchical_weighted,operation_heavy,39,464,Andrey Yeryomenko,53.01921274601687,world_wars
+hierarchical_weighted,operation_heavy,40,475,Alexandros Papagos,52.411402686660416,world_wars
+hierarchical_weighted,operation_heavy,41,535,Hoàng Cầm,49.63327085285848,cold_war
+hierarchical_weighted,operation_heavy,42,552,Dmitry Lelyushenko,48.740706029365825,world_wars
+hierarchical_weighted,operation_heavy,43,615,Maurice Gamelin,46.11824429865667,world_wars
+hierarchical_weighted,operation_heavy,44,616,Nguyễn Văn Minh,46.064198687910036,cold_war
+hierarchical_weighted,operation_heavy,45,623,Arthur Coningham,45.798969072164944,world_wars
+hierarchical_weighted,operation_heavy,46,632,Adolf Hitler,45.378163074039364,world_wars
+hierarchical_weighted,operation_heavy,47,634,Kliment Boyadzhiev,45.29037800687285,world_wars
+hierarchical_weighted,operation_heavy,48,647,Giáp Văn Cương,44.688691034051864,cold_war
+hierarchical_weighted,operation_heavy,49,653,Noor Wali Mehsud,44.33488909715713,contemporary
+hierarchical_weighted,operation_heavy,50,668,Alexander Löhr,43.645679475164016,world_wars
+hierarchical_weighted,operation_heavy,51,684,Hoàng Văn Thái,43.07200874726648,cold_war
+hierarchical_weighted,operation_heavy,52,687,Hoàng Xuân Lãm,42.84639175257733,cold_war
+hierarchical_weighted,operation_heavy,53,694,Johannes Blaskowitz,42.55342080599812,world_wars
+hierarchical_weighted,operation_heavy,54,714,Sudirman,41.682380506091846,cold_war
+hierarchical_weighted,operation_heavy,55,723,Trần Văn Trà,41.23790065604499,cold_war
+hierarchical_weighted,operation_heavy,56,738,Paul Hausser,40.65557638238051,world_wars
+hierarchical_weighted,operation_heavy,57,739,Erich von Manstein,40.61715089034677,world_wars
+hierarchical_weighted,operation_heavy,58,759,Issam Zahreddine,39.75845673227116,contemporary
+hierarchical_weighted,operation_heavy,59,799,Hjalmar Siilasvuo,37.48375507653859,world_wars
+hierarchical_weighted,operation_heavy,60,800,Heinrich von Vietinghoff,37.44798500468604,world_wars
+hierarchical_weighted,operation_heavy,61,809,Georg-Hans Reinhardt,37.14667291471415,world_wars
+hierarchical_weighted,operation_heavy,62,819,Nikolai Ivanov,36.69015151515151,world_wars
+hierarchical_weighted,operation_heavy,63,825,Ferdinand Schörner,36.32536707278976,world_wars
+hierarchical_weighted,operation_heavy,64,830,Hakimullah Mehsud,36.034914089347076,contemporary
+hierarchical_weighted,operation_heavy,65,836,Hermann Göring,35.75101530771634,world_wars
+hierarchical_weighted,operation_heavy,66,877,Joseph Achuzie,33.373789440799754,cold_war
+hierarchical_weighted,operation_heavy,67,879,Tohir Yoʻldosh,33.31012183692596,contemporary
+hierarchical_weighted,operation_heavy,68,884,Traugott Herr,33.14011246485474,world_wars
+hierarchical_weighted,operation_heavy,69,889,Eduard von Böhm-Ermolli,32.94017494532958,world_wars
+hierarchical_weighted,operation_heavy,70,893,Erhard Raus,32.738831615120276,world_wars
+hierarchical_weighted,operation_heavy,71,908,Courtney Hodges,31.82099343955014,world_wars
+hierarchical_weighted,operation_heavy,72,913,Yakov Cherevichenko,31.46796626054358,world_wars
+hierarchical_weighted,operation_heavy,73,933,Ernst Busch,30.211840049984378,world_wars
+hierarchical_weighted,operation_heavy,74,945,Wilhelm Ritter von Leeb,29.90924711027804,world_wars
+hierarchical_weighted,operation_heavy,75,952,Isoroku Yamamoto,29.251640112464855,world_wars
+hierarchical_weighted,operation_heavy,76,967,Petre Dumitrescu,28.407910028116216,world_wars
+hierarchical_weighted,operation_heavy,77,972,Hans-Valentin Hube,27.95251483911278,world_wars
+hierarchical_weighted,operation_heavy,78,994,Walther Nehring,25.354264292408626,world_wars
+hierarchical_weighted,operation_heavy,79,998,Otto Wöhler,24.93714464229928,world_wars
+hierarchical_weighted,operation_heavy,80,1008,Alexander Yegorov,24.40549828178694,world_wars
+hierarchical_weighted,operation_heavy,81,1028,Dietrich von Saucken,22.569890659169012,world_wars
+hierarchical_weighted,operation_heavy,82,1029,Italo Gariboldi,22.348728522336774,world_wars
+hierarchical_weighted,operation_heavy,83,1038,Hans-Jürgen von Arnim,21.42580443611371,world_wars
+hierarchical_weighted,operation_heavy,84,1042,Lothar Rendulic,20.52913464542331,world_wars
+hierarchical_weighted,operation_heavy,85,1049,Walter Weiß,19.14784129959388,world_wars
+hierarchical_weighted,operation_heavy,86,1051,Kurt von Tippelskirch,18.910727897532023,world_wars
+hierarchical_weighted,operation_heavy,87,1054,Gusztáv Jány,18.320962199312717,world_wars
+hierarchical_weighted,operation_heavy,88,1063,Karl-Adolf Hollidt,16.032889721961887,world_wars
+hierarchical_weighted,war_campaign_heavy,1,89,Valery Gerasimov,73.61936113714465,contemporary
+hierarchical_weighted,war_campaign_heavy,2,141,Kurt Christoph Graf von Schwerin,69.57419556388629,early_modern
+hierarchical_weighted,war_campaign_heavy,3,267,Józef Piłsudski,61.55576382380507,world_wars
+hierarchical_weighted,war_campaign_heavy,4,284,Phạm Văn Đồng,60.73451421430804,cold_war
+hierarchical_weighted,war_campaign_heavy,5,292,Pietro Badoglio,60.352077475788825,world_wars
+hierarchical_weighted,war_campaign_heavy,6,297,Lê Duẩn,60.13914401749454,cold_war
+hierarchical_weighted,war_campaign_heavy,7,363,Masoud Barzani,57.29365823180257,contemporary
+hierarchical_weighted,war_campaign_heavy,8,471,Yuan Shikai,52.686660418619184,long_nineteenth_century
+hierarchical_weighted,war_campaign_heavy,9,485,Jonas Savimbi,51.811433926897855,cold_war
+hierarchical_weighted,war_campaign_heavy,10,590,Henry VII of England,47.03842549203374,medieval
+hierarchical_weighted,war_campaign_heavy,11,594,Jukums Vācietis,46.93017806935333,world_wars
+hierarchical_weighted,war_campaign_heavy,12,602,Sergey Kamenev,46.61121524523586,world_wars
+hierarchical_weighted,war_campaign_heavy,13,646,Leonid Brezhnev,44.78281786941581,cold_war
+hierarchical_weighted,war_campaign_heavy,14,660,Nicholas I of Russia,44.09247110278038,long_nineteenth_century
+hierarchical_weighted,war_campaign_heavy,15,688,Baji Rao II,42.84036238675414,revolutionary_napoleonic
+hierarchical_weighted,war_campaign_heavy,16,828,Abu Ibrahim al-Hashimi al-Qurashi,36.10845829428304,contemporary
+hierarchical_weighted,war_campaign_heavy,17,842,Qianlong Emperor,35.359787566385506,early_modern
+hierarchical_weighted,war_campaign_heavy,18,849,Abu Bakr al-Baghdadi,34.9866213683224,contemporary
+hierarchical_weighted,war_campaign_heavy,19,854,Mikhail Frunze,34.6569259606373,world_wars
+hierarchical_weighted,war_campaign_heavy,20,862,Abu Ayyub al-Masri,34.083255232739766,contemporary
+hierarchical_weighted,war_campaign_heavy,21,886,Feng Yuxiang,33.065760699781315,world_wars
+hierarchical_weighted,war_campaign_heavy,22,906,Izzat Ibrahim al-Douri,31.98429865666979,contemporary
+hierarchical_weighted,war_campaign_heavy,23,973,Frederick Augustus Rutowsky,27.912995938769136,early_modern
+hierarchical_weighted,war_campaign_heavy,24,986,Mikhail Tukhachevsky,26.522649172133704,world_wars
+hierarchical_weighted,war_campaign_heavy,25,999,Maria Theresa,24.913002186816623,early_modern
+hierarchical_weighted,war_campaign_heavy,26,1033,Leon Trotsky,21.822193064667296,world_wars
+hierarchical_weighted,war_campaign_heavy,27,1057,Gustav IV Adolf,17.90119962511715,revolutionary_napoleonic

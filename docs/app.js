@@ -109,6 +109,12 @@
     return `${titleCase(confidence.confidenceCategory || "unknown")} · ${interval}`;
   }
 
+  function commanderRoleLabel(commander) {
+    const role = commander.roleSensitivity || commander.roleContribution || {};
+    if (!role.dominantRoleClass) return "Unclassified";
+    return titleCase(role.dominantRoleClass);
+  }
+
   function commanderMetricValue(commander, modelKey, metricKey) {
     return metricKey === "score" ? commander.scores[modelKey] : commander.ranks[modelKey];
   }
@@ -131,6 +137,7 @@
     if (key === "tier") return commander.tier && commander.tier.sort != null ? commander.tier.sort : 99;
     if (key === "stability") return commander.stabilityScore || 0;
     if (key === "confidence") return commander.rankConfidence && commander.rankConfidence.rankBandWidth80 != null ? commander.rankConfidence.rankBandWidth80 : 999999;
+    if (key === "role") return commanderRoleLabel(commander);
     if (key === "audit") return (commander.auditFlags || []).length;
     if (key === "metric") return commanderMetricValue(commander, state.modelKey, state.metricKey);
     if (key === "engagements") return commander.engagementCount || 0;
@@ -171,7 +178,7 @@
       state.tableSortDirection = state.tableSortDirection === "desc" ? "asc" : "desc";
     } else {
       state.tableSortKey = key;
-      state.tableSortDirection = key === "name" || key === "era" || key === "category" || key === "profile" || key === "tier" ? "asc" : "desc";
+    state.tableSortDirection = key === "name" || key === "era" || key === "category" || key === "profile" || key === "tier" || key === "role" ? "asc" : "desc";
     }
     renderExplorerTable();
   }
@@ -185,7 +192,8 @@
       if (state.searchTerm) {
         const auditText = (commander.auditFlags || []).map((flag) => flag.flag).join(" ");
         const confidenceText = commander.rankConfidence ? `${commander.rankConfidence.confidenceCategory || ""} ${commander.rankConfidence.rankInterval80 || ""}` : "";
-        const haystack = `${commander.name} ${commander.primaryEraBucket || ""} ${commander.interpretiveEra} ${commander.robustnessCategory} ${commanderTierLabel(commander)} ${confidenceText} ${auditText}`
+        const roleText = commanderRoleLabel(commander);
+        const haystack = `${commander.name} ${commander.primaryEraBucket || ""} ${commander.interpretiveEra} ${commander.robustnessCategory} ${commanderTierLabel(commander)} ${confidenceText} ${roleText} ${auditText}`
           .toLowerCase();
         if (!haystack.includes(state.searchTerm.toLowerCase())) return false;
       }
@@ -783,6 +791,9 @@
               <div><span>Stability</span><strong>${commanderStabilityLabel(commander)}</strong></div>
               <div><span>Rank CI</span><strong>${commanderConfidenceLabel(commander)}</strong></div>
               <div><span>Bootstrap presence</span><strong>${formatPercent(commander.rankConfidence && commander.rankConfidence.bootstrapPresenceRate)}</strong></div>
+              <div><span>Dominant role</span><strong>${commanderRoleLabel(commander)}</strong></div>
+              <div><span>Role-weighted rank</span><strong>${formatNumber(commander.roleSensitivity && commander.roleSensitivity.rankRoleWeighted)}</strong></div>
+              <div><span>Direct command share</span><strong>${formatPercent(commander.roleSensitivity && commander.roleSensitivity.shareDirectFieldCommand)}</strong></div>
               <div><span>Audit flags</span><strong>${formatNumber((commander.auditFlags || []).length)}</strong></div>
             </div>
             <div class="muted">${commander.trustHeadlineReason || commander.interpretiveReason || "No interpretive note available for this commander in the current classification layer."}</div>
@@ -850,6 +861,7 @@
         ${sortableHeader("engagements", "Engagements")}
         ${sortableHeader("stability", "Stability")}
         ${sortableHeader("confidence", "Confidence")}
+        ${sortableHeader("role", "Role")}
         ${sortableHeader("spread", "Spread")}
         ${sortableHeader("audit", "Audit")}
         ${sortableHeader("profile", "Profile")}
@@ -868,6 +880,7 @@
             <td>${formatNumber(commander.engagementCount)}</td>
             <td>${commanderStabilityLabel(commander)}</td>
             <td>${commanderConfidenceLabel(commander)}</td>
+            <td>${commanderRoleLabel(commander)}</td>
             <td>${formatNumber(commander.rankRange)}</td>
             <td>${formatNumber((commander.auditFlags || []).length)}</td>
             <td>${PAGE_CLASS_LABELS[commander.pageTypeProfileClass] || titleCase(commander.pageTypeProfileClass || "mixed")}</td>

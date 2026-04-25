@@ -126,6 +126,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
     high_ranked_flags = load_optional_csv(snapshot_dir, "audits/high_ranked_commander_flags.csv")
     rank_confidence = load_optional_csv(snapshot_dir, "derived_scoring/commander_rank_confidence_summary.csv")
     confidence_adjusted_tiers = load_optional_csv(snapshot_dir, "derived_scoring/commander_tiers_confidence_adjusted.csv")
+    role_contributions = load_optional_csv(snapshot_dir, "derived_scoring/role_class_score_contributions.csv")
+    role_sensitivity = load_optional_csv(snapshot_dir, "RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv")
 
     sensitivity_numeric = [
         "best_rank",
@@ -339,6 +341,33 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "score_normalized",
             ],
         )
+    if not role_contributions.empty:
+        to_numeric(
+            role_contributions,
+            [
+                "total_score",
+                "share_unclear_role",
+                "share_nominal_or_political",
+                "share_direct_field_command",
+                "role_adjustment_factor",
+                "mean_role_confidence",
+            ],
+        )
+    if not role_sensitivity.empty:
+        to_numeric(
+            role_sensitivity,
+            [
+                "rank_hierarchical_trust_v2",
+                "rank_role_weighted",
+                "score_role_weighted",
+                "rank_change_vs_hierarchical_trust_v2",
+                "share_direct_field_command",
+                "share_unclear_role",
+                "share_nominal_or_political",
+                "role_adjustment_factor",
+                "mean_role_confidence",
+            ],
+        )
 
     commander_ids = set(sensitivity["analytic_commander_id"])
     outcome_profile = outcome_profile[outcome_profile["analytic_commander_id"].isin(commander_ids)]
@@ -361,6 +390,10 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         confidence_adjusted_tiers = confidence_adjusted_tiers[
             confidence_adjusted_tiers["analytic_commander_id"].isin(commander_ids)
         ]
+    if not role_contributions.empty:
+        role_contributions = role_contributions[role_contributions["analytic_commander_id"].isin(commander_ids)]
+    if not role_sensitivity.empty:
+        role_sensitivity = role_sensitivity[role_sensitivity["analytic_commander_id"].isin(commander_ids)]
 
     stability_by_id = {
         row["analytic_commander_id"]: {
@@ -444,6 +477,29 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         }
         for _, row in confidence_adjusted_tiers.iterrows()
     } if not confidence_adjusted_tiers.empty else {}
+    role_contrib_by_id = {
+        row["analytic_commander_id"]: {
+            "dominantRoleClass": clean_value(row.get("dominant_role_class")),
+            "shareDirectFieldCommand": clean_value(row.get("share_direct_field_command")),
+            "shareUnclearRole": clean_value(row.get("share_unclear_role")),
+            "shareNominalOrPolitical": clean_value(row.get("share_nominal_or_political")),
+            "roleAdjustmentFactor": clean_value(row.get("role_adjustment_factor")),
+            "meanRoleConfidence": clean_value(row.get("mean_role_confidence")),
+        }
+        for _, row in role_contributions.iterrows()
+    } if not role_contributions.empty else {}
+    role_sensitivity_by_id = {
+        row["analytic_commander_id"]: {
+            "rankRoleWeighted": clean_value(row.get("rank_role_weighted")),
+            "scoreRoleWeighted": clean_value(row.get("score_role_weighted")),
+            "rankChangeVsTrustV2": clean_value(row.get("rank_change_vs_hierarchical_trust_v2")),
+            "dominantRoleClass": clean_value(row.get("dominant_role_class")),
+            "shareDirectFieldCommand": clean_value(row.get("share_direct_field_command")),
+            "shareUnclearRole": clean_value(row.get("share_unclear_role")),
+            "shareNominalOrPolitical": clean_value(row.get("share_nominal_or_political")),
+        }
+        for _, row in role_sensitivity.iterrows()
+    } if not role_sensitivity.empty else {}
 
     summary = summary.rename(columns={column: f"summary_{column}" for column in summary.columns})
     classification = classification.rename(
@@ -505,6 +561,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         page_contributions = page_contributions_by_id.get(row.get("analytic_commander_id"), [])
         rank_confidence_info = rank_confidence_by_id.get(row.get("analytic_commander_id"), {})
         confidence_tier_info = confidence_tier_by_id.get(row.get("analytic_commander_id"), {})
+        role_contrib_info = role_contrib_by_id.get(row.get("analytic_commander_id"), {})
+        role_sensitivity_info = role_sensitivity_by_id.get(row.get("analytic_commander_id"), {})
         primary_era_bucket = (
             clean_value(row.get("primary_era_bucket"))
             or clean_value(row.get("primary_era_bucket_x"))
@@ -600,6 +658,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
                 "tier": tier_info,
                 "rankConfidence": rank_confidence_info,
                 "confidenceAdjustedTier": confidence_tier_info,
+                "roleContribution": role_contrib_info,
+                "roleSensitivity": role_sensitivity_info,
                 "robustnessCategory": clean_value(row.get("interpretive_group")) or "other_ranked",
                 "trustConfidence": clean_value(row.get("summary_trust_confidence_v2")) or clean_value(row.get("trust_confidence_v2")),
                 "trustHeadlineReason": clean_value(row.get("summary_trust_headline_reason_v2")) or clean_value(row.get("trust_headline_reason_v2")),
@@ -792,6 +852,8 @@ def build_dashboard_dataset(snapshot_dir: Path) -> dict[str, Any]:
         ("audits/high_ranked_commander_flags.csv", high_ranked_flags),
         ("derived_scoring/commander_rank_confidence_summary.csv", rank_confidence),
         ("derived_scoring/commander_tiers_confidence_adjusted.csv", confidence_adjusted_tiers),
+        ("derived_scoring/role_class_score_contributions.csv", role_contributions),
+        ("RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv", role_sensitivity),
     ]:
         if not frame.empty:
             generated_from.append(optional_source)

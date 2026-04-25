@@ -1,0 +1,45 @@
+{
+  "snapshot": "outputs_improved_2026-04-24_upgrade_pass4_role_curated",
+  "checks": {
+    "strict_eligibility_preserved": {
+      "pass": true,
+      "strict_included_pages": 13492
+    },
+    "non_person_leakage": {
+      "pass": true,
+      "hits": []
+    },
+    "top10_core_overlap": {
+      "pass": true,
+      "overlap_count": 9,
+      "trust_top10": [
+        "Alexander Suvorov",
+        "Maurice, Prince of Orange",
+        "Napoleon Bonaparte",
+        "Subutai",
+        "Sébastien Le Prestre, Marquis of Vauban",
+        "Jean Lannes",
+        "Louis-Nicolas Davout",
+        "Douglas MacArthur",
+        "Charles XIV John",
+        "Ivan Paskevich"
+      ],
+      "weighted_top10": [
+        "Alexander Suvorov",
+        "Ivan Paskevich",
+        "Subutai",
+        "Sébastien Le Prestre, Marquis of Vauban",
+        "Maurice, Prince of Orange",
+        "Napoleon Bonaparte",
+        "Louis XIV",
+        "Louis-Nicolas Davout",
+        "Jean Lannes",
+        "Charles XIV John"
+      ]
+    },
+    "robust_core_not_higher_level_fragile": {
+      "pass": true,
+      "hits": []
+    }
+  }
+}

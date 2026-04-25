@@ -47,6 +47,13 @@ CONFIDENCE_FILES = [
     "derived_scoring/commander_tiers_confidence_adjusted.csv",
     "reports/UPGRADE_PASS_3_CONFIDENCE_REPORT.md",
 ]
+ROLE_FILES = [
+    "verification/verified_command_role_classification.csv",
+    "derived_scoring/role_class_score_contributions.csv",
+    "RANKING_RESULTS_HIERARCHICAL_TRUST_V2_ROLE_WEIGHTED.csv",
+    "RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv",
+    "reports/UPGRADE_PASS_4_ROLE_CLASSIFICATION_REPORT.md",
+]
 
 
 def resolve_snapshot_file(snapshot_dir: Path, relative_name: str) -> Path:
@@ -99,6 +106,7 @@ def audit(
     snapshot_dir: Path,
     require_upgrade_files: bool = False,
     require_confidence_files: bool = False,
+    require_role_files: bool = False,
 ) -> dict[str, Any]:
     checks: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
@@ -107,6 +115,7 @@ def audit(
         *REQUIRED_FILES,
         *(UPGRADE_FILES if require_upgrade_files else []),
         *(CONFIDENCE_FILES if require_confidence_files else []),
+        *(ROLE_FILES if require_role_files else []),
     ]
     missing_files = [name for name in required_files if not resolve_snapshot_file(snapshot_dir, name).exists()]
     add_check(checks, "required_files_exist", not missing_files, missing_files=missing_files)
@@ -364,6 +373,70 @@ def audit(
             generated_from=dashboard["metadata"].get("generatedFrom", []),
         )
 
+    if require_role_files:
+        role_contrib = read_csv(snapshot_dir / "derived_scoring" / "role_class_score_contributions.csv")
+        role_sensitivity = read_csv(snapshot_dir / "RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv")
+        role_file = read_csv(snapshot_dir / "verification" / "verified_command_role_classification.csv")
+        top100_ids = {
+            row["analytic_commander_id"]
+            for row in trust
+            if 0 < numeric(row.get("rank", row.get("rank_hierarchical_trust_v2", "")), 999999) <= 100
+        }
+        role_contrib_ids = {row["analytic_commander_id"] for row in role_contrib}
+        role_sensitivity_ids = {row["analytic_commander_id"] for row in role_sensitivity}
+        role_pair_count = len({(row.get("analytic_commander_id"), row.get("battle_id")) for row in role_file})
+        valid_roles = {
+            "overall_commander",
+            "principal_field_commander",
+            "wing_or_corps_commander",
+            "subordinate_commander",
+            "coalition_commander",
+            "siege_engineer_or_specialist",
+            "naval_commander",
+            "staff_or_planning_role",
+            "nominal_or_political_leader",
+            "unclear_role",
+        }
+        invalid_roles = sorted({row.get("role_class") for row in role_file} - valid_roles)
+        dashboard_by_id = {row.get("id"): row for row in dashboard.get("commanders", [])}
+        dashboard_missing_role = []
+        for commander_id in sorted(top100_ids):
+            commander = dashboard_by_id.get(commander_id, {})
+            if not commander.get("roleSensitivity") or not commander.get("roleContribution"):
+                dashboard_missing_role.append(commander_id)
+        add_check(
+            checks,
+            "top100_have_role_contributions",
+            top100_ids <= role_contrib_ids,
+            missing_count=len(top100_ids - role_contrib_ids),
+            missing_ids=sorted(top100_ids - role_contrib_ids)[:20],
+        )
+        add_check(
+            checks,
+            "top100_have_role_sensitivity",
+            top100_ids <= role_sensitivity_ids,
+            missing_count=len(top100_ids - role_sensitivity_ids),
+            missing_ids=sorted(top100_ids - role_sensitivity_ids)[:20],
+        )
+        add_check(
+            checks,
+            "role_file_covers_annotated_pairs",
+            role_pair_count == len(annotated_pairs),
+            role_pairs=role_pair_count,
+            annotated_pairs=len(annotated_pairs),
+        )
+        add_check(checks, "role_classes_valid", not invalid_roles, invalid_roles=invalid_roles)
+        add_check(
+            checks,
+            "dashboard_contains_role_metadata",
+            not dashboard_missing_role
+            and "derived_scoring/role_class_score_contributions.csv" in dashboard["metadata"].get("generatedFrom", [])
+            and "RANKING_RESULTS_PASS4_ROLE_SENSITIVITY.csv" in dashboard["metadata"].get("generatedFrom", []),
+            missing_count=len(dashboard_missing_role),
+            missing_ids=dashboard_missing_role[:20],
+            generated_from=dashboard["metadata"].get("generatedFrom", []),
+        )
+
     validation_failures = {
         name: result
         for name, result in validation.get("checks", {}).items()
@@ -437,12 +510,18 @@ def main() -> None:
         action="store_true",
         help="Require Pass 3 bootstrap confidence outputs and dashboard confidence metadata.",
     )
+    parser.add_argument(
+        "--require-role-files",
+        action="store_true",
+        help="Require Pass 4 command-role classification outputs and dashboard role metadata.",
+    )
     args = parser.parse_args()
 
     summary = audit(
         args.snapshot_dir,
         require_upgrade_files=args.require_upgrade_files,
         require_confidence_files=args.require_confidence_files,
+        require_role_files=args.require_role_files,
     )
     output_path = args.output or args.snapshot_dir / "SNAPSHOT_INTEGRITY_AUDIT.json"
     output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
