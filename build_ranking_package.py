@@ -282,6 +282,7 @@ def aggregate_model_metrics(
     active["battle_presence_mass"] = active["presence_mass"] * active["battle_flag"]
     active["nonbattle_presence_mass"] = active["presence_mass"] * (1 - active["battle_flag"])
     active["era_bucket_known"] = active["era_bucket"].where(active["era_bucket"].ne("unknown"), "")
+    active["analytic_year_num_for_metrics"] = pd.to_numeric(active["analytic_year_num"], errors="coerce")
 
     grouped = active.groupby("analytic_commander_id", sort=False)
     metrics = grouped.agg(
@@ -299,8 +300,8 @@ def aggregate_model_metrics(
         weighted_outcome_value=("weighted_outcome_value", "sum"),
         conflict_breadth=("conflict_key", "nunique"),
         page_type_diversity=("page_type", "nunique"),
-        first_year=("analytic_year_num", "min"),
-        last_year=("analytic_year_num", "max"),
+        first_year=("analytic_year_num_for_metrics", "min"),
+        last_year=("analytic_year_num_for_metrics", "max"),
     ).reset_index()
     metrics["known_outcome_share"] = metrics["known_outcome_count"] / metrics["engagement_count"].clip(lower=1)
     metrics["known_battle_outcome_share"] = metrics["known_battle_outcome_count"] / metrics["battle_count"].clip(lower=1)

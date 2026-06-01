@@ -19,6 +19,19 @@ from battle_dataset_pipeline import normalize_result
 
 CURRENT_YEAR = 2026
 WIKIPEDIA_BASE = "https://en.wikipedia.org/wiki/"
+SIDE_KEYS = ("side_a", "side_b", "side_c", "side_d")
+SIDE_BELLIGERENT_FIELDS = {
+    "side_a": "belligerent_1_raw",
+    "side_b": "belligerent_2_raw",
+    "side_c": "belligerent_3_raw",
+    "side_d": "belligerent_4_raw",
+}
+SIDE_COMMANDER_FIELDS = {
+    "side_a": "commander_side_a_raw",
+    "side_b": "commander_side_b_raw",
+    "side_c": "commander_side_c_raw",
+    "side_d": "commander_side_d_raw",
+}
 EVENT_TITLE_KEYWORDS = {
     "battle",
     "siege",
@@ -820,9 +833,8 @@ def infer_actor_led_generic_winner_side(result_raw: str, battle_row: pd.Series) 
     if not actor_subject:
         return "", "unresolved"
     side_to_raw = {
-        "side_a": battle_row.get("belligerent_1_raw", ""),
-        "side_b": battle_row.get("belligerent_2_raw", ""),
-        "side_c": battle_row.get("belligerent_3_raw", ""),
+        side: battle_row.get(field, "")
+        for side, field in SIDE_BELLIGERENT_FIELDS.items()
     }
     populated_sides = [side for side, raw_value in side_to_raw.items() if normalize_space(raw_value)]
     actor_norm = normalize_title(actor_subject).lower()
@@ -865,11 +877,7 @@ def infer_subject_side_from_title(battle_row: pd.Series) -> tuple[str, str]:
     if not title_tokens:
         return "", "unresolved"
     hit_map: dict[str, list[str]] = {}
-    for side, field in (
-        ("side_a", "belligerent_1_raw"),
-        ("side_b", "belligerent_2_raw"),
-        ("side_c", "belligerent_3_raw"),
-    ):
+    for side, field in SIDE_BELLIGERENT_FIELDS.items():
         raw_value = normalize_space(battle_row.get(field, "")).lower()
         if not raw_value:
             continue
@@ -896,14 +904,15 @@ def infer_winner_side(result_raw: str, result_type: str, battle_row: pd.Series) 
     if not result_lower or result_type in ("", "unknown") or result_type in NEUTRAL_OUTCOMES:
         return "", "unresolved"
     side_to_raw = {
-        "side_a": battle_row.get("belligerent_1_raw", ""),
-        "side_b": battle_row.get("belligerent_2_raw", ""),
-        "side_c": battle_row.get("belligerent_3_raw", ""),
+        side: battle_row.get(field, "")
+        for side, field in SIDE_BELLIGERENT_FIELDS.items()
     }
     side_to_supporting_raws = {
-        "side_a": [battle_row.get("belligerent_1_raw", ""), battle_row.get("commander_side_a_raw", "")],
-        "side_b": [battle_row.get("belligerent_2_raw", ""), battle_row.get("commander_side_b_raw", "")],
-        "side_c": [battle_row.get("belligerent_3_raw", ""), battle_row.get("commander_side_c_raw", "")],
+        side: [
+            battle_row.get(SIDE_BELLIGERENT_FIELDS[side], ""),
+            battle_row.get(SIDE_COMMANDER_FIELDS[side], ""),
+        ]
+        for side in SIDE_KEYS
     }
     populated_sides = [side for side, raw_value in side_to_raw.items() if normalize_space(raw_value)]
     direct_loser_side = infer_negated_loser_side(result_lower, side_to_supporting_raws)
@@ -1211,7 +1220,7 @@ def apply_commander_outcome_overrides(output_root: Path, annotated: pd.DataFrame
 
 def apply_split_outcome_credit(annotated: pd.DataFrame) -> pd.DataFrame:
     annotated = annotated.copy()
-    valid_side_mask = annotated["side"].isin(["side_a", "side_b", "side_c", "side_d"])
+    valid_side_mask = annotated["side"].isin(SIDE_KEYS)
     known_outcome_mask = annotated["outcome_category"].ne("unknown")
     same_side_counts = (
         annotated.loc[valid_side_mask]
@@ -1231,7 +1240,7 @@ def apply_split_outcome_credit(annotated: pd.DataFrame) -> pd.DataFrame:
     outcome_credit_fractions: list[str] = []
     for row in annotated.to_dict(orient="records"):
         key = (row["battle_id"], row["side"])
-        if row["side"] in {"side_a", "side_b", "side_c", "side_d"}:
+        if row["side"] in SIDE_KEYS:
             side_count = max(same_side_counts.get(key, 1), 1)
             known_side_count = known_side_counts.get(key, 0)
             same_side_count_values.append(str(side_count))
@@ -1636,12 +1645,10 @@ def build_package(output_root: Path) -> dict[str, Any]:
     battle_opponent_entities: dict[tuple[str, str], list[str]] = {}
     for battle_row in battles.to_dict(orient="records"):
         side_entities = {
-            "side_a": extract_belligerent_entities(battle_row["belligerent_1_raw"]),
-            "side_b": extract_belligerent_entities(battle_row["belligerent_2_raw"]),
-            "side_c": extract_belligerent_entities(battle_row["belligerent_3_raw"]),
-            "side_d": [],
+            side: extract_belligerent_entities(battle_row.get(field, ""))
+            for side, field in SIDE_BELLIGERENT_FIELDS.items()
         }
-        for side in ("side_a", "side_b", "side_c", "side_d"):
+        for side in SIDE_KEYS:
             opponents: list[str] = []
             for other_side, entities in side_entities.items():
                 if other_side != side:
