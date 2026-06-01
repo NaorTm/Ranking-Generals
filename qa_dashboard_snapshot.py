@@ -9,7 +9,6 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 import pandas as pd
-from playwright.sync_api import sync_playwright
 
 
 def parse_args() -> argparse.Namespace:
@@ -17,6 +16,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--snapshot-dir", type=Path, required=True)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8765)
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="Optional path for dashboard QA summary JSON. Defaults to snapshot_dir/dashboard_qa_summary.json.",
+    )
     return parser.parse_args()
 
 
@@ -81,6 +86,8 @@ def chart_trace_count(page, selector: str) -> int:
 
 
 def run_checks(snapshot_dir: Path, host: str, port: int) -> dict[str, object]:
+    from playwright.sync_api import sync_playwright
+
     dashboard_dir = snapshot_dir / "dashboard"
     expected = read_expected(snapshot_dir)
     summary: dict[str, object] = {
@@ -104,7 +111,32 @@ def run_checks(snapshot_dir: Path, host: str, port: int) -> dict[str, object]:
             page.on("pageerror", lambda exc: summary["page_errors"].append(str(exc)))
 
             response = page.goto(url, wait_until="networkidle", timeout=120000)
-            page.wait_for_timeout(1500)
+            chart_ids = [
+                "#leaderboard-chart",
+                "#movement-chart",
+                "#sensitivity-chart",
+                "#page-dependence-chart",
+                "#page-composition-chart",
+                "#era-chart",
+                "#outcome-chart",
+            ]
+            page.wait_for_function(
+                """expected => {
+                    const countText = document.querySelector("#commander-count")?.textContent || "";
+                    const count = Number(countText.replace(/,/g, ""));
+                    return count === expected && document.querySelectorAll("#explorer-table tbody tr").length >= 10;
+                }""",
+                arg=expected["commander_count"],
+                timeout=120000,
+            )
+            page.wait_for_function(
+                """selectors => selectors.every(selector => {
+                    const node = document.querySelector(selector);
+                    return node && Array.isArray(node.data) && node.data.length > 0;
+                })""",
+                arg=chart_ids,
+                timeout=120000,
+            )
 
             summary["checks"]["http_load"] = {
                 "ok": bool(response and response.ok),
@@ -124,15 +156,6 @@ def run_checks(snapshot_dir: Path, host: str, port: int) -> dict[str, object]:
                 "snapshot_label": snapshot_label,
             }
 
-            chart_ids = [
-                "#leaderboard-chart",
-                "#movement-chart",
-                "#sensitivity-chart",
-                "#page-dependence-chart",
-                "#page-composition-chart",
-                "#era-chart",
-                "#outcome-chart",
-            ]
             panel_counts = {chart_id: chart_trace_count(page, chart_id) for chart_id in chart_ids}
             summary["checks"]["panel_render"] = {
                 "ok": all(count > 0 for count in panel_counts.values())
@@ -248,11 +271,17 @@ def run_checks(snapshot_dir: Path, host: str, port: int) -> dict[str, object]:
     return summary
 
 
+def write_summary(summary: dict[str, object], snapshot_dir: Path, output_path: Path | None = None) -> Path:
+    target = output_path or snapshot_dir / "dashboard_qa_summary.json"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    return target
+
+
 def main() -> None:
     args = parse_args()
     summary = run_checks(args.snapshot_dir, args.host, args.port)
-    output_path = args.snapshot_dir / "dashboard_qa_summary.json"
-    output_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_summary(summary, args.snapshot_dir, args.output)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
