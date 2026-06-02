@@ -5,19 +5,19 @@
   const MODEL_KEYS = MODELS.map((item) => item.key);
 
   const COLORS = {
-    robust_elite_core: "#227c5d",
-    strong_upper_tier: "#c77d22",
-    high_confidence_upper_band: "#2f6db3",
-    model_sensitive_band: "#b74a4a",
-    other_ranked: "#6f7a72",
-    battle: "#2f6db3",
-    operation: "#5b8c5a",
-    campaign: "#b27c2f",
-    war: "#894d9c",
-    victory: "#2e8f63",
-    indecisive: "#b88b2b",
-    defeat: "#b74646",
-    unknown: "#7b8480",
+    robust_elite_core: "#1f7a5f",
+    strong_upper_tier: "#b66a22",
+    high_confidence_upper_band: "#2568b8",
+    model_sensitive_band: "#b64a55",
+    other_ranked: "#667085",
+    battle: "#2568b8",
+    operation: "#4c8a64",
+    campaign: "#b7792d",
+    war: "#7b4fad",
+    victory: "#25845a",
+    indecisive: "#a97822",
+    defeat: "#b8464f",
+    unknown: "#667085",
   };
 
   const GROUP_LABELS = {
@@ -56,10 +56,16 @@
     selectedIds: [],
     tableSortKey: "metric",
     tableSortDirection: "default",
+    resizeTimer: null,
+    wikiHideTimer: null,
+    wikiPreviewBound: false,
   };
 
   const commanderById = new Map(COMMANDERS.map((commander) => [commander.id, commander]));
   const searchInput = document.getElementById("search-input");
+  const wikiSummaryCache = new Map();
+  let activeWikiLink = null;
+  let wikiPreviewElement = null;
 
   function formatRank(value) {
     return value == null ? "NA" : `#${Math.round(value)}`;
@@ -83,6 +89,35 @@
     return text
       .replace(/_/g, " ")
       .replace(/\b\w/g, (match) => match.toUpperCase());
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function wikiLinkHtml(name, url) {
+    const safeName = escapeHtml(name || "Unknown commander");
+    if (!url) return `<span class="commander-name">${safeName}</span>`;
+    const safeUrl = escapeHtml(url);
+    return `
+      <a
+        class="wiki-link"
+        href="${safeUrl}"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-wiki-title="${safeName}"
+        data-wiki-url="${safeUrl}"
+      >${safeName}</a>
+    `;
+  }
+
+  function commanderLinkHtml(commander) {
+    return wikiLinkHtml(commander.name, commander.url);
   }
 
   function getModelLabel(modelKey) {
@@ -255,6 +290,207 @@
     };
   }
 
+  function chartLayout(overrides = {}) {
+    const isCompact = window.matchMedia("(max-width: 760px)").matches;
+    const normalizedOverrides = { ...overrides };
+    if (overrides.margin && isCompact) {
+      normalizedOverrides.margin = {
+        l: Math.min(overrides.margin.l || 0, 92),
+        r: Math.min(overrides.margin.r || 0, 12),
+        t: overrides.margin.t || 20,
+        b: Math.min(Math.max(overrides.margin.b || 40, 44), 72),
+      };
+    }
+    const axisDefaults = {
+      gridcolor: "rgba(148, 163, 184, 0.24)",
+      zerolinecolor: "rgba(100, 116, 139, 0.34)",
+      tickfont: { color: "#475569" },
+      titlefont: { color: "#334155" },
+    };
+    const baseLegend = { font: { color: "#475569" } };
+    return {
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "rgba(255,255,255,0)",
+      font: {
+        family: '"Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif',
+        color: "#162033",
+      },
+      hoverlabel: {
+        bgcolor: "#162033",
+        bordercolor: "#162033",
+        font: { color: "#ffffff" },
+      },
+      ...normalizedOverrides,
+      xaxis: { ...axisDefaults, ...(overrides.xaxis || {}) },
+      yaxis: { ...axisDefaults, ...(overrides.yaxis || {}) },
+      legend: { ...baseLegend, ...(overrides.legend || {}) },
+    };
+  }
+
+  function resizeCharts() {
+    document.querySelectorAll(".chart").forEach((chart) => {
+      if (chart._fullLayout) {
+        Plotly.Plots.resize(chart);
+      }
+    });
+  }
+
+  function scheduleChartResize() {
+    window.requestAnimationFrame(resizeCharts);
+  }
+
+  function ensureWikiPreview() {
+    if (wikiPreviewElement) return wikiPreviewElement;
+    wikiPreviewElement = document.createElement("aside");
+    wikiPreviewElement.className = "wiki-preview";
+    wikiPreviewElement.setAttribute("role", "status");
+    wikiPreviewElement.setAttribute("aria-live", "polite");
+    document.body.appendChild(wikiPreviewElement);
+    wikiPreviewElement.addEventListener("mouseenter", () => clearTimeout(state.wikiHideTimer));
+    wikiPreviewElement.addEventListener("mouseleave", hideWikiPreview);
+    return wikiPreviewElement;
+  }
+
+  function wikipediaSummaryEndpoint(url) {
+    try {
+      const parsed = new URL(url);
+      const marker = "/wiki/";
+      const index = parsed.pathname.indexOf(marker);
+      if (!parsed.hostname.endsWith("wikipedia.org") || index === -1) return null;
+      return `${parsed.origin}/api/rest_v1/page/summary/${parsed.pathname.slice(index + marker.length)}`;
+    } catch {
+      return null;
+    }
+  }
+
+  function positionWikiPreview(link) {
+    const preview = ensureWikiPreview();
+    const rect = link.getBoundingClientRect();
+    const width = Math.min(340, window.innerWidth - 24);
+    preview.style.width = `${width}px`;
+    const left = Math.min(Math.max(12, rect.left + window.scrollX), window.scrollX + window.innerWidth - width - 12);
+    let top = rect.bottom + window.scrollY + 10;
+    if (top + preview.offsetHeight > window.scrollY + window.innerHeight - 12) {
+      top = Math.max(window.scrollY + 12, rect.top + window.scrollY - preview.offsetHeight - 10);
+    }
+    preview.style.left = `${left}px`;
+    preview.style.top = `${top}px`;
+  }
+
+  function renderWikiPreviewContent(summary, url, isLoading = false) {
+    const preview = ensureWikiPreview();
+    const thumbnail = summary.thumbnail
+      ? `<img src="${escapeHtml(summary.thumbnail)}" alt="" loading="lazy">`
+      : `<div class="wiki-preview-fallback" aria-hidden="true">W</div>`;
+    preview.innerHTML = `
+      <div class="wiki-preview-media">${thumbnail}</div>
+      <div class="wiki-preview-copy">
+        <div class="wiki-preview-title">${escapeHtml(summary.title)}</div>
+        <p>${escapeHtml(summary.extract)}</p>
+        <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">
+          ${isLoading ? "Opening full article is available now" : "Open on Wikipedia"}
+        </a>
+      </div>
+    `;
+  }
+
+  async function showWikiPreview(link) {
+    clearTimeout(state.wikiHideTimer);
+    activeWikiLink = link;
+    const url = link.dataset.wikiUrl || link.href;
+    const title = link.dataset.wikiTitle || link.textContent.trim();
+    const preview = ensureWikiPreview();
+    renderWikiPreviewContent({ title, extract: "Loading Wikipedia preview..." }, url, true);
+    preview.classList.add("visible");
+    positionWikiPreview(link);
+
+    const endpoint = wikipediaSummaryEndpoint(url);
+    if (!endpoint) {
+      renderWikiPreviewContent({ title, extract: "Preview is unavailable for this link." }, url);
+      positionWikiPreview(link);
+      return;
+    }
+
+    if (!wikiSummaryCache.has(endpoint)) {
+      wikiSummaryCache.set(
+        endpoint,
+        fetch(endpoint)
+          .then((response) => {
+            if (!response.ok) throw new Error(`Wikipedia returned ${response.status}`);
+            return response.json();
+          })
+          .then((data) => ({
+            title: data.title || title,
+            extract: data.extract || "No summary is available from Wikipedia for this page.",
+            thumbnail: data.thumbnail && data.thumbnail.source ? data.thumbnail.source : null,
+          }))
+          .catch(() => ({
+            title,
+            extract: "Preview could not be loaded. Open Wikipedia for the full article.",
+            thumbnail: null,
+          })),
+      );
+    }
+
+    const summary = await wikiSummaryCache.get(endpoint);
+    if (activeWikiLink !== link) return;
+    renderWikiPreviewContent(summary, url);
+    positionWikiPreview(link);
+  }
+
+  function scheduleWikiPreviewHide(relatedTarget) {
+    const preview = ensureWikiPreview();
+    if (relatedTarget && preview.contains(relatedTarget)) return;
+    clearTimeout(state.wikiHideTimer);
+    state.wikiHideTimer = window.setTimeout(hideWikiPreview, 160);
+  }
+
+  function hideWikiPreview() {
+    clearTimeout(state.wikiHideTimer);
+    activeWikiLink = null;
+    if (wikiPreviewElement) {
+      wikiPreviewElement.classList.remove("visible");
+    }
+  }
+
+  function closestWikiLink(event) {
+    return event.target && event.target.closest ? event.target.closest(".wiki-link") : null;
+  }
+
+  function bindWikiPreviews() {
+    if (state.wikiPreviewBound) return;
+    state.wikiPreviewBound = true;
+    ensureWikiPreview();
+
+    document.addEventListener(
+      "click",
+      (event) => {
+        if (closestWikiLink(event)) {
+          event.stopPropagation();
+        }
+      },
+      true,
+    );
+
+    document.addEventListener("mouseover", (event) => {
+      const link = closestWikiLink(event);
+      if (link) showWikiPreview(link);
+    });
+    document.addEventListener("focusin", (event) => {
+      const link = closestWikiLink(event);
+      if (link) showWikiPreview(link);
+    });
+    document.addEventListener("mouseout", (event) => {
+      const link = closestWikiLink(event);
+      if (link) scheduleWikiPreviewHide(event.relatedTarget);
+    });
+    document.addEventListener("focusout", (event) => {
+      const link = closestWikiLink(event);
+      if (link) scheduleWikiPreviewHide(event.relatedTarget);
+    });
+    window.addEventListener("scroll", hideWikiPreview, true);
+  }
+
   function attachPlotSelection(chartId) {
     const chart = document.getElementById(chartId);
     if (!chart || chart.dataset.selectionAttached === "1") return;
@@ -288,7 +524,7 @@
       },
       {
         label: "Headline leader",
-        value: top ? top.name : "NA",
+        value: top ? commanderLinkHtml(top) : "NA",
         detail: top ? `${formatRank(top.ranks[state.modelKey])} Â· ${top.trustConfidence || "NA"} confidence` : "No commander available",
       },
       {
@@ -345,9 +581,12 @@
               ${entry.items
                 .map(
                   (commander) => `
-                    <button class="tier-pill" data-commander-id="${commander.id}">
-                      ${commander.name}
-                    </button>
+                    <span class="tier-pill">
+                      ${commanderLinkHtml(commander)}
+                      <button type="button" class="tier-select-button" data-commander-id="${commander.id}" aria-label="Add ${escapeHtml(commander.name)} to comparison">
+                        +
+                      </button>
+                    </span>
                   `,
                 )
                 .join("") || '<span class="muted">No commanders in the current filter.</span>'}
@@ -357,7 +596,7 @@
       })
       .join("");
 
-    document.querySelectorAll(".tier-pill").forEach((button) => {
+    document.querySelectorAll(".tier-select-button").forEach((button) => {
       button.addEventListener("click", () => addSelection(button.dataset.commanderId));
     });
   }
@@ -374,8 +613,8 @@
         if (!commander) return "";
         return `
           <span class="chip">
-            ${commander.name}
-            <button type="button" data-remove-id="${id}" aria-label="Remove ${commander.name}">Ã—</button>
+            ${commanderLinkHtml(commander)}
+            <button type="button" data-remove-id="${id}" aria-label="Remove ${escapeHtml(commander.name)}">&times;</button>
           </span>
         `;
       })
@@ -420,17 +659,14 @@
     Plotly.react(
       chart,
       traces,
-      {
+      chartLayout({
         margin: { l: 180, r: 30, t: 20, b: 40 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
         xaxis: {
           title: state.metricKey === "rank" ? "Rank (lower is better)" : "Normalized score",
           autorange: state.metricKey === "rank" ? "reversed" : true,
-          gridcolor: "rgba(0,0,0,0.08)",
         },
         yaxis: { automargin: true },
-      },
+      }),
       plotlyConfig(),
     );
     attachPlotSelection("leaderboard-chart");
@@ -461,18 +697,15 @@
     Plotly.react(
       chart,
       traces,
-      {
+      chartLayout({
         margin: { l: 48, r: 20, t: 20, b: 70 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
         xaxis: { tickangle: -25 },
         yaxis: {
           title: "Rank",
           autorange: "reversed",
-          gridcolor: "rgba(0,0,0,0.08)",
         },
         showlegend: false,
-      },
+      }),
       plotlyConfig(),
     );
     attachPlotSelection("movement-chart");
@@ -515,14 +748,12 @@
     Plotly.react(
       chart,
       traces,
-      {
+      chartLayout({
         margin: { l: 55, r: 20, t: 20, b: 48 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
-        xaxis: { title: "Conservative baseline rank", autorange: "reversed", gridcolor: "rgba(0,0,0,0.08)" },
-        yaxis: { title: "Rank spread across models", gridcolor: "rgba(0,0,0,0.08)" },
+        xaxis: { title: "Conservative baseline rank", autorange: "reversed" },
+        yaxis: { title: "Rank spread across models" },
         legend: { orientation: "h", y: 1.12 },
-      },
+      }),
       plotlyConfig(),
     );
     attachPlotSelection("sensitivity-chart");
@@ -570,22 +801,17 @@
     Plotly.react(
       chart,
       traces,
-      {
+      chartLayout({
         margin: { l: 55, r: 20, t: 20, b: 55 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
         xaxis: {
           title: "Higher-level page share (%)",
-          gridcolor: "rgba(0,0,0,0.08)",
         },
         yaxis: {
           title: "Battle-only rank minus hierarchical rank",
           zeroline: true,
-          zerolinecolor: "rgba(0,0,0,0.32)",
-          gridcolor: "rgba(0,0,0,0.08)",
         },
         legend: { orientation: "h", y: 1.12 },
-      },
+      }),
       plotlyConfig(),
     );
     attachPlotSelection("page-dependence-chart");
@@ -628,15 +854,13 @@
     Plotly.react(
       chart,
       traces,
-      {
+      chartLayout({
         barmode: "stack",
         margin: { l: 55, r: 20, t: 20, b: 85 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
         xaxis: { tickangle: -28 },
-        yaxis: { title: "Strict page-type share (%)", gridcolor: "rgba(0,0,0,0.08)", range: [0, 100] },
+        yaxis: { title: "Strict page-type share (%)", range: [0, 100] },
         legend: { orientation: "h", y: 1.14 },
-      },
+      }),
       plotlyConfig(),
     );
   }
@@ -671,18 +895,15 @@
             `<extra>${ERA_LABELS[era]}</extra>`,
         },
       ],
-      {
+      chartLayout({
         margin: { l: 180, r: 20, t: 20, b: 40 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
         title: { text: `${ERA_LABELS[era]} leaderboard`, font: { size: 16 } },
         xaxis: {
           title: state.metricKey === "rank" ? "Rank (lower is better)" : "Normalized score",
           autorange: state.metricKey === "rank" ? "reversed" : true,
-          gridcolor: "rgba(0,0,0,0.08)",
         },
         yaxis: { automargin: true },
-      },
+      }),
       plotlyConfig(),
     );
     attachPlotSelection("era-chart");
@@ -731,15 +952,13 @@
     Plotly.react(
       chart,
       traces,
-      {
+      chartLayout({
         barmode: "stack",
         margin: { l: 180, r: 20, t: 20, b: 40 },
-        paper_bgcolor: "rgba(0,0,0,0)",
-        plot_bgcolor: "rgba(0,0,0,0)",
-        xaxis: { title: "Outcome share (%)", range: [0, 100], gridcolor: "rgba(0,0,0,0.08)" },
+        xaxis: { title: "Outcome share (%)", range: [0, 100] },
         yaxis: { automargin: true },
         legend: { orientation: "h", y: 1.12 },
-      },
+      }),
       plotlyConfig(),
     );
   }
@@ -766,7 +985,7 @@
           .join(" | ");
         return `
           <article class="comparison-card">
-            <h3>${commander.name}</h3>
+            <h3>${commanderLinkHtml(commander)}</h3>
             <div class="comparison-meta">
               ${ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra)} ·
               ${GROUP_LABELS[commander.robustnessCategory] || "Other ranked"} ·
@@ -875,7 +1094,7 @@
       .map(
         (commander) => `
           <tr data-commander-id="${commander.id}" class="${state.selectedIds.includes(commander.id) ? "selected-row" : ""}">
-            <td>${commander.name}</td>
+            <td>${commanderLinkHtml(commander)}</td>
             <td>${ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra)}</td>
             <td>${GROUP_LABELS[commander.robustnessCategory] || "Other ranked"}</td>
             <td>${commanderTierLabel(commander)}</td>
@@ -909,7 +1128,7 @@
       .map(
         (row) => `
           <li>
-            <strong>${row.displayName}</strong>
+            <strong>${wikiLinkHtml(row.displayName, row.canonicalWikipediaUrl)}</strong>
             <span class="muted">(${titleCase(row.primaryEraBucket || "unknown")})</span><br>
             best ${formatRank(row.bestRank)}, worst ${formatRank(row.worstRank)}, spread ${formatNumber(row.rankRange)}.<br>
             ${row.auditNote}
@@ -924,7 +1143,7 @@
       .map(
         (row) => `
           <li>
-            <strong>${row.displayName}</strong>
+            <strong>${wikiLinkHtml(row.displayName, row.canonicalWikipediaUrl)}</strong>
             <span class="muted">(${row.supportBand.replace(/_/g, " ")})</span><br>
             ${row.recommendationNote}<br>
             ${row.caveatNote}
@@ -948,6 +1167,7 @@
     renderExplorerTable();
     renderAuditAndShortlist();
     renderTrustExplainer();
+    scheduleChartResize();
   }
 
   function populateControls() {
@@ -1012,5 +1232,10 @@
 
   populateControls();
   bindControls();
+  bindWikiPreviews();
+  window.addEventListener("resize", () => {
+    clearTimeout(state.resizeTimer);
+    state.resizeTimer = window.setTimeout(resizeCharts, 120);
+  });
   renderAll();
 })();
