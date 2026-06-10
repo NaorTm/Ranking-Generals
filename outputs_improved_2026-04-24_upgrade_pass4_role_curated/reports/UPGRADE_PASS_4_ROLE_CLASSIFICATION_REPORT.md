@@ -26,7 +26,7 @@ Headline model remains `hierarchical_trust_v2`. Pass 4 adds a role-aware sensiti
 | 6 | 9 | 3 | Jean Lannes | Tier A, confidence-supported robust elite | principal_field_commander | 100.0% | 1.4% | 0.0% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 7 | 10 | 3 | Louis-Nicolas Davout | Tier B, confidence-supported elite | principal_field_commander | 100.0% | 2.7% | 0.0% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 8 | 41 | 33 | Douglas MacArthur | Tier B, confidence-supported elite | coalition_commander | 0.0% | 6.6% | 0.0% | Role weighting materially weakens exact rank. |
-| 9 | 43 | 34 | Charles XIV John | Tier B, confidence-supported elite | coalition_commander | 0.0% | 3.3% | 0.0% | Role weighting materially weakens exact rank. |
+| 9 | 43 | 34 | Charles XIV John | Tier A, confidence-supported robust elite | coalition_commander | 0.0% | 3.3% | 0.0% | Role weighting materially weakens exact rank. |
 | 10 | 4 | -6 | Ivan Paskevich | Tier C, high-ranking but confidence-limited | overall_commander | 100.0% | 5.8% | 0.0% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 11 | 987 | 976 | Louis XIV | Tier B, confidence-supported elite | nominal_or_political_leader | 0.0% | 7.7% | 0.0% | Nominal/political role share is high; headline interpretation needs curation. |
 | 12 | 12 | 0 | Henri de La Tour d'Auvergne, Viscount of Turenne | Tier B, confidence-supported elite | principal_field_commander | 98.0% | 0.0% | 2.0% | Role evidence supports ranking without a major Pass 4 caveat. |
@@ -37,12 +37,12 @@ Headline model remains `hierarchical_trust_v2`. Pass 4 adds a role-aware sensiti
 | 17 | 14 | -3 | Alexander Farnese, Duke of Parma | Tier B, confidence-supported elite | principal_field_commander | 99.5% | 0.0% | 0.5% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 18 | 17 | -1 | Khalid ibn al-Walid | Tier A, confidence-supported robust elite | principal_field_commander | 99.8% | 0.0% | 0.2% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 19 | 5 | -14 | Genghis Khan | Tier C, high-ranking but confidence-limited | overall_commander | 100.0% | 4.4% | 0.0% | Role evidence supports ranking without a major Pass 4 caveat. |
-| 20 | 13 | -7 | Hubert Gough | Tier C, high-ranking but confidence-limited | principal_field_commander | 100.0% | 5.3% | 0.0% | Role evidence supports ranking without a major Pass 4 caveat. |
-| 21 | 19 | -2 | Bernard Montgomery | Tier C, high-ranking but confidence-limited | overall_commander | 91.9% | 48.9% | 0.0% | High broad-page dependency; role-weighted interpretation is qualified. |
+| 20 | 13 | -7 | Hubert Gough | Tier B, confidence-supported elite | principal_field_commander | 100.0% | 5.3% | 0.0% | Role evidence supports ranking without a major Pass 4 caveat. |
+| 21 | 19 | -2 | Bernard Montgomery | Tier B, confidence-supported elite | overall_commander | 91.9% | 48.9% | 0.0% | High broad-page dependency; role-weighted interpretation is qualified. |
 | 22 | 53 | 31 | Maharaja Ranjit Singh | Tier C, high-ranking but confidence-limited | principal_field_commander | 88.6% | 12.4% | 9.4% | Role weighting materially weakens exact rank. |
 | 23 | 35 | 12 | Alexander the Great | Tier C, high-ranking but confidence-limited | principal_field_commander | 99.1% | 1.1% | 0.0% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 24 | 45 | 21 | Winfield Scott | Tier C, high-ranking but confidence-limited | principal_field_commander | 93.9% | 2.6% | 3.7% | Role weighting materially weakens exact rank. |
-| 25 | 15 | -10 | Hannibal | Tier C, high-ranking but confidence-limited | principal_field_commander | 97.8% | 2.5% | 1.2% | Role evidence supports ranking without a major Pass 4 caveat. |
+| 25 | 15 | -10 | Hannibal | Tier B, confidence-supported elite | principal_field_commander | 97.8% | 2.5% | 1.2% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 26 | 39 | 13 | Enver Pasha | Tier C, high-ranking but confidence-limited | principal_field_commander | 87.0% | 6.5% | 4.3% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 27 | 16 | -11 | Baybars | Tier C, high-ranking but confidence-limited | principal_field_commander | 99.0% | 0.0% | 1.0% | Role evidence supports ranking without a major Pass 4 caveat. |
 | 28 | 27 | -1 | Peng Dehuai | Tier C, high-ranking but confidence-limited | principal_field_commander | 98.9% | 0.0% | 1.1% | Role evidence supports ranking without a major Pass 4 caveat. |
@@ -97,53 +97,53 @@ Headline model remains `hierarchical_trust_v2`. Pass 4 adds a role-aware sensiti
 | 453 | 1062 | 609 | Ashfaq Parvez Kayani | staff_or_planning_role | 0.0% | 0.0% | 100.0% |
 | 463 | 1064 | 601 | Phạm Văn Đồng | nominal_or_political_leader | 0.0% | 100.0% | 100.0% |
 | 354 | 900 | 546 | Ghiath Dalla | unclear_role | 92.6% | 0.0% | 100.0% |
-| 279 | 807 | 528 | Marc Mitscher | unclear_role | 69.9% | 0.0% | 74.7% |
-| 243 | 736 | 493 | Ivan Chernyakhovsky | unclear_role | 63.3% | 0.0% | 80.8% |
+| 243 | 738 | 495 | Ivan Chernyakhovsky | unclear_role | 63.3% | 0.0% | 80.8% |
 | 559 | 1001 | 442 | Đỗ Cao Trí | unclear_role | 100.0% | 0.0% | 100.0% |
-| 373 | 795 | 422 | Miles Dempsey | unclear_role | 52.2% | 0.0% | 59.0% |
-| 202 | 584 | 382 | William Halsey Jr. | wing_or_corps_commander | 37.4% | 0.0% | 44.6% |
-| 125 | 490 | 365 | Suhayl al-Hasan | unclear_role | 64.6% | 0.0% | 81.3% |
-| 195 | 559 | 364 | Abu Mohammad al-Julani | unclear_role | 58.8% | 0.0% | 100.0% |
+| 373 | 796 | 423 | Miles Dempsey | unclear_role | 52.2% | 0.0% | 59.0% |
+| 202 | 587 | 385 | William Halsey Jr. | wing_or_corps_commander | 37.4% | 0.0% | 44.6% |
+| 195 | 561 | 366 | Abu Mohammad al-Julani | unclear_role | 58.8% | 0.0% | 100.0% |
+| 125 | 491 | 366 | Suhayl al-Hasan | unclear_role | 64.6% | 0.0% | 81.3% |
 | 660 | 1016 | 356 | Jonas Savimbi | unclear_role | 100.0% | 0.0% | 100.0% |
-| 352 | 705 | 353 | Markian Popov | wing_or_corps_commander | 26.1% | 0.0% | 42.1% |
+| 352 | 706 | 354 | Markian Popov | wing_or_corps_commander | 26.1% | 0.0% | 42.1% |
 | 516 | 869 | 353 | Georg-Hans Reinhardt | unclear_role | 60.4% | 0.0% | 72.3% |
-| 416 | 768 | 352 | Ii Naomasa | wing_or_corps_commander | 8.0% | 0.0% | 9.6% |
-| 405 | 755 | 350 | Aliagha Shikhlinski | wing_or_corps_commander | 4.1% | 0.0% | 4.1% |
-| 326 | 675 | 349 | Ukita Hideie | wing_or_corps_commander | 5.5% | 0.0% | 5.5% |
-| 188 | 526 | 338 | Chiang Kai-shek | wing_or_corps_commander | 36.4% | 0.0% | 29.9% |
+| 416 | 769 | 353 | Ii Naomasa | wing_or_corps_commander | 8.0% | 0.0% | 9.6% |
+| 326 | 679 | 353 | Ukita Hideie | wing_or_corps_commander | 5.5% | 0.0% | 5.5% |
+| 188 | 529 | 341 | Chiang Kai-shek | wing_or_corps_commander | 36.4% | 0.0% | 29.9% |
+| 249 | 589 | 340 | Mizuno Katsushige | wing_or_corps_commander | 0.0% | 0.0% | 0.0% |
+| 541 | 872 | 331 | Yuan Shikai | unclear_role | 44.9% | 0.0% | 46.6% |
 
 ## Largest Improvements Or Credibility Gains
 
 | rank_hierarchical_trust_v2 | rank_role_weighted | rank_change_vs_hierarchical_trust_v2 | display_name | dominant_role_class | share_direct_field_command | broad_page_contribution_share |
 | --- | --- | --- | --- | --- | --- | --- |
-| 511 | 336 | -175 | Trần Văn Trà | overall_commander | 82.3% | 66.4% |
-| 818 | 646 | -172 | Miguel Grau | principal_field_commander | 100.0% | 0.0% |
-| 834 | 666 | -168 | George of Hesse-Darmstadt | principal_field_commander | 100.0% | 0.0% |
-| 629 | 462 | -167 | Francisco Pizarro | principal_field_commander | 100.0% | 0.0% |
-| 709 | 545 | -164 | Wazir Khan | principal_field_commander | 100.0% | 0.0% |
-| 512 | 349 | -163 | Tughril I | principal_field_commander | 100.0% | 0.0% |
-| 514 | 351 | -163 | Prince Emanuele Filiberto, Duke of Aosta | principal_field_commander | 100.0% | 0.0% |
-| 513 | 350 | -163 | Attila the Hun | principal_field_commander | 100.0% | 0.0% |
-| 760 | 598 | -162 | Karl von Bülow | principal_field_commander | 100.0% | 0.0% |
-| 718 | 557 | -161 | Bhim Chand | principal_field_commander | 100.0% | 0.0% |
+| 620 | 438 | -182 | Alexandros Papagos | overall_commander | 94.5% | 55.8% |
+| 511 | 337 | -174 | Trần Văn Trà | overall_commander | 82.3% | 66.4% |
+| 818 | 650 | -168 | Miguel Grau | principal_field_commander | 100.0% | 0.0% |
+| 834 | 669 | -165 | George of Hesse-Darmstadt | principal_field_commander | 100.0% | 0.0% |
+| 629 | 465 | -164 | Francisco Pizarro | principal_field_commander | 100.0% | 0.0% |
+| 709 | 547 | -162 | Wazir Khan | principal_field_commander | 100.0% | 0.0% |
 | 302 | 141 | -161 | James Somerville | overall_commander | 100.0% | 69.9% |
-| 800 | 639 | -161 | Omer Vrioni | principal_field_commander | 100.0% | 0.0% |
-| 852 | 692 | -160 | Pierre Dupont de l'Étang | principal_field_commander | 100.0% | 0.0% |
-| 635 | 476 | -159 | Toghtekin | principal_field_commander | 100.0% | 0.0% |
-| 407 | 248 | -159 | Masinissa | principal_field_commander | 100.0% | 0.0% |
-| 733 | 574 | -159 | James G. Blunt | principal_field_commander | 100.0% | 0.0% |
-| 786 | 627 | -159 | Lala Shahin Pasha | principal_field_commander | 100.0% | 0.0% |
-| 556 | 397 | -159 | Charles Martel | principal_field_commander | 100.0% | 0.0% |
-| 649 | 492 | -157 | Douglas H. Cooper | principal_field_commander | 100.0% | 0.0% |
-| 666 | 510 | -156 | Kilij Arslan I | principal_field_commander | 100.0% | 0.0% |
+| 407 | 247 | -160 | Masinissa | principal_field_commander | 100.0% | 0.0% |
+| 852 | 693 | -159 | Pierre Dupont de l'Étang | principal_field_commander | 100.0% | 0.0% |
+| 718 | 559 | -159 | Bhim Chand | principal_field_commander | 100.0% | 0.0% |
+| 512 | 353 | -159 | Tughril I | principal_field_commander | 100.0% | 0.0% |
+| 513 | 354 | -159 | Attila the Hun | principal_field_commander | 100.0% | 0.0% |
+| 786 | 628 | -158 | Lala Shahin Pasha | principal_field_commander | 100.0% | 0.0% |
+| 760 | 602 | -158 | Karl von Bülow | principal_field_commander | 100.0% | 0.0% |
+| 514 | 356 | -158 | Prince Emanuele Filiberto, Duke of Aosta | principal_field_commander | 100.0% | 0.0% |
+| 556 | 399 | -157 | Charles Martel | principal_field_commander | 100.0% | 0.0% |
+| 800 | 643 | -157 | Omer Vrioni | principal_field_commander | 100.0% | 0.0% |
+| 635 | 479 | -156 | Toghtekin | principal_field_commander | 100.0% | 0.0% |
+| 733 | 577 | -156 | James G. Blunt | principal_field_commander | 100.0% | 0.0% |
+| 649 | 494 | -155 | Douglas H. Cooper | principal_field_commander | 100.0% | 0.0% |
 
 ## High-Rank, High-Unclear-Role Cases
 
 | rank_hierarchical_trust_v2 | rank_role_weighted | display_name | dominant_role_class | share_unclear_role | broad_page_contribution_share | confidence_adjusted_tier |
 | --- | --- | --- | --- | --- | --- | --- |
-| 125 | 490 | Suhayl al-Hasan | unclear_role | 64.6% | 81.3% | Tier D, page-type-sensitive performer |
+| 125 | 491 | Suhayl al-Hasan | unclear_role | 64.6% | 81.3% | Tier D, page-type-sensitive performer |
 | 101 | 253 | Georg von Küchler | principal_field_commander | 43.4% | 42.3% | Tier D, page-type-sensitive performer |
-| 105 | 368 | Tommy Franks | unclear_role | 40.7% | 52.4% | Tier D, page-type-sensitive performer |
+| 105 | 372 | Tommy Franks | unclear_role | 40.7% | 52.4% | Tier D, page-type-sensitive performer |
 
 ## Final Judgment
 

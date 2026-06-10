@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'">
   <title>Commander Ranking Analysis Dashboard</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -10,17 +11,17 @@
   <div class="app-shell">
     <header class="hero">
       <div>
-        <p class="eyebrow">Frozen Snapshot Dashboard</p>
+        <p class="eyebrow">Release Candidate Dashboard</p>
         <h1>Commander Ranking Analysis</h1>
         <p class="hero-copy">
-          Interactive exploration layer for the frozen ranking package in <code>outputs_improved_2026-04-24_upgrade_pass4_role_curated</code>.
-          This release presents a conservative, audited ranking framework with confidence limits. Read trusted tiers first, confidence labels second, and exact ranks as secondary detail rather than final historical truth.
+          This dashboard presents a tiered, confidence-aware interpretation of an evidence-weighted historical commander ranking framework.
+          Exact ranks are available, but tiers and sensitivity diagnostics should be read first.
         </p>
       </div>
       <div class="hero-meta">
         <div class="hero-meta-card">
           <span class="meta-label">Source snapshot</span>
-          <strong id="snapshot-label">outputs_improved_2026-04-24_upgrade_pass4_role_curated</strong>
+          <strong id="snapshot-label">outputs_improved_2026-04-24_upgrade_pass5_release_candidate</strong>
         </div>
         <div class="hero-meta-card">
           <span class="meta-label">Ranked commanders</span>

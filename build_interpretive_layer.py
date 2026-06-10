@@ -732,7 +732,7 @@ def main() -> None:
     parser.add_argument(
         "--snapshot-dir",
         type=Path,
-        default=Path("outputs_cleaned_2026-04-21_fullpopulation_authoritative"),
+        default=Path("outputs_improved_2026-04-24_upgrade_pass5_release_candidate"),
         help="Snapshot directory containing ranking outputs.",
     )
     args = parser.parse_args()

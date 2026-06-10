@@ -19,6 +19,7 @@ from build_ranking_dashboard import (
 )
 from build_ranking_package import build_rankings
 from build_scoring_framework_package import build_package
+from path_safety import safe_rmtree
 
 
 ROOT = Path(__file__).resolve().parent
@@ -59,7 +60,7 @@ def copy_snapshot(base_snapshot: Path, output_snapshot: Path) -> None:
     if (output_snapshot / "battles_clean.csv").exists():
         return
     if output_snapshot.exists():
-        shutil.rmtree(output_snapshot)
+        safe_rmtree(output_snapshot, ROOT)
     shutil.copytree(base_snapshot, output_snapshot)
 
 
@@ -141,7 +142,7 @@ def main() -> None:
     verification_dir = output_snapshot / "verification"
     state = read_stage_state(verification_dir)
     if stage_completed(state, "copy_snapshot") and not (output_snapshot / "battles_clean.csv").exists():
-        shutil.rmtree(output_snapshot, ignore_errors=True)
+        safe_rmtree(output_snapshot, ROOT, missing_ok=True)
         state = {"stages": {}}
 
     if not stage_completed(state, "copy_snapshot"):

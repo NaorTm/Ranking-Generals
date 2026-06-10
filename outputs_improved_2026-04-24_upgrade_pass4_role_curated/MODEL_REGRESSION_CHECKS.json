@@ -1,5 +1,5 @@
 {
-  "snapshot": "outputs_improved_2026-04-24_upgrade_pass4_role_curated",
+  "snapshot": "outputs_improved_2026-04-24_upgrade_pass3_confidence",
   "checks": {
     "strict_eligibility_preserved": {
       "pass": true,

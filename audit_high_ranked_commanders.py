@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 
-DEFAULT_SNAPSHOT = Path("outputs_improved_2026-04-24_ranking_model_upgrade")
+DEFAULT_SNAPSHOT = Path("outputs_improved_2026-04-24_upgrade_pass5_release_candidate")
 HIGH_LEVEL_PAGE_TYPES = {"operation_article", "campaign_article", "war_conflict_article"}
 
 

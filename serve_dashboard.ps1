@@ -1,4 +1,4 @@
-$dashboardDir = Join-Path $PSScriptRoot "outputs_cleaned_2026-04-21_fullpopulation_authoritative\dashboard"
+$dashboardDir = Join-Path $PSScriptRoot "outputs_improved_2026-04-24_upgrade_pass5_release_candidate\dashboard"
 
 if (-not (Test-Path $dashboardDir)) {
     Write-Error "Dashboard directory not found: $dashboardDir"

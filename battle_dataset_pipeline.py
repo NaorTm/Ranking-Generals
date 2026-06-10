@@ -33,6 +33,7 @@ ROOT_TITLE = "Lists of battles"
 USER_AGENT = "HistoricalBattleDatasetBot/0.1 (research dataset construction; local execution)"
 NOW_UTC = datetime.now(timezone.utc)
 THREAD_LOCAL = threading.local()
+SIDE_KEYS = ("side_a", "side_b", "side_c", "side_d")
 
 CONTENT_NAMESPACES = {
     "Talk:",
@@ -834,7 +835,7 @@ def build_wikitext_side_values(params: dict[str, str], stems: tuple[str, ...]) -
     for key, value in params.items():
         normalized_key = key.lower().replace("_", "")
         for stem in stems:
-            match = re.fullmatch(rf"{stem}([123])([a-z]?)", normalized_key)
+            match = re.fullmatch(rf"{stem}([1-4])([a-z]?)", normalized_key)
             if match:
                 grouped[int(match.group(1))].append(value)
                 break
@@ -1403,7 +1404,7 @@ def is_generic_commander_value(name: str) -> bool:
     lower = clean_name(name).lower()
     if not lower:
         return True
-    if len(re.findall(r"[a-zà-öø-ÿ]", lower)) < 2:
+    if sum(1 for char in lower if char.isalpha()) < 2:
         return True
     if lower in GENERIC_COMMANDER_TOKENS:
         return True
@@ -1416,61 +1417,6 @@ def is_generic_commander_value(name: str) -> bool:
     if len(lower.split()) == 1 and lower in {"attacker", "defender"}:
         return True
     return False
-
-
-def split_raw_commander_text(raw_text: str) -> list[str]:
-    if not raw_text:
-        return []
-    working = raw_text.replace("•", "\n").replace(";", "\n")
-    parts = [clean_name(part) for part in working.splitlines()]
-    parts = [part for part in parts if part]
-    if len(parts) == 1 and "," in parts[0]:
-        comma_parts = [clean_name(part) for part in parts[0].split(",")]
-        if len(comma_parts) > 1:
-            parts = [part for part in comma_parts if part]
-    deduped: list[str] = []
-    seen: set[str] = set()
-    for part in parts:
-        key = part.lower()
-        if key not in seen:
-            seen.add(key)
-            deduped.append(part)
-    return deduped
-
-
-def extract_commander_entries(side_cell: dict[str, Any]) -> list[dict[str, str]]:
-    linked_names = []
-    for link in side_cell.get("links", []):
-        candidate = clean_name(link["title"])
-        if not candidate or is_generic_commander_value(candidate):
-            continue
-        linked_names.append(
-            {
-                "raw_name": candidate,
-                "normalized_name": candidate,
-                "wikipedia_url": link["url"],
-                "identity_confidence": "high",
-                "identity_resolution_method": "linked_article",
-            }
-        )
-    if linked_names:
-        return linked_names
-
-    raw_names = split_raw_commander_text(side_cell.get("raw_text", ""))
-    entries = []
-    for raw_name in raw_names:
-        if is_generic_commander_value(raw_name):
-            continue
-        entries.append(
-            {
-                "raw_name": raw_name,
-                "normalized_name": clean_name(raw_name),
-                "wikipedia_url": "",
-                "identity_confidence": "medium",
-                "identity_resolution_method": "cleaned_raw_text",
-            }
-        )
-    return entries
 
 
 def split_raw_commander_text(raw_text: str) -> list[str]:
@@ -1886,15 +1832,19 @@ def build_battle_rows(
         "belligerent_1_raw": belligerent_map.get("side_a", ""),
         "belligerent_2_raw": belligerent_map.get("side_b", ""),
         "belligerent_3_raw": belligerent_map.get("side_c", ""),
+        "belligerent_4_raw": belligerent_map.get("side_d", ""),
         "commander_side_a_raw": commander_map.get("side_a", ""),
         "commander_side_b_raw": commander_map.get("side_b", ""),
         "commander_side_c_raw": commander_map.get("side_c", ""),
+        "commander_side_d_raw": commander_map.get("side_d", ""),
         "strength_side_a_raw": strength_map.get("side_a", ""),
         "strength_side_b_raw": strength_map.get("side_b", ""),
         "strength_side_c_raw": strength_map.get("side_c", ""),
+        "strength_side_d_raw": strength_map.get("side_d", ""),
         "casualties_side_a_raw": casualty_map.get("side_a", ""),
         "casualties_side_b_raw": casualty_map.get("side_b", ""),
         "casualties_side_c_raw": casualty_map.get("side_c", ""),
+        "casualties_side_d_raw": casualty_map.get("side_d", ""),
         "page_type": classification["page_type"],
         "page_type_confidence": classification["confidence"],
         "classification_notes": classification["reasons"],
@@ -1931,23 +1881,35 @@ def build_battle_rows(
         "belligerent_1_raw": belligerent_map.get("side_a", ""),
         "belligerent_2_raw": belligerent_map.get("side_b", ""),
         "belligerent_3_raw": belligerent_map.get("side_c", ""),
+        "belligerent_4_raw": belligerent_map.get("side_d", ""),
         "commander_side_a_raw": commander_map.get("side_a", ""),
         "commander_side_b_raw": commander_map.get("side_b", ""),
         "commander_side_c_raw": commander_map.get("side_c", ""),
+        "commander_side_d_raw": commander_map.get("side_d", ""),
         "strength_side_a_raw": strength_map.get("side_a", ""),
         "strength_side_b_raw": strength_map.get("side_b", ""),
         "strength_side_c_raw": strength_map.get("side_c", ""),
+        "strength_side_d_raw": strength_map.get("side_d", ""),
         "casualties_side_a_raw": casualty_map.get("side_a", ""),
         "casualties_side_b_raw": casualty_map.get("side_b", ""),
         "casualties_side_c_raw": casualty_map.get("side_c", ""),
+        "casualties_side_d_raw": casualty_map.get("side_d", ""),
         "strength_side_a_min": parse_numeric_range(strength_map.get("side_a", "")).get("min", ""),
         "strength_side_a_max": parse_numeric_range(strength_map.get("side_a", "")).get("max", ""),
         "strength_side_b_min": parse_numeric_range(strength_map.get("side_b", "")).get("min", ""),
         "strength_side_b_max": parse_numeric_range(strength_map.get("side_b", "")).get("max", ""),
+        "strength_side_c_min": parse_numeric_range(strength_map.get("side_c", "")).get("min", ""),
+        "strength_side_c_max": parse_numeric_range(strength_map.get("side_c", "")).get("max", ""),
+        "strength_side_d_min": parse_numeric_range(strength_map.get("side_d", "")).get("min", ""),
+        "strength_side_d_max": parse_numeric_range(strength_map.get("side_d", "")).get("max", ""),
         "casualties_side_a_min": parse_numeric_range(casualty_map.get("side_a", "")).get("min", ""),
         "casualties_side_a_max": parse_numeric_range(casualty_map.get("side_a", "")).get("max", ""),
         "casualties_side_b_min": parse_numeric_range(casualty_map.get("side_b", "")).get("min", ""),
         "casualties_side_b_max": parse_numeric_range(casualty_map.get("side_b", "")).get("max", ""),
+        "casualties_side_c_min": parse_numeric_range(casualty_map.get("side_c", "")).get("min", ""),
+        "casualties_side_c_max": parse_numeric_range(casualty_map.get("side_c", "")).get("max", ""),
+        "casualties_side_d_min": parse_numeric_range(casualty_map.get("side_d", "")).get("min", ""),
+        "casualties_side_d_max": parse_numeric_range(casualty_map.get("side_d", "")).get("max", ""),
         "page_type": classification["page_type"],
         "page_type_confidence": classification["confidence"],
         "classification_notes": classification["reasons"],
@@ -2142,15 +2104,19 @@ def build_battle_rows_from_wikitext(
         "belligerent_1_raw": belligerent_map.get("side_a", ""),
         "belligerent_2_raw": belligerent_map.get("side_b", ""),
         "belligerent_3_raw": belligerent_map.get("side_c", ""),
+        "belligerent_4_raw": belligerent_map.get("side_d", ""),
         "commander_side_a_raw": commander_map.get("side_a", ""),
         "commander_side_b_raw": commander_map.get("side_b", ""),
         "commander_side_c_raw": commander_map.get("side_c", ""),
+        "commander_side_d_raw": commander_map.get("side_d", ""),
         "strength_side_a_raw": strength_map.get("side_a", ""),
         "strength_side_b_raw": strength_map.get("side_b", ""),
         "strength_side_c_raw": strength_map.get("side_c", ""),
+        "strength_side_d_raw": strength_map.get("side_d", ""),
         "casualties_side_a_raw": casualty_map.get("side_a", ""),
         "casualties_side_b_raw": casualty_map.get("side_b", ""),
         "casualties_side_c_raw": casualty_map.get("side_c", ""),
+        "casualties_side_d_raw": casualty_map.get("side_d", ""),
         "page_type": classification["page_type"],
         "page_type_confidence": classification["confidence"],
         "classification_notes": classification["reasons"],
@@ -2187,23 +2153,35 @@ def build_battle_rows_from_wikitext(
         "belligerent_1_raw": belligerent_map.get("side_a", ""),
         "belligerent_2_raw": belligerent_map.get("side_b", ""),
         "belligerent_3_raw": belligerent_map.get("side_c", ""),
+        "belligerent_4_raw": belligerent_map.get("side_d", ""),
         "commander_side_a_raw": commander_map.get("side_a", ""),
         "commander_side_b_raw": commander_map.get("side_b", ""),
         "commander_side_c_raw": commander_map.get("side_c", ""),
+        "commander_side_d_raw": commander_map.get("side_d", ""),
         "strength_side_a_raw": strength_map.get("side_a", ""),
         "strength_side_b_raw": strength_map.get("side_b", ""),
         "strength_side_c_raw": strength_map.get("side_c", ""),
+        "strength_side_d_raw": strength_map.get("side_d", ""),
         "casualties_side_a_raw": casualty_map.get("side_a", ""),
         "casualties_side_b_raw": casualty_map.get("side_b", ""),
         "casualties_side_c_raw": casualty_map.get("side_c", ""),
+        "casualties_side_d_raw": casualty_map.get("side_d", ""),
         "strength_side_a_min": parse_numeric_range(strength_map.get("side_a", "")).get("min", ""),
         "strength_side_a_max": parse_numeric_range(strength_map.get("side_a", "")).get("max", ""),
         "strength_side_b_min": parse_numeric_range(strength_map.get("side_b", "")).get("min", ""),
         "strength_side_b_max": parse_numeric_range(strength_map.get("side_b", "")).get("max", ""),
+        "strength_side_c_min": parse_numeric_range(strength_map.get("side_c", "")).get("min", ""),
+        "strength_side_c_max": parse_numeric_range(strength_map.get("side_c", "")).get("max", ""),
+        "strength_side_d_min": parse_numeric_range(strength_map.get("side_d", "")).get("min", ""),
+        "strength_side_d_max": parse_numeric_range(strength_map.get("side_d", "")).get("max", ""),
         "casualties_side_a_min": parse_numeric_range(casualty_map.get("side_a", "")).get("min", ""),
         "casualties_side_a_max": parse_numeric_range(casualty_map.get("side_a", "")).get("max", ""),
         "casualties_side_b_min": parse_numeric_range(casualty_map.get("side_b", "")).get("min", ""),
         "casualties_side_b_max": parse_numeric_range(casualty_map.get("side_b", "")).get("max", ""),
+        "casualties_side_c_min": parse_numeric_range(casualty_map.get("side_c", "")).get("min", ""),
+        "casualties_side_c_max": parse_numeric_range(casualty_map.get("side_c", "")).get("max", ""),
+        "casualties_side_d_min": parse_numeric_range(casualty_map.get("side_d", "")).get("min", ""),
+        "casualties_side_d_max": parse_numeric_range(casualty_map.get("side_d", "")).get("max", ""),
         "page_type": classification["page_type"],
         "page_type_confidence": classification["confidence"],
         "classification_notes": classification["reasons"],

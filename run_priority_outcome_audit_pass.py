@@ -11,6 +11,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from path_safety import safe_rmtree
+
 
 ROOT = Path(__file__).resolve().parent
 BASE_SNAPSHOT = ROOT / "outputs_cleaned_2026-04-21_fullverification_authoritative"
@@ -389,7 +391,7 @@ def main() -> None:
     base_snapshot = args.base_snapshot.resolve()
     output_snapshot = args.output_snapshot.resolve()
     if output_snapshot.exists():
-        shutil.rmtree(output_snapshot)
+        safe_rmtree(output_snapshot, ROOT)
     shutil.copytree(base_snapshot, output_snapshot)
 
     priority = load_frame(base_snapshot / "verification" / "TOP200_OUTCOME_AUDIT_PRIORITY.csv")

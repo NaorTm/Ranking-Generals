@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 
-DEFAULT_SNAPSHOT = Path("outputs_improved_2026-04-24_ranking_model_upgrade")
+DEFAULT_SNAPSHOT = Path("outputs_improved_2026-04-24_upgrade_pass5_release_candidate")
 PARENT_SNAPSHOT = "outputs_cleaned_2026-04-21_fullpopulation_authoritative"
 
 

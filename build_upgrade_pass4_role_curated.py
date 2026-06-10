@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 
 from build_scoring_framework_package import OUTCOME_SCORE_MAPS
+from path_safety import safe_rmtree
 
 
 PARENT_SNAPSHOT = Path("outputs_improved_2026-04-24_upgrade_pass3_confidence")
@@ -231,7 +232,7 @@ def create_snapshot(parent_dir: Path, snapshot_dir: Path, force: bool) -> None:
     if snapshot_dir.exists():
         if not force:
             return
-        shutil.rmtree(snapshot_dir)
+        safe_rmtree(snapshot_dir)
     shutil.copytree(parent_dir, snapshot_dir)
 
 

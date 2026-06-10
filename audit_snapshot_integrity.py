@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_SNAPSHOT = Path("outputs_cleaned_2026-04-21_fullpopulation_authoritative")
+DEFAULT_SNAPSHOT = Path("outputs_improved_2026-04-24_upgrade_pass5_release_candidate")
 CORE_CSVS = [
     "battles_clean.csv",
     "battle_commanders.csv",

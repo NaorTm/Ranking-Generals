@@ -18,7 +18,7 @@ Compared views:
 
 ## Current Robust Elite Core
 
-Alexander Suvorov, Maurice, Prince of Orange, Napoleon Bonaparte, Jean Lannes, Alexander Farnese, Duke of Parma, Khalid ibn al-Walid
+Alexander Suvorov, Napoleon Bonaparte, Jean Lannes, Khalid ibn al-Walid
 
 These commanders remain strong after model stability, high-level capping, eligibility filtering, bootstrap confidence, and role-weighting checks. Their exact adjacent order should still be interpreted through confidence intervals.
 
@@ -27,34 +27,34 @@ These commanders remain strong after model stability, high-level capping, eligib
 | headline_rank | commander_name | rank_interval_80 | stability_category | high_level_capped_rank | eligibility_filtered_rank | role_weighted_rank | synthesis_tier | recommended_interpretation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Alexander Suvorov | 1-9 | very_stable | 1 | 1.0 | 1 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
-| 2 | Maurice, Prince of Orange | 1-23 | very_stable | 2 | 2.0 | 3 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
-| 3 | Napoleon Bonaparte | 1-8 | very_stable | 3 | 3.0 | 2 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
-| 4 | Subutai | 1-38 | very_stable | 4 | 4.0 | 11 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
-| 5 | Sébastien Le Prestre, Marquis of Vauban | 8-60 | very_stable | 5 | 5.0 | 23 | Tier D, category-specific strength | High placement is qualified by wide bootstrap interval, best read as siege engineer or specialist. |
-| 6 | Jean Lannes | 2-9 | very_stable | 6 | 6.0 | 9 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
-| 7 | Louis-Nicolas Davout | 7-43 | very_stable | 7 | 7.0 | 10 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
-| 8 | Douglas MacArthur | 14-100 | stable | 8 | 8.0 | 41 | Tier D, category-specific strength | High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander. |
-| 9 | Charles XIV John | 10-52 | very_stable | 9 | 9.0 | 43 | Tier D, category-specific strength | High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander. |
-| 10 | Ivan Paskevich | 7-201 | stable | 10 | 10.0 | 4 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
-| 11 | Louis XIV | 14-102 | stable | 11 | 11.0 | 987 | Tier F, not suitable for headline comparison | Not suitable for direct headline comparison without stronger source-backed command-role curation. |
-| 12 | Henri de La Tour d'Auvergne, Viscount of Turenne | 9-87 | stable | 12 | 12.0 | 12 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
-| 13 | Mehmed II | 2-45 | stable | 13 | 13.0 | 22 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
-| 14 | Belisarius | 4-81 | stable | 14 | 14.0 | 36 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval, large role-weighted movement. |
-| 15 | Louis-Gabriel Suchet | 9-95 | very_stable | 15 | 15.0 | 20 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
-| 16 | André Masséna | 6-48 | stable | 16 | 16.0 | 32 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
-| 17 | Alexander Farnese, Duke of Parma | 8-36 | very_stable | 17 | 17.0 | 14 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
-| 18 | Khalid ibn al-Walid | 3-7 | very_stable | 18 | 18.0 | 17 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
-| 19 | Genghis Khan | 7-111 | moderately_stable | 19 | 19.0 | 5 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
-| 20 | Hubert Gough | 19-139 | stable | 20 | 20.0 | 13 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
-| 21 | Bernard Montgomery | 25-133 | stable | 113 | 21.0 | 19 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval, high broad-page dependency. |
-| 22 | Maharaja Ranjit Singh | 30-394 | moderately_stable | 21 | 22.0 | 53 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval, large role-weighted movement. |
-| 23 | Alexander the Great | 31-220 | stable | 22 | 23.0 | 35 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
-| 24 | Winfield Scott | 31-325 | moderately_stable | 23 | 24.0 | 45 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval, large role-weighted movement. |
-| 25 | Hannibal | 39-181 | stable | 24 | 25.0 | 15 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
+| 2 | Maurice, Prince of Orange | 2-36 | very_stable | 2 | 2.0 | 3 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 3 | Napoleon Bonaparte | 2-23 | very_stable | 3 | 3.0 | 2 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
+| 4 | Subutai | 3-62 | very_stable | 4 | 4.0 | 11 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 5 | Sébastien Le Prestre, Marquis of Vauban | 3-32 | very_stable | 5 | 5.0 | 23 | Tier D, category-specific strength | High placement is qualified by best read as siege engineer or specialist. |
+| 6 | Jean Lannes | 4-13 | very_stable | 6 | 6.0 | 9 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
+| 7 | Louis-Nicolas Davout | 3-33 | very_stable | 7 | 7.0 | 10 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 8 | Douglas MacArthur | 4-72 | stable | 8 | 8.0 | 41 | Tier D, category-specific strength | High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander. |
+| 9 | Charles XIV John | 6-32 | very_stable | 9 | 9.0 | 43 | Tier D, category-specific strength | High placement is qualified by large role-weighted movement, best read as coalition commander. |
+| 10 | Ivan Paskevich | 2-199 | stable | 10 | 10.0 | 4 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
+| 11 | Louis XIV | 5-60 | stable | 11 | 11.0 | 987 | Tier F, not suitable for headline comparison | Not suitable for direct headline comparison without stronger source-backed command-role curation. |
+| 12 | Henri de La Tour d'Auvergne, Viscount of Turenne | 4-77 | stable | 12 | 12.0 | 12 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 13 | Mehmed II | 3-84 | stable | 13 | 13.0 | 22 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 14 | Belisarius | 4-76 | stable | 14 | 14.0 | 36 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval, large role-weighted movement. |
+| 15 | Louis-Gabriel Suchet | 9-78 | very_stable | 15 | 15.0 | 20 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 16 | André Masséna | 6-63 | stable | 16 | 16.0 | 32 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 17 | Alexander Farnese, Duke of Parma | 13-57 | very_stable | 17 | 17.0 | 14 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 18 | Khalid ibn al-Walid | 7-31 | very_stable | 18 | 18.0 | 17 | Tier A, robust elite | Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands. |
+| 19 | Genghis Khan | 3-106 | moderately_stable | 19 | 19.0 | 5 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
+| 20 | Hubert Gough | 10-109 | stable | 20 | 20.0 | 13 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
+| 21 | Bernard Montgomery | 15-103 | stable | 113 | 21.0 | 19 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval, high broad-page dependency. |
+| 22 | Maharaja Ranjit Singh | 8-264 | moderately_stable | 21 | 22.0 | 53 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval, large role-weighted movement. |
+| 23 | Alexander the Great | 16-140 | stable | 22 | 23.0 | 35 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval. |
+| 24 | Winfield Scott | 6-222 | moderately_stable | 23 | 24.0 | 45 | Tier C, high performer with evidence caveats | High placement is qualified by wide bootstrap interval, large role-weighted movement. |
+| 25 | Hannibal | 12-106 | stable | 24 | 25.0 | 15 | Tier B, elite but qualified | High placement is qualified by wide bootstrap interval. |
 
 ## High-Ranked Commanders Requiring Caveats
 
-Subutai, Sébastien Le Prestre, Marquis of Vauban, Louis-Nicolas Davout, Douglas MacArthur, Charles XIV John, Ivan Paskevich, Louis XIV, Henri de La Tour d'Auvergne, Viscount of Turenne, Mehmed II, Belisarius, Louis-Gabriel Suchet, André Masséna, Genghis Khan, Hubert Gough, Bernard Montgomery, Maharaja Ranjit Singh, Alexander the Great, Winfield Scott, Hannibal, Enver Pasha, Baybars, Peng Dehuai, Frederick the Great, Heinz Guderian, Charles-Pierre Augereau, Takeda Shingen, Hari Singh Nalwa, Aurangzeb, Ögedei Khan, Dwight D. Eisenhower
+Maurice, Prince of Orange, Subutai, Sébastien Le Prestre, Marquis of Vauban, Louis-Nicolas Davout, Douglas MacArthur, Charles XIV John, Ivan Paskevich, Louis XIV, Henri de La Tour d'Auvergne, Viscount of Turenne, Mehmed II, Belisarius, Louis-Gabriel Suchet, André Masséna, Alexander Farnese, Duke of Parma, Genghis Khan, Hubert Gough, Bernard Montgomery, Maharaja Ranjit Singh, Alexander the Great, Winfield Scott, Hannibal, Enver Pasha, Baybars, Peng Dehuai, Frederick the Great, Heinz Guderian, Charles-Pierre Augereau, Takeda Shingen, Hari Singh Nalwa, Aurangzeb
 
 ## Not Direct Field-Command Comparisons
 
@@ -69,25 +69,25 @@ Exact ranks are most meaningful when the commander has a narrow or moderate boot
 ## Specific Commander Notes
 
 - **Alexander Suvorov**: headline rank 1, role-weighted rank 1, tier `Tier A, robust elite`, 80% CI 1-9, dominant role `overall_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
-- **Maurice, Prince of Orange**: headline rank 2, role-weighted rank 3, tier `Tier A, robust elite`, 80% CI 1-23, dominant role `overall_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
-- **Napoleon Bonaparte**: headline rank 3, role-weighted rank 2, tier `Tier A, robust elite`, 80% CI 1-8, dominant role `overall_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
-- **Subutai**: headline rank 4, role-weighted rank 11, tier `Tier B, elite but qualified`, 80% CI 1-38, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
-- **Sébastien Le Prestre, Marquis of Vauban**: headline rank 5, role-weighted rank 23, tier `Tier D, category-specific strength`, 80% CI 8-60, dominant role `siege_engineer_or_specialist`. High placement is qualified by wide bootstrap interval, best read as siege engineer or specialist.
-- **Jean Lannes**: headline rank 6, role-weighted rank 9, tier `Tier A, robust elite`, 80% CI 2-9, dominant role `principal_field_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
-- **Louis-Nicolas Davout**: headline rank 7, role-weighted rank 10, tier `Tier B, elite but qualified`, 80% CI 7-43, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
-- **Douglas MacArthur**: headline rank 8, role-weighted rank 41, tier `Tier D, category-specific strength`, 80% CI 14-100, dominant role `coalition_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
-- **Charles XIV John**: headline rank 9, role-weighted rank 43, tier `Tier D, category-specific strength`, 80% CI 10-52, dominant role `coalition_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
-- **Ivan Paskevich**: headline rank 10, role-weighted rank 4, tier `Tier C, high performer with evidence caveats`, 80% CI 7-201, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval.
-- **Dwight D. Eisenhower**: headline rank 36, role-weighted rank 68, tier `Tier D, category-specific strength`, 80% CI 54-312, dominant role `coalition_commander`. High placement is qualified by wide bootstrap interval, high broad-page dependency, large role-weighted movement, best read as coalition commander.
-- **Georgy Zhukov**: headline rank 39, role-weighted rank 7, tier `Tier B, elite but qualified`, 80% CI 15-113, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement.
-- **Genghis Khan**: headline rank 19, role-weighted rank 5, tier `Tier C, high performer with evidence caveats`, 80% CI 7-111, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval.
-- **Frederick the Great**: headline rank 29, role-weighted rank 6, tier `Tier B, elite but qualified`, 80% CI 8-100, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement.
-- **Konstantin Rokossovsky**: headline rank 47, role-weighted rank 8, tier `Tier C, high performer with evidence caveats`, 80% CI 19-175, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval, high broad-page dependency, large role-weighted movement.
-- **Hannibal**: headline rank 25, role-weighted rank 15, tier `Tier C, high performer with evidence caveats`, 80% CI 39-181, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
+- **Maurice, Prince of Orange**: headline rank 2, role-weighted rank 3, tier `Tier B, elite but qualified`, 80% CI 2-36, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval.
+- **Napoleon Bonaparte**: headline rank 3, role-weighted rank 2, tier `Tier A, robust elite`, 80% CI 2-23, dominant role `overall_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
+- **Subutai**: headline rank 4, role-weighted rank 11, tier `Tier B, elite but qualified`, 80% CI 3-62, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
+- **Sébastien Le Prestre, Marquis of Vauban**: headline rank 5, role-weighted rank 23, tier `Tier D, category-specific strength`, 80% CI 3-32, dominant role `siege_engineer_or_specialist`. High placement is qualified by best read as siege engineer or specialist.
+- **Jean Lannes**: headline rank 6, role-weighted rank 9, tier `Tier A, robust elite`, 80% CI 4-13, dominant role `principal_field_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
+- **Louis-Nicolas Davout**: headline rank 7, role-weighted rank 10, tier `Tier B, elite but qualified`, 80% CI 3-33, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
+- **Douglas MacArthur**: headline rank 8, role-weighted rank 41, tier `Tier D, category-specific strength`, 80% CI 4-72, dominant role `coalition_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
+- **Charles XIV John**: headline rank 9, role-weighted rank 43, tier `Tier D, category-specific strength`, 80% CI 6-32, dominant role `coalition_commander`. High placement is qualified by large role-weighted movement, best read as coalition commander.
+- **Ivan Paskevich**: headline rank 10, role-weighted rank 4, tier `Tier C, high performer with evidence caveats`, 80% CI 2-199, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval.
+- **Dwight D. Eisenhower**: headline rank 36, role-weighted rank 68, tier `Tier D, category-specific strength`, 80% CI 15-223, dominant role `coalition_commander`. High placement is qualified by wide bootstrap interval, high broad-page dependency, large role-weighted movement, best read as coalition commander.
+- **Georgy Zhukov**: headline rank 39, role-weighted rank 7, tier `Tier B, elite but qualified`, 80% CI 16-113, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement.
+- **Genghis Khan**: headline rank 19, role-weighted rank 5, tier `Tier C, high performer with evidence caveats`, 80% CI 3-106, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval.
+- **Frederick the Great**: headline rank 29, role-weighted rank 6, tier `Tier B, elite but qualified`, 80% CI 8-105, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement.
+- **Konstantin Rokossovsky**: headline rank 47, role-weighted rank 8, tier `Tier C, high performer with evidence caveats`, 80% CI 23-168, dominant role `overall_commander`. High placement is qualified by wide bootstrap interval, high broad-page dependency, large role-weighted movement.
+- **Hannibal**: headline rank 25, role-weighted rank 15, tier `Tier B, elite but qualified`, 80% CI 12-106, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
 - **Julius Caesar**: not present as a ranked commander in the current identity bridge; this is a coverage/alias issue, not a model judgment.
-- **Alexander the Great**: headline rank 23, role-weighted rank 35, tier `Tier C, high performer with evidence caveats`, 80% CI 31-220, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
-- **Khalid ibn al-Walid**: headline rank 18, role-weighted rank 17, tier `Tier A, robust elite`, 80% CI 3-7, dominant role `principal_field_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
-- **Helmuth von Moltke the Elder**: headline rank 487, role-weighted rank 609, tier `Tier E, historically important but model-sensitive`, 80% CI 313-932, dominant role `wing_or_corps_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement.
+- **Alexander the Great**: headline rank 23, role-weighted rank 35, tier `Tier C, high performer with evidence caveats`, 80% CI 16-140, dominant role `principal_field_commander`. High placement is qualified by wide bootstrap interval.
+- **Khalid ibn al-Walid**: headline rank 18, role-weighted rank 17, tier `Tier A, robust elite`, 80% CI 7-31, dominant role `principal_field_commander`. Robust elite placement is defensible; exact adjacent rank should still be read through confidence bands.
+- **Helmuth von Moltke the Elder**: headline rank 487, role-weighted rank 613, tier `Tier E, historically important but model-sensitive`, 80% CI 235-859, dominant role `wing_or_corps_commander`. High placement is qualified by wide bootstrap interval, large role-weighted movement.
 - **Wellington**: not present as a ranked commander in the current identity bridge; this is a coverage/alias issue, not a model judgment.
 
 ## Release-Candidate Judgment

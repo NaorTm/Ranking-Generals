@@ -33,7 +33,7 @@ Then open `http://localhost:8000`.
 From the workspace root:
 
 ```powershell
-python build_ranking_dashboard.py
+python build_ranking_dashboard.py --snapshot-dir .\outputs_improved_2026-04-24_upgrade_pass5_release_candidate
 ```
 
 That rebuilds `dashboard/dashboard_data.js` and updates `outputs_improved_2026-04-24_upgrade_pass5_release_candidate/RANKING_DASHBOARD_TECHNICAL_NOTE.md`.

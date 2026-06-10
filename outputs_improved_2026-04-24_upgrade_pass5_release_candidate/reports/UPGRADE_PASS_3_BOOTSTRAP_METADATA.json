@@ -2,7 +2,7 @@
   "iterations": 200,
   "seed": 20260424,
   "sampled_battle_ids_per_iteration": 12377,
-  "runtime_seconds": 142.071,
+  "runtime_seconds": 366.791,
   "models": [
     "hierarchical_trust_v2",
     "hierarchical_weighted",
@@ -11,6 +11,7 @@
     "hierarchical_trust_v2_high_level_capped",
     "hierarchical_trust_v2_eligibility_filtered"
   ],
-  "method": "fast_battle_level_weighted_bootstrap",
-  "method_note": "Battle IDs are resampled with replacement, then precomputed row-level scoring signals are aggregated into a fast ranking proxy for each model. This avoids full package recomputation, which exceeded the initial runtime budget."
+  "method": "production_aligned_battle_level_weighted_bootstrap",
+  "method_note": "Battle IDs are resampled with replacement, then the bootstrap pass recomputes the production ranking components, weights, shrinkage, and trust-v2 guardrails from precomputed row-level signals. High-level capping uses the verified static broad-page contribution share from Pass 2.",
+  "excluded_headline_ids": 7
 }

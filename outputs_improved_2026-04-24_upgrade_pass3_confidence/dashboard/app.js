@@ -78,6 +78,15 @@
     return Number(value).toLocaleString();
   }
 
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
   function titleCase(text) {
     if (!text) return "Unknown";
     return text
@@ -91,6 +100,8 @@
   }
 
   function commanderTierLabel(commander) {
+    if (commander.synthesis && commander.synthesis.tier) return commander.synthesis.tier;
+    if (commander.confidenceAdjustedTier && commander.confidenceAdjustedTier.label) return commander.confidenceAdjustedTier.label;
     return commander.tier && commander.tier.label ? commander.tier.label : "Unclassified";
   }
 
@@ -107,6 +118,12 @@
     if (!confidence.confidenceCategory && !confidence.rankInterval80) return "Unknown";
     const interval = confidence.rankInterval80 ? `80% ${confidence.rankInterval80}` : "80% NA";
     return `${titleCase(confidence.confidenceCategory || "unknown")} · ${interval}`;
+  }
+
+  function commanderRoleLabel(commander) {
+    const role = commander.roleSensitivity || commander.roleContribution || {};
+    if (!role.dominantRoleClass) return "Unclassified";
+    return titleCase(role.dominantRoleClass);
   }
 
   function commanderMetricValue(commander, modelKey, metricKey) {
@@ -131,6 +148,7 @@
     if (key === "tier") return commander.tier && commander.tier.sort != null ? commander.tier.sort : 99;
     if (key === "stability") return commander.stabilityScore || 0;
     if (key === "confidence") return commander.rankConfidence && commander.rankConfidence.rankBandWidth80 != null ? commander.rankConfidence.rankBandWidth80 : 999999;
+    if (key === "role") return commanderRoleLabel(commander);
     if (key === "audit") return (commander.auditFlags || []).length;
     if (key === "metric") return commanderMetricValue(commander, state.modelKey, state.metricKey);
     if (key === "engagements") return commander.engagementCount || 0;
@@ -163,7 +181,7 @@
     const marker = active && state.tableSortDirection !== "default"
       ? (state.tableSortDirection === "asc" ? " ▲" : " ▼")
       : "";
-    return `<th data-sort-key="${key}" class="${active ? "sorted" : ""}">${label}${marker}</th>`;
+    return `<th data-sort-key="${escapeHtml(key)}" class="${active ? "sorted" : ""}">${escapeHtml(label)}${marker}</th>`;
   }
 
   function handleTableSort(key) {
@@ -171,7 +189,7 @@
       state.tableSortDirection = state.tableSortDirection === "desc" ? "asc" : "desc";
     } else {
       state.tableSortKey = key;
-      state.tableSortDirection = key === "name" || key === "era" || key === "category" || key === "profile" || key === "tier" ? "asc" : "desc";
+    state.tableSortDirection = key === "name" || key === "era" || key === "category" || key === "profile" || key === "tier" || key === "role" ? "asc" : "desc";
     }
     renderExplorerTable();
   }
@@ -185,7 +203,8 @@
       if (state.searchTerm) {
         const auditText = (commander.auditFlags || []).map((flag) => flag.flag).join(" ");
         const confidenceText = commander.rankConfidence ? `${commander.rankConfidence.confidenceCategory || ""} ${commander.rankConfidence.rankInterval80 || ""}` : "";
-        const haystack = `${commander.name} ${commander.primaryEraBucket || ""} ${commander.interpretiveEra} ${commander.robustnessCategory} ${commanderTierLabel(commander)} ${confidenceText} ${auditText}`
+        const roleText = commanderRoleLabel(commander);
+        const haystack = `${commander.name} ${commander.primaryEraBucket || ""} ${commander.interpretiveEra} ${commander.robustnessCategory} ${commanderTierLabel(commander)} ${confidenceText} ${roleText} ${auditText}`
           .toLowerCase();
         if (!haystack.includes(state.searchTerm.toLowerCase())) return false;
       }
@@ -279,7 +298,7 @@
       {
         label: "Headline leader",
         value: top ? top.name : "NA",
-        detail: top ? `${formatRank(top.ranks[state.modelKey])} Â· ${top.trustConfidence || "NA"} confidence` : "No commander available",
+        detail: top ? `${formatRank(top.ranks[state.modelKey])} / ${top.trustConfidence || "NA"} confidence` : "No commander available",
       },
       {
         label: "Headline core in filter",
@@ -295,9 +314,9 @@
       .map(
         (card) => `
           <div class="metric-card">
-            <span class="metric-label">${card.label}</span>
-            <strong class="metric-value">${card.value}</strong>
-            <div class="metric-detail">${card.detail}</div>
+            <span class="metric-label">${escapeHtml(card.label)}</span>
+            <strong class="metric-value">${escapeHtml(card.value)}</strong>
+            <div class="metric-detail">${escapeHtml(card.detail)}</div>
           </div>
         `,
       )
@@ -329,14 +348,14 @@
                 : "Visible upper-band cases whose placement is still materially model-sensitive.";
         return `
           <div class="tier-column ${entry.group === "robust_elite_core" ? "robust" : entry.group === "strong_upper_tier" ? "strong" : "caution"}">
-            <h3>${GROUP_LABELS[entry.group]}</h3>
-            <p>${description}</p>
+            <h3>${escapeHtml(GROUP_LABELS[entry.group])}</h3>
+            <p>${escapeHtml(description)}</p>
             <div class="tier-list">
               ${entry.items
                 .map(
                   (commander) => `
-                    <button class="tier-pill" data-commander-id="${commander.id}">
-                      ${commander.name}
+                    <button class="tier-pill" data-commander-id="${escapeHtml(commander.id)}">
+                      ${escapeHtml(commander.name)}
                     </button>
                   `,
                 )
@@ -364,8 +383,8 @@
         if (!commander) return "";
         return `
           <span class="chip">
-            ${commander.name}
-            <button type="button" data-remove-id="${id}" aria-label="Remove ${commander.name}">Ã—</button>
+            ${escapeHtml(commander.name)}
+            <button type="button" data-remove-id="${escapeHtml(id)}" aria-label="Remove ${escapeHtml(commander.name)}">&times;</button>
           </span>
         `;
       })
@@ -382,7 +401,7 @@
       {
         type: "bar",
         orientation: "h",
-        y: top.map((commander) => commander.name).reverse(),
+        y: top.map((commander) => escapeHtml(commander.name)).reverse(),
         x: top.map((commander) => commanderMetricValue(commander, state.modelKey, state.metricKey)).reverse(),
         customdata: top.map((commander) => [commander.id]).reverse(),
         marker: {
@@ -395,12 +414,12 @@
         hovertemplate: top
           .map(
             (commander) => `
-              <b>${commander.name}</b><br>
-              Era: ${ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra)}<br>
+              <b>${escapeHtml(commander.name)}</b><br>
+              Era: ${escapeHtml(ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra))}<br>
               ${state.metricKey === "rank" ? "Rank" : "Score"}: %{x}<br>
               Engagements: ${formatNumber(commander.engagementCount)}<br>
               Rank spread: ${formatNumber(commander.rankRange)}<br>
-              Robustness: ${GROUP_LABELS[commander.robustnessCategory] || "Other ranked"}<extra></extra>
+              Robustness: ${escapeHtml(GROUP_LABELS[commander.robustnessCategory] || "Other ranked")}<extra></extra>
             `,
           )
           .reverse(),
@@ -432,7 +451,7 @@
     const traces = set.map((commander) => ({
       type: "scatter",
       mode: "lines+markers",
-      name: commander.name,
+      name: escapeHtml(commander.name),
       x: MODELS.map((model) => model.label),
       y: MODEL_KEYS.map((modelKey) => commander.ranks[modelKey]),
       customdata: MODEL_KEYS.map(() => [commander.id]),
@@ -444,7 +463,7 @@
         size: state.selectedIds.includes(commander.id) ? 10 : 7,
         color: COLORS[commander.robustnessCategory] || COLORS.other_ranked,
       },
-      hovertemplate: `<b>${commander.name}</b><br>%{x}<br>Rank: %{y}<extra></extra>`,
+      hovertemplate: `<b>${escapeHtml(commander.name)}</b><br>%{x}<br>Rank: %{y}<extra></extra>`,
       connectgaps: false,
     }));
 
@@ -482,7 +501,7 @@
           name: GROUP_LABELS[group],
           x: items.map((commander) => commander.ranks.baseline_conservative),
           y: items.map((commander) => commander.rankRange),
-          text: items.map((commander) => commander.name),
+          text: items.map((commander) => escapeHtml(commander.name)),
           customdata: items.map((commander) => [commander.id, commander.engagementCount]),
           marker: {
             size: items.map(bubbleSize),
@@ -536,7 +555,7 @@
           name: GROUP_LABELS[group],
           x: items.map((commander) => commander.pageTypes.higherLevelShare * 100),
           y: items.map((commander) => commander.modelDependence.battleVsHierarchicalRankGap),
-          text: items.map((commander) => commander.name),
+          text: items.map((commander) => escapeHtml(commander.name)),
           customdata: items.map((commander) => [commander.id, commander.engagementCount]),
           marker: {
             size: items.map(bubbleSize),
@@ -588,28 +607,28 @@
       {
         type: "bar",
         name: "Battle",
-        x: set.map((commander) => commander.name),
+        x: set.map((commander) => escapeHtml(commander.name)),
         y: set.map((commander) => commander.pageTypes.shares.battle * 100),
         marker: { color: COLORS.battle },
       },
       {
         type: "bar",
         name: "Operation",
-        x: set.map((commander) => commander.name),
+        x: set.map((commander) => escapeHtml(commander.name)),
         y: set.map((commander) => commander.pageTypes.shares.operation * 100),
         marker: { color: COLORS.operation },
       },
       {
         type: "bar",
         name: "Campaign",
-        x: set.map((commander) => commander.name),
+        x: set.map((commander) => escapeHtml(commander.name)),
         y: set.map((commander) => commander.pageTypes.shares.campaign * 100),
         marker: { color: COLORS.campaign },
       },
       {
         type: "bar",
         name: "War/conflict",
-        x: set.map((commander) => commander.name),
+        x: set.map((commander) => escapeHtml(commander.name)),
         y: set.map((commander) => commander.pageTypes.shares.war * 100),
         marker: { color: COLORS.war },
       },
@@ -645,7 +664,7 @@
         {
           type: "bar",
           orientation: "h",
-          y: cohort.map((commander) => commander.name).reverse(),
+          y: cohort.map((commander) => escapeHtml(commander.name)).reverse(),
           x: cohort.map((commander) => commanderMetricValue(commander, state.modelKey, state.metricKey)).reverse(),
           customdata: cohort.map((commander) => [commander.id]).reverse(),
           marker: {
@@ -658,14 +677,14 @@
           hovertemplate:
             "<b>%{y}</b><br>" +
             `${state.metricKey === "rank" ? "Rank" : "Score"}: %{x}<br>` +
-            `<extra>${ERA_LABELS[era]}</extra>`,
+            `<extra>${escapeHtml(ERA_LABELS[era])}</extra>`,
         },
       ],
       {
         margin: { l: 180, r: 20, t: 20, b: 40 },
         paper_bgcolor: "rgba(0,0,0,0)",
         plot_bgcolor: "rgba(0,0,0,0)",
-        title: { text: `${ERA_LABELS[era]} leaderboard`, font: { size: 16 } },
+        title: { text: `${escapeHtml(ERA_LABELS[era])} leaderboard`, font: { size: 16 } },
         xaxis: {
           title: state.metricKey === "rank" ? "Rank (lower is better)" : "Normalized score",
           autorange: state.metricKey === "rank" ? "reversed" : true,
@@ -681,7 +700,7 @@
   function renderOutcomeChart() {
     const chart = document.getElementById("outcome-chart");
     const set = selectedCommandersOrFallback(Math.min(state.topN, 8));
-    const names = set.map((commander) => commander.name).reverse();
+    const names = set.map((commander) => escapeHtml(commander.name)).reverse();
     const reversed = [...set].reverse();
     const traces = [
       {
@@ -756,21 +775,21 @@
           .join(" | ");
         return `
           <article class="comparison-card">
-            <h3>${commander.name}</h3>
+            <h3>${escapeHtml(commander.name)}</h3>
             <div class="comparison-meta">
-              ${ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra)} ·
-              ${GROUP_LABELS[commander.robustnessCategory] || "Other ranked"} ·
-              ${PAGE_CLASS_LABELS[commander.pageTypeProfileClass] || titleCase(commander.pageTypeProfileClass || "mixed")} ·
-              ${commander.trustConfidence || "NA"} confidence
+              ${escapeHtml(ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra))} &middot;
+              ${escapeHtml(GROUP_LABELS[commander.robustnessCategory] || "Other ranked")} &middot;
+              ${escapeHtml(PAGE_CLASS_LABELS[commander.pageTypeProfileClass] || titleCase(commander.pageTypeProfileClass || "mixed"))} &middot;
+              ${escapeHtml(commander.trustConfidence || "NA")} confidence
             </div>
             <div class="tier-line">
-              <strong>${commanderTierLabel(commander)}</strong>
-              <span>${commander.tier && commander.tier.reason ? commander.tier.reason : "No tier reason available."}</span>
+              <strong>${escapeHtml(commanderTierLabel(commander))}</strong>
+              <span>${escapeHtml(commander.tier && commander.tier.reason ? commander.tier.reason : "No tier reason available.")}</span>
             </div>
             ${commander.confidenceAdjustedTier && commander.confidenceAdjustedTier.label ? `
               <div class="tier-line confidence-line">
-                <strong>${commander.confidenceAdjustedTier.label}</strong>
-                <span>${commander.confidenceAdjustedTier.reason || "No confidence-adjusted tier reason available."}</span>
+                <strong>${escapeHtml(commander.confidenceAdjustedTier.label)}</strong>
+                <span>${escapeHtml(commander.confidenceAdjustedTier.reason || "No confidence-adjusted tier reason available.")}</span>
               </div>
             ` : ""}
             <div class="comparison-grid">
@@ -780,14 +799,18 @@
               <div><span>Conflicts</span><strong>${formatNumber(commander.distinctConflicts)}</strong></div>
               <div><span>Battle share</span><strong>${formatPercent(commander.pageTypes.shares.battle)}</strong></div>
               <div><span>Higher-level share</span><strong>${formatPercent(commander.pageTypes.higherLevelShare)}</strong></div>
-              <div><span>Stability</span><strong>${commanderStabilityLabel(commander)}</strong></div>
-              <div><span>Rank CI</span><strong>${commanderConfidenceLabel(commander)}</strong></div>
+              <div><span>Stability</span><strong>${escapeHtml(commanderStabilityLabel(commander))}</strong></div>
+              <div><span>Rank CI</span><strong>${escapeHtml(commanderConfidenceLabel(commander))}</strong></div>
               <div><span>Bootstrap presence</span><strong>${formatPercent(commander.rankConfidence && commander.rankConfidence.bootstrapPresenceRate)}</strong></div>
+              <div><span>Dominant role</span><strong>${escapeHtml(commanderRoleLabel(commander))}</strong></div>
+              <div><span>Role-weighted rank</span><strong>${formatNumber(commander.roleSensitivity && commander.roleSensitivity.rankRoleWeighted)}</strong></div>
+              <div><span>Direct command share</span><strong>${formatPercent(commander.roleSensitivity && commander.roleSensitivity.shareDirectFieldCommand)}</strong></div>
               <div><span>Audit flags</span><strong>${formatNumber((commander.auditFlags || []).length)}</strong></div>
             </div>
-            <div class="muted">${commander.trustHeadlineReason || commander.interpretiveReason || "No interpretive note available for this commander in the current classification layer."}</div>
-            ${commander.rankConfidence && commander.rankConfidence.recommendedInterpretation ? `<div class="muted">${commander.rankConfidence.recommendedInterpretation}</div>` : ""}
-            ${topPageContributions ? `<div class="muted">Main page contribution mix: ${topPageContributions}</div>` : ""}
+            <div class="muted">${escapeHtml(commander.trustHeadlineReason || commander.interpretiveReason || "No interpretive note available for this commander in the current classification layer.")}</div>
+            ${commander.synthesis && commander.synthesis.recommendedInterpretation ? `<div class="muted">${escapeHtml(commander.synthesis.recommendedInterpretation)}</div>` : ""}
+            ${commander.rankConfidence && commander.rankConfidence.recommendedInterpretation ? `<div class="muted">${escapeHtml(commander.rankConfidence.recommendedInterpretation)}</div>` : ""}
+            ${topPageContributions ? `<div class="muted">Main page contribution mix: ${escapeHtml(topPageContributions)}</div>` : ""}
             <table class="model-rank-list">
               <thead>
                 <tr><th>Model</th><th>Rank</th><th>Score</th></tr>
@@ -796,7 +819,7 @@
                 ${MODELS.map(
                   (model) => `
                     <tr>
-                      <td>${model.label}</td>
+                      <td>${escapeHtml(model.label)}</td>
                       <td>${formatRank(commander.ranks[model.key])}</td>
                       <td>${formatScore(commander.scores[model.key])}</td>
                     </tr>
@@ -805,7 +828,7 @@
               </tbody>
             </table>
             <div class="flag-list">
-              ${flags.length ? flags.map((flag) => `<span class="flag">${flag}</span>`).join("") : '<span class="flag">no special flags</span>'}
+              ${flags.length ? flags.map((flag) => `<span class="flag">${escapeHtml(flag)}</span>`).join("") : '<span class="flag">no special flags</span>'}
             </div>
           </article>
         `;
@@ -829,7 +852,7 @@
       </article>
       <article class="footer-card">
         <h3>Why baseline can mislead</h3>
-        <p>Battle-purity models can reward very clean smaller records. The trust tiers treat exact adjacent order as secondary to confidence, with ${leader ? `<strong>${leader.name}</strong>` : "the current leader"} shown inside that broader context.</p>
+        <p>Battle-purity models can reward very clean smaller records. The trust tiers treat exact adjacent order as secondary to confidence, with ${leader ? `<strong>${escapeHtml(leader.name)}</strong>` : "the current leader"} shown inside that broader context.</p>
       </article>
     `;
   }
@@ -850,6 +873,7 @@
         ${sortableHeader("engagements", "Engagements")}
         ${sortableHeader("stability", "Stability")}
         ${sortableHeader("confidence", "Confidence")}
+        ${sortableHeader("role", "Role")}
         ${sortableHeader("spread", "Spread")}
         ${sortableHeader("audit", "Audit")}
         ${sortableHeader("profile", "Profile")}
@@ -859,18 +883,19 @@
     tbody.innerHTML = rows
       .map(
         (commander) => `
-          <tr data-commander-id="${commander.id}" class="${state.selectedIds.includes(commander.id) ? "selected-row" : ""}">
-            <td>${commander.name}</td>
-            <td>${ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra)}</td>
-            <td>${GROUP_LABELS[commander.robustnessCategory] || "Other ranked"}</td>
-            <td>${commanderTierLabel(commander)}</td>
+          <tr data-commander-id="${escapeHtml(commander.id)}" class="${state.selectedIds.includes(commander.id) ? "selected-row" : ""}">
+            <td>${escapeHtml(commander.name)}</td>
+            <td>${escapeHtml(ERA_LABELS[commander.interpretiveEra] || titleCase(commander.interpretiveEra))}</td>
+            <td>${escapeHtml(GROUP_LABELS[commander.robustnessCategory] || "Other ranked")}</td>
+            <td>${escapeHtml(commanderTierLabel(commander))}</td>
             <td>${state.metricKey === "rank" ? formatRank(commander.ranks[state.modelKey]) : formatScore(commander.scores[state.modelKey])}</td>
             <td>${formatNumber(commander.engagementCount)}</td>
-            <td>${commanderStabilityLabel(commander)}</td>
-            <td>${commanderConfidenceLabel(commander)}</td>
+            <td>${escapeHtml(commanderStabilityLabel(commander))}</td>
+            <td>${escapeHtml(commanderConfidenceLabel(commander))}</td>
+            <td>${escapeHtml(commanderRoleLabel(commander))}</td>
             <td>${formatNumber(commander.rankRange)}</td>
             <td>${formatNumber((commander.auditFlags || []).length)}</td>
-            <td>${PAGE_CLASS_LABELS[commander.pageTypeProfileClass] || titleCase(commander.pageTypeProfileClass || "mixed")}</td>
+            <td>${escapeHtml(PAGE_CLASS_LABELS[commander.pageTypeProfileClass] || titleCase(commander.pageTypeProfileClass || "mixed"))}</td>
           </tr>
         `,
       )
@@ -893,10 +918,10 @@
       .map(
         (row) => `
           <li>
-            <strong>${row.displayName}</strong>
-            <span class="muted">(${titleCase(row.primaryEraBucket || "unknown")})</span><br>
+            <strong>${escapeHtml(row.displayName)}</strong>
+            <span class="muted">(${escapeHtml(titleCase(row.primaryEraBucket || "unknown"))})</span><br>
             best ${formatRank(row.bestRank)}, worst ${formatRank(row.worstRank)}, spread ${formatNumber(row.rankRange)}.<br>
-            ${row.auditNote}
+            ${escapeHtml(row.auditNote)}
           </li>
         `,
       )
@@ -908,10 +933,10 @@
       .map(
         (row) => `
           <li>
-            <strong>${row.displayName}</strong>
-            <span class="muted">(${row.supportBand.replace(/_/g, " ")})</span><br>
-            ${row.recommendationNote}<br>
-            ${row.caveatNote}
+            <strong>${escapeHtml(row.displayName)}</strong>
+            <span class="muted">(${escapeHtml(String(row.supportBand || "unknown").replace(/_/g, " "))})</span><br>
+            ${escapeHtml(row.recommendationNote)}<br>
+            ${escapeHtml(row.caveatNote)}
           </li>
         `,
       )
@@ -936,12 +961,12 @@
 
   function populateControls() {
     const modelSelect = document.getElementById("model-select");
-    modelSelect.innerHTML = MODELS.map((model) => `<option value="${model.key}">${model.label}</option>`).join("");
+    modelSelect.innerHTML = MODELS.map((model) => `<option value="${escapeHtml(model.key)}">${escapeHtml(model.label)}</option>`).join("");
     modelSelect.value = state.modelKey;
 
     const datalist = document.getElementById("commander-search-list");
     datalist.innerHTML = COMMANDERS
-      .map((commander) => `<option value="${commander.name}"></option>`)
+      .map((commander) => `<option value="${escapeHtml(commander.name)}"></option>`)
       .join("");
   }
 

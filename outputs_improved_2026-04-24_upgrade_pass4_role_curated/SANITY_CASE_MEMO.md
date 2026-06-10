@@ -1,6 +1,6 @@
 # Sanity Case Memo
 
-Snapshot: `outputs_improved_2026-04-24_upgrade_pass4_role_curated`
+Snapshot: `outputs_improved_2026-04-24_upgrade_pass3_confidence`
 
 ## Trust-First V2 sanity cases
 

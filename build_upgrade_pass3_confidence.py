@@ -101,6 +101,7 @@ def original_model_table(snapshot_dir: Path) -> pd.DataFrame:
 def run_bootstrap(snapshot_dir: Path, iterations: int, seed: int) -> tuple[pd.DataFrame, dict[str, object]]:
     start = time.time()
     annotated = pd.read_csv(snapshot_file(snapshot_dir, "derived_scoring/commander_engagements_annotated.csv"))
+    summary = pd.read_csv(snapshot_file(snapshot_dir, "derived_scoring/commander_engagement_summary.csv"), dtype=str).fillna("")
     for column in [
         "eligible_strict",
         "page_weight_model_b",
@@ -119,6 +120,7 @@ def run_bootstrap(snapshot_dir: Path, iterations: int, seed: int) -> tuple[pd.Da
     annotated["battle_weight"] = annotated["eligible_strict"] * annotated["battle_flag"]
     annotated["hier_weight"] = annotated["eligible_strict"] * annotated["page_weight_model_b"]
     annotated["year_num"] = pd.to_numeric(annotated["analytic_year"], errors="coerce").fillna(0.0)
+    annotated["era_bucket_known"] = annotated["era_bucket"].where(annotated["era_bucket"].ne("unknown"), "")
 
     id_to_name = (
         annotated[["analytic_commander_id", "display_name"]]
@@ -133,6 +135,21 @@ def run_bootstrap(snapshot_dir: Path, iterations: int, seed: int) -> tuple[pd.Da
             "analytic_commander_id",
         ]
     )
+
+    def numeric_max_map(frame: pd.DataFrame, value_column: str) -> dict[str, float]:
+        if "analytic_commander_id" not in frame.columns or value_column not in frame.columns:
+            return {}
+        return (
+            pd.to_numeric(frame[value_column], errors="coerce")
+            .fillna(0.0)
+            .groupby(frame["analytic_commander_id"])
+            .max()
+            .to_dict()
+        )
+
+    distinct_opponents_map = numeric_max_map(summary, "distinct_opponents_strict")
+    active_span_nonwar_map = numeric_max_map(summary, "active_span_years_nonwar")
+    broad_share_map = numeric_max_map(eligibility, "broad_page_contribution_share")
 
     battle_ids = np.array(sorted(annotated["battle_id"].dropna().unique()))
     battle_id_to_pos = {battle_id: idx for idx, battle_id in enumerate(battle_ids)}
@@ -168,77 +185,161 @@ def run_bootstrap(snapshot_dir: Path, iterations: int, seed: int) -> tuple[pd.Da
         active["weighted_outcome_value"] = active["outcome_mass"] * active[outcome_col]
         active["known_mass"] = active["bootstrap_count"] * active["known_outcome_flag"]
         active["battle_mass"] = active["bootstrap_count"] * active["battle_flag"]
+        active["known_battle_mass"] = active["bootstrap_count"] * active["known_outcome_flag"] * active["battle_flag"]
+        active["operation_mass"] = active["bootstrap_count"] * active["operation_flag"]
+        active["campaign_mass"] = active["bootstrap_count"] * active["campaign_flag"]
+        active["war_mass"] = active["bootstrap_count"] * active["war_flag"]
         active["nonbattle_presence"] = active["sample_weight"] * (1.0 - active["battle_flag"])
 
         grouped = active.groupby("analytic_commander_id", sort=False).agg(
             engagement_count=("bootstrap_count", "sum"),
             battle_count=("battle_mass", "sum"),
+            operation_count=("operation_mass", "sum"),
+            campaign_count=("campaign_mass", "sum"),
+            war_count=("war_mass", "sum"),
             known_outcome_count=("known_mass", "sum"),
+            known_battle_outcome_count=("known_battle_mass", "sum"),
             presence_mass=("sample_weight", "sum"),
             nonbattle_presence_mass=("nonbattle_presence", "sum"),
             outcome_weight_sum=("outcome_mass", "sum"),
             weighted_outcome_value=("weighted_outcome_value", "sum"),
             conflict_breadth=("conflict_key", "nunique"),
+            page_type_diversity=("page_type", "nunique"),
             first_year=("year_num", "min"),
             last_year=("year_num", "max"),
         ).reset_index()
+        era_div = (
+            active.loc[active["era_bucket_known"].ne("")]
+            .groupby("analytic_commander_id")["era_bucket_known"]
+            .nunique()
+            .rename("era_diversity")
+        )
+        grouped = grouped.merge(era_div, on="analytic_commander_id", how="left")
+        grouped["era_diversity"] = grouped["era_diversity"].fillna(0.0)
         grouped["outcome_mean"] = grouped["weighted_outcome_value"] / grouped["outcome_weight_sum"].replace({0: np.nan})
         grouped["outcome_mean"] = grouped["outcome_mean"].fillna(0.0)
-        grouped["outcome_shrunk"] = grouped["outcome_mean"] * (
-            grouped["known_outcome_count"] / (grouped["known_outcome_count"] + 5.0)
-        )
         grouped["known_outcome_share"] = grouped["known_outcome_count"] / grouped["engagement_count"].clip(lower=1)
+        grouped["known_battle_outcome_share"] = grouped["known_battle_outcome_count"] / grouped["battle_count"].clip(lower=1)
         grouped["higher_level_share"] = grouped["nonbattle_presence_mass"] / grouped["presence_mass"].replace({0: np.nan})
         grouped["higher_level_share"] = grouped["higher_level_share"].fillna(0.0)
         grouped["active_span_years"] = (grouped["last_year"] - grouped["first_year"]).clip(lower=0, upper=60)
-        grouped["scale_raw"] = np.log1p(grouped["engagement_count"])
-        grouped["known_raw"] = np.log1p(grouped["known_outcome_count"])
-        grouped["scope_raw"] = np.log1p(grouped["conflict_breadth"])
-        grouped["temporal_raw"] = np.log1p(grouped["active_span_years"])
+        grouped["active_span_years_nonwar"] = (
+            grouped["analytic_commander_id"].map(active_span_nonwar_map).fillna(grouped["active_span_years"]).clip(lower=0, upper=60)
+        )
+        grouped["distinct_opponents_strict"] = grouped["analytic_commander_id"].map(distinct_opponents_map).fillna(0.0)
         grouped["centrality_raw"] = np.log1p(grouped["presence_mass"])
-        grouped["evidence_raw"] = grouped["known_outcome_share"]
+        grouped["higher_level_raw"] = np.log1p(grouped["nonbattle_presence_mass"])
+        grouped["scope_conflict_raw"] = np.log1p(grouped["conflict_breadth"])
+        grouped["scope_page_type_raw"] = grouped["page_type_diversity"]
+        grouped["scope_era_raw"] = grouped["era_diversity"]
+        grouped["temporal_raw"] = np.log1p(grouped["active_span_years_nonwar"])
+        grouped["evidence_raw"] = 0.60 * grouped["known_outcome_share"] + 0.40 * grouped["known_battle_outcome_share"]
+        grouped["sustained_scale_raw"] = (
+            0.45 * np.log1p(grouped["known_outcome_count"])
+            + 0.20 * np.log1p(grouped["conflict_breadth"])
+            + 0.20 * np.log1p(grouped["distinct_opponents_strict"])
+            + 0.15 * np.log1p(grouped["battle_count"] + grouped["campaign_count"])
+        )
 
         model_ids = original_ids_by_model[model]
-        if model == "hierarchical_trust_v2_high_level_capped":
-            model_ids = original_ids_by_model["hierarchical_trust_v2_high_level_capped"]
-        elif model == "hierarchical_trust_v2_eligibility_filtered":
-            model_ids = original_ids_by_model["hierarchical_trust_v2_eligibility_filtered"]
         grouped = grouped[grouped["analytic_commander_id"].isin(model_ids)].copy()
         if grouped.empty:
             return pd.DataFrame(columns=["analytic_commander_id", "commander_name", "rank", "score"])
 
-        grouped["component_outcome"] = percentile(grouped["outcome_shrunk"])
-        grouped["component_scale"] = percentile(grouped["scale_raw"])
-        grouped["component_known"] = percentile(grouped["known_raw"])
-        grouped["component_scope"] = percentile(grouped["scope_raw"])
-        grouped["component_temporal"] = percentile(grouped["temporal_raw"])
-        grouped["component_centrality"] = percentile(grouped["centrality_raw"])
-        grouped["component_evidence"] = percentile(grouped["evidence_raw"])
-
         if model in {"baseline_conservative", "battle_only_baseline"}:
-            grouped["score"] = 0.75 * grouped["component_outcome"] + 0.25 * grouped["component_scale"]
-        elif model == "hierarchical_weighted":
-            grouped["score"] = (
-                0.45 * grouped["component_outcome"]
-                + 0.20 * grouped["component_scope"]
-                + 0.15 * grouped["component_temporal"]
-                + 0.10 * grouped["component_centrality"]
-                + 0.10 * grouped["component_evidence"]
+            grouped["outcome_shrunk"] = grouped["outcome_mean"] * (
+                grouped["known_battle_outcome_count"] / (grouped["known_battle_outcome_count"] + 5.0)
             )
+            grouped["component_outcome"] = percentile(grouped["outcome_shrunk"])
+            grouped["component_depth"] = percentile(np.log1p(grouped["battle_count"]))
+            if model == "baseline_conservative":
+                grouped["reliability_raw"] = (
+                    0.7 * grouped["known_battle_outcome_share"]
+                    + 0.3 * (grouped["known_battle_outcome_count"].clip(upper=10) / 10.0)
+                )
+                grouped["component_reliability"] = percentile(grouped["reliability_raw"])
+                grouped["score"] = (
+                    0.60 * grouped["component_outcome"]
+                    + 0.25 * grouped["component_depth"]
+                    + 0.15 * grouped["component_reliability"]
+                )
+            else:
+                grouped["score"] = 0.75 * grouped["component_outcome"] + 0.25 * grouped["component_depth"]
         else:
-            grouped["score"] = (
-                0.32 * grouped["component_outcome"]
-                + 0.18 * grouped["component_known"]
-                + 0.18 * grouped["component_scope"]
-                + 0.12 * grouped["component_temporal"]
-                + 0.10 * grouped["component_centrality"]
-                + 0.10 * grouped["component_evidence"]
+            grouped["outcome_shrunk"] = grouped["outcome_mean"] * (
+                grouped["known_outcome_count"] / (grouped["known_outcome_count"] + 5.0)
             )
-            if model == "hierarchical_trust_v2_high_level_capped":
-                grouped["score"] = grouped["score"] * grouped["higher_level_share"].map(capped_adjustment_factor)
+            grouped["component_outcome"] = percentile(grouped["outcome_shrunk"])
+            grouped["component_scope_conflict"] = percentile(grouped["scope_conflict_raw"])
+            grouped["component_scope_page_type"] = percentile(grouped["scope_page_type_raw"])
+            grouped["component_scope_era"] = percentile(grouped["scope_era_raw"])
+            grouped["component_scope"] = (
+                grouped["component_scope_conflict"]
+                + grouped["component_scope_page_type"]
+                + grouped["component_scope_era"]
+            ) / 3.0
+            grouped["component_sustained_scale"] = percentile(grouped["sustained_scale_raw"])
+            grouped["component_higher_level"] = percentile(grouped["higher_level_raw"])
+            grouped["component_evidence"] = percentile(grouped["evidence_raw"])
+            grouped["component_centrality"] = percentile(grouped["centrality_raw"])
+            grouped["component_temporal"] = percentile(grouped["temporal_raw"])
+
+            if model == "hierarchical_weighted":
+                grouped["score"] = (
+                    0.45 * grouped["component_outcome"]
+                    + 0.20 * grouped["component_scope"]
+                    + 0.15 * grouped["component_temporal"]
+                    + 0.10 * grouped["component_centrality"]
+                    + 0.06 * grouped["component_higher_level"]
+                    + 0.04 * grouped["component_evidence"]
+                )
+            else:
+                grouped["score_pre_guardrail"] = (
+                    0.32 * grouped["component_outcome"]
+                    + 0.18 * grouped["component_sustained_scale"]
+                    + 0.18 * grouped["component_scope"]
+                    + 0.12 * grouped["component_temporal"]
+                    + 0.10 * grouped["component_centrality"]
+                    + 0.06 * grouped["component_higher_level"]
+                    + 0.04 * grouped["component_evidence"]
+                )
+                grouped["confidence_guardrail_factor"] = 1.0
+                combo_mask = grouped["higher_level_share"].ge(0.50) & grouped["known_outcome_share"].lt(0.40)
+                grouped.loc[combo_mask, "confidence_guardrail_factor"] = 0.95
+                sparse_higher_level_mask = (
+                    grouped["known_outcome_count"].lt(8.0)
+                    & grouped["known_outcome_share"].lt(0.50)
+                    & grouped["higher_level_share"].ge(0.35)
+                )
+                grouped.loc[sparse_higher_level_mask, "confidence_guardrail_factor"] = (
+                    grouped.loc[sparse_higher_level_mask, "confidence_guardrail_factor"].clip(upper=0.95)
+                )
+                thin_battle_anchor_mask = (
+                    grouped["higher_level_share"].ge(0.50)
+                    & grouped["known_battle_outcome_count"].lt(2.0)
+                    & grouped["battle_count"].lt(4.0)
+                )
+                grouped.loc[thin_battle_anchor_mask, "confidence_guardrail_factor"] = (
+                    grouped.loc[thin_battle_anchor_mask, "confidence_guardrail_factor"].clip(upper=0.92)
+                )
+                low_scale_anchor_mask = grouped["known_outcome_count"].lt(8.0) & grouped["battle_count"].lt(8.0)
+                very_thin_record_mask = grouped["known_outcome_count"].lt(6.0) | grouped["known_battle_outcome_count"].lt(3.0)
+                grouped.loc[low_scale_anchor_mask, "confidence_guardrail_factor"] = (
+                    grouped.loc[low_scale_anchor_mask, "confidence_guardrail_factor"].clip(upper=0.97)
+                )
+                grouped.loc[very_thin_record_mask, "confidence_guardrail_factor"] = (
+                    grouped.loc[very_thin_record_mask, "confidence_guardrail_factor"].clip(upper=0.94)
+                )
+                grouped["score"] = grouped["score_pre_guardrail"] * grouped["confidence_guardrail_factor"]
+                if model == "hierarchical_trust_v2_high_level_capped":
+                    broad_share = grouped["analytic_commander_id"].map(broad_share_map).fillna(grouped["higher_level_share"])
+                    grouped["score"] = grouped["score"] * broad_share.map(capped_adjustment_factor)
 
         grouped["commander_name"] = grouped["analytic_commander_id"].map(id_to_name)
-        grouped = grouped.sort_values(["score", "outcome_shrunk", "engagement_count", "commander_name"], ascending=[False, False, False, True]).reset_index(drop=True)
+        grouped = grouped.sort_values(
+            ["score", "outcome_shrunk", "engagement_count", "commander_name"],
+            ascending=[False, False, False, True],
+        ).reset_index(drop=True)
         grouped["rank"] = range(1, len(grouped) + 1)
         return grouped[["analytic_commander_id", "commander_name", "rank", "score"]]
 
@@ -260,8 +361,9 @@ def run_bootstrap(snapshot_dir: Path, iterations: int, seed: int) -> tuple[pd.Da
         "sampled_battle_ids_per_iteration": int(len(battle_ids)),
         "runtime_seconds": round(time.time() - start, 3),
         "models": MODELS,
-        "method": "fast_battle_level_weighted_bootstrap",
-        "method_note": "Battle IDs are resampled with replacement, then precomputed row-level scoring signals are aggregated into a fast ranking proxy for each model. This avoids full package recomputation, which exceeded the initial runtime budget.",
+        "method": "production_aligned_battle_level_weighted_bootstrap",
+        "method_note": "Battle IDs are resampled with replacement, then the bootstrap pass recomputes the production ranking components, weights, shrinkage, and trust-v2 guardrails from precomputed row-level signals. High-level capping uses the verified static broad-page contribution share from Pass 2.",
+        "excluded_headline_ids": int(len(excluded_ids)),
     }
     return raw, runtime
 

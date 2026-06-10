@@ -8,6 +8,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from path_safety import safe_rmtree
+
 
 PARENT_SNAPSHOT = Path("outputs_improved_2026-04-24_upgrade_pass4_role_curated")
 DEFAULT_SNAPSHOT = Path("outputs_improved_2026-04-24_upgrade_pass5_release_candidate")
@@ -51,7 +53,7 @@ def create_snapshot(parent_dir: Path, snapshot_dir: Path, force: bool) -> None:
     if snapshot_dir.exists():
         if not force:
             return
-        shutil.rmtree(snapshot_dir)
+        safe_rmtree(snapshot_dir)
     shutil.copytree(parent_dir, snapshot_dir)
 
 
@@ -630,7 +632,7 @@ def main() -> None:
                 "strict_integrity_audit": "PASS, 0 failed checks",
                 "dashboard_qa": "passed, 0 console errors, 0 page errors",
                 "large_file_check": "passed, no tracked files above 50 MB",
-                "repo_status": "clean after commit",
+                "repo_status": "validated working tree, changes pending commit",
             },
         )
         return

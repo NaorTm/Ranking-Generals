@@ -25,7 +25,7 @@ These caveats qualify interpretation; they do not automatically invalidate a com
 ## role-sensitive
 
 - Rank 8: **Douglas MacArthur** — High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
-- Rank 9: **Charles XIV John** — High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
+- Rank 9: **Charles XIV John** — High placement is qualified by large role-weighted movement, best read as coalition commander.
 - Rank 11: **Louis XIV** — Not suitable for direct headline comparison without stronger source-backed command-role curation.
 - Rank 14: **Belisarius** — High placement is qualified by wide bootstrap interval, large role-weighted movement.
 - Rank 22: **Maharaja Ranjit Singh** — High placement is qualified by wide bootstrap interval, large role-weighted movement.
@@ -68,17 +68,16 @@ These caveats qualify interpretation; they do not automatically invalidate a com
 ## coalition-sensitive
 
 - Rank 8: **Douglas MacArthur** — High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
-- Rank 9: **Charles XIV John** — High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
+- Rank 9: **Charles XIV John** — High placement is qualified by large role-weighted movement, best read as coalition commander.
 - Rank 36: **Dwight D. Eisenhower** — High placement is qualified by wide bootstrap interval, high broad-page dependency, large role-weighted movement, best read as coalition commander.
 - Rank 82: **Joseph Stalin** — High placement is qualified by wide bootstrap interval, high broad-page dependency, large role-weighted movement, best read as coalition commander.
 
 ## confidence-limited
 
+- Rank 2: **Maurice, Prince of Orange** — High placement is qualified by wide bootstrap interval.
 - Rank 4: **Subutai** — High placement is qualified by wide bootstrap interval.
-- Rank 5: **Sébastien Le Prestre, Marquis of Vauban** — High placement is qualified by wide bootstrap interval, best read as siege engineer or specialist.
 - Rank 7: **Louis-Nicolas Davout** — High placement is qualified by wide bootstrap interval.
 - Rank 8: **Douglas MacArthur** — High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
-- Rank 9: **Charles XIV John** — High placement is qualified by wide bootstrap interval, large role-weighted movement, best read as coalition commander.
 - Rank 10: **Ivan Paskevich** — High placement is qualified by wide bootstrap interval.
 - Rank 11: **Louis XIV** — Not suitable for direct headline comparison without stronger source-backed command-role curation.
 - Rank 12: **Henri de La Tour d'Auvergne, Viscount of Turenne** — High placement is qualified by wide bootstrap interval.
@@ -86,6 +85,7 @@ These caveats qualify interpretation; they do not automatically invalidate a com
 - Rank 14: **Belisarius** — High placement is qualified by wide bootstrap interval, large role-weighted movement.
 - Rank 15: **Louis-Gabriel Suchet** — High placement is qualified by wide bootstrap interval.
 - Rank 16: **André Masséna** — High placement is qualified by wide bootstrap interval.
+- Rank 17: **Alexander Farnese, Duke of Parma** — High placement is qualified by wide bootstrap interval.
 - Rank 19: **Genghis Khan** — High placement is qualified by wide bootstrap interval.
 - Rank 20: **Hubert Gough** — High placement is qualified by wide bootstrap interval.
 - Rank 21: **Bernard Montgomery** — High placement is qualified by wide bootstrap interval, high broad-page dependency.
@@ -117,7 +117,7 @@ These caveats qualify interpretation; they do not automatically invalidate a com
 
 ## category-specific
 
-- Rank 5: **Sébastien Le Prestre, Marquis of Vauban** — High placement is qualified by wide bootstrap interval, best read as siege engineer or specialist.
+- Rank 5: **Sébastien Le Prestre, Marquis of Vauban** — High placement is qualified by best read as siege engineer or specialist.
 - Rank 216: **Hulusi Akar** — High placement is qualified by wide bootstrap interval, high broad-page dependency, large role-weighted movement.
 
 ## evidence-limited

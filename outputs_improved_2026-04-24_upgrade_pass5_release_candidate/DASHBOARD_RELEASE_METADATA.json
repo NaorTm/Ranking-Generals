@@ -11,6 +11,6 @@
     "strict_integrity_audit": "PASS, 0 failed checks",
     "dashboard_qa": "passed, 0 console errors, 0 page errors",
     "large_file_check": "passed, no tracked files above 50 MB",
-    "repo_status": "clean after commit"
+    "repo_status": "validated working tree, changes pending commit"
   }
 }

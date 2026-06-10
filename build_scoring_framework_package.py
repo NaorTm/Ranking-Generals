@@ -2011,7 +2011,7 @@ def main() -> None:
     parser.add_argument(
         "--output-root",
         type=Path,
-        default=Path("outputs_cleaned_2026-04-21_fullpopulation_authoritative"),
+        default=Path("outputs_improved_2026-04-24_upgrade_pass5_release_candidate"),
         help="Frozen output directory containing battles_clean.csv and related files.",
     )
     args = parser.parse_args()

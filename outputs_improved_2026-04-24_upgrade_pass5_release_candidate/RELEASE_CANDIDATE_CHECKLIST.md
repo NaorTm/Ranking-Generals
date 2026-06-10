@@ -4,7 +4,7 @@
 - Ranking validation status: passed
 - Strict integrity audit status: PASS, 0 failed checks
 - Dashboard QA status: passed, 0 console errors, 0 page errors
-- Repo status: clean after commit
+- Repo status: validated working tree, changes pending commit
 - Large-file check: passed, no tracked files above 50 MB
 - Snapshot lineage: `outputs_improved_2026-04-24_upgrade_pass4_role_curated` -> `outputs_improved_2026-04-24_upgrade_pass5_release_candidate`
 - Docs updated: README, SCORING_FRAMEWORK, final assessment, robust elite, caveats
